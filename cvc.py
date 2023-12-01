@@ -335,7 +335,7 @@ class CVCGenerator:
             # Once all tokens are processed, simply get done with the op_stack
             operator = op_stack.pop()
             # Also take care of quantified variables if we are getting rid of them
-            if operator.quantifier:
+            if operator != '(' and operator.quantifier:
                 bound_variables.remove(operator.quanified_variable)
             output.append(operator)
         
@@ -408,7 +408,7 @@ class CVCGenerator:
         cvc_str += "\n(check-sat)\n(get-model)"
         return cvc_str
 
-input_formula = "exists x ( T(x) and L(x, cheese) ) -> forall y ( not T(y) => L(y, C(y, z) and R(y)) )"
+input_formula = "exists x ( T(x) and L(x, cheese) ) -> forall y ( T(y) => L(y, cheese)) )"
 script = CVCGenerator(input_formula).generateCVCScript()
 print(script)
 
