@@ -1,0 +1,19 @@
+Here are some examples of extracting claims and implication from an input paragraph. There can be multiple claims but only one implication. 
+
+ Input: "I met a tall man who loved to eat cheese, now I believe all tall people like cheese 
+ Output:
+ Claim: "A tall man loves cheese."  
+ Implication: "All tall people like cheese."  
+
+ Input: "What can our new math teacher know? Have you seen how fat she is?"  
+ Output:
+ Claim: "The new math teacher is fat"  
+ Implication: "The new math teacher doesn't know anything"
+
+ Input: "I don’t care what scientists say, my mother always told me that the world is flat, and she would never lie to me!"
+ Claims: "Mother said the world is flat" and "Mother never lies"
+ Implication: "The world is flat"
+
+ Do not use any subordinating conjunctions in the implication. Replace pronouns by the appropriate nouns so that there are no pronouns.
+ Now extract the claim and implication for the following input.
+ Input:
