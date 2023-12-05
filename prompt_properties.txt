@@ -1,0 +1,19 @@
+Given a sentence, and the referring expressions of that sentence. Properties are anything that describe a relationship between two referring expressions, or it may describe a trait of a referring expression. These properties are essentially predicates in first-order logic.
+Here are some examples of finding properties in a sentence:
+
+Example 1:  
+Input Sentence: A tall man loves cheese
+Referring Expressions: tall man: x , cheese: y 
+Properties: IsTall(x), Loves(x,cheese) 
+ 
+Example 2: 
+Input Sentence: Smacking children stops bad behavior 
+Referring expressions: Children: x, Bad behavior: y 
+Properties: IsSmacked(x), HasBadBehavior(x)
+ 
+Example 3: 
+Input Sentence: “Mike doesn't believe in any gods.” 
+Referring Expressions: Mike: x, Gods: y
+Properties: Believe(x,y)
+
+Now extract the properties for the following input:

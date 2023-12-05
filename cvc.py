@@ -408,9 +408,4 @@ class CVCGenerator:
         cvc_str += "\n(check-sat)\n(get-model)"
         return cvc_str
 
-input_formula = "exists x ( T(x) and L(x, cheese) ) -> forall y ( T(y) => L(y, cheese)) )"
-script = CVCGenerator(input_formula).generateCVCScript()
-print(script)
-
-
 
