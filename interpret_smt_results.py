@@ -5,6 +5,7 @@ For the counter example, we use an LLM to interpret the same.
 """
 from llm import get_llm_result
 import json
+import sys
 
 class SMTResults:
     """
@@ -12,7 +13,7 @@ class SMTResults:
     """
     def __init__(self, output_file_path, sentence_data_path):
         with open(output_file_path, "r") as f:
-            results = f.read()
+            results = f.read() + "\n"
         
         sat_or_unsat, counter_model = results.split("\n", 1)
         
