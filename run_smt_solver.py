@@ -1,11 +1,19 @@
+"""
+Python script to run an SMT solver on a given file and store the output in another text file.
+This script uses CVC4 SMT solver for solving the same.
+"""
 import subprocess
 import sys
 
 def run_cvc5(smt2_file_path, output_text_file_path):
+    """
+    Function to run SMT file
+    """
     try:
-        # Run CVC5 and capture output
+        # Run CVC4 and capture output
         result = subprocess.run(["cvc4", smt2_file_path], capture_output=True, text=True, check=True)
 
+        # Store the result in the output file
         with open(output_text_file_path, "w") as f:
             f.write(result.stdout)
 
