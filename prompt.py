@@ -91,3 +91,4 @@ class NL2SMT:
             file.write(script)
 
 NL2SMT("A boy is jumping on skateboard in the middle of a red bridge. Thus, he does a skateboarding trick.").save_smt("skateboard.smt2")
+
