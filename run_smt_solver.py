@@ -21,7 +21,7 @@ def run_cvc5(smt2_file_path, output_text_file_path):
         print("Error running CVC4", e.stderr)
 
 if __name__ == "__main__":
-    # Check if a file path is provided as a command-line argument
+    # Check if file paths are provided as a command-line argument
     if len(sys.argv) != 3:
         print("Usage: python run_sat_solver.py <smt2_file> <output_text_file>")
         sys.exit(1)

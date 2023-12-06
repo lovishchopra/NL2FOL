@@ -1,17 +1,21 @@
 # CS257_Project
 
-Installation Instructions:
-export PYTHONPATH=$GROUP_HOME/python/lib/python3.9/site-packages:$PYTHONPATH
-export PATH=$GROUP_HOME/python/bin:$PATH
-PYTHONUSERBASE=$GROUP_HOME/python pip3 install --user torch
-export TRANSFORMERS_CACHE=$GROUP_HOME/cache
-export HF_HOME=$GROUP_HOME/cache:
+Instructions:
+1. export PYTHONPATH=$GROUP_HOME/python/lib/python3.9/site-packages:$PYTHONPATH
+2. export PATH=$GROUP_HOME/python/bin:$PATH
+3. export TRANSFORMERS_CACHE=$GROUP_HOME/cache
+4. export HF_HOME=$GROUP_HOME/cache:
+5. ml python/3.9.0
+6. If python file uses LLM, run this on terminal and put your huggingface authorization token: huggingface-cli login
+7. To run the LLM in this repository, you need access to meta-llama/Llama-2-7b-chat-hf. Get access here: https://huggingface.co/meta-llama/Llama-2-7b-chat-hf 
+8. Run file using:
+    python3 <filename>.py <args>
 
-1. ml python/3.9.0
-2. pip3 install transformers
-3. pip3 install torch
-4. huggingface-cli login: Login using your llama token
-5. pip3 install accelerate
+To install a package, set the paths above first. Then run:
+- PYTHONUSERBASE=$GROUP_HOME/python pip3 install --user <package_name>
 
-Run python files using:
-python3 <filename>.py <relevant inputs>
+Necessary packages to run the code:
+- transformers
+- torch
+- accelerate
+
