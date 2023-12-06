@@ -4,7 +4,7 @@ Implication: {1}
 Referring expressions: {2}
 Properties: {3}
 
-I use first-order logic to represent it in the following way: {5}
-Upon running CVC4 SMT solver on the negation of the above formula, I get the following counter-example:
-{6}
+I use first-order logic to represent it in the following way: {4}
+Upon running CVC5 SMT solver on the negation of the above formula, I get the following counter-example:
+{5}
 Interpret the counter-example.

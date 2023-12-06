@@ -1,0 +1,11 @@
+sat
+(
+; cardinality of BoundSet is 2
+; rep: (as @BoundSet_0 BoundSet)
+; rep: (as @BoundSet_1 BoundSet)
+; cardinality of UnboundSet is 1
+; rep: (as @UnboundSet_0 UnboundSet)
+(define-fun cheese () UnboundSet (as @UnboundSet_0 UnboundSet))
+(define-fun T ((_arg_1 BoundSet)) Bool true)
+(define-fun L ((_arg_1 BoundSet) (_arg_2 UnboundSet)) Bool (and (= (as @BoundSet_0 BoundSet) _arg_1) (= (as @UnboundSet_0 UnboundSet) _arg_2)))
+)

@@ -1,0 +1,7 @@
+{
+    "Claim": "Tall man likes cheese",
+    "Implication": "All tall people like cheese",
+    "Referring expressions": "Tall man, Cheese, Tall People",
+    "Properties": "Tall(x), Likes(x, cheese)",
+    "Formula": "exists x ( T(x) and L(x, cheese) ) -> forall y ( T(y) => L(y, cheese)) )"
+}
