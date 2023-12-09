@@ -19,3 +19,7 @@ Necessary packages to run the code:
 - torch
 - accelerate
 
+Run instructions:
+-> For converting natural language to first order logic on the given dataset: python3 nl_to_fol.py
+-> For converting first order logic to SMT files use: 
+

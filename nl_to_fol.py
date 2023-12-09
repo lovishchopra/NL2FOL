@@ -1,13 +1,15 @@
 from cvc import CVCGenerator
-# from llm import get_llm_result
 import pandas as pd
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import transformers
 import torch
 import ast
-from helpers import label_values,first_non_empty_line,split_string_except_in_brackets,extract_propositional_symbols
+from helpers import label_values, first_non_empty_line, split_string_except_in_brackets, extract_propositional_symbols
 
 class NL2FOL:
+    """
+    Class to convert natural language to first-order logical expression
+    """
     def __init__(self, sentence, pipeline, tokenizer, nli_model, nli_tokenizer, debug=False):
         self.sentence = sentence
         self.claim = ""
@@ -210,15 +212,15 @@ class NL2FOL:
             subsets=self.subset_entities
         for (subset,superset) in subsets:
             if map[subset] in claim_symbols and map[superset] in implication_symbols:
-                if claim_lf.find("ThereExists {} ".format(map[subset]))==-1:
-                    claim_lf="ThereExists {} ".format(map[subset])+claim_lf
-                if implication_lf.find("ForAll {} ".format(map[superset]))==-1:
-                    implication_lf="ForAll {} ".format(map[superset])+implication_lf
+                if claim_lf.find("exists {} ".format(map[subset]))==-1:
+                    claim_lf="exists {} ".format(map[subset])+claim_lf
+                if implication_lf.find("forall {} ".format(map[superset]))==-1:
+                    implication_lf="forall {} ".format(map[superset])+implication_lf
             if map[subset] in implication_symbols and map[superset] in claim_symbols:
-                if implication_lf.find("ThereExists {} ".format(map[subset]))==-1:
-                    implication_lf="ThereExists {} ".format(map[subset])+implication_lf
-                if claim_lf.find("ForAll {} ".format(map[superset]))==-1:
-                    claim_lf="ForAll {} ".format(map[superset])+claim_lf
+                if implication_lf.find("exists {} ".format(map[subset]))==-1:
+                    implication_lf="exists {} ".format(map[subset])+implication_lf
+                if claim_lf.find("forall {} ".format(map[superset]))==-1:
+                    claim_lf="forall {} ".format(map[superset])+claim_lf
         self.final_lf="({}) -> ({})".format(claim_lf,implication_lf)
         if isinstance(self.property_implications,str):
             prop_imps=ast.literal_eval(self.property_implications)
@@ -228,7 +230,7 @@ class NL2FOL:
             lf="{} -> {}".format(prop1,prop2)
             lf_symbols=extract_propositional_symbols(lf)
             for symbol in lf_symbols:
-                lf="ForAll {} ".format(symbol)+lf
+                lf="forall {} ".format(symbol)+lf
             self.final_lf=self.final_lf+" & ("+lf+")"
         if self.debug:
             print("Final Lf= ",self.final_lf)
