@@ -1,0 +1,9 @@
+unknown
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+(declare-sort UnboundSet 0)
+(define-fun IsRunTowards ((BOUND_VARIABLE_341 BoundSet) (BOUND_VARIABLE_342 BoundSet)) Bool true)
+)
