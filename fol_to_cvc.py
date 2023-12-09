@@ -17,9 +17,9 @@ if __name__ == "__main__":
             script = CVCGenerator(data[i].replace("ForAll", "forall").replace("ThereExists", "exists")).generateCVCScript()
             with open("results/run1_smt/{0}.smt2".format(i), "w") as f:
                 f.write(script)
-            with open("results/run1_smt/{0}_out.smt2".format(i), "w") as f:
+            with open("results/run1_smt/{0}_out.txt".format(i), "w") as f:
                 # Run CVC5 and capture output
-                result = subprocess.run(["cvc5", "results/run1_smt/{0}.smt2".format(i)], capture_output=True, text=True, check=True)
+                result = subprocess.run(["cvc4", "results/run1_smt/{0}.smt2".format(i)], capture_output=True, text=True, check=True)
                 f.write(result.stdout)
         except:
             pass
