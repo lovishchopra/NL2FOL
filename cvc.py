@@ -3,6 +3,7 @@ Python parser to parse a logical formula and create a CVC file for the negation 
 It also checks and makes sure that all predicates have consistent sorts.
 """
 import re
+import sys
 
 bound_variables = set()
 unbound_variables = {}
@@ -204,6 +205,9 @@ class CVCGenerator:
     Class to generate CVC code for a formula.
     """
     def __init__(self, formula):
+        bound_variables.clear()
+        unbound_variables.clear()
+        predicate_to_sort_map.clear()
         self.formula = formula
         self.tokens = self.tokenize()   # Generate the tokens and process them for a given formula
 
@@ -405,4 +409,11 @@ class CVCGenerator:
         cvc_str += "\n(check-sat)\n(get-model)"
         return cvc_str
 
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print('Usage: python cvc.py "<fol>"')
+        sys.exit(1)
+
+    script = CVCGenerator(sys.argv[1].replace("ForAll", "forall").replace("ThereExists", "exists")).generateCVCScript()
+    print(script)
 
