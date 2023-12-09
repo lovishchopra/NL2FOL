@@ -10,16 +10,34 @@ if __name__ == "__main__":
         sys.exit(1)
 
     csv_file = sys.argv[1]
-    data = pd.read_csv(csv_file)['Logical Form']
-    for i in range(len(data)):
-        print(i, data[i])
+    data = pd.read_csv(csv_file)
+    fol = data['Logical Form']
+    results = []
+    for i in range(len(fol)):
+        print(i, fol[i])
         try:
-            script = CVCGenerator(data[i].replace("ForAll", "forall").replace("ThereExists", "exists")).generateCVCScript()
+            script = CVCGenerator(fol[i].replace("ForAll", "forall").replace("ThereExists", "exists")).generateCVCScript()
             with open("results/run1_smt/{0}.smt2".format(i), "w") as f:
                 f.write(script)
             with open("results/run1_smt/{0}_out.txt".format(i), "w") as f:
                 # Run CVC5 and capture output
-                result = subprocess.run(["cvc4", "results/run1_smt/{0}.smt2".format(i)], capture_output=True, text=True, check=True)
-                f.write(result.stdout)
+                proc = subprocess.run(["cvc4", "results/run1_smt/{0}.smt2".format(i)], capture_output=True, text=True, check=True)
+                proc_result = proc.stdout
+                f.write(proc_result)
+                if len(proc_result) == 0:
+                    results.append("")
+                result, _ = proc_result.split("\n", 1)
+                if "unsat" in result: 
+                    results.append("Valid")
+                elif "unknown" in result or "sat" in result:
+                    results.append("LF")
+                else:
+                    results.append("")
+
         except:
+            results.append("")
             pass
+    
+    data['result'] = results
+    data.to_csv("results/run1_results.csv")
+
