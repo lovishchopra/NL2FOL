@@ -378,9 +378,6 @@ class CVCGenerator:
         # Stack top is our final formula
         return stack[0]
 
-        prefix = parenthesize_prefix(prefix)
-        return prefix
-
     def generateCVCScript(self):
         """
         Function to generate the CVC Script for a given formula
