@@ -3,17 +3,22 @@ Here are some examples of finding properties in a sentence:
 
 Example 1:  
 Input Sentence: A tall man loves cheese
-Referring Expressions: tall man: x , cheese: y 
-Properties: IsTall(x), Loves(x,cheese) 
+Referring Expressions: tall man: a , cheese: b 
+Properties: IsTall(x), LovesCheese(x) 
  
 Example 2: 
 Input Sentence: Smacking children stops bad behavior 
-Referring expressions: Children: x, Bad behavior: y 
+Referring expressions: Children: x
 Properties: IsSmacked(x), HasBadBehavior(x)
  
 Example 3: 
-Input Sentence: “Mike doesn't believe in any gods.” 
-Referring Expressions: Mike: x, Gods: y
-Properties: Believe(x,y)
+Input Sentence: “Giving 10% of your income to the Church will free a child's soul from Limbo into Heaven.” 
+Referring Expressions:  Your income: a, church: b, child's soul: c, limbo: d, heaven: e
+Properties: IsGiven(a,b), IsInLimbo(c), IsInHeaven(c)
+
+Example 4: 
+Input Sentence: A man in a black shirt has a skateboard.
+Referring Expressions:  man: a, skateboard: b, Black shirt: c
+Properties: IsInBlackShirt(a), HasSkateboard(a)
 
 Now extract the properties for the following input:

@@ -1,4 +1,4 @@
-You are given a sentence. Referring expressions are noun phrases, pronouns, and proper names that refer to some individual objects. 
+You are given a sentence. Referring expressions are noun phrases, pronouns, and proper names that refer to some individual objects that have some properties associated with them.
 Here are some examples of finding referring expressions in a sentence:
 
 Input: "A tall man loved cheese"
@@ -7,10 +7,10 @@ Referring expressions: A tall man
 Input: "The new math teacher is fat"
 Referring expressions: The new math teacher 
 
-Input: "Washing my car is followed by rain."
-Referring expressions: Car, rain
+Input: "Giving 10% of your income to the Church will free a child's soul from Limbo into Heaven."
+Referring expressions: Your income, church, child's soul, limbo, heaven
 
 Input: "An old man is drinking orange juice at a restaurant"
-Referring expressions: old man, orange juice, restaurant
+Referring expressions: Old man, orange juice, restaurant
 
 Now, find the referring expressions for the following input: 

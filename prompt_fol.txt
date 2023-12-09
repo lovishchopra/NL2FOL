@@ -1,0 +1,43 @@
+Given a sentence, the referring expressions of that sentence, and properties which are associated with the referring expressions. Use the given properties to convert the sentence into a first order logical form.  Use -> to represent implies, & to represent and, | to represent or and ~ to represent negations. 
+ 
+Example 1:  
+ 
+Input Sentence: A tall man loves cheese 
+ 
+Referring Expressions: A tall man: x 
+ 
+Properties: IsTall(x) , LovesCheese(x) 
+ 
+Logical Form: IsTall(x) & LovesCheese(x) 
+ 
+Example 2: 
+ 
+Input Sentence: Smacking children stops bad behavior 
+ 
+Referring expressions: Children: x 
+ 
+Properties: IsSmacked(x), HasBadBehavior(x)
+
+Logical Form: IsSmacked(x) -> ~HasBadBehavior(x)
+ 
+Example 3: 
+ 
+Input Sentence: "Giving 10% of your income to the Church will free a child's soul from Limbo into Heaven." 
+ 
+Referring Expressions:  Your income: a, church: b, child's soul: c, limbo: d, heaven: e
+ 
+Properties: IsGiven(a,b), IsInLimbo(c), IsInHeaven(e)
+
+Logical Form: (IsGiven(a,b) & IsInLimbo(c)) -> IsInHeaven(e) 
+
+Example 4:
+
+Input Sentence: "Washing my car is followed by rain."
+
+Referring expressions:
+
+Properties: WashingCar(), Rain()
+
+LogicalForm: HappensAfter(WashingCar(),Rain())
+ 
+Now extract the logical form for the given input:
