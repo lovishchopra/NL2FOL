@@ -8,6 +8,6 @@
 (declare-fun IsCaught (BoundSet UnboundSet) Bool)
 (declare-fun IsThrown (UnboundSet UnboundSet) Bool)
 (declare-fun IsAt (UnboundSet BoundSet) Bool)
-(assert (not (=> (forall ((a BoundSet)) (IsCaught a b)) (exists ((e BoundSet)) (=> (IsThrown c d) (IsAt c e))))))
+(assert (not (=> (exists ((a BoundSet)) (IsCaught a b)) (exists ((e BoundSet)) (=> (IsThrown c d) (IsAt c e))))))
 (check-sat)
 (get-model)

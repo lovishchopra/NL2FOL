@@ -4,6 +4,6 @@
 (declare-sort UnboundSet 0)
 (declare-fun a () UnboundSet)
 (declare-fun IsRunTowards (BoundSet UnboundSet) Bool)
-(assert (not (=> (exists ((b BoundSet)) (IsRunTowards b a)) (forall ((c BoundSet)) (IsRunTowards c a)))))
+(assert (not (=> (exists ((b BoundSet)) (IsRunTowards b a)) (exists ((c BoundSet)) (IsRunTowards c a)))))
 (check-sat)
 (get-model)

@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     csv_file = sys.argv[1]
     data = pd.read_csv(csv_file)
-    fol = data['Logical Form']
+    fol = data['Logical Form 2']
     results = []
     for i in range(len(fol)):
         print(i, fol[i])

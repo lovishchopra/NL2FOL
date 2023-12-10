@@ -7,6 +7,6 @@
 (declare-fun IsWearing (BoundSet) Bool)
 (declare-fun IsSewing (BoundSet) Bool)
 (declare-fun IsAnArticleOfClothing (BoundSet) Bool)
-(assert (not (=> (exists ((b BoundSet)) (exists ((a BoundSet)) (=> (IsHispanic a) (WearsRedPlaidShirt b)))) (forall ((e BoundSet)) (forall ((d BoundSet)) (forall ((c BoundSet)) (=> (IsWearing c) (=> (IsSewing d) (IsAnArticleOfClothing e)))))))))
+(assert (not (=> (exists ((b BoundSet)) (exists ((a BoundSet)) (=> (IsHispanic a) (WearsRedPlaidShirt b)))) (exists ((e BoundSet)) (exists ((d BoundSet)) (exists ((c BoundSet)) (=> (IsWearing c) (=> (IsSewing d) (IsAnArticleOfClothing e)))))))))
 (check-sat)
 (get-model)

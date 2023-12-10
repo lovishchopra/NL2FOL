@@ -6,6 +6,6 @@
 (declare-fun IsBestClass (BoundSet) Bool)
 (declare-fun IsBest (BoundSet) Bool)
 (declare-fun IsClass (BoundSet) Bool)
-(assert (not (forall ((d BoundSet)) (forall ((e BoundSet)) (=> (IsBest d) (IsClass e))))))
+(assert (not (exists ((d BoundSet)) (exists ((e BoundSet)) (=> (IsBest d) (IsClass e))))))
 (check-sat)
 (get-model)

@@ -4,6 +4,6 @@
 (declare-sort UnboundSet 0)
 (declare-fun IsPutting (BoundSet BoundSet) Bool)
 (declare-fun IsUnder (BoundSet BoundSet) Bool)
-(assert (not (=> (exists ((c BoundSet)) (forall ((b BoundSet)) (exists ((a BoundSet)) (=> (IsPutting a b) (IsUnder a c))))) (forall ((f BoundSet)) (exists ((e BoundSet)) (forall ((d BoundSet)) (=> (IsPutting d e) (IsUnder d f))))))))
+(assert (not (=> (exists ((c BoundSet)) (exists ((b BoundSet)) (exists ((a BoundSet)) (=> (IsPutting a b) (IsUnder a c))))) (exists ((f BoundSet)) (exists ((e BoundSet)) (exists ((d BoundSet)) (=> (IsPutting d e) (IsUnder d f))))))))
 (check-sat)
 (get-model)

@@ -1,12 +1,2 @@
-sat
-(model
-; cardinality of BoundSet is 2
-(declare-sort BoundSet 0)
-; rep: @uc_BoundSet_0
-; rep: @uc_BoundSet_1
-; cardinality of UnboundSet is 1
-(declare-sort UnboundSet 0)
-; rep: @uc_UnboundSet_0
-(define-fun a () UnboundSet @uc_UnboundSet_0)
-(define-fun IsRunTowards ((BOUND_VARIABLE_337 BoundSet) (BOUND_VARIABLE_338 UnboundSet)) Bool (ite (= @uc_BoundSet_0 BOUND_VARIABLE_337) (= @uc_UnboundSet_0 BOUND_VARIABLE_338) false))
-)
+unsat
+(error "Cannot get the current model unless immediately preceded by SAT/INVALID or UNKNOWN response.")

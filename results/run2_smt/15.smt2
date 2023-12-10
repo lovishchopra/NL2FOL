@@ -6,6 +6,6 @@
 (declare-fun IsTampering (BoundSet) Bool)
 (declare-fun IsTamperedWith (BoundSet) Bool)
 (declare-fun IsMetal (BoundSet) Bool)
-(assert (not (=> (forall ((b BoundSet)) (forall ((a BoundSet)) (=> (IsNoShirt a) (IsTampering b)))) (exists ((d BoundSet)) (exists ((c BoundSet)) (=> (IsTamperedWith c) (IsMetal d)))))))
+(assert (not (=> (exists ((b BoundSet)) (exists ((a BoundSet)) (=> (IsNoShirt a) (IsTampering b)))) (exists ((d BoundSet)) (exists ((c BoundSet)) (=> (IsTamperedWith c) (IsMetal d)))))))
 (check-sat)
 (get-model)

@@ -1,14 +1,17 @@
 unknown
 (model
+; cardinality of BoundSet is 1
 (declare-sort BoundSet 0)
-; cardinality of UnboundSet is 2
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 3
 (declare-sort UnboundSet 0)
 ; rep: @uc_UnboundSet_0
 ; rep: @uc_UnboundSet_1
+; rep: @uc_UnboundSet_2
 (define-fun b () UnboundSet @uc_UnboundSet_0)
-(define-fun c () UnboundSet @uc_UnboundSet_0)
-(define-fun d () UnboundSet @uc_UnboundSet_1)
-(define-fun IsCaught ((BOUND_VARIABLE_339 BoundSet) (BOUND_VARIABLE_340 UnboundSet)) Bool false)
-(define-fun IsThrown ((BOUND_VARIABLE_350 UnboundSet) (BOUND_VARIABLE_351 UnboundSet)) Bool true)
-(define-fun IsAt ((BOUND_VARIABLE_366 UnboundSet) (BOUND_VARIABLE_367 BoundSet)) Bool false)
+(define-fun c () UnboundSet @uc_UnboundSet_1)
+(define-fun d () UnboundSet @uc_UnboundSet_2)
+(define-fun IsCaught ((BOUND_VARIABLE_350 BoundSet) (BOUND_VARIABLE_351 UnboundSet)) Bool true)
+(define-fun IsThrown ((BOUND_VARIABLE_360 UnboundSet) (BOUND_VARIABLE_361 UnboundSet)) Bool true)
+(define-fun IsAt ((BOUND_VARIABLE_376 UnboundSet) (BOUND_VARIABLE_377 BoundSet)) Bool false)
 )

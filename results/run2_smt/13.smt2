@@ -5,6 +5,6 @@
 (declare-fun b () UnboundSet)
 (declare-fun IsWalkedDown (BoundSet UnboundSet) Bool)
 (declare-fun IsOutside (BoundSet) Bool)
-(assert (not (=> (forall ((a BoundSet)) (IsWalkedDown a b)) (exists ((c BoundSet)) (IsOutside c)))))
+(assert (not (=> (exists ((a BoundSet)) (IsWalkedDown a b)) (exists ((c BoundSet)) (IsOutside c)))))
 (check-sat)
 (get-model)

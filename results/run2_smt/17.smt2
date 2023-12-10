@@ -6,6 +6,6 @@
 (declare-fun IsRubbing (BoundSet) Bool)
 (declare-fun IsInYellowTie (UnboundSet) Bool)
 (declare-fun IsRubbingNeck (BoundSet) Bool)
-(assert (not (=> (forall ((b BoundSet)) (IsRubbing b)) (exists ((d BoundSet)) (=> (IsInYellowTie c) (IsRubbingNeck d))))))
+(assert (not (=> (exists ((b BoundSet)) (IsRubbing b)) (exists ((d BoundSet)) (=> (IsInYellowTie c) (IsRubbingNeck d))))))
 (check-sat)
 (get-model)
