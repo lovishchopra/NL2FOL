@@ -1,0 +1,17 @@
+sat
+(model
+(declare-sort BoundSet 0)
+; cardinality of UnboundSet is 4
+(declare-sort UnboundSet 0)
+; rep: @uc_UnboundSet_0
+; rep: @uc_UnboundSet_1
+; rep: @uc_UnboundSet_2
+; rep: @uc_UnboundSet_3
+(define-fun a () UnboundSet @uc_UnboundSet_0)
+(define-fun b () UnboundSet @uc_UnboundSet_1)
+(define-fun d () UnboundSet @uc_UnboundSet_2)
+(define-fun e () UnboundSet @uc_UnboundSet_3)
+(define-fun IsLivedLike ((BOUND_VARIABLE_315 UnboundSet) (BOUND_VARIABLE_316 UnboundSet)) Bool true)
+(define-fun IsBeautiful ((BOUND_VARIABLE_321 UnboundSet)) Bool true)
+(define-fun IsAPlace ((BOUND_VARIABLE_321 UnboundSet)) Bool false)
+)

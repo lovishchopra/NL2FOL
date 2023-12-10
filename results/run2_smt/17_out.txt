@@ -1,0 +1,11 @@
+unknown
+(model
+(declare-sort BoundSet 0)
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+; rep: @uc_UnboundSet_0
+(define-fun c () UnboundSet @uc_UnboundSet_0)
+(define-fun IsRubbing ((BOUND_VARIABLE_329 BoundSet)) Bool false)
+(define-fun IsInYellowTie ((BOUND_VARIABLE_334 UnboundSet)) Bool true)
+(define-fun IsRubbingNeck ((BOUND_VARIABLE_329 BoundSet)) Bool false)
+)
