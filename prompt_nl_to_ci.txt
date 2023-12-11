@@ -14,6 +14,10 @@ Here are some examples of extracting claims and implication from an input paragr
  Claims: "Mother said the world is flat" and "Mother never lies"
  Implication: "The world is flat"
 
+ Input: Dave wants you to break into the spooky cabin with him. Everyone does it
+ Claim: Everyone breaks into the spooky cabin
+ Implication: You should break into the spooky cabin 
+
  Do not use any subordinating conjunctions in the implication. Replace pronouns by the appropriate nouns so that there are no pronouns.
  Now extract the claim and implication for the following input.
  Input:

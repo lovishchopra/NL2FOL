@@ -32,12 +32,10 @@ Logical Form: (IsGiven(a,b) & IsInLimbo(c)) -> IsInHeaven(e)
 
 Example 4:
 
-Input Sentence: "Washing my car is followed by rain."
+Input Sentence: "A bald man is touching another person."
 
 Referring expressions:
 
-Properties: WashingCar(), Rain()
+Properties: A bald man: a, another person: b
 
-LogicalForm: HappensAfter(WashingCar(),Rain())
- 
-Now extract the logical form for the given input:
+LogicalForm: IsBald(a) & IsTouching(a,b)

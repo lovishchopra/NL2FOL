@@ -4,7 +4,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import transformers
 import torch
 import ast
-from helpers import label_values, first_non_empty_line, split_string_except_in_brackets, extract_propositional_symbols
+from helpers import label_values, first_non_empty_line, split_string_except_in_brackets, extract_propositional_symbols, remove_text_after_last_parenthesis, fix_inconsistent_arities, replace_variables
 
 class NL2FOL:
     """
@@ -85,11 +85,18 @@ class NL2FOL:
         "Properties: ".format(self.claim,label_values(self.claim_ref_exp,self.entity_mappings))
         prompt1=prompt+prompt_template
         self.claim_properties = first_non_empty_line(self.get_llm_result(prompt1))
-        prompt_template="Input {} " \
+        with open("prompt_properties2.txt", encoding="ascii", errors="ignore") as f:
+            prompt = f.read()
+        prompt_template="Input {}" \
+        "Referring Expressions {}" \
+        "Properties {}" \
+        "Now extract the properties for the following input: " \
+        "Input {} " \
         "Referring Expressions: {} " \
-        "Properties: ".format(self.implication,label_values(self.implication_ref_exp,self.entity_mappings))
+        "Properties: ".format(self.claim,label_values(self.claim_ref_exp,self.entity_mappings),self.claim_properties,self.implication,label_values(self.implication_ref_exp,self.entity_mappings))
         prompt1=prompt+prompt_template
         self.implication_properties = first_non_empty_line(self.get_llm_result(prompt1))
+        self.claim_properties, self.implication_properties = fix_inconsistent_arities(split_string_except_in_brackets(self.claim_properties,','),split_string_except_in_brackets(self.implication_properties,','))
         if self.debug:
             print("Claim Properties: ", self.claim_properties)
             print("Implication Proeprties ", self.implication_properties)
@@ -101,8 +108,12 @@ class NL2FOL:
         implication_properties=split_string_except_in_brackets(self.implication_properties, ',')
         for c_p in claim_properties:
             for i_p in implication_properties:
-                p=self.get_nli_prob(c_p,i_p)
-                p2=self.get_nli_prob(i_p,c_p)
+                predicate1= c_p.split('(')[0]
+                predicate2 = i_p.split('(')[0]
+                if(predicate1==predicate2):
+                    continue
+                p=self.get_nli_prob(replace_variables(self.entity_mappings,c_p),replace_variables(self.entity_mappings,i_p))
+                p2=self.get_nli_prob(replace_variables(self.entity_mappings,i_p),replace_variables(self.entity_mappings,c_p))
                 if p>70:
                     self.property_implications.append((c_p,i_p))
                 if p2>70:
@@ -128,6 +139,8 @@ class NL2FOL:
 
         prompt1=prompt+prompt_template
         self.implication_lf=first_non_empty_line(self.get_llm_result(prompt1))
+        self.claim_lf=remove_text_after_last_parenthesis(self.claim_lf)
+        self.implication_lf=remove_text_after_last_parenthesis(self.implication_lf)
         if self.debug:
             print("Claim Lf: ", self.claim_lf)
             print("Impliation Lf: ",self.implication_lf)
@@ -271,7 +284,7 @@ class NL2FOL:
             lf="{} -> {}".format(prop1,prop2)
             lf_symbols=extract_propositional_symbols(lf)
             for symbol in lf_symbols:
-                lf="forall ({}) ".format(symbol)+lf
+                lf="forall {} ".format(symbol)+"("+lf+")"
             self.final_lf2=self.final_lf2+" & ("+lf+")"
         if self.debug:
             print("Final Lf2= ",self.final_lf2)
@@ -287,6 +300,9 @@ class NL2FOL:
         self.get_final_lf()
         self.get_final_lf2()
         return self.final_lf,self.final_lf2
+    
+    def apply_heuristics(self):
+        self.claim_lf = s
 
 class NL2SMT:
     def __init__(self, sentence):
@@ -335,7 +351,7 @@ if __name__ == '__main__':
         final_lfs2.append(nl2fol.final_lf2)
     df['Logical Form']=final_lfs
     df['Logical Form 2']=final_lfs2
-    df.to_csv('results/run2.csv',index=False)
+    df.to_csv('results/run4.csv',index=False)
 
 
     
