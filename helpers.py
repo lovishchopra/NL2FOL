@@ -83,7 +83,6 @@ def fix_inconsistent_arities(clauses1, clauses2):
         arity = len(args)
         
         if arity > predicates[predicate]:
-            print(f"updating {predicate} to arity {predicates[predicate]}")
             # Keep only necessary arguments based on predicate arity
             new_clause = f"{predicate}({', '.join(args[:predicates[predicate]])})"
             fixed_clauses1.append(new_clause)
@@ -121,5 +120,4 @@ def replace_variables(mapping, clause):
     args=','.join(replaced_args)
     
     replaced_clause=predicate+'('+args+')'
-    print("replaced_clause=",replaced_clause)
     return replaced_clause

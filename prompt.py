@@ -14,8 +14,8 @@ class NL2FOL:
         self.sentence = sentence
         self.claim = ""
         self.implication = ""
-        self.claim_ref_exp = None
-        self.implication_ref_exp = None
+        self.claim_ref_exp = ""
+        self.implication_ref_exp = ""
         self.pipeline = pipeline
         self.tokenizer = tokenizer
         self.nli_model = nli_model
@@ -110,7 +110,7 @@ class NL2FOL:
             for i_p in implication_properties:
                 predicate1= c_p.split('(')[0]
                 predicate2 = i_p.split('(')[0]
-                if(predicate1==predicate2):
+                if(predicate1.strip()==predicate2.strip()):
                     continue
                 p=self.get_nli_prob(replace_variables(self.entity_mappings,c_p),replace_variables(self.entity_mappings,i_p))
                 p2=self.get_nli_prob(replace_variables(self.entity_mappings,i_p),replace_variables(self.entity_mappings,c_p))
@@ -235,7 +235,6 @@ class NL2FOL:
                     implication_lf="exists {} ({})".format(map[subset],implication_lf)
                 if claim_lf.find("forall {} ".format(map[superset]))==-1 and claim_lf.find("exists {} ".format(map[subset]))==-1:
                     claim_lf="forall {} ({})".format(map[superset],claim_lf)
-        self.final_lf="({}) -> ({})".format(claim_lf,implication_lf)
         if isinstance(self.property_implications,str):
             prop_imps=ast.literal_eval(self.property_implications)
         else:
@@ -244,8 +243,9 @@ class NL2FOL:
             lf="{} -> {}".format(prop1,prop2)
             lf_symbols=extract_propositional_symbols(lf)
             for symbol in lf_symbols:
-                lf="forall ({}) ".format(symbol)+lf
-            self.final_lf=self.final_lf+" & ("+lf+")"
+                lf="forall {} ".format(symbol)+'('+lf+')'
+            claim_lf=claim_lf+" & ("+lf+")"
+        self.final_lf="({}) -> ({})".format(claim_lf,implication_lf)
         if self.debug:
             print("Final Lf= ",self.final_lf)
     
@@ -275,7 +275,6 @@ class NL2FOL:
                     claim_lf="exists {} ({})".format(map[superset],claim_lf)
                 if implication_lf.find("exists {}".format(map[subset]))==-1:
                     implication_lf="exists {} ({})".format(map[subset],implication_lf)
-        self.final_lf2="({}) -> ({})".format(claim_lf,implication_lf)
         if isinstance(self.property_implications,str):
             prop_imps=ast.literal_eval(self.property_implications)
         else:
@@ -285,7 +284,8 @@ class NL2FOL:
             lf_symbols=extract_propositional_symbols(lf)
             for symbol in lf_symbols:
                 lf="forall {} ".format(symbol)+"("+lf+")"
-            self.final_lf2=self.final_lf2+" & ("+lf+")"
+            claim_lf=claim_lf+" & ("+lf+")"
+        self.final_lf2="({}) -> ({})".format(claim_lf,implication_lf)
         if self.debug:
             print("Final Lf2= ",self.final_lf2)
 
@@ -353,15 +353,18 @@ if __name__ == '__main__':
     df=setup_dataset(length=10)
     final_lfs=[]
     final_lfs2=[]
+    count=0
     for i,row in df.iterrows():
-        print(row['articles'])
+        print(count)
+        count=count+1
+        # print(row['articles'])
         nl2fol=NL2FOL(row['articles'],pipeline,tokenizer,nli_model,nli_tokenizer,debug=True)
         nl2fol.convert_to_first_order_logic()
         final_lfs.append(nl2fol.final_lf)
         final_lfs2.append(nl2fol.final_lf2)
     df['Logical Form']=final_lfs
     df['Logical Form 2']=final_lfs2
-    df.to_csv('results/run4.csv',index=False)
+    df.to_csv('results/run5.csv',index=False)
 
 
     
