@@ -297,12 +297,22 @@ class NL2FOL:
         self.get_properties()
         self.get_properties_relations()
         self.get_fol()
+        self.apply_heuristics()
         self.get_final_lf()
         self.get_final_lf2()
         return self.final_lf,self.final_lf2
     
     def apply_heuristics(self):
-        self.claim_lf = s
+        self.claim_lf = self.claim_lf.replace('->','&')
+        self.claim_lf = self.claim_lf.replace('&','and')
+        self.claim_lf = self.claim_lf.replace('|','or')
+        self.implication_lf = self.implication_lf.replace('->','&')
+        self.implication_lf = self.implication_lf.replace('&','and')
+        self.implication_lf = self.implication_lf.replace('|','or')
+        if self.debug:
+            print("Updated Claim Lf= ",self.claim_lf)
+            print("Updated Implication Lf=",self.implication_lf)
+
 
 class NL2SMT:
     def __init__(self, sentence):
