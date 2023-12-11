@@ -4,7 +4,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import transformers
 import torch
 import ast
-from helpers import label_values, first_non_empty_line, split_string_except_in_brackets, extract_propositional_symbols, remove_text_after_last_parenthesis, fix_inconsistent_arities, replace_variables
+from helpers import *
 
 class NL2FOL:
     """
@@ -264,22 +264,19 @@ class NL2FOL:
             subsets=ast.literal_eval(self.subset_entities)
         else:
             subsets=self.subset_entities
-        for (subset,superset) in subsets:
-            if (map[subset] in claim_symbols and map[superset] in implication_symbols):
-                if claim_lf.find("exists {} ".format(map[subset]))==-1:
-                    claim_lf="exists {} ({})".format(map[subset],claim_lf)
-                if implication_lf.find("exists {}".format(map[superset]))==-1:
-                    implication_lf="exists {} ({})".format(map[superset],implication_lf)
-            elif (map[superset] in claim_symbols and map[subset] in implication_symbols):
-                if claim_lf.find("exists {} ".format(map[superset]))==-1:
-                    claim_lf="exists {} ({})".format(map[superset],claim_lf)
-                if implication_lf.find("exists {}".format(map[subset]))==-1:
-                    implication_lf="exists {} ({})".format(map[subset],implication_lf)
+        for symbol in claim_symbols:
+            if claim_lf.find("exists {} ".format(symbol))==-1:
+                    claim_lf="exists {} ({})".format(symbol,claim_lf)
+        for symbol in implication_symbols:
+            if implication_lf.find("exists {}".format(symbol))==-1:
+                    implication_lf="exists {} ({})".format(symbol,implication_lf)
         if isinstance(self.property_implications,str):
             prop_imps=ast.literal_eval(self.property_implications)
         else:
             prop_imps=self.property_implications
+        current_char=chr(ord('a') + len(self.entity_mappings))
         for (prop1,prop2) in prop_imps:
+            prop1,prop2,current_char=substitute_variables(prop1,prop2,current_char)
             lf="{} -> {}".format(prop1,prop2)
             lf_symbols=extract_propositional_symbols(lf)
             for symbol in lf_symbols:
@@ -364,7 +361,7 @@ if __name__ == '__main__':
         final_lfs2.append(nl2fol.final_lf2)
     df['Logical Form']=final_lfs
     df['Logical Form 2']=final_lfs2
-    df.to_csv('results/run5.csv',index=False)
+    df.to_csv('results/run6.csv',index=False)
 
 
     

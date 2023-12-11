@@ -121,3 +121,31 @@ def replace_variables(mapping, clause):
     
     replaced_clause=predicate+'('+args+')'
     return replaced_clause
+
+def substitute_variables(clause1,clause2,start_char):
+    variables={}
+    replaced_clause1 = clause1
+    predicate = clause1.split('(')[0]
+    args = clause1.split('(')[1][:-1].split(',')
+    current_char = start_char
+    replaced_args = []
+    for arg in args:
+        if arg not in variables:
+            variables[arg]=current_char
+            current_char = chr(ord(current_char) + 1)
+        replaced_args.append(variables[arg])
+    args=','.join(replaced_args)
+    replaced_clause1=predicate+'('+args+')'
+    ###
+    replaced_clause2 = clause2
+    predicate = clause2.split('(')[0]
+    args = clause2.split('(')[1][:-1].split(',')
+    replaced_args = []
+    for arg in args:
+        if arg not in variables:
+            variables[arg]=current_char
+            current_char = chr(ord(current_char) + 1)
+        replaced_args.append(variables[arg])
+    args=','.join(replaced_args)
+    replaced_clause2=predicate+'('+args+')'
+    return replaced_clause1, replaced_clause2, current_char
