@@ -1,0 +1,18 @@
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 3
+(declare-sort UnboundSet 0)
+; rep: @uc_UnboundSet_0
+; rep: @uc_UnboundSet_1
+; rep: @uc_UnboundSet_2
+(define-fun b () UnboundSet @uc_UnboundSet_0)
+(define-fun d () UnboundSet @uc_UnboundSet_1)
+(define-fun e () UnboundSet @uc_UnboundSet_2)
+(define-fun IsCaught ((BOUND_VARIABLE_355 BoundSet) (BOUND_VARIABLE_356 UnboundSet)) Bool true)
+(define-fun IsPlaying ((BOUND_VARIABLE_366 BoundSet)) Bool false)
+(define-fun Threw ((BOUND_VARIABLE_374 UnboundSet) (BOUND_VARIABLE_375 UnboundSet)) Bool false)
+(define-fun IsTheSamePerson ((BOUND_VARIABLE_374 UnboundSet) (BOUND_VARIABLE_375 UnboundSet)) Bool false)
+)

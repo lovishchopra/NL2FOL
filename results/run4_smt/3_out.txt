@@ -1,0 +1,14 @@
+sat
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+(declare-sort UnboundSet 0)
+(define-fun b () BoundSet @uc_BoundSet_0)
+(define-fun c () BoundSet @uc_BoundSet_1)
+(define-fun a () BoundSet @uc_BoundSet_2)
+(define-fun IsInSpookyCabin ((BOUND_VARIABLE_332 BoundSet)) Bool true)
+(define-fun ShouldBreakInto ((BOUND_VARIABLE_340 BoundSet) (BOUND_VARIABLE_341 BoundSet)) Bool false)
+)

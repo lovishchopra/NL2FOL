@@ -15,13 +15,17 @@ if __name__ == "__main__":
     results = []
     for i in range(len(fol)):
         print(i, fol[i])
+        script = CVCGenerator(fol[i].replace("ForAll", "forall").replace("ThereExists", "exists").replace("&", "and")).generateCVCScript()
+       
+        with open("results/run4_smt/{0}.smt2".format(i), "w") as f:
+            f.write(script)
         try:
             script = CVCGenerator(fol[i].replace("ForAll", "forall").replace("ThereExists", "exists")).generateCVCScript()
-            with open("results/run2_smt/{0}.smt2".format(i), "w") as f:
+            with open("results/run4_smt/{0}.smt2".format(i), "w") as f:
                 f.write(script)
-            with open("results/run2_smt/{0}_out.txt".format(i), "w") as f:
+            with open("results/run4_smt/{0}_out.txt".format(i), "w") as f:
                 # Run CVC5 and capture output
-                proc = subprocess.run(["cvc4", "results/run2_smt/{0}.smt2".format(i)], capture_output=True, text=True, check=True)
+                proc = subprocess.run(["cvc4", "results/run4_smt/{0}.smt2".format(i)], capture_output=True, text=True, check=True)
                 proc_result = proc.stdout
                 f.write(proc_result)
                 if len(proc_result) == 0:
@@ -40,5 +44,5 @@ if __name__ == "__main__":
             pass
     
     data['result'] = results
-    data.to_csv("results/run2_results.csv")
+    data.to_csv("results/run4_results.csv")
 
