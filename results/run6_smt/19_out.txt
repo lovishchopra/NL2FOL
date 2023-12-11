@@ -1,0 +1,11 @@
+unknown
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+(declare-sort UnboundSet 0)
+(define-fun IsBald ((BOUND_VARIABLE_448 BoundSet)) Bool true)
+(define-fun HasHandOnShoulder ((BOUND_VARIABLE_448 BoundSet)) Bool true)
+(define-fun IsTouching ((BOUND_VARIABLE_460 BoundSet) (BOUND_VARIABLE_461 BoundSet)) Bool false)
+)
