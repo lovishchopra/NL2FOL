@@ -2,6 +2,7 @@
 (set-option :produce-models true)
 (declare-sort BoundSet 0)
 (declare-sort UnboundSet 0)
+(set-option :finite-model-find true)
 (declare-fun IsHasSkateboard (BoundSet) Bool)
 (declare-fun HasSkateboard (BoundSet) Bool)
 (declare-fun IsInBlackShirt (BoundSet) Bool)

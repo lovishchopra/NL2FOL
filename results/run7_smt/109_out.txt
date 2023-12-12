@@ -9,3 +9,5 @@ unknown
 (define-fun HasHandOnShoulder ((BOUND_VARIABLE_448 BoundSet)) Bool true)
 (define-fun IsTouching ((BOUND_VARIABLE_460 BoundSet) (BOUND_VARIABLE_461 BoundSet)) Bool false)
 )
+unsat
+(error "Cannot get the current model unless immediately preceded by SAT/INVALID or UNKNOWN response.")

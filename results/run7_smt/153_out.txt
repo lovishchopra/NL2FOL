@@ -11,3 +11,5 @@ unknown
 (define-fun IsAtNight ((BOUND_VARIABLE_437 BoundSet)) Bool true)
 (define-fun IsOutside ((BOUND_VARIABLE_437 BoundSet)) Bool false)
 )
+unsat
+(error "Cannot get the current model unless immediately preceded by SAT/INVALID or UNKNOWN response.")

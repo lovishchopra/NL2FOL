@@ -2,6 +2,7 @@
 (set-option :produce-models true)
 (declare-sort BoundSet 0)
 (declare-sort UnboundSet 0)
+(set-option :finite-model-find true)
 (declare-fun IsInOrange (BoundSet) Bool)
 (declare-fun IsRefutingArguments (BoundSet) Bool)
 (declare-fun LaunchesCounterargument (BoundSet BoundSet) Bool)

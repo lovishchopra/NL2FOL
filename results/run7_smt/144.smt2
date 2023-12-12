@@ -2,6 +2,7 @@
 (set-option :produce-models true)
 (declare-sort BoundSet 0)
 (declare-sort UnboundSet 0)
+(set-option :finite-model-find true)
 (declare-fun IsSittingAlone (BoundSet) Bool)
 (declare-fun IsInParkBench (BoundSet) Bool)
 (declare-fun IsInSun (BoundSet) Bool)

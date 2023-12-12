@@ -8,3 +8,13 @@ unknown
 (define-fun RequiresNoMaintenance ((BOUND_VARIABLE_369 BoundSet)) Bool false)
 (define-fun IsInexpensive ((BOUND_VARIABLE_369 BoundSet)) Bool false)
 )
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+(declare-sort UnboundSet 0)
+(define-fun IsEasyToKeep ((BOUND_VARIABLE_403 BoundSet)) Bool true)
+(define-fun RequiresNoMaintenance ((BOUND_VARIABLE_403 BoundSet)) Bool true)
+(define-fun IsInexpensive ((BOUND_VARIABLE_403 BoundSet)) Bool false)
+)

@@ -8,3 +8,13 @@ unknown
 (define-fun IsReachedTheClassroom ((BOUND_VARIABLE_366 BoundSet)) Bool false)
 (define-fun IsUsedForEducation ((BOUND_VARIABLE_366 BoundSet)) Bool false)
 )
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+(declare-sort UnboundSet 0)
+(define-fun IsNeeded ((BOUND_VARIABLE_404 BoundSet)) Bool false)
+(define-fun IsReachedTheClassroom ((BOUND_VARIABLE_404 BoundSet)) Bool false)
+(define-fun IsUsedForEducation ((BOUND_VARIABLE_404 BoundSet)) Bool false)
+)

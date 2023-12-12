@@ -11,3 +11,14 @@ unknown
 (define-fun ShouldNotAllow ((BOUND_VARIABLE_389 BoundSet) (BOUND_VARIABLE_390 BoundSet)) Bool false)
 (define-fun IsAStudent ((BOUND_VARIABLE_395 BoundSet)) Bool false)
 )
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+(declare-sort UnboundSet 0)
+(define-fun IsAllowed ((BOUND_VARIABLE_417 BoundSet) (BOUND_VARIABLE_418 BoundSet)) Bool true)
+(define-fun WantsToRedo ((BOUND_VARIABLE_423 BoundSet)) Bool true)
+(define-fun ShouldNotAllow ((BOUND_VARIABLE_417 BoundSet) (BOUND_VARIABLE_418 BoundSet)) Bool true)
+(define-fun IsAStudent ((BOUND_VARIABLE_423 BoundSet)) Bool true)
+)

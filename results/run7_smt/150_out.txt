@@ -8,3 +8,5 @@ unknown
 (define-fun IsEnjoyed ((BOUND_VARIABLE_395 BoundSet) (BOUND_VARIABLE_396 BoundSet)) Bool true)
 (define-fun IsOutdoors ((BOUND_VARIABLE_405 BoundSet)) Bool false)
 )
+unsat
+(error "Cannot get the current model unless immediately preceded by SAT/INVALID or UNKNOWN response.")

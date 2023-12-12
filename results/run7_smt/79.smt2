@@ -2,6 +2,7 @@
 (set-option :produce-models true)
 (declare-sort BoundSet 0)
 (declare-sort UnboundSet 0)
+(set-option :finite-model-find true)
 (declare-fun IsGrown (BoundSet) Bool)
 (declare-fun IsInjured (BoundSet) Bool)
 (assert (not (=> (exists ((b BoundSet)) (not (IsGrown b))) (exists ((a BoundSet)) (IsInjured a)))))

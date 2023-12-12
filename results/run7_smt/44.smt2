@@ -2,6 +2,7 @@
 (set-option :produce-models true)
 (declare-sort BoundSet 0)
 (declare-sort UnboundSet 0)
+(set-option :finite-model-find true)
 (declare-fun IsAveraging (BoundSet) Bool)
 (declare-fun IsSuperior (BoundSet BoundSet) Bool)
 (assert (not (=> (and (exists ((a BoundSet)) (IsAveraging a)) (and (forall ((c BoundSet)) (forall ((d BoundSet)) (=> (IsAveraging c) (IsSuperior c d)))) (forall ((e BoundSet)) (forall ((f BoundSet)) (=> (IsSuperior e f) (IsAveraging e)))))) (exists ((b BoundSet)) (exists ((a BoundSet)) (IsSuperior a b))))))

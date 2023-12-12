@@ -9,3 +9,5 @@ unknown
 (define-fun IsOnBike ((BOUND_VARIABLE_405 BoundSet)) Bool true)
 (define-fun IsRidingBike ((BOUND_VARIABLE_405 BoundSet)) Bool false)
 )
+unsat
+(error "Cannot get the current model unless immediately preceded by SAT/INVALID or UNKNOWN response.")

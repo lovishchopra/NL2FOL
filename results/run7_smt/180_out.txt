@@ -8,3 +8,12 @@ unknown
 (define-fun IsStandingNear ((BOUND_VARIABLE_370 BoundSet) (BOUND_VARIABLE_371 BoundSet)) Bool true)
 (define-fun HasWhiteHair ((BOUND_VARIABLE_377 BoundSet)) Bool false)
 )
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+(declare-sort UnboundSet 0)
+(define-fun IsStandingNear ((BOUND_VARIABLE_391 BoundSet) (BOUND_VARIABLE_392 BoundSet)) Bool true)
+(define-fun HasWhiteHair ((BOUND_VARIABLE_398 BoundSet)) Bool false)
+)

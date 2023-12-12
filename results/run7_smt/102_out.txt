@@ -12,3 +12,5 @@ unknown
 (define-fun IsWearing ((BOUND_VARIABLE_505 BoundSet)) Bool false)
 (define-fun IsSewing ((BOUND_VARIABLE_505 BoundSet)) Bool false)
 )
+unsat
+(error "Cannot get the current model unless immediately preceded by SAT/INVALID or UNKNOWN response.")

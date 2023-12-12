@@ -2,6 +2,7 @@
 (set-option :produce-models true)
 (declare-sort BoundSet 0)
 (declare-sort UnboundSet 0)
+(set-option :finite-model-find true)
 (declare-fun IsOnSlide (BoundSet) Bool)
 (declare-fun IsSmall (BoundSet) Bool)
 (assert (not (=> (exists ((b BoundSet)) (IsOnSlide b)) (exists ((c BoundSet)) (exists ((a BoundSet)) (and (IsSmall c) (IsOnSlide a)))))))

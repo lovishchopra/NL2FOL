@@ -2,6 +2,7 @@
 (set-option :produce-models true)
 (declare-sort BoundSet 0)
 (declare-sort UnboundSet 0)
+(set-option :finite-model-find true)
 (declare-fun IsRubbing (BoundSet) Bool)
 (declare-fun IsInYellowTie (BoundSet) Bool)
 (assert (not (=> (exists ((b BoundSet)) (IsRubbing b)) (exists ((c BoundSet)) (exists ((d BoundSet)) (and (IsInYellowTie c) (IsRubbing d)))))))

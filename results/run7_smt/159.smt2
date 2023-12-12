@@ -2,6 +2,7 @@
 (set-option :produce-models true)
 (declare-sort BoundSet 0)
 (declare-sort UnboundSet 0)
+(set-option :finite-model-find true)
 (declare-fun IsPlayingIn (BoundSet BoundSet) Bool)
 (declare-fun IsBeautiful (BoundSet) Bool)
 (assert (not (=> (exists ((b BoundSet)) (exists ((a BoundSet)) (IsPlayingIn a b))) (exists ((c BoundSet)) (IsBeautiful c)))))

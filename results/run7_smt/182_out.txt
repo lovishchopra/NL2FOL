@@ -13,3 +13,16 @@ unknown
 (define-fun IsWearing ((BOUND_VARIABLE_462 BoundSet) (BOUND_VARIABLE_463 BoundSet)) Bool false)
 (define-fun IsFive ((BOUND_VARIABLE_468 BoundSet)) Bool false)
 )
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+(declare-sort UnboundSet 0)
+(define-fun IsWears ((BOUND_VARIABLE_517 BoundSet) (BOUND_VARIABLE_518 BoundSet)) Bool true)
+(define-fun IsGray ((BOUND_VARIABLE_523 BoundSet)) Bool true)
+(define-fun IsYellow ((BOUND_VARIABLE_523 BoundSet)) Bool true)
+(define-fun IsHeeled ((BOUND_VARIABLE_523 BoundSet)) Bool false)
+(define-fun IsWearing ((BOUND_VARIABLE_517 BoundSet) (BOUND_VARIABLE_518 BoundSet)) Bool true)
+(define-fun IsFive ((BOUND_VARIABLE_523 BoundSet)) Bool false)
+)

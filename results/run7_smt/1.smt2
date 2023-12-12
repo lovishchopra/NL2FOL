@@ -2,6 +2,7 @@
 (set-option :produce-models true)
 (declare-sort BoundSet 0)
 (declare-sort UnboundSet 0)
+(set-option :finite-model-find true)
 (declare-fun IsLivedExactlyLike (BoundSet BoundSet) Bool)
 (declare-fun IsBeautiful (BoundSet) Bool)
 (declare-fun IsAPlace (BoundSet) Bool)

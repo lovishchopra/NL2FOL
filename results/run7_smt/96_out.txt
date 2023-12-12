@@ -8,3 +8,12 @@ unknown
 (define-fun IsWanted ((BOUND_VARIABLE_336 BoundSet) (BOUND_VARIABLE_337 BoundSet)) Bool true)
 (define-fun IsTerriblePerson ((BOUND_VARIABLE_346 BoundSet)) Bool false)
 )
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+(declare-sort UnboundSet 0)
+(define-fun IsWanted ((BOUND_VARIABLE_366 BoundSet) (BOUND_VARIABLE_367 BoundSet)) Bool true)
+(define-fun IsTerriblePerson ((BOUND_VARIABLE_373 BoundSet)) Bool false)
+)

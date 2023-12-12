@@ -10,3 +10,5 @@ unknown
 (define-fun HasPassingGrade ((BOUND_VARIABLE_505 BoundSet)) Bool true)
 (define-fun DeservesPassingGrade ((BOUND_VARIABLE_499 BoundSet) (BOUND_VARIABLE_500 BoundSet)) Bool false)
 )
+unsat
+(error "Cannot get the current model unless immediately preceded by SAT/INVALID or UNKNOWN response.")

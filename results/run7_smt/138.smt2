@@ -2,6 +2,7 @@
 (set-option :produce-models true)
 (declare-sort BoundSet 0)
 (declare-sort UnboundSet 0)
+(set-option :finite-model-find true)
 (declare-fun c1 () BoundSet)
 (declare-fun c2 () BoundSet)
 (declare-fun IsRunTogether (BoundSet) Bool)

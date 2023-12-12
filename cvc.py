@@ -389,7 +389,7 @@ class CVCGenerator:
         # Initial declarations in CVC
         cvc_str = "(set-logic ALL)\n(set-option :produce-models true)\n(declare-sort BoundSet 0)\n(declare-sort UnboundSet 0)"
         if finite_model_finding:
-            cvc_str += ("\n(set-option :finite-model-find true)"   # Finite model finding, enabled only in selective cases
+            cvc_str += ("\n(set-option :finite-model-find true)")   # Finite model finding, enabled only in selective cases
                         
         prefix_formula = CVCGenerator.generatePrefixFormula(self.tokens)
         
@@ -417,6 +417,6 @@ if __name__ == "__main__":
         print('Usage: python cvc.py "<fol>"')
         sys.exit(1)
 
-    script = CVCGenerator(sys.argv[1].replace("ForAll", "forall").replace("ThereExists", "exists").replace("&", "and").replace("~", "not ").generateCVCScript()
+    script = CVCGenerator(sys.argv[1].replace("ForAll", "forall").replace("ThereExists", "exists").replace("&", "and").replace("~", "not ")).generateCVCScript()
     print(script)
 

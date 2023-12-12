@@ -2,6 +2,7 @@
 (set-option :produce-models true)
 (declare-sort BoundSet 0)
 (declare-sort UnboundSet 0)
+(set-option :finite-model-find true)
 (declare-fun IsPlayingWith (BoundSet BoundSet) Bool)
 (declare-fun IsLiftedIntoTheAir (BoundSet) Bool)
 (declare-fun IsWearingNoShirt (BoundSet) Bool)

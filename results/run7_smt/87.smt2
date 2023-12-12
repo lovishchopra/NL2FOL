@@ -2,6 +2,7 @@
 (set-option :produce-models true)
 (declare-sort BoundSet 0)
 (declare-sort UnboundSet 0)
+(set-option :finite-model-find true)
 (declare-fun IsLessFatThan (BoundSet BoundSet) Bool)
 (declare-fun IsNotAsHotAs (BoundSet BoundSet) Bool)
 (declare-fun ShouldBeEatenInsteadOf (BoundSet BoundSet) Bool)

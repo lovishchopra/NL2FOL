@@ -2,6 +2,7 @@
 (set-option :produce-models true)
 (declare-sort BoundSet 0)
 (declare-sort UnboundSet 0)
+(set-option :finite-model-find true)
 (declare-fun IsLoved (BoundSet BoundSet) Bool)
 (declare-fun IsLacked (BoundSet BoundSet) Bool)
 (assert (not (=> (exists ((b BoundSet)) (exists ((a BoundSet)) (IsLoved a b))) (exists ((c BoundSet)) (exists ((a BoundSet)) (IsLacked a c))))))

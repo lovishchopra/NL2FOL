@@ -10,3 +10,5 @@ unknown
 (define-fun IsOld ((BOUND_VARIABLE_453 BoundSet)) Bool false)
 (define-fun IsLookingAt ((BOUND_VARIABLE_453 BoundSet)) Bool false)
 )
+unsat
+(error "Cannot get the current model unless immediately preceded by SAT/INVALID or UNKNOWN response.")

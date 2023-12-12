@@ -9,3 +9,13 @@ unknown
 (define-fun IsOnAmusementSlide ((BOUND_VARIABLE_379 BoundSet)) Bool true)
 (define-fun IsOnSlide ((BOUND_VARIABLE_379 BoundSet)) Bool false)
 )
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+(declare-sort UnboundSet 0)
+(define-fun IsOnHisKnees ((BOUND_VARIABLE_411 BoundSet)) Bool true)
+(define-fun IsOnAmusementSlide ((BOUND_VARIABLE_411 BoundSet)) Bool true)
+(define-fun IsOnSlide ((BOUND_VARIABLE_411 BoundSet)) Bool false)
+)

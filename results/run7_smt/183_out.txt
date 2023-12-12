@@ -9,3 +9,5 @@ unknown
 (define-fun IsPlayingTugOfWar ((BOUND_VARIABLE_382 BoundSet)) Bool true)
 (define-fun WillOccur ((BOUND_VARIABLE_382 BoundSet)) Bool false)
 )
+unsat
+(error "Cannot get the current model unless immediately preceded by SAT/INVALID or UNKNOWN response.")

@@ -9,3 +9,13 @@ unknown
 (define-fun IsJaneFonda ((BOUND_VARIABLE_377 BoundSet)) Bool true)
 (define-fun IsInGreatShape ((BOUND_VARIABLE_377 BoundSet)) Bool false)
 )
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+(declare-sort UnboundSet 0)
+(define-fun IsWorthTheMoney ((BOUND_VARIABLE_409 BoundSet)) Bool true)
+(define-fun IsJaneFonda ((BOUND_VARIABLE_409 BoundSet)) Bool true)
+(define-fun IsInGreatShape ((BOUND_VARIABLE_409 BoundSet)) Bool false)
+)

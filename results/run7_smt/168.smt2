@@ -2,6 +2,7 @@
 (set-option :produce-models true)
 (declare-sort BoundSet 0)
 (declare-sort UnboundSet 0)
+(set-option :finite-model-find true)
 (declare-fun IsInParade (BoundSet) Bool)
 (declare-fun IsPink (BoundSet) Bool)
 (declare-fun IsMarching (BoundSet) Bool)

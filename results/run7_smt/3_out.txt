@@ -7,3 +7,12 @@ unknown
 (define-fun IsInSpookyCabin ((BOUND_VARIABLE_359 BoundSet)) Bool true)
 (define-fun ShouldBreakInto ((BOUND_VARIABLE_371 BoundSet) (BOUND_VARIABLE_372 BoundSet)) Bool false)
 )
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+(declare-sort UnboundSet 0)
+(define-fun IsInSpookyCabin ((BOUND_VARIABLE_385 BoundSet)) Bool true)
+(define-fun ShouldBreakInto ((BOUND_VARIABLE_393 BoundSet) (BOUND_VARIABLE_394 BoundSet)) Bool false)
+)

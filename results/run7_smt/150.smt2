@@ -2,6 +2,7 @@
 (set-option :produce-models true)
 (declare-sort BoundSet 0)
 (declare-sort UnboundSet 0)
+(set-option :finite-model-find true)
 (declare-fun IsEnjoyed (BoundSet BoundSet) Bool)
 (declare-fun IsOutdoors (BoundSet) Bool)
 (assert (not (=> (and (exists ((b BoundSet)) (exists ((a BoundSet)) (IsEnjoyed a b))) (and (forall ((g BoundSet)) (forall ((e BoundSet)) (forall ((f BoundSet)) (=> (IsEnjoyed e f) (IsOutdoors g))))) (forall ((h BoundSet)) (forall ((j BoundSet)) (forall ((i BoundSet)) (=> (IsOutdoors h) (IsEnjoyed i j))))))) (exists ((d BoundSet)) (IsOutdoors d)))))

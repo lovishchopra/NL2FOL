@@ -2,6 +2,7 @@
 (set-option :produce-models true)
 (declare-sort BoundSet 0)
 (declare-sort UnboundSet 0)
+(set-option :finite-model-find true)
 (declare-fun IsKickedUp (BoundSet) Bool)
 (declare-fun IsOnFourWheeler (BoundSet) Bool)
 (declare-fun IsClear (BoundSet) Bool)

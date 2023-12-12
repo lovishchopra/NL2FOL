@@ -8,3 +8,13 @@ unknown
 (define-fun IsWearingBlueAndYellowBowlerHat ((BOUND_VARIABLE_337 BoundSet)) Bool false)
 (define-fun IsSpeakingIntoHeadsetMicrophone ((BOUND_VARIABLE_337 BoundSet)) Bool false)
 )
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+(declare-sort UnboundSet 0)
+(define-fun IsUsingHandsFreeMicrophone ((BOUND_VARIABLE_373 BoundSet)) Bool true)
+(define-fun IsWearingBlueAndYellowBowlerHat ((BOUND_VARIABLE_373 BoundSet)) Bool false)
+(define-fun IsSpeakingIntoHeadsetMicrophone ((BOUND_VARIABLE_373 BoundSet)) Bool true)
+)

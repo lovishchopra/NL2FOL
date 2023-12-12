@@ -9,3 +9,5 @@ unknown
 (define-fun IsWorkingHard ((BOUND_VARIABLE_428 BoundSet)) Bool false)
 (define-fun IsInFactory ((BOUND_VARIABLE_428 BoundSet)) Bool false)
 )
+unsat
+(error "Cannot get the current model unless immediately preceded by SAT/INVALID or UNKNOWN response.")

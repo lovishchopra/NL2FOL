@@ -2,6 +2,7 @@
 (set-option :produce-models true)
 (declare-sort BoundSet 0)
 (declare-sort UnboundSet 0)
+(set-option :finite-model-find true)
 (declare-fun IsThreatened (BoundSet) Bool)
 (declare-fun MustAddress (BoundSet) Bool)
 (assert (not (=> (exists ((b BoundSet)) (IsThreatened b)) (exists ((c BoundSet)) (MustAddress c)))))

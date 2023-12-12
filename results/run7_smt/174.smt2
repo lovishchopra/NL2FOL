@@ -2,6 +2,7 @@
 (set-option :produce-models true)
 (declare-sort BoundSet 0)
 (declare-sort UnboundSet 0)
+(set-option :finite-model-find true)
 (declare-fun IsSmall (BoundSet) Bool)
 (declare-fun IsOnPavedPath (BoundSet) Bool)
 (declare-fun IsA (BoundSet) Bool)

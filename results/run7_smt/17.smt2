@@ -2,6 +2,7 @@
 (set-option :produce-models true)
 (declare-sort BoundSet 0)
 (declare-sort UnboundSet 0)
+(set-option :finite-model-find true)
 (declare-fun IsADD (BoundSet) Bool)
 (declare-fun IsWantingToCleanOut (BoundSet BoundSet) Bool)
 (assert (not (=> (exists ((b BoundSet)) (IsADD b)) (exists ((c BoundSet)) (exists ((a BoundSet)) (not (IsWantingToCleanOut a c)))))))

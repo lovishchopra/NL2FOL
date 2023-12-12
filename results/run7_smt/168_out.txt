@@ -12,3 +12,15 @@ unknown
 (define-fun IsMarchingBy ((BOUND_VARIABLE_455 BoundSet)) Bool false)
 (define-fun IsInSameColor ((BOUND_VARIABLE_455 BoundSet)) Bool false)
 )
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+(declare-sort UnboundSet 0)
+(define-fun IsInParade ((BOUND_VARIABLE_507 BoundSet)) Bool true)
+(define-fun IsPink ((BOUND_VARIABLE_507 BoundSet)) Bool true)
+(define-fun IsMarching ((BOUND_VARIABLE_507 BoundSet)) Bool true)
+(define-fun IsMarchingBy ((BOUND_VARIABLE_507 BoundSet)) Bool false)
+(define-fun IsInSameColor ((BOUND_VARIABLE_507 BoundSet)) Bool false)
+)

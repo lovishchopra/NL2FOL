@@ -10,3 +10,15 @@ unknown
 (define-fun IsOutShopping ((BOUND_VARIABLE_407 BoundSet)) Bool false)
 (define-fun IsInBasket ((BOUND_VARIABLE_407 BoundSet)) Bool false)
 )
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+(declare-sort UnboundSet 0)
+(define-fun IsWearingBlueShorts ((BOUND_VARIABLE_438 BoundSet)) Bool true)
+(define-fun IsWearingBlackTop ((BOUND_VARIABLE_438 BoundSet)) Bool true)
+(define-fun IsWearingPurpleHat ((BOUND_VARIABLE_438 BoundSet)) Bool true)
+(define-fun IsOutShopping ((BOUND_VARIABLE_438 BoundSet)) Bool false)
+(define-fun IsInBasket ((BOUND_VARIABLE_438 BoundSet)) Bool false)
+)

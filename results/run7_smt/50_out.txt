@@ -10,3 +10,13 @@ unknown
 (define-fun HasAnIPhone ((BOUND_VARIABLE_409 BoundSet)) Bool true)
 (define-fun ShouldBuy ((BOUND_VARIABLE_403 BoundSet) (BOUND_VARIABLE_404 BoundSet)) Bool false)
 )
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+(declare-sort UnboundSet 0)
+(define-fun IsAt ((BOUND_VARIABLE_443 BoundSet) (BOUND_VARIABLE_444 BoundSet)) Bool true)
+(define-fun HasAnIPhone ((BOUND_VARIABLE_449 BoundSet)) Bool true)
+(define-fun ShouldBuy ((BOUND_VARIABLE_443 BoundSet) (BOUND_VARIABLE_444 BoundSet)) Bool false)
+)
