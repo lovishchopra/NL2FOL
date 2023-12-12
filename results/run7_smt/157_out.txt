@@ -1,0 +1,11 @@
+unknown
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+(declare-sort UnboundSet 0)
+(define-fun IsPointingTowards ((BOUND_VARIABLE_363 BoundSet) (BOUND_VARIABLE_364 BoundSet)) Bool true)
+(define-fun IsPointing ((BOUND_VARIABLE_363 BoundSet) (BOUND_VARIABLE_364 BoundSet)) Bool false)
+(define-fun IsUpward ((BOUND_VARIABLE_382 BoundSet)) Bool false)
+)

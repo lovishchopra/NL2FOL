@@ -1,0 +1,11 @@
+unknown
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+(declare-sort UnboundSet 0)
+(define-fun IsSteadilyCompleting ((BOUND_VARIABLE_418 BoundSet) (BOUND_VARIABLE_419 BoundSet)) Bool true)
+(define-fun IsWorkingHard ((BOUND_VARIABLE_428 BoundSet)) Bool false)
+(define-fun IsInFactory ((BOUND_VARIABLE_428 BoundSet)) Bool false)
+)

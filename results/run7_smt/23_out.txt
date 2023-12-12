@@ -1,0 +1,14 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+(declare-sort UnboundSet 0)
+(define-fun IsPosted ((BOUND_VARIABLE_425 BoundSet)) Bool true)
+(define-fun IsInCastleChurch ((BOUND_VARIABLE_425 BoundSet)) Bool true)
+(define-fun IsInWittenberg ((BOUND_VARIABLE_425 BoundSet)) Bool true)
+(define-fun IsBelieving ((BOUND_VARIABLE_425 BoundSet)) Bool false)
+(define-fun IsSimplisticViewOfHistory ((BOUND_VARIABLE_425 BoundSet)) Bool false)
+)

@@ -1,0 +1,12 @@
+unknown
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+(declare-sort UnboundSet 0)
+(define-fun IsPreyedOn ((BOUND_VARIABLE_378 BoundSet)) Bool true)
+(define-fun IsSensitive ((BOUND_VARIABLE_378 BoundSet)) Bool true)
+(define-fun IsTurnedInto ((BOUND_VARIABLE_378 BoundSet)) Bool false)
+(define-fun IsSlippery ((BOUND_VARIABLE_378 BoundSet)) Bool false)
+)

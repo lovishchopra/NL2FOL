@@ -1,0 +1,13 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+(declare-sort UnboundSet 0)
+(define-fun IsInField ((BOUND_VARIABLE_382 BoundSet)) Bool true)
+(define-fun HasTennisBall ((BOUND_VARIABLE_382 BoundSet)) Bool true)
+(define-fun IsHis ((BOUND_VARIABLE_382 BoundSet)) Bool true)
+(define-fun IsOutside ((BOUND_VARIABLE_382 BoundSet)) Bool false)
+)

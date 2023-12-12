@@ -1,0 +1,11 @@
+unknown
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+(declare-sort UnboundSet 0)
+(define-fun IsBanned ((BOUND_VARIABLE_379 BoundSet)) Bool true)
+(define-fun IsBadFor ((BOUND_VARIABLE_379 BoundSet)) Bool true)
+(define-fun WillBeBanned ((BOUND_VARIABLE_379 BoundSet)) Bool false)
+)

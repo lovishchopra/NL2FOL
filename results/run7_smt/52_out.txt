@@ -1,0 +1,12 @@
+unknown
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+(declare-sort UnboundSet 0)
+(define-fun IsStayingInside ((BOUND_VARIABLE_385 BoundSet)) Bool true)
+(define-fun IsBendingCurve ((BOUND_VARIABLE_385 BoundSet)) Bool true)
+(define-fun IsLosingJobs ((BOUND_VARIABLE_385 BoundSet)) Bool false)
+(define-fun IsNecessaryConsequence ((BOUND_VARIABLE_401 BoundSet) (BOUND_VARIABLE_402 BoundSet)) Bool false)
+)

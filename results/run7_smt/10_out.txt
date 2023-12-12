@@ -1,0 +1,13 @@
+unknown
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+(declare-sort UnboundSet 0)
+(define-fun IsRun ((BOUND_VARIABLE_394 BoundSet)) Bool true)
+(define-fun IsStatisticallyIndependent ((BOUND_VARIABLE_394 BoundSet)) Bool true)
+(define-fun IsRoutine ((BOUND_VARIABLE_394 BoundSet)) Bool false)
+(define-fun IsWheel ((BOUND_VARIABLE_394 BoundSet)) Bool false)
+(define-fun IsSpirit ((BOUND_VARIABLE_394 BoundSet)) Bool false)
+)

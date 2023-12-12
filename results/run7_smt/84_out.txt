@@ -1,0 +1,10 @@
+unknown
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+(declare-sort UnboundSet 0)
+(define-fun IsInBadShape ((BOUND_VARIABLE_395 BoundSet)) Bool true)
+(define-fun IsTornDown ((BOUND_VARIABLE_395 BoundSet)) Bool false)
+(define-fun Must ((BOUND_VARIABLE_395 BoundSet)) Bool false)
+)

@@ -1,0 +1,8 @@
+unknown
+(model
+(declare-sort BoundSet 0)
+(declare-sort UnboundSet 0)
+(define-fun IsCooking ((BOUND_VARIABLE_299 BoundSet)) Bool false)
+(define-fun IsTalking ((BOUND_VARIABLE_310 BoundSet) (BOUND_VARIABLE_311 BoundSet)) Bool false)
+(define-fun IsInKitchen ((BOUND_VARIABLE_299 BoundSet)) Bool false)
+)

@@ -1,0 +1,12 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+(declare-sort UnboundSet 0)
+(define-fun IsAt ((BOUND_VARIABLE_403 BoundSet) (BOUND_VARIABLE_404 BoundSet)) Bool true)
+(define-fun HasAnIPhone ((BOUND_VARIABLE_409 BoundSet)) Bool true)
+(define-fun ShouldBuy ((BOUND_VARIABLE_403 BoundSet) (BOUND_VARIABLE_404 BoundSet)) Bool false)
+)

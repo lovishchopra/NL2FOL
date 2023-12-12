@@ -1,0 +1,11 @@
+unknown
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+(declare-sort UnboundSet 0)
+(define-fun IsOnLadder ((BOUND_VARIABLE_373 BoundSet)) Bool true)
+(define-fun IsPainting ((BOUND_VARIABLE_373 BoundSet)) Bool true)
+(define-fun IsBricks ((BOUND_VARIABLE_373 BoundSet)) Bool false)
+)

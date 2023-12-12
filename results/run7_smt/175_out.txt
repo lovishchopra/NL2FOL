@@ -1,0 +1,12 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+(declare-sort UnboundSet 0)
+(define-fun IsBroughtBy ((BOUND_VARIABLE_410 BoundSet) (BOUND_VARIABLE_411 BoundSet)) Bool true)
+(define-fun IsSeated ((BOUND_VARIABLE_416 BoundSet)) Bool true)
+(define-fun IsGottenFrom ((BOUND_VARIABLE_410 BoundSet) (BOUND_VARIABLE_411 BoundSet)) Bool false)
+)

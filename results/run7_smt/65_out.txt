@@ -1,0 +1,14 @@
+unknown
+(model
+; cardinality of BoundSet is 4
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+(declare-sort UnboundSet 0)
+(define-fun IsFilledWith ((BOUND_VARIABLE_396 BoundSet) (BOUND_VARIABLE_397 BoundSet)) Bool true)
+(define-fun IsSaturated ((BOUND_VARIABLE_402 BoundSet)) Bool true)
+(define-fun IsAdded ((BOUND_VARIABLE_402 BoundSet)) Bool true)
+(define-fun IsHypocrite ((BOUND_VARIABLE_402 BoundSet)) Bool false)
+)

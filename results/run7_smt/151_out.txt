@@ -1,0 +1,14 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+(declare-sort UnboundSet 0)
+(define-fun IsBearded ((BOUND_VARIABLE_505 BoundSet)) Bool true)
+(define-fun IsDressedForColdWeather ((BOUND_VARIABLE_505 BoundSet)) Bool (= @uc_BoundSet_1 BOUND_VARIABLE_505))
+(define-fun IsWearingFurLinedJacket ((BOUND_VARIABLE_505 BoundSet)) Bool false)
+(define-fun IsWearingHat ((BOUND_VARIABLE_505 BoundSet)) Bool false)
+(define-fun IsSittingOnBench ((BOUND_VARIABLE_505 BoundSet)) Bool false)
+)

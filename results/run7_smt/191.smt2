@@ -1,0 +1,8 @@
+(set-logic ALL)
+(set-option :produce-models true)
+(declare-sort BoundSet 0)
+(declare-sort UnboundSet 0)
+(declare-fun IsJumpedAt (BoundSet) Bool)
+(assert (not (=> (exists ((a BoundSet)) (IsJumpedAt a)) (exists ((b BoundSet)) (IsJumpedAt b)))))
+(check-sat)
+(get-model)

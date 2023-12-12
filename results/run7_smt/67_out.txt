@@ -1,0 +1,13 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+(declare-sort UnboundSet 0)
+(define-fun IsHaunted ((BOUND_VARIABLE_388 BoundSet)) Bool true)
+(define-fun IsInOffice ((BOUND_VARIABLE_388 BoundSet)) Bool true)
+(define-fun IsGhost ((BOUND_VARIABLE_388 BoundSet)) Bool true)
+(define-fun IsA ((BOUND_VARIABLE_400 BoundSet) (BOUND_VARIABLE_401 BoundSet)) Bool false)
+)

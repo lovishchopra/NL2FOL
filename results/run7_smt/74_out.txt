@@ -1,0 +1,11 @@
+unknown
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+(declare-sort UnboundSet 0)
+(define-fun IsTooLittle ((BOUND_VARIABLE_363 BoundSet)) Bool true)
+(define-fun IsUnrepresentative ((BOUND_VARIABLE_363 BoundSet)) Bool false)
+(define-fun IsMakeClaim ((BOUND_VARIABLE_363 BoundSet)) Bool false)
+(define-fun IsClaim ((BOUND_VARIABLE_363 BoundSet)) Bool false)
+)

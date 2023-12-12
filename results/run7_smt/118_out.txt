@@ -1,0 +1,13 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+(declare-sort UnboundSet 0)
+(define-fun IsEaten ((BOUND_VARIABLE_526 BoundSet) (BOUND_VARIABLE_527 BoundSet)) Bool true)
+(define-fun SmellsAwful ((BOUND_VARIABLE_532 BoundSet)) Bool true)
+(define-fun HasObviousPungentOdor ((BOUND_VARIABLE_526 BoundSet) (BOUND_VARIABLE_527 BoundSet)) Bool false)
+(define-fun IsPlugged ((BOUND_VARIABLE_526 BoundSet) (BOUND_VARIABLE_527 BoundSet)) Bool false)
+)

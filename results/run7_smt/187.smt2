@@ -1,0 +1,8 @@
+(set-logic ALL)
+(set-option :produce-models true)
+(declare-sort BoundSet 0)
+(declare-sort UnboundSet 0)
+(declare-fun IsRun (BoundSet) Bool)
+(assert (not (=> (exists ((a BoundSet)) (IsRun a)) (exists ((a BoundSet)) (IsRun a)))))
+(check-sat)
+(get-model)

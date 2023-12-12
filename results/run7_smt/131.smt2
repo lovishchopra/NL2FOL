@@ -1,0 +1,8 @@
+(set-logic ALL)
+(set-option :produce-models true)
+(declare-sort BoundSet 0)
+(declare-sort UnboundSet 0)
+(declare-fun IsOnStage (BoundSet) Bool)
+(assert (not (=> (exists ((b BoundSet)) (IsOnStage b)) (exists ((c BoundSet)) (IsOnStage c)))))
+(check-sat)
+(get-model)

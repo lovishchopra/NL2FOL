@@ -1,0 +1,11 @@
+unknown
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+(declare-sort UnboundSet 0)
+(define-fun IsCausedBySneeze ((BOUND_VARIABLE_355 BoundSet)) Bool true)
+(define-fun IsOff ((BOUND_VARIABLE_355 BoundSet)) Bool true)
+(define-fun HasSuperpowers ((BOUND_VARIABLE_355 BoundSet)) Bool false)
+)
