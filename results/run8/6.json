@@ -1,7 +1,0 @@
-{
-    "Claim": " \"The firefighter is putting something under the car.\"",
-    "Implication": " \"The firefighter is putting wooden blocks under the car.\"",
-    "Referring expressions": " The firefighter, something, car.  The firefighter, wooden blocks, car.",
-    "Properties": " IsPutting(a,c),  IsUnder(b)  IsPutting(a,d),  IsUnder(b)",
-    "Formula": "(exists c (exists b (exists a (IsPutting(a,c) and IsUnder(b))))) -> (exists d (exists b (exists a (IsPutting(a,d) and IsUnder(b)))))"
-}

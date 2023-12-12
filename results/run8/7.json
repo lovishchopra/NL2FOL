@@ -1,7 +1,0 @@
-{
-    "Claim": " \"A Hispanic woman wearing a red plaid shirt works on sewing an article of clothing.\"",
-    "Implication": " \"A woman wearing a shirt is sewing.\"",
-    "Referring expressions": " Hispanic woman, red plaid shirt, article of clothing.  A woman, shirt, sewing.",
-    "Properties": " IsHispanic(a),  IsWearingRedPlaidShirt(b),  WorksOnSewing(c)  IsWearing(e),  IsSewing(f)",
-    "Formula": "(exists c (exists b (exists a (IsHispanic(a) and IsWearingRedPlaidShirt(b) and WorksOnSewing(c)))) & (forall g (forall h (  IsWearingRedPlaidShirt(g) ->  IsWearing(h)))) & (forall j (forall i ( IsWearing(i) ->   IsWearingRedPlaidShirt(j)))) & (forall l (forall k (  WorksOnSewing(k) ->   IsSewing(l)))) & (forall m (forall n (  IsSewing(m) ->   WorksOnSewing(n))))) -> (exists e (exists f (IsWearing(e) and IsSewing(f))))"
-}

@@ -17,5 +17,7 @@ Necessary packages to run the code:
 
 Run instructions:
 - For converting natural language to first order logic on the given dataset: python3 nl_to_fol.py
-- For converting first order logic to SMT files use: 
+- For converting first order logic to SMT files and generate results use: python3 fol_to_cvc.py <Results File>
+- For getting the final result metrics run: python3 get_metrics.py
+- To interpret the SMT results use: python3 interpret_smt_result.py 
 

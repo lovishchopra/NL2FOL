@@ -42,7 +42,7 @@ class NL2FOL:
         return sequences[0]["generated_text"].removeprefix(prompt)
 
     def extract_claim_and_implication(self):
-        with open("prompt_nl_to_ci.txt", encoding="ascii", errors="ignore") as f:
+        with open("prompts/prompt_nl_to_ci.txt", encoding="ascii", errors="ignore") as f:
             prompt = f.read() + self.sentence
         
         result = self.get_llm_result(prompt)
@@ -57,7 +57,7 @@ class NL2FOL:
             print("Implication: ", self.implication)
 
     def get_referring_expressions(self):
-        with open("prompt_referring_expressions.txt", encoding="ascii", errors="ignore") as f:
+        with open("prompts/prompt_referring_expressions.txt", encoding="ascii", errors="ignore") as f:
             prompt = f.read()
 
         result_claim = self.get_llm_result(prompt + self.claim)
@@ -79,14 +79,14 @@ class NL2FOL:
     def get_properties(self):
         if(self.claim=="" or isinstance(self.claim_ref_exp,float) or isinstance(self.implication_ref_exp,float)):
             return
-        with open("prompt_properties.txt", encoding="ascii", errors="ignore") as f:
+        with open("prompts/prompt_properties.txt", encoding="ascii", errors="ignore") as f:
             prompt = f.read()
         prompt_template="Input {} " \
         "Referring Expressions: {} " \
         "Properties: ".format(self.claim,label_values(self.claim_ref_exp,self.entity_mappings))
         prompt1=prompt+prompt_template
         self.claim_properties = first_non_empty_line(self.get_llm_result(prompt1))
-        with open("prompt_properties2.txt", encoding="ascii", errors="ignore") as f:
+        with open("prompts/prompt_properties2.txt", encoding="ascii", errors="ignore") as f:
             prompt = f.read()
         prompt_template="Input {}" \
         "Referring Expressions {}" \
@@ -123,7 +123,7 @@ class NL2FOL:
             print("property implications: ",self.property_implications)
         
     def get_fol(self):
-        with open("prompt_fol.txt", encoding="ascii", errors="ignore") as f:
+        with open("prompts/prompt_fol.txt", encoding="ascii", errors="ignore") as f:
             prompt = f.read()
         if(self.claim=="" or isinstance(self.claim_ref_exp,float) or isinstance(self.implication_ref_exp,float)):
             return

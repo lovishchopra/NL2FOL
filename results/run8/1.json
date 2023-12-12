@@ -1,7 +1,0 @@
-{
-    "Claim": " \"Everyone lived their life exactly like Jesus lived his life\"",
-    "Implication": " \"The world would be a beautiful place\"",
-    "Referring expressions": " Everyone, Jesus, his life  The world, beautiful place",
-    "Properties": " IsLivedExactlyLike(a,b)  IsBeautiful(d),  IsAPlace(e)",
-    "Formula": "(exists c (exists a (IsLivedExactlyLike(a,c)))) -> (exists d (exists e (IsBeautiful(d) and IsAPlace(e))))"
-}

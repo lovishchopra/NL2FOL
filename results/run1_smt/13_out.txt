@@ -1,8 +1,0 @@
-unknown
-(model
-(declare-sort BoundSet 0)
-(declare-sort UnboundSet 0)
-(define-fun b () UnboundSet @uc_UnboundSet_0)
-(define-fun IsWalkedDown ((BOUND_VARIABLE_319 BoundSet) (BOUND_VARIABLE_320 UnboundSet)) Bool false)
-(define-fun IsOutside ((BOUND_VARIABLE_330 BoundSet)) Bool false)
-)

@@ -1,7 +1,0 @@
-{
-    "Claim": " \"A group of people are outside.\"",
-    "Implication": " \"One of the people is on the phone and wearing a green hat.\"",
-    "Referring expressions": " A group of people, outside  One of the people, green hat",
-    "Properties": " IsOutside(a)  IsOnPhone(c),  IsWearingGreenHat(d)",
-    "Formula": "(exists b (IsOutside(b))) -> (exists c (exists d (IsOnPhone(c) and IsWearingGreenHat(d))))"
-}
