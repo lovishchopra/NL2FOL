@@ -4,7 +4,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import transformers
 import torch
 import ast
-from helpers import label_values, first_non_empty_line, split_string_except_in_brackets, extract_propositional_symbols
+from helpers import *
 
 class NL2FOL:
     """
@@ -14,8 +14,8 @@ class NL2FOL:
         self.sentence = sentence
         self.claim = ""
         self.implication = ""
-        self.claim_ref_exp = None
-        self.implication_ref_exp = None
+        self.claim_ref_exp = ""
+        self.implication_ref_exp = ""
         self.pipeline = pipeline
         self.tokenizer = tokenizer
         self.nli_model = nli_model
@@ -29,6 +29,7 @@ class NL2FOL:
         self.claim_lf = ""
         self.implication_lf = ""
         self.final_lf = ""
+        self.final_lf2 = ""
         self.debug = debug
 
     def get_llm_result(self, prompt):
@@ -84,11 +85,18 @@ class NL2FOL:
         "Properties: ".format(self.claim,label_values(self.claim_ref_exp,self.entity_mappings))
         prompt1=prompt+prompt_template
         self.claim_properties = first_non_empty_line(self.get_llm_result(prompt1))
-        prompt_template="Input {} " \
+        with open("prompt_properties2.txt", encoding="ascii", errors="ignore") as f:
+            prompt = f.read()
+        prompt_template="Input {}" \
+        "Referring Expressions {}" \
+        "Properties {}" \
+        "Now extract the properties for the following input: " \
+        "Input {} " \
         "Referring Expressions: {} " \
-        "Properties: ".format(self.implication,label_values(self.implication_ref_exp,self.entity_mappings))
+        "Properties: ".format(self.claim,label_values(self.claim_ref_exp,self.entity_mappings),self.claim_properties,self.implication,label_values(self.implication_ref_exp,self.entity_mappings))
         prompt1=prompt+prompt_template
         self.implication_properties = first_non_empty_line(self.get_llm_result(prompt1))
+        self.claim_properties, self.implication_properties = fix_inconsistent_arities(split_string_except_in_brackets(self.claim_properties,','),split_string_except_in_brackets(self.implication_properties,','))
         if self.debug:
             print("Claim Properties: ", self.claim_properties)
             print("Implication Proeprties ", self.implication_properties)
@@ -100,8 +108,12 @@ class NL2FOL:
         implication_properties=split_string_except_in_brackets(self.implication_properties, ',')
         for c_p in claim_properties:
             for i_p in implication_properties:
-                p=self.get_nli_prob(c_p,i_p)
-                p2=self.get_nli_prob(i_p,c_p)
+                predicate1= c_p.split('(')[0]
+                predicate2 = i_p.split('(')[0]
+                if(predicate1.strip()==predicate2.strip()):
+                    continue
+                p=self.get_nli_prob(replace_variables(self.entity_mappings,c_p),replace_variables(self.entity_mappings,i_p))
+                p2=self.get_nli_prob(replace_variables(self.entity_mappings,i_p),replace_variables(self.entity_mappings,c_p))
                 if p>70:
                     self.property_implications.append((c_p,i_p))
                 if p2>70:
@@ -127,6 +139,8 @@ class NL2FOL:
 
         prompt1=prompt+prompt_template
         self.implication_lf=first_non_empty_line(self.get_llm_result(prompt1))
+        self.claim_lf=remove_text_after_last_parenthesis(self.claim_lf)
+        self.implication_lf=remove_text_after_last_parenthesis(self.implication_lf)
         if self.debug:
             print("Claim Lf: ", self.claim_lf)
             print("Impliation Lf: ",self.implication_lf)
@@ -152,15 +166,15 @@ class NL2FOL:
         implication_res=self.implication_ref_exp.split(",")
         for c_re in claim_res:
             for i_re in implication_res:
+                if c_re.strip().lower() == i_re.strip().lower():
+                    self.equal_entities.append((c_re,i_re))
+                    continue
                 premise=""
                 hypothesis_list=["{} is a subset of {}".format(c_re,i_re),"{} is equal to {}".format(c_re,i_re),"{} is a subset of {}".format(i_re,c_re),'{} is not related to {}'.format(i_re,c_re)]
-                # print(c_re,i_re)
                 probs=self.get_nli_prob_list(premise, hypothesis_list)
-                # print("Probs", probs)
                 result_idx=probs.index(max(probs))
                 if(max(probs)<65):
                     result="Unrelated"
-                    # result_idx=3
                 else:
                     result=hypothesis_list[result_idx]
                     if result_idx==0:
@@ -212,16 +226,15 @@ class NL2FOL:
             subsets=self.subset_entities
         for (subset,superset) in subsets:
             if map[subset] in claim_symbols and map[superset] in implication_symbols:
-                if claim_lf.find("exists {} ".format(map[subset]))==-1:
-                    claim_lf="exists {} ".format(map[subset])+claim_lf
-                if implication_lf.find("forall {} ".format(map[superset]))==-1:
-                    implication_lf="forall {} ".format(map[superset])+implication_lf
+                if claim_lf.find("exists {} ".format(map[subset]))==-1 and claim_lf.find("forall {} ".format(map[subset]))==-1:
+                    claim_lf="exists {} ({})".format(map[subset],claim_lf)
+                if implication_lf.find("forall {}".format(map[superset]))==-1 and implication_lf.find("forall {} ".format(map[subset]))==-1:
+                    implication_lf="forall {} ({})".format(map[superset],implication_lf)
             if map[subset] in implication_symbols and map[superset] in claim_symbols:
-                if implication_lf.find("exists {} ".format(map[subset]))==-1:
-                    implication_lf="exists {} ".format(map[subset])+implication_lf
-                if claim_lf.find("forall {} ".format(map[superset]))==-1:
-                    claim_lf="forall {} ".format(map[superset])+claim_lf
-        self.final_lf="({}) -> ({})".format(claim_lf,implication_lf)
+                if implication_lf.find("exists {} ".format(map[subset]))==-1 and implication_lf.find("forall {} ".format(map[subset]))==-1:
+                    implication_lf="exists {} ({})".format(map[subset],implication_lf)
+                if claim_lf.find("forall {} ".format(map[superset]))==-1 and claim_lf.find("exists {} ".format(map[subset]))==-1:
+                    claim_lf="forall {} ({})".format(map[superset],claim_lf)
         if isinstance(self.property_implications,str):
             prop_imps=ast.literal_eval(self.property_implications)
         else:
@@ -230,10 +243,48 @@ class NL2FOL:
             lf="{} -> {}".format(prop1,prop2)
             lf_symbols=extract_propositional_symbols(lf)
             for symbol in lf_symbols:
-                lf="forall {} ".format(symbol)+lf
-            self.final_lf=self.final_lf+" & ("+lf+")"
+                lf="forall {} ".format(symbol)+'('+lf+')'
+            claim_lf=claim_lf+" & ("+lf+")"
+        self.final_lf="({}) -> ({})".format(claim_lf,implication_lf)
         if self.debug:
             print("Final Lf= ",self.final_lf)
+    
+    def get_final_lf2(self):
+        if isinstance(self.entity_mappings,float):
+            return
+        if isinstance(self.entity_mappings,str):
+            map=ast.literal_eval(self.entity_mappings)
+        else:
+            map=self.entity_mappings
+        claim_symbols=extract_propositional_symbols(self.claim_lf)
+        implication_symbols=extract_propositional_symbols(self.implication_lf)
+        claim_lf=self.claim_lf
+        implication_lf=self.implication_lf
+        if isinstance(self.subset_entities,str):
+            subsets=ast.literal_eval(self.subset_entities)
+        else:
+            subsets=self.subset_entities
+        for symbol in claim_symbols:
+            if claim_lf.find("exists {} ".format(symbol))==-1:
+                    claim_lf="exists {} ({})".format(symbol,claim_lf)
+        for symbol in implication_symbols:
+            if implication_lf.find("exists {}".format(symbol))==-1:
+                    implication_lf="exists {} ({})".format(symbol,implication_lf)
+        if isinstance(self.property_implications,str):
+            prop_imps=ast.literal_eval(self.property_implications)
+        else:
+            prop_imps=self.property_implications
+        current_char=chr(ord('a') + len(self.entity_mappings))
+        for (prop1,prop2) in prop_imps:
+            prop1,prop2,current_char=substitute_variables(prop1,prop2,current_char)
+            lf="{} -> {}".format(prop1,prop2)
+            lf_symbols=extract_propositional_symbols(lf)
+            for symbol in lf_symbols:
+                lf="forall {} ".format(symbol)+"("+lf+")"
+            claim_lf=claim_lf+" & ("+lf+")"
+        self.final_lf2="({}) -> ({})".format(claim_lf,implication_lf)
+        if self.debug:
+            print("Final Lf2= ",self.final_lf2)
 
     def convert_to_first_order_logic(self):
         self.extract_claim_and_implication()
@@ -243,8 +294,22 @@ class NL2FOL:
         self.get_properties()
         self.get_properties_relations()
         self.get_fol()
+        self.apply_heuristics()
         self.get_final_lf()
-        return self.final_lf
+        self.get_final_lf2()
+        return self.final_lf,self.final_lf2
+    
+    def apply_heuristics(self):
+        self.claim_lf = self.claim_lf.replace('->','&')
+        self.claim_lf = self.claim_lf.replace('&','and')
+        self.claim_lf = self.claim_lf.replace('|','or')
+        self.implication_lf = self.implication_lf.replace('->','&')
+        self.implication_lf = self.implication_lf.replace('&','and')
+        self.implication_lf = self.implication_lf.replace('|','or')
+        if self.debug:
+            print("Updated Claim Lf= ",self.claim_lf)
+            print("Updated Implication Lf=",self.implication_lf)
+
 
 class NL2SMT:
     def __init__(self, sentence):
@@ -282,15 +347,21 @@ if __name__ == '__main__':
         max_length=1024,
         device_map="auto",
     )
-    df=setup_dataset(length=10)
+    df=setup_dataset(length=100)
     final_lfs=[]
+    final_lfs2=[]
+    count=0
     for i,row in df.iterrows():
-        print(row['articles'])
+        print(count)
+        count=count+1
+        # print(row['articles'])
         nl2fol=NL2FOL(row['articles'],pipeline,tokenizer,nli_model,nli_tokenizer,debug=True)
         nl2fol.convert_to_first_order_logic()
         final_lfs.append(nl2fol.final_lf)
+        final_lfs2.append(nl2fol.final_lf2)
     df['Logical Form']=final_lfs
-    df.to_csv('results/run1.csv',ignore_index=True)
+    df['Logical Form 2']=final_lfs2
+    df.to_csv('results/run7.csv',index=False)
 
 
     

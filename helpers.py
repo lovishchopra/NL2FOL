@@ -118,7 +118,6 @@ def replace_variables(mapping, clause):
         else:
             replaced_args.append(arg)
     args=','.join(replaced_args)
-    
     replaced_clause=predicate+'('+args+')'
     return replaced_clause
 
