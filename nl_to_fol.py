@@ -366,12 +366,12 @@ if __name__ == '__main__':
         results_dict['Properties']=nl2fol.claim_properties+" "+nl2fol.implication_properties
         results_dict['Formula']=nl2fol.final_lf2
         json_object = json.dumps(results_dict, indent=4)
-        with open("results/run8/{}.json".format(count), "w") as outfile:
+        with open("results/final_run/{}.json".format(count), "w") as outfile:
             outfile.write(json_object)
         count=count+1
     df['Logical Form']=final_lfs
     df['Logical Form 2']=final_lfs2
-    df.to_csv('results/run8.csv',index=False)
+    df.to_csv('results/final_run.csv',index=False)
 
 
     
