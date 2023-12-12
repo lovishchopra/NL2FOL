@@ -382,14 +382,17 @@ class CVCGenerator:
         # Stack top is our final formula
         return stack[0]
 
-    def generateCVCScript(self):
+    def generateCVCScript(self, finite_model_finding=False):
         """
         Function to generate the CVC Script for a given formula
         """
         # Initial declarations in CVC
         cvc_str = "(set-logic ALL)\n(set-option :produce-models true)\n(declare-sort BoundSet 0)\n(declare-sort UnboundSet 0)"
+        if finite_model_finding:
+            cvc_str += ("\n(set-option :finite-model-find true)"   # Finite model finding, enabled only in selective cases
+                        
         prefix_formula = CVCGenerator.generatePrefixFormula(self.tokens)
-
+        
         # Declarations for unbound variables
         for variable in unbound_variables:
             if not unbound_variables[variable].getSort():
@@ -414,6 +417,6 @@ if __name__ == "__main__":
         print('Usage: python cvc.py "<fol>"')
         sys.exit(1)
 
-    script = CVCGenerator(sys.argv[1].replace("ForAll", "forall").replace("ThereExists", "exists")).generateCVCScript()
+    script = CVCGenerator(sys.argv[1].replace("ForAll", "forall").replace("ThereExists", "exists").replace("&", "and").replace("~", "not ").generateCVCScript()
     print(script)
 
