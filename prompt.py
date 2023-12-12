@@ -347,7 +347,7 @@ if __name__ == '__main__':
         max_length=1024,
         device_map="auto",
     )
-    df=setup_dataset(length=10)
+    df=setup_dataset(length=100)
     final_lfs=[]
     final_lfs2=[]
     count=0
@@ -361,7 +361,7 @@ if __name__ == '__main__':
         final_lfs2.append(nl2fol.final_lf2)
     df['Logical Form']=final_lfs
     df['Logical Form 2']=final_lfs2
-    df.to_csv('results/run6.csv',index=False)
+    df.to_csv('results/run7.csv',index=False)
 
 
     
