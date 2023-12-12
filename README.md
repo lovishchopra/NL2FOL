@@ -1,4 +1,4 @@
-# CS257_Project
+# ExplainNLI: Translating Natural Language to First Order Logic for Logical Fallacy Detection
 
 Instructions:
 1. source setup_sherlock.sh
