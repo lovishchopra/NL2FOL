@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Giving 10% of your income to the Church will free a child's soul from Limbo into Heaven.\"",
+    "Implication": " \"You should give your money to the Church.\"",
+    "Referring expressions": " Your income, church, child's soul, limbo, heaven  Your money, church",
+    "Properties": " IsGiven(b,a),  IsInLimbo(c),  IsInHeaven(c)  IsGiven(f,a)",
+    "Formula": "(exists c (exists e (exists b (exists a ((IsGiven(b,a) and IsInLimbo(c)) and IsInHeaven(e)))))) -> (exists f (exists a (IsGiven(f,a))))"
+}

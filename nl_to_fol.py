@@ -5,6 +5,7 @@ import transformers
 import torch
 import ast
 from helpers import *
+import json
 
 class NL2FOL:
     """
@@ -347,21 +348,30 @@ if __name__ == '__main__':
         max_length=1024,
         device_map="auto",
     )
-    df=setup_dataset(length=100)
+    df=setup_dataset(length=5)
     final_lfs=[]
     final_lfs2=[]
     count=0
     for i,row in df.iterrows():
         print(count)
-        count=count+1
         # print(row['articles'])
         nl2fol=NL2FOL(row['articles'],pipeline,tokenizer,nli_model,nli_tokenizer,debug=True)
         nl2fol.convert_to_first_order_logic()
         final_lfs.append(nl2fol.final_lf)
         final_lfs2.append(nl2fol.final_lf2)
+        results_dict={}
+        results_dict['Claim']=nl2fol.claim
+        results_dict['Implication']=nl2fol.implication
+        results_dict['Referring expressions']=nl2fol.claim_ref_exp+" "+nl2fol.implication_ref_exp
+        results_dict['Properties']=nl2fol.claim_properties+" "+nl2fol.implication_properties
+        results_dict['Formula']=nl2fol.final_lf2
+        json_object = json.dumps(results_dict, indent=4)
+        with open("results/run8/{}.json".format(count), "w") as outfile:
+            outfile.write(json_object)
+        count=count+1
     df['Logical Form']=final_lfs
     df['Logical Form 2']=final_lfs2
-    df.to_csv('results/run7.csv',index=False)
+    df.to_csv('results/run8.csv',index=False)
 
 
     

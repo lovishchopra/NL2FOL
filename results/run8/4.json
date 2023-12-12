@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Ms. Drayer says the debate is the best class\"",
+    "Implication": " \"The debate is the best class\"",
+    "Referring expressions": " Ms. Drayer, debate, class  The debate, class",
+    "Properties": " IsTeacherOf(b),  IsBestClass(c)  IsBestClass(d)",
+    "Formula": "(exists c (exists b (IsTeacherOf(b) and IsBestClass(c)))) -> (exists a (IsBestClass(a)))"
+}

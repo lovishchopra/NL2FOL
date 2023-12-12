@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Grandma knitted a sweater for me.\"",
+    "Implication": " \"Wearing the sweater will make Grandma happy.\"",
+    "Referring expressions": " Grandma, me  Grandma, sweater",
+    "Properties": " IsKnitted(a),  IsFor(b)  IsWorn(c),  MakesHappy(a)",
+    "Formula": "(exists b (exists a (IsKnitted(a) and IsFor(b)))) -> (exists c (exists a (IsWorn(c) and MakesHappy(a))))"
+}

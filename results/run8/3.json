@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Everyone breaks into the spooky cabin\"",
+    "Implication": " \"You should break into the spooky cabin\"",
+    "Referring expressions": " Everyone, spooky cabin  You, spooky cabin",
+    "Properties": " IsInSpookyCabin(a)  ShouldBreakInto(c,a)",
+    "Formula": "(exists b (IsInSpookyCabin(b)) & (forall d (forall e ( ShouldBreakInto(d,e) ->  IsInSpookyCabin(e))))) -> (exists c (exists a (ShouldBreakInto(c,a))))"
+}

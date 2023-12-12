@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A dog caught a Frisbee.\"",
+    "Implication": " \"The dog is playing with a toy thrown by a person.\"",
+    "Referring expressions": " A dog, Frisbee  The dog, person, toy",
+    "Properties": " IsCaught(a,b)  IsPlaying(c),  Threw(d,e)",
+    "Formula": "(exists b (exists a (IsCaught(a,b)))) -> (exists c (exists d (exists e (IsPlaying(c) and (Threw(d,e) and IsTheSamePerson(d,e))))))"
+}

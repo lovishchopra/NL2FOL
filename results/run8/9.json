@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Six children run towards a soccer ball\"",
+    "Implication": " \"Children run towards a soccer ball\"",
+    "Referring expressions": " Six children, soccer ball  Children, soccer ball",
+    "Properties": " IsRunTowards(b,a)  IsRunTowards(c,a)",
+    "Formula": "(exists b (exists a (IsRunTowards(b,a)))) -> (exists c (exists a (IsRunTowards(c,a))))"
+}
