@@ -17,18 +17,18 @@ def merge_with_random_phrase(row):
     return sentence1 + " " + random_phrase + sentence2
 
 def process_data(data, col_name, output_file_path):
-    data = data[data['annotator_labels'].apply(lambda x: x == [col_name])][["sentence1", "sentence2"]]
+    data = data[data['gold_label'] == col_name][["sentence1", "sentence2"]]
     data['sentence'] = data.apply(merge_with_random_phrase, axis=1)
     data = data.reset_index(drop=True)
     data.to_csv(output_file_path)
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python parse_json_nli_dataset.py jsonl_file_path")
+    if len(sys.argv) != 3:
+        print("Usage: python parse_json_nli_dataset.py jsonl_file_path suffix(test/dev/train/etc.)")
         sys.exit(1)
 
     data = pd.read_json(path_or_buf=sys.argv[1], lines=True)
     print("Processing Entailments...")
-    process_data(data, "entailment", "data/nli_entailments.csv")
+    process_data(data, "entailment", "data/nli_entailments_{0}.csv".format(sys.argv[2]))
     print("Processing Fallacies...")
-    process_data(data, "contradiction", "data/nli_fallacies.csv")
+    process_data(data, "contradiction", "data/nli_fallacies_{0}.csv".format(sys.argv[2]))
