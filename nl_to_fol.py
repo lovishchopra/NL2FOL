@@ -33,6 +33,10 @@ class NL2FOL:
         self.final_lf2 = ""
         self.debug = debug
 
+    def yield_data(data):
+        for obj in data:
+            yield obj
+
     def get_llm_result(self, prompt):
         sequences = self.pipeline(prompt,
             do_sample=False,
