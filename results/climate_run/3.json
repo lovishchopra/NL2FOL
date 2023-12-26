@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The idea of'settled science' defies the history of science.\"",
+    "Implication": " \"Repeated upheavals of previous forms of'settled science' have occurred in the history of science.\"",
+    "Referring expressions": " The idea, settled science, history of science.  previous forms of settled science, history of science.",
+    "Properties": " IsSettled(c),  IsHistoryOfScience(a)  HasRepeatedUpheaval(d),  IsHistoryOfScience(a)",
+    "Formula": "(exists c (exists a (IsSettled(c) and IsHistoryOfScience(a)))) -> (exists d (exists a (HasRepeatedUpheaval(d) and IsHistoryOfScience(a))))"
+}

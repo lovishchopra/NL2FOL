@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The Arctic will be ice-free.\"",
+    "Implication": " \"Temperatures in Greenland have shown no increase for decades.\"",
+    "Referring expressions": " The Arctic  Temperatures, Greenland",
+    "Properties": " IsIceFree(a)  IsNoIncrease(b),  IsInGreenland(c)",
+    "Formula": "(exists a (IsIceFree(a)) & (forall d (forall e ( IsIceFree(d) ->  IsNoIncrease(e))))) -> (exists c (exists b (IsNoIncrease(b) and IsInGreenland(c))))"
+}

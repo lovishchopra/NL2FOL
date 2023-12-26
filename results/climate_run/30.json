@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Computer models of doom are just simulations\"",
+    "Implication": " \"We should not trust these computer models of doom\"",
+    "Referring expressions": " Computer models, doom, simulations  These computer models, doom",
+    "Properties": " IsSimulation(c)  IsTrusted(d,a)",
+    "Formula": "(exists c (exists a (IsSimulation(c) and ~IsDoom(a))) & (forall g (forall f (forall e ( IsTrusted(e,f) ->  IsSimulation(g)))))) -> (exists d (exists a (~IsTrusted(d,a))))"
+}

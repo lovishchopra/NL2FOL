@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Ice core drilling shows that 800 years after natural warming, the atmosphere increases in carbon dioxide.\"",
+    "Implication": " \"There is no correlation between CO2 emissions and global warming on any timescale.\"",
+    "Referring expressions": " 800 years, natural warming, atmosphere, carbon dioxide.  CO2 emissions, global warming, timescale",
+    "Properties": " Is800YearsAfter(a),  IsNaturalWarming(b),  IsInAtmosphere(c),  IsCarbonDioxide(d)  IsNoCorrelation(e, f),  IsOnAnyTimescale(g)",
+    "Formula": "(exists d (exists c (exists b (exists a (Is800YearsAfter(a) and IsInAtmosphere(c) and IsNaturalWarming(b) and IsCarbonDioxide(d))))) & (forall h (forall j (forall i ( IsNoCorrelation(h,i) ->   IsCarbonDioxide(j)))))) -> (exists g (exists f (exists e (IsNoCorrelation(e, f) and IsOnAnyTimescale(g)))))"
+}

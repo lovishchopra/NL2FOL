@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Carbon may evaporate as methane.\"",
+    "Implication": " \"Methane is 34 times as powerful a greenhouse-gas warming blanket as carbon dioxide when judged on the timescale of a century.\"",
+    "Referring expressions": " Carbon, methane  Methane, carbon dioxide, greenhouse-gas warming blanket",
+    "Properties": " IsEvaporated(a)  IsAsPowerful(a,c),  IsJudgedOn(a,d)",
+    "Formula": "(exists a (IsEvaporated(a))) -> (exists d (exists c (exists a (IsAsPowerful(a,c) and IsJudgedOn(a,d)))))"
+}

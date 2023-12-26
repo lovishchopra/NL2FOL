@@ -353,8 +353,8 @@ def setup_dataset(fallacy_set='logic',length=100):
 
 if __name__ == '__main__':
     model = "meta-llama/Llama-2-7b-chat-hf"
-    fallacy_set='logicclimate'
-    run_name='climate_run'
+    fallacy_set='nli'
+    run_name='nli_run'
     nli_tokenizer = AutoTokenizer.from_pretrained('facebook/bart-large-mnli')
     nli_model = AutoModelForSequenceClassification.from_pretrained('facebook/bart-large-mnli')
     tokenizer = AutoTokenizer.from_pretrained(model)

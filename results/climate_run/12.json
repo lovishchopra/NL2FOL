@@ -1,0 +1,7 @@
+{
+    "Claim": " \"This process is overpowering the erosion from sea-level rise.\"",
+    "Implication": " \"Net land-area gain occurs.\"",
+    "Referring expressions": " This process, sea-level rise  Net land-area gain, occurs",
+    "Properties": " IsOverpowering(a),  IsErodedBy(b)  IsGain(c),  Occurs(a)",
+    "Formula": "(exists b (exists a (IsOverpowering(a) and IsErodedBy(b))) & (forall e ( IsOverpowering(e) ->   Occurs(e)))) -> (exists c (exists a (IsGain(c) and Occurs(a))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"There is no proof the current rate of change in Antarctica will continue\"",
+    "Implication": " \"The current rate of change in Antarctica will not continue\"",
+    "Referring expressions": " Antarctica, current rate of change  Antarctica, current rate of change",
+    "Properties": " IsCurrent(b),  WillContinue(b)  WillNotContinue(b)",
+    "Formula": "(exists b (~IsCurrent(b) and WillContinue(b))) -> (exists a (WillNotContinue(a)))"
+}

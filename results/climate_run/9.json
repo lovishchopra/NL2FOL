@@ -1,0 +1,7 @@
+{
+    "Claim": " \"9 million people died prematurely from pollution-related diseases in 2015\"",
+    "Implication": " \"Pollution caused 16% of all deaths worldwide\"",
+    "Referring expressions": " 9 million people, pollution-related diseases, 2015  Pollution, all deaths worldwide",
+    "Properties": " IsDiedPrematurely(a),  IsFromPollution(b),  IsIn2015(c)  IsCausedBy(d),  IsAllDeaths(e)",
+    "Formula": "(exists c (exists b (exists a (IsDiedPrematurely(a) and (IsFromPollution(b) and IsIn2015(c))))) & (forall g (forall f (  IsFromPollution(f) ->  IsCausedBy(g)))) & (forall h (forall i ( IsCausedBy(h) ->   IsFromPollution(i))))) -> (exists d (exists e (IsCausedBy(d) and IsAllDeaths(e))))"
+}

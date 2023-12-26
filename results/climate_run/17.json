@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The summer sea ice dropped abruptly to levels not expected until 2050.\"",
+    "Implication": " \"The predicted 67-per-cent decline in polar bear numbers simply didn\u2019t happen.\"",
+    "Referring expressions": " summer sea ice, levels, 2050  polar bear numbers",
+    "Properties": " IsAtLevels(a,b),  IsExpectedIn2050(c)  IsPredicted(d)",
+    "Formula": "(exists c (exists b (exists a (IsAtLevels(a,b) and IsExpectedIn2050(c))))) -> (exists d (~IsPredicted(d)))"
+}

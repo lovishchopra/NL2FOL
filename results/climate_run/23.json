@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The highest record temperature ever reported was 136 degrees Fahrenheit in Libya in 1922.\"",
+    "Implication": " \"Fossil fuel emissions in 1913 and 1922 were negligible compared to today.\"",
+    "Referring expressions": " The highest record temperature, Libya, 1922  Fossil fuel emissions, 1913, 1922, today",
+    "Properties": " IsHighestRecordTemperature(b),  IsInLibya(c),  IsIn1922(a)  IsNegligibleComparedTo(d, a, f)",
+    "Formula": "(exists c (exists b (exists a (IsHighestRecordTemperature(b) and IsInLibya(c) and IsIn1922(a))))) -> (exists d (exists f (exists a (IsNegligibleComparedTo(d, a) and ~IsNegligibleComparedTo(f)))))"
+}

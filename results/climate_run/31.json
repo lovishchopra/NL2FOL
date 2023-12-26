@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The rise in Arctic temperatures is probably tied to a sudden warming of the stratosphere\"",
+    "Implication": " \"The warming of the stratosphere occurred several weeks ago\"",
+    "Referring expressions": " Arctic temperatures, stratosphere  The warming, stratosphere",
+    "Properties": " IsWarming(a),  IsTiedTo(b)  IsOccurred(a),  IsWarming(c)",
+    "Formula": "(exists b (exists a (IsWarming(a) and IsTiedTo(b)))) -> (exists c (exists a (IsOccurred(a) and IsWarming(c))))"
+}

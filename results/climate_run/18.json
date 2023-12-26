@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Polls suggest the public is unmoved at home and abroad.\"",
+    "Implication": " \"Serial exaggeration is backfiring and confirming the perils of climate exaggeration.\"",
+    "Referring expressions": " Public, home, abroad  Serial exaggeration, climate exaggeration",
+    "Properties": " IsUnmoved(a),  IsAtHome(b),  IsAbroad(c)  IsBackfiring(d),  IsConfirming(e)",
+    "Formula": "(exists c (exists b (exists a (IsUnmoved(a) and IsAtHome(b) or IsAbroad(c))))) -> (exists d (exists e (IsBackfiring(d) and IsConfirming(e))))"
+}

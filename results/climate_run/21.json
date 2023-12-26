@@ -1,0 +1,7 @@
+{
+    "Claim": " \"It is ideology for the media\"",
+    "Implication": " \"Money and headlines are important for the media\"",
+    "Referring expressions": " It, media  Money, headlines, media",
+    "Properties": " IsIdeologyFor(b)  IsImportantFor(b)",
+    "Formula": "(exists b (IsIdeologyFor(b))) -> (exists c (exists b (exists a (IsImportantFor(b) and (IsMoney(c) or IsHeadlines(a))))))"
+}

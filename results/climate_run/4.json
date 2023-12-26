@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Bears are going extinct.\"",
+    "Implication": " \"Bears are starving to death.\"",
+    "Referring expressions": " Bears, extinct  Bears, death",
+    "Properties": " IsGoingExtinct(a)  IsStarvingToDeath(a)",
+    "Formula": "(exists b (IsExtinct(b)) & (forall d ( IsGoingExtinct(d) ->  IsStarvingToDeath(d))) & (forall e ( IsStarvingToDeath(e) ->  IsGoingExtinct(e)))) -> (exists c (exists a (IsStarvingToDeath(a) and death(c))))"
+}

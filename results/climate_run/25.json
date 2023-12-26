@@ -1,0 +1,7 @@
+{
+    "Claim": " Defra spent \u00a312.5 million on an ocean acidification research program between 2009 and 2014.",
+    "Implication": " The issue of ocean acidification could have been resolved for next to nothing after a few hours of basic research.",
+    "Referring expressions": " Defra, ocean acidification research program, 2009, 2014  The issue of ocean acidification, next to nothing, basic research.",
+    "Properties": " IsSpent(a,b),  IsBetween(c,d)  IsIssueOfOceanAcidification(e),  IsNextToNothing(f),  IsBasicResearch(g)",
+    "Formula": "(exists d (exists c (exists b (exists a (IsSpent(a,b) and IsBetween(c,d))))) & (forall h (forall j (forall i ( IsSpent(h,i) ->  IsIssueOfOceanAcidification(j)))))) -> (exists g (exists f (exists e (IsIssueOfOceanAcidification(e) and IsNextToNothing(f) and IsBasicResearch(g)))))"
+}

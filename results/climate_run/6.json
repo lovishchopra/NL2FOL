@@ -1,0 +1,7 @@
+{
+    "Claim": " \"By 2070, a third of the global population will be made up of people who are over 65 years old.\"",
+    "Implication": " \"There will be a significant increase in the number of elderly people in the world by 2070.\"",
+    "Referring expressions": " global population, people, over 65 years old  elderly people, world, 2070",
+    "Properties": " IsOver65(c)  WillHaveIncrease(d,e),  IsIn2070(f)",
+    "Formula": "(exists c (exists b (exists a (IsOver65(c) and (IsGlobalPopulation(a) and IsPeople(b))))) & (forall g (forall h (forall i ( IsOver65(g) ->  WillHaveIncrease(h,i))))) & (forall l (forall k (forall j ( WillHaveIncrease(j,k) ->  IsOver65(l)))))) -> (exists d (exists f (exists e (WillHaveIncrease(d,e) and IsIn2070(f)))))"
+}

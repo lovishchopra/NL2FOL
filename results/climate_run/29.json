@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The overall increases in hurricanes and tornadoes have not materialized.\"",
+    "Implication": " \"Major hurricane activity in the Gulf of Mexico has been less frequent than in centuries past.\"",
+    "Referring expressions": " overall, hurricanes, tornadoes  Major hurricane activity, Gulf of Mexico, centuries past",
+    "Properties": " IsIncreased(a),  IsNotMaterialized(b,c)  IsLessFrequent(d),  IsInGulfOfMexico(e),  IsInCenturiesPast(f)",
+    "Formula": "(exists c (exists b (exists a (IsIncreased(a) and ~IsNotMaterialized(b,c))))) -> (exists d (exists f (exists e (IsLessFrequent(d) and (IsInGulfOfMexico(e) and IsInCenturiesPast(f))))))"
+}

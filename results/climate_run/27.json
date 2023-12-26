@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Fears of sea-level rise are barely scratching the surface of what terrors are possible\"",
+    "Implication": " \"Global warming is a source of terror\"",
+    "Referring expressions": " Fears, sea-level rise, terrors  Global warming, terror",
+    "Properties": " IsScratching(a,b),  ArePossible(c)  IsSourceOf(d,a)",
+    "Formula": "(exists c (exists b (exists a (IsScratching(a,b) and ArePossible(c)))) & (forall g (forall f (forall h ( IsSourceOf(f,g) ->   ArePossible(h)))))) -> (exists d (exists a (IsSourceOf(d,a))))"
+}
