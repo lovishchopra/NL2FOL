@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A rooster is near an Eastern vendor.\"",
+    "Implication": " \"An Eastern vendor has a rooster nearby.\"",
+    "Referring expressions": " A rooster, Eastern vendor  Eastern vendor, rooster, nearby.",
+    "Properties": " IsNear(b,a)  IsHas(a,c),  IsNearby(d)",
+    "Formula": "(exists a (exists b (IsNear(b,a))) & (forall f (forall e (forall g ( IsNear(e,f) ->  IsHas(f,g))))) & (forall i (forall j (forall h ( IsHas(h,i) ->  IsNear(j,h))))) & (forall l (forall m (forall k ( IsNear(k,l) ->   IsNearby(m)))))) -> (exists c (exists a (exists d (IsHas(a,c) and IsNearby(d)))))"
+}

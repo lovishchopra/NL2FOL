@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A woman in black has a job.\"",
+    "Implication": " \"The woman in black reviews messages as she walks to work.\"",
+    "Referring expressions": " Woman in black, job  Woman in black, messages, work",
+    "Properties": " IsInBlack(a),  HasJob(b)  IsReviewsMessages(a),  IsWalksToWork(d)",
+    "Formula": "(exists a (exists b (IsInBlack(a) and HasJob(b))) & (forall f (forall e (  IsWalksToWork(e) ->   HasJob(f))))) -> (exists a (exists d (IsReviewsMessages(a) and IsWalksToWork(d))))"
+}

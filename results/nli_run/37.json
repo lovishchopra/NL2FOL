@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two sweet young girls on ice skates get ready to begin their performance on the ice.\"",
+    "Implication": " \"Two female synchronized swimmers are in the pool.\"",
+    "Referring expressions": " Two sweet young girls, ice skates, performance on the ice.  Two female synchronized swimmers, pool",
+    "Properties": " IsSweet(a),  IsOnIceSkates(b),  IsPerformingOnTheIce(c)  IsFemale(d),  IsInPool(e)",
+    "Formula": "(exists c (exists a (exists b (IsSweet(a) and IsOnIceSkates(b) and IsPerformingOnTheIce(c))))) -> (exists e (exists d (IsFemale(d) and IsInPool(e))))"
+}

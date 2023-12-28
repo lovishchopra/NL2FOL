@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man smokes while leaning against a pillar.\"",
+    "Implication": " \"A missing person is nearby.\"",
+    "Referring expressions": " A man, pillar  missing person, nearby",
+    "Properties": " IsSmoking(a),  IsLeaningAgainst(b)  IsMissing(c),  IsNearby(d)",
+    "Formula": "(exists a (exists b (IsSmoking(a) and IsLeaningAgainst(b))) & (forall f (forall e ( IsSmoking(e) ->   IsNearby(f))))) -> (exists c (exists d (IsMissing(c) and IsNearby(d))))"
+}

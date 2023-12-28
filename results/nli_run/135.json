@@ -1,0 +1,7 @@
+{
+    "Claim": " \"An Asian woman is wearing colorful clothing.\"",
+    "Implication": " \"A woman is wearing colorful clothing.\"",
+    "Referring expressions": " Asian woman, colorful clothing  Woman, colorful clothing",
+    "Properties": " IsAsian(b),  IsWearingColorfulClothing(a)  IsWearingColorfulClothing(a)",
+    "Formula": "(exists a (exists b (IsAsian(b) and IsWearingColorfulClothing(a))) & (forall e (forall d ( IsAsian(d) ->  IsWearingColorfulClothing(e)))) & (forall f (forall g ( IsWearingColorfulClothing(f) ->  IsAsian(g))))) -> (exists a (IsWearingColorfulClothing(a)))"
+}

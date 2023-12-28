@@ -1,0 +1,7 @@
+{
+    "Claim": " \"There are three children in this picture.\"",
+    "Implication": " \"They are all outside.\"",
+    "Referring expressions": " three children  They, outside",
+    "Properties": " IsInThisPicture(a)  IsOutside(b)",
+    "Formula": "(exists a (IsInThisPicture(a))) -> (exists b (IsOutside(b)))"
+}

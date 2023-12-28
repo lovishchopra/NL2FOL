@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A black dog is swimming with a ball in his mouth.\"",
+    "Implication": " \"The dog is asleep in the grass.\"",
+    "Referring expressions": " Black dog, ball, his mouth  The dog, grass",
+    "Properties": " IsBlack(a),  IsSwimming(b),  IsInHisMouth(c)  IsAsleep(d),  IsInGrass(e)",
+    "Formula": "(exists c (exists a (exists b (IsBlack(a) and IsSwimming(b) and IsInHisMouth(c))))) -> (exists e (exists d (IsAsleep(d) and IsInGrass(e))))"
+}

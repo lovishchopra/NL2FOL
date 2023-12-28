@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Cheerleaders are standing on a football field.\"",
+    "Implication": " \"Cheerleaders are standing on a bridge.\"",
+    "Referring expressions": " Cheerleaders, football field  Cheerleaders, bridge",
+    "Properties": " IsStandingOn(a,b)  IsStandingOn(a,c)",
+    "Formula": "(exists a (exists b (IsStandingOn(a,b)))) -> (exists c (exists a (IsStandingOn(a,c))))"
+}

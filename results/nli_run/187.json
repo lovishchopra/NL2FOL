@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man wearing a black hat and coat makes a face with a crowd behind him.\"",
+    "Implication": " \"A guy is standing near a crowd of people.\"",
+    "Referring expressions": "  Guy, crowd of people.",
+    "Properties": " IsWearing(a,b),  MakesFace(a),  IsInCrowd(a)  IsStanding(b),  IsNear(b,c)",
+    "Formula": "(exists a (exists b (IsWearing(a,b) and (MakesFace(a) and IsInCrowd(a)))) & (forall f (forall e (forall d (  IsInCrowd(d) ->   IsNear(e,f))))) & (forall i (forall h (forall g (  IsNear(g,h) ->   IsInCrowd(i)))))) -> (exists c (exists b (IsStanding(b) and IsNear(b,c))))"
+}

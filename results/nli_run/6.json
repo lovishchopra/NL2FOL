@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A skier is standing on a blue stretcher.\"",
+    "Implication": " \"Three men are excitedly watching a skier.\"",
+    "Referring expressions": " A skier, blue stretcher  Three men, skier",
+    "Properties": " IsStandingOn(a,b)  AreExcitedlyWatching(c,d)",
+    "Formula": "(exists a (exists b (IsStandingOn(a,b)))) -> (exists c (exists d (AreExcitedlyWatching(c,d))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Young men are dumping soil onto the ground.\"",
+    "Implication": " \"The young men are lazing about on the beach.\"",
+    "Referring expressions": " Young men, soil, ground  Young men, beach",
+    "Properties": " IsDumping(a),  IsSoil(b),  IsGround(c)  IsLazing(a),  IsOnBeach(d)",
+    "Formula": "(exists c (exists a (exists b (IsDumping(a) and IsSoil(b) and IsGround(c))))) -> (exists a (exists d (IsLazing(a) and IsOnBeach(d))))"
+}

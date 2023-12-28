@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man is walking in the shadows of nature.\"",
+    "Implication": " \"A woman is at the beach.\"",
+    "Referring expressions": " A man, nature  Woman, beach",
+    "Properties": " IsWalking(a),  IsInNature(b)  IsAt(c,d)",
+    "Formula": "(exists a (exists b (IsWalking(a) and IsInNature(b)))) -> (exists c (exists d (IsAt(c,d))))"
+}

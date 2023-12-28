@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A scientist studies a slide.\"",
+    "Implication": " \"A scientist studies a slide related to her invention.\"",
+    "Referring expressions": " A scientist, slide  A scientist, her invention, slide",
+    "Properties": " IsStudies(a,b)  IsRelatedTo(a,c),  IsStudies(a,b)",
+    "Formula": "(exists a (exists b (IsStudies(a,b)))) -> (exists c (exists a (exists b (IsRelatedTo(a,c) and IsStudies(a,b)))))"
+}

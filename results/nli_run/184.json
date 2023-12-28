@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Four boys are about to be hit by an approaching wave.\"",
+    "Implication": " \"A wave is about to hit some boys.\"",
+    "Referring expressions": " Four boys, approaching wave.  A wave, some boys",
+    "Properties": " IsAboutToBeHit(a),  IsApproaching(b)  IsAboutToHit(c),  IsSome(d)",
+    "Formula": "(exists a (exists b (IsAboutToBeHit(a) and IsApproaching(b))) & (forall f (forall e ( IsAboutToBeHit(e) ->   IsSome(f)))) & (forall h (forall g (  IsApproaching(g) ->  IsAboutToHit(h)))) & (forall i (forall j ( IsAboutToHit(i) ->   IsApproaching(j))))) -> (exists c (exists d (IsAboutToHit(c) and IsSome(d))))"
+}

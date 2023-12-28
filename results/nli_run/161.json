@@ -1,0 +1,7 @@
+{
+    "Claim": " \"There is a man in the basement.\"",
+    "Implication": " \"The basement has a man.\"",
+    "Referring expressions": " man, basement  The basement, man",
+    "Properties": " IsInBasement(a)  IsInBasement(a)",
+    "Formula": "(exists a (IsInBasement(a))) -> (exists a (IsInBasement(a)))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A dog chases a ball.\"",
+    "Implication": " \"A tan dog chases a black and white soccer ball.\"",
+    "Referring expressions": " A dog, ball  A tan dog, black and white soccer ball",
+    "Properties": " IsChased(a,b)  IsTan(c),  IsChased(c,d)",
+    "Formula": "(exists a (exists b (IsChased(a,b)))) -> (exists c (exists d (IsTan(c) and IsChased(c,d))))"
+}

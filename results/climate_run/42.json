@@ -1,0 +1,7 @@
+{
+    "Claim": " \"ECS is low.\"",
+    "Implication": " \"Climate models need to be revised.\"",
+    "Referring expressions": " ECS  Climate models, need to be revised.",
+    "Properties": " IsLow(a)  IsRevised(c)",
+    "Formula": "(exists a (IsLow(a))) -> (exists c (IsRevised(c)))"
+}

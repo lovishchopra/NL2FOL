@@ -1,7 +1,7 @@
 {
     "Claim": " \"9 million people died prematurely from pollution-related diseases in 2015\"",
-    "Implication": " \"Pollution caused 16% of all deaths worldwide\"",
-    "Referring expressions": " 9 million people, pollution-related diseases, 2015  Pollution, all deaths worldwide",
-    "Properties": " IsDiedPrematurely(a),  IsFromPollution(b),  IsIn2015(c)  IsCausedBy(d),  IsAllDeaths(e)",
-    "Formula": "(exists c (exists b (exists a (IsDiedPrematurely(a) and (IsFromPollution(b) and IsIn2015(c))))) & (forall g (forall f (  IsFromPollution(f) ->  IsCausedBy(g)))) & (forall h (forall i ( IsCausedBy(h) ->   IsFromPollution(i))))) -> (exists d (exists e (IsCausedBy(d) and IsAllDeaths(e))))"
+    "Implication": " \"Pollution caused 16% of all deaths worldwide in 2015\"",
+    "Referring expressions": " 9 million people, pollution-related diseases, 2015  Pollution, all deaths, worldwide, 2015",
+    "Properties": " IsDiedPrematurely(b),  IsFromPollution(c),  IsIn2015(a)  IsCausedBy(d),  IsDeaths(e),  IsWorldwide(f),  IsIn2015(a)",
+    "Formula": "(exists c (exists b (exists a (IsDiedPrematurely(b) and (IsFromPollution(c) and IsIn2015(a))))) & (forall g (forall h ( IsDiedPrematurely(g) ->   IsDeaths(h)))) & (forall j (forall i (  IsFromPollution(i) ->  IsCausedBy(j)))) & (forall l (forall k ( IsCausedBy(k) ->   IsFromPollution(l))))) -> (exists f (exists e (exists d (IsCausedBy(d) and (IsDeaths(e) and IsWorldwide(f))))))"
 }

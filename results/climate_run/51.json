@@ -1,0 +1,7 @@
+{
+    "Claim": " \"They may still have the opportunity to visit a living Great Barrier Reef\"",
+    "Implication": " \"There is a living Great Barrier Reef\"",
+    "Referring expressions": " They, Great Barrier Reef  living Great Barrier Reef",
+    "Properties": " IsVisit(a,b)  IsLiving(c)",
+    "Formula": "(exists b (exists a (IsVisit(a,b) and HasOpportunity(a,b)))) -> (exists c (IsLiving(c)))"
+}

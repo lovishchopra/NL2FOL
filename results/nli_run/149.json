@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two boys in running clothes stretching.\"",
+    "Implication": " \"The boys are stretching.\"",
+    "Referring expressions": " Two boys, running clothes, stretching.  The boys",
+    "Properties": " IsInRunningClothes(a),  IsStretching(c)  IsStretching(d)",
+    "Formula": "(exists c (exists a (IsInRunningClothes(a) and IsStretching(c)))) -> (exists d (IsStretching(d)))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man is playing the trumpet on the street corner.\"",
+    "Implication": " \"Two unrecognizable people are watching in the background.\"",
+    "Referring expressions": " A man, trumpet, street corner  Two unrecognizable people, background",
+    "Properties": " IsPlaying(a),  IsOnStreetCorner(b)  IsUnrecognizable(d),  IsWatchingInBackground(e)",
+    "Formula": "(exists a (exists b (IsPlaying(a) and IsOnStreetCorner(b)))) -> (exists e (exists d (IsUnrecognizable(d) and IsWatchingInBackground(e))))"
+}

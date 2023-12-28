@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man in suit waits for the green light.\"",
+    "Implication": " \"A man waits at a red light.\"",
+    "Referring expressions": " A man in suit, green light  A man, red light",
+    "Properties": " IsInSuit(a),  WaitsForGreenLight(b)  IsWaitingAtRedLight(c)",
+    "Formula": "(exists a (exists b (IsInSuit(a) and WaitsForGreenLight(b)))) -> (exists c (IsWaitingAtRedLight(c)))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two women are taking care of a herd of animals.\"",
+    "Implication": " \"The two women are near a building made primarily of stone.\"",
+    "Referring expressions": " Two women, herd of animals.  Two women, building, stone",
+    "Properties": " IsTakingCareOf(a,b)  IsNear(a,c),  IsMadePrimarilyOfStone(c)",
+    "Formula": "(exists a (exists b (IsTakingCareOf(a,b)))) -> (exists c (exists a (IsNear(a,c) and IsMadePrimarilyOfStone(c))))"
+}

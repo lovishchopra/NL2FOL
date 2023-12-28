@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Seven young girls are being creative and making posters.\"",
+    "Implication": " \"One girl is making posters.\"",
+    "Referring expressions": " Seven young girls, posters  One girl, posters.",
+    "Properties": " IsCreative(a),  HasPosters(a)  IsMakingPosters(c)",
+    "Formula": "(exists a (IsCreative(a) and HasPosters(a))) -> (exists c (IsMakingPosters(c)))"
+}

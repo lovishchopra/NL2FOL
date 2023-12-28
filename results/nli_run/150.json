@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A group of young men in a gym take turns scoring in basketball.\"",
+    "Implication": " \"Guys are indoors.\"",
+    "Referring expressions": " young men, gym, basketball  Guys, indoors",
+    "Properties": " IsInGym(a),  TakesTurns(a),  ScoresInBasketball(a)  IsIndoors(d)",
+    "Formula": "(exists a ((IsInGym(a) and TakesTurns(a)) and ScoresInBasketball(a)) & (forall f (forall g ( IsIndoors(f) ->   TakesTurns(g))))) -> (exists d (IsIndoors(d)))"
+}

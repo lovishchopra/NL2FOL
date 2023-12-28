@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man jumped off a cliff with a city view below.\"",
+    "Implication": " \"A man walks down a hill.\"",
+    "Referring expressions": " A man, city view, cliff  A man, hill",
+    "Properties": " IsJumpedOff(a),  HasCityView(b),  IsOnCliff(c)  IsWalksDown(a),  IsOnHill(d)",
+    "Formula": "(exists c (exists a (exists b (IsJumpedOff(a) and HasCityView(b) and IsOnCliff(c))))) -> (exists a (exists d (IsWalksDown(a) and IsOnHill(d))))"
+}

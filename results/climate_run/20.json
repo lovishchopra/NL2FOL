@@ -1,7 +1,7 @@
 {
-    "Claim": " \"Dirty water, dirty air, and insect-borne diseases are a far greater problem today for most people world-wide.\"",
-    "Implication": " \"Global warming is not the obvious top environmental threat.\"",
-    "Referring expressions": " Dirty water, dirty air, insect-borne diseases, most people, world-wide  Global warming, environmental threat",
-    "Properties": " IsDirty(a),  IsInsectBorne(c),  IsForMostPeople(d),  IsWorldWide(e)  IsGlobalWarming(f),  IsEnvironmentalThreat(g)",
-    "Formula": "(exists d (exists c (exists e (exists a ((IsDirty(a) and IsInsectBorne(c)) and (IsForMostPeople(d) and IsWorldWide(e)))))) & (forall h (forall i ( IsDirty(h) ->   IsEnvironmentalThreat(i))))) -> (exists g (exists f (IsGlobalWarming(f) and ~IsEnvironmentalThreat(g))))"
+    "Claim": " \"Global warming is not the obvious top environmental threat.\"",
+    "Implication": " \"Dirty water, dirty air, and insect-borne diseases are a far greater problem today for most people world-wide.\"",
+    "Referring expressions": " Global warming, environmental threat  Dirty water, dirty air, insect-borne diseases, most people, world-wide",
+    "Properties": " IsObvious(b),  IsTopEnvironmentalThreat(a)  IsInsectBorne(e),  IsFarGreater(d),  IsForMostPeople(f),  IsWorldWide(g)",
+    "Formula": "(exists b (exists a (IsObvious(b) and IsTopEnvironmentalThreat(a))) & (forall h (forall i (  IsFarGreater(h) ->  IsObvious(i))))) -> (exists f (exists e (exists g (exists d ((IsInsectBorne(e) and IsFarGreater(d)) and (IsForMostPeople(f) and IsWorldWide(g)))))))"
 }

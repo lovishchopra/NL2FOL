@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A bird is perched on a tree branch.\"",
+    "Implication": " \"A bird is perching in a tree.\"",
+    "Referring expressions": " Bird, tree, branch  Bird, tree",
+    "Properties": " IsPerchedOn(a,b),  IsOnBranch(a,c)  IsPerching(a),  IsInTree(b)",
+    "Formula": "(exists c (exists a (exists b (IsPerchedOn(a,b) and IsOnBranch(a,c)))) & (forall e (forall d ( IsPerchedOn(d,e) ->  IsPerching(d))))) -> (exists a (exists b (IsPerching(a) and IsInTree(b))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Someone billion people would face unlivable conditions.\"",
+    "Implication": " \"The internal cohesion of nation-states like the US and China would unravel.\"",
+    "Referring expressions": " Someone, billion people, unlivable conditions.  Nation-states, US, China",
+    "Properties": " IsSomeone(a),  AreBillionPeople(b),  AreUnlivableConditions(c)  IsNationState(d),  IsUnraveling(e,f)",
+    "Formula": "(exists c (exists b (exists a (IsSomeone(a) and (AreBillionPeople(b) and AreUnlivableConditions(c))))) & (forall g (forall h (forall i (  IsUnraveling(g,h) ->   AreUnlivableConditions(i)))))) -> (exists f (exists e (exists d (IsNationState(d) and (IsUnraveling(e,f) or IsUnraveling(f,e))))))"
+}

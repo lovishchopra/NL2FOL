@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man with a blue wrapping around his foot is about to kick another man with a red cloth hanging from his belt.\"",
+    "Implication": " \"A kitten drinks milk.\"",
+    "Referring expressions": "  A kitten, milk",
+    "Properties": " IsInBlueWrapping(a),  IsAboutToKick(a),  IsInRedCloth(a)  IsDrinksMilk(b)",
+    "Formula": "(exists a (IsInBlueWrapping(a) and (IsAboutToKick(a) or IsInRedCloth(a)))) -> (exists b (IsDrinksMilk(b)))"
+}

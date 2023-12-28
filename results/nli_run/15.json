@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A small girl with short brown hair is pushing a pink scooter.\"",
+    "Implication": " \"The girl is on a beach.\"",
+    "Referring expressions": " Small girl, short brown hair, pink scooter  Girl, beach",
+    "Properties": " IsSmall(a),  HasShortBrownHair(b),  IsPushing(c)  IsOnBeach(d)",
+    "Formula": "(exists c (exists a (exists b (IsSmall(a) and HasShortBrownHair(b) and IsPushing(c)))) & (forall f (forall g ( IsOnBeach(f) ->  IsSmall(g))))) -> (exists d (IsOnBeach(d)))"
+}

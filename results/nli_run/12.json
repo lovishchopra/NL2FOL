@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Asian men are sitting down.\"",
+    "Implication": " \"Asian women are sitting in a restaurant.\"",
+    "Referring expressions": " Asian men  Asian women, restaurant",
+    "Properties": " IsSittingDown(a)  IsSittingInRestaurant(b)",
+    "Formula": "(exists a (IsAsian(a) and IsSittingDown(a))) -> (exists b (IsSittingInRestaurant(b)))"
+}

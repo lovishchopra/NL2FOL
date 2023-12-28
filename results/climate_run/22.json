@@ -3,5 +3,5 @@
     "Implication": " \"Many climate scientists believe the current ecological future is similar to the past mass extinctions.\"",
     "Referring expressions": " Earth, mass extinctions  Many climate scientists, current ecological future, mass extinctions",
     "Properties": " HasExperienced(a)  Believe(c),  IsSimilarTo(d, a)",
-    "Formula": "(exists a (HasExperienced(a)) & (forall g (forall f (forall e ( HasExperienced(e) ->   IsSimilarTo(f,g)))))) -> (exists d (exists c (exists a (Believe(c) and IsSimilarTo(d, a)))))"
+    "Formula": "(exists a (HasExperienced(a)) & (forall f (forall e (forall g ( HasExperienced(e) ->   IsSimilarTo(f,g)))))) -> (exists d (exists c (exists a (Believe(c) and IsSimilarTo(d, a)))))"
 }

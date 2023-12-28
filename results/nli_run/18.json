@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Little girl flips an omelet.\"",
+    "Implication": " \"Young girl cooks pancakes.\"",
+    "Referring expressions": " Little girl, omelet.  Young girl, pancakes.",
+    "Properties": " IsLittle(a),  FlipsOmelet(b)  IsYoung(c),  CooksPancakes(d)",
+    "Formula": "(exists a (exists b (IsLittle(a) and FlipsOmelet(b))) & (forall f (forall e ( IsLittle(e) ->  IsYoung(f)))) & (forall h (forall g ( IsYoung(g) ->  IsLittle(h))))) -> (exists c (exists d (IsYoung(c) and CooksPancakes(d))))"
+}

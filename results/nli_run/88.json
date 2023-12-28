@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Four people are standing on a hiking trail in a forest.\"",
+    "Implication": " \"Nobody is standing.\"",
+    "Referring expressions": " Four people, hiking trail, forest  Nobody",
+    "Properties": " IsStandingOn(a,b),  IsInForest(c)  IsStanding(d)",
+    "Formula": "(exists c (exists a (exists b (IsStandingOn(a,b) and IsInForest(c))))) -> (exists d (~IsStanding(d)))"
+}

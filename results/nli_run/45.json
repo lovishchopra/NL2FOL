@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man stands speaking to a crowd of sitting people.\"",
+    "Implication": " \"A boy is riding a wave on his surfboard.\"",
+    "Referring expressions": " A man, crowd of sitting people.  A boy, surfboard, wave",
+    "Properties": " IsStanding(a),  IsSitting(b)  IsRiding(c,d),  IsOnWave(e)",
+    "Formula": "(exists a (exists b (IsStanding(a) and ~IsSitting(b)))) -> (exists e (exists c (exists d (IsRiding(c,d) and IsOnWave(e)))))"
+}

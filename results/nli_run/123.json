@@ -1,0 +1,7 @@
+{
+    "Claim": " \"An asian teenager wearing a white shirt with black stripes is seated.\"",
+    "Implication": " \"The teenager is seated.\"",
+    "Referring expressions": " Asian teenager, white shirt, black stripes, seated.  teenager",
+    "Properties": " IsAsian(a),   IsWearingWhiteShirt(b),   HasBlackStripes(c),   IsSeated(d)  IsSeated(e)",
+    "Formula": "(exists c (exists a (exists d (exists b (IsAsian(a) and (IsWearingWhiteShirt(b) and HasBlackStripes(c)) and IsSeated(d))))) & (forall f (forall g ( IsSeated(f) ->  IsAsian(g)))) & (forall i (forall h ( IsSeated(h) ->    IsWearingWhiteShirt(i))))) -> (exists e (IsSeated(e)))"
+}

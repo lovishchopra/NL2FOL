@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A child with blond hair is being held by his mother at the mall.\"",
+    "Implication": " \"A child is being held by his mother at the mall.\"",
+    "Referring expressions": " Child, blond hair, mother, mall  A child, his mother, mall",
+    "Properties": " IsBlond(c),  IsHeldBy(d),  IsAtMall(a)  IsBeingHeldBy(f),  IsAtMall(a)",
+    "Formula": "(exists c (exists a (exists d (IsBlond(c) and IsHeldBy(d) and IsAtMall(a)))) & (forall h (forall g (  IsHeldBy(g) ->  IsBeingHeldBy(h)))) & (forall i (forall j ( IsBeingHeldBy(i) ->   IsHeldBy(j))))) -> (exists f (exists a (IsBeingHeldBy(f) and IsAtMall(a))))"
+}

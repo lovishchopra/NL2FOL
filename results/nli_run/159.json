@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A bearded man sits near a white van.\"",
+    "Implication": " \"A man sitting outside near a van.\"",
+    "Referring expressions": " A bearded man, white van  A man, outside, near, van.",
+    "Properties": " IsBearded(a),  IsNear(a,b)  IsSitting(c),  IsNear(c,d)",
+    "Formula": "(exists a (exists b (IsBearded(a) and IsNear(a,b)))) -> (exists c (exists d (IsSitting(c) and IsNear(c,d))))"
+}

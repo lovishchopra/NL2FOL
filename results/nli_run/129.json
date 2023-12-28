@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A boy runs through the grass.\"",
+    "Implication": " \"A boy is outside.\"",
+    "Referring expressions": " A boy, grass  A boy, outside",
+    "Properties": " IsRunsThrough(a,b)  IsOutside(a,c)",
+    "Formula": "(exists a (exists b (IsRunsThrough(a,b)))) -> (exists c (exists a (IsOutside(a,c))))"
+}

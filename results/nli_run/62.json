@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A couple walks hand-in-hand in front of a building.\"",
+    "Implication": " \"A couple walks in front of a boat.\"",
+    "Referring expressions": " A couple, building  A couple, boat",
+    "Properties": " IsWalks(a),  IsHandInHand(a),  IsInFrontOf(b)  IsWalks(a),  IsInFrontOf(c)",
+    "Formula": "(exists a (exists b (IsWalks(a) and IsHandInHand(a) and IsInFrontOf(b)))) -> (exists c (exists a (IsWalks(a) and IsInFrontOf(c))))"
+}

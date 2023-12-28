@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A white greyhound dog wears a muzzle and runs around a track.\"",
+    "Implication": " \"The dog is racing other dogs.\"",
+    "Referring expressions": "  dog, other dogs",
+    "Properties": " IsWhite(a),  WearsMuzzle(a),  RunsAroundTrack(a)  IsRacing(b),  IsOtherDog(c)",
+    "Formula": "(exists a (IsWhite(a) and (WearsMuzzle(a) and RunsAroundTrack(a))) & (forall e (forall d ( IsRacing(d) ->   RunsAroundTrack(e))))) -> (exists c (exists b (IsRacing(b) and IsOtherDog(c))))"
+}

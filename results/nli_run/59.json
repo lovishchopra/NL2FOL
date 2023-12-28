@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The small dog is running across the lawn.\"",
+    "Implication": " \"A cat is running up a tree.\"",
+    "Referring expressions": " Small dog, lawn  A cat, tree",
+    "Properties": " IsSmall(a),  IsRunning(a),  IsOnLawn(b)  IsRunning(c),  IsOnTree(d)",
+    "Formula": "(exists a (exists b (IsSmall(a) and IsOnLawn(b)))) -> (exists c (exists d (IsRunning(c) and IsOnTree(d))))"
+}

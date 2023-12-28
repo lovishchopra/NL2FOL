@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Daddy taught her how to ride her scooter.\"",
+    "Implication": " \"Daddy taught her.\"",
+    "Referring expressions": " Daddy, her, scooter  Daddy, her.",
+    "Properties": " IsTaught(a,b),  IsRidden(c)  IsTaught(a,d)",
+    "Formula": "(exists c (exists a (exists b (IsTaught(a,b) and IsRidden(c))))) -> (exists a (exists d (IsTaught(a,d))))"
+}

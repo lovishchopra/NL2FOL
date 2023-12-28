@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two children wearing hooded tops laugh with each other.\"",
+    "Implication": " \"Children laugh.\"",
+    "Referring expressions": " Two children, hooded tops, each other.  Children",
+    "Properties": " IsWearingHoodedTops(a),  LaughsWithEachOther(c)  IsLaugh(d)",
+    "Formula": "(exists c (exists a (IsWearingHoodedTops(a) and LaughsWithEachOther(c)))) -> (exists d (IsLaugh(d)))"
+}

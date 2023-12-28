@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man is pushing many cartons of bread down the street.\"",
+    "Implication": " \"A woman is baking bread in the oven.\"",
+    "Referring expressions": " A man, many cartons of bread, street  Woman, bread, oven.",
+    "Properties": " IsPushing(a),  HasManyCartons(b),  IsOnStreet(c)  IsBaking(d),  HasBread(e),  IsInOven(f)",
+    "Formula": "(exists c (exists a (exists b (IsPushing(a) and HasManyCartons(b) and IsOnStreet(c)))) & (forall h (forall g (  HasManyCartons(g) ->   HasBread(h))))) -> (exists f (exists e (exists d (IsBaking(d) and HasBread(e) and IsInOven(f)))))"
+}

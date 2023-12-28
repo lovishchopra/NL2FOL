@@ -1,0 +1,7 @@
+{
+    "Claim": " \"We change major planetary systems\"",
+    "Implication": " \"We are alive today\"",
+    "Referring expressions": " We, major planetary systems  We, today",
+    "Properties": " IsChanged(a,b)  IsAlive(a,c)",
+    "Formula": "(exists b (exists a (IsChanged(a,b)))) -> (exists c (exists a (IsAlive(a,c))))"
+}

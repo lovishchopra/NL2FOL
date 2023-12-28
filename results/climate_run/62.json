@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Severe heatwave claimed over 1,000 lives in Karachi.\"",
+    "Implication": " \"Severe drought caused food shortages for millions of people in Ethiopia.\"",
+    "Referring expressions": " Severe heatwave, Karachi  Severe drought, food shortages, millions of people, Ethiopia",
+    "Properties": " IsClaimed(a,b)  IsCaused(c,d),   IsFor(d,e),   IsIn(f)",
+    "Formula": "(exists b (exists a (IsSevereHeatwave(a) and IsClaimed(a,b)))) -> (exists f (exists e (exists d (exists c (IsCaused(c,d) and (IsFor(d,e) and IsIn(f)))))))"
+}

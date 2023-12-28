@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A brown dog persues a Frisbee across the grass as the thrower watches.\"",
+    "Implication": " \"A dog goes to the vet.\"",
+    "Referring expressions": "  A dog, vet",
+    "Properties": " IsBrown(a),  IsPersuing(a),  IsAcrossGrass(a),  IsThrown(b)  IsGoesTo(b),  IsVet(c)",
+    "Formula": "(exists a (exists b (IsBrown(a) and IsPersuing(a) and IsAcrossGrass(a) and IsThrown(b)))) -> (exists c (exists b (IsGoesTo(b) and IsVet(c))))"
+}

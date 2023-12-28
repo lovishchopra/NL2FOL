@@ -1,0 +1,7 @@
+{
+    "Claim": " \"This church choir sings to the masses.\"",
+    "Implication": " \"A choir singing at a baseball game.\"",
+    "Referring expressions": " This church choir, masses  A choir, baseball game",
+    "Properties": " IsSingsTo(a,b)  IsSingingAt(c,d)",
+    "Formula": "(exists a (exists b (IsSingsTo(a,b)))) -> (exists c (exists d (IsSingingAt(c,d))))"
+}

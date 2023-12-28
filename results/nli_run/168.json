@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A young man in an orange shirt rides a skateboard.\"",
+    "Implication": " \"A person rides a skateboard.\"",
+    "Referring expressions": " Young man, orange shirt, skateboard  A person, skateboard",
+    "Properties": " IsYoung(b),  IsInOrangeShirt(c),  IsRidesSkateboard(a)  IsRidesSkateboard(a)",
+    "Formula": "(exists c (exists a (exists b (IsYoung(b) and IsInOrangeShirt(c) and IsRidesSkateboard(a)))) & (forall f (forall e ( IsRidesSkateboard(e) ->  IsYoung(f))))) -> (exists a (IsRidesSkateboard(a)))"
+}

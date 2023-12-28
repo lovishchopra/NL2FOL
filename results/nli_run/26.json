@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The man is wearing a tank top.\"",
+    "Implication": " \"The man is in Alaska.\"",
+    "Referring expressions": " Man, tank top  Man, Alaska",
+    "Properties": " IsWearing(a,b)  IsIn(a,c)",
+    "Formula": "(exists a (exists b (IsWearing(a,b)))) -> (exists c (exists a (IsIn(a,c))))"
+}

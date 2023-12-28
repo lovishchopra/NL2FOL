@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The sun and clouds are important for the climate.\"",
+    "Implication": " \"Modellers did not consider the sun and clouds important.\"",
+    "Referring expressions": " The sun, clouds, climate.  sun, clouds, modellers",
+    "Properties": " IsImportantFor(a,c),  IsClimate(c)  IsNotImportantFor(a,d),  IsDidNotConsider(e)",
+    "Formula": "(exists c (exists a (IsImportantFor(a,c) and IsClimate(c)))) -> (exists e (exists d (exists a (IsNotImportantFor(a,d) and DidNotConsider(e)))))"
+}

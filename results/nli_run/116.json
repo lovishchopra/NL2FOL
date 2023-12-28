@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Children are playing a video game together.\"",
+    "Implication": " \"The kids are indoors playing a video game.\"",
+    "Referring expressions": " Children, video game, together  The kids, video game",
+    "Properties": " IsPlaying(b),  IsTogether(b,c)  IsIndoors(d),  IsPlaying(a)",
+    "Formula": "(exists c (exists b (IsPlaying(b) and IsTogether(b,c))) & (forall f (forall e (forall g ( IsIndoors(e) ->   IsTogether(f,g)))))) -> (exists a (exists d (IsIndoors(d) and IsPlaying(a))))"
+}

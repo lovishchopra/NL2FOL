@@ -1,7 +1,7 @@
 {
     "Claim": " \"The World Coal Association disputed the conclusion that stopping global warming calls for an end of coal use\"",
-    "Implication": " \"The World Coal Association does not want to stop global warming\"",
-    "Referring expressions": " The World Coal Association, global warming, coal use  World Coal Association, global warming",
-    "Properties": " IsDisputed(b),  IsEnded(c)  DoesNotWantToStop(d),  IsGlobalWarming(a)",
-    "Formula": "(exists c (exists b (IsDisputed(b) and IsEnded(c)))) -> (exists d (exists a (DoesNotWantToStop(d) and IsGlobalWarming(a))))"
+    "Implication": " \"Ending coal use is not necessary to stop global warming\"",
+    "Referring expressions": " The World Coal Association, global warming, coal use  Ending coal use, global warming",
+    "Properties": " IsDisputed(b),  IsEnded(c)  IsNotNecessary(d),  IsStopped(a)",
+    "Formula": "(exists c (exists b (IsDisputed(b) and IsEnded(c))) & (forall f (forall e (  IsEnded(e) ->  IsNotNecessary(f)))) & (forall g (forall h ( IsNotNecessary(g) ->   IsEnded(h)))) & (forall j (forall i (  IsEnded(i) ->   IsStopped(j))))) -> (exists d (exists a (IsNotNecessary(d) and IsStopped(a))))"
 }

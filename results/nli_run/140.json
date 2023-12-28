@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A child and a parent or older sibling go for a hike.\"",
+    "Implication": " \"Two people go for a hike.\"",
+    "Referring expressions": " A child, parent, older sibling, hike.  Two people, hike",
+    "Properties": " IsChildOf(a,b),  IsOlderSiblingOf(a,c),  IsOnHike(d)  IsOnHike(f)",
+    "Formula": "(exists c (exists a (exists d (exists b ((IsChildOf(a,b) and IsOnHike(d)) or (IsOlderSiblingOf(a,c) and IsOnHike(d))))))) -> (exists e (IsOnHike(e)))"
+}

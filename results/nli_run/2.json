@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man is carrying a bag on his back.\"",
+    "Implication": " \"A man is outside with no bag on his back.\"",
+    "Referring expressions": " A man, bag, his back  A man, outside, no bag on his back.",
+    "Properties": " IsCarriedOnBack(a,c)  IsOutside(a),   IsWithoutBagOnBack(a,e)",
+    "Formula": "(exists c (exists a (IsCarriedOnBack(a,c)))) -> (exists e (exists a (IsOutside(a) and IsWithoutBagOnBack(a,e))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man is inside\"",
+    "Implication": " \"A man sits outdoors with some of his belongings\"",
+    "Referring expressions": " A man, inside  Some of his belongings",
+    "Properties": " IsInside(a)  IsOutdoors(a),  BelongsTo(a)",
+    "Formula": "(exists a (IsInside(a)) & (forall d ( IsInside(d) ->   BelongsTo(d))) & (forall e (  BelongsTo(e) ->  IsInside(e)))) -> (exists c (exists a (IsOutdoors(a) and BelongsTo(a,c))))"
+}

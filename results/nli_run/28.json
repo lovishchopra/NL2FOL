@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The girl is playing electronic drum pads with sticks.\"",
+    "Implication": " \"The girl is playing cricket.\"",
+    "Referring expressions": " Girl, electronic drum pads, sticks  Girl, cricket",
+    "Properties": " IsPlaying(a,b),   IsWithSticks(c)  IsPlaying(a,d)",
+    "Formula": "(exists c (exists a (exists b (IsPlaying(a,b) and IsWithSticks(c))))) -> (exists a (exists d (IsPlaying(a,d))))"
+}

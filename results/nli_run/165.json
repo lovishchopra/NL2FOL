@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The girl is outside.\"",
+    "Implication": " \"The girl is small and has short brown hair.\"",
+    "Referring expressions": " Girl, outside  Girl, small, short brown hair.",
+    "Properties": " IsOutside(a)  IsSmall(a),  HasShortBrownHair(a)",
+    "Formula": "(exists b (IsOutside(b)) & (forall e ( IsOutside(e) ->  IsSmall(e)))) -> (exists a (IsSmall(a) and HasShortBrownHair(a)))"
+}

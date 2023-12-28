@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A little boy looks disgusted that his ball is dirty.\"",
+    "Implication": " \"It looks like quite a sweaty, smelly dog pile over one little rugby ball.\"",
+    "Referring expressions": " little boy, ball, disgusted  It, little rugby ball, dog pile, smelly, sweaty",
+    "Properties": " IsLittle(a),  IsDirty(b),  IsDisgusted(c)  IsSmelly(f),  IsSweaty(h),  IsDogPile(e)",
+    "Formula": "(exists c (exists a (exists b (IsLittle(a) and IsDirty(b) and IsDisgusted(c)))) & (forall i (forall j ( IsSmelly(i) ->   IsDisgusted(j))))) -> (exists f (exists e (exists h (IsSmelly(f) and (IsSweaty(h) and IsDogPile(e))))))"
+}

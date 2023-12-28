@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A small girl is playing electronic drum pads with sticks.\"",
+    "Implication": " \"A girl is playing electronic drums.\"",
+    "Referring expressions": " Small girl, electronic drum pads, sticks.  Girl, electronic drums",
+    "Properties": " IsSmall(a),  IsPlaying(a),  HasSticks(c)  IsPlaying(d),  HasElectronicDrums(e)",
+    "Formula": "(exists c (exists a (IsSmall(a) and IsPlaying(a) and HasSticks(c))) & (forall f (forall g ( IsPlaying(f) ->  IsSmall(g))))) -> (exists e (exists d (IsPlaying(d) and HasElectronicDrums(e))))"
+}

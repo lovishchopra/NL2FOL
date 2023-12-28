@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Three people are laughing.\"",
+    "Implication": " \"The dogs are laughing.\"",
+    "Referring expressions": " Three people  The dogs",
+    "Properties": " IsLaughing(a)  IsLaughing(b)",
+    "Formula": "(exists c (exists a (exists b (IsLaughing(a) and (IsLaughing(b) and IsLaughing(c)))))) -> (exists b (IsLaughing(b)))"
+}

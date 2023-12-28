@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A group of young adults have 'X' on their hands.\"",
+    "Implication": " \"The group of adults are crying hysterically.\"",
+    "Referring expressions": " young adults, 'X'  Adults",
+    "Properties": " IsYoungAdult(a),  HasX(b)  IsAdult(c),  IsCryingHysterically(c)",
+    "Formula": "(exists a (exists b (IsYoungAdult(a) and HasX(b))) & (forall e (forall d (  HasX(d) ->  IsAdult(e))))) -> (exists c (IsAdult(c) and IsCryingHysterically(c)))"
+}

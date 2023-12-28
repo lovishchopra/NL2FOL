@@ -1,6 +1,6 @@
 {
-    "Claim": " \"Most scientists saw climate change as a distant prospect\"",
-    "Implication": " \"Climate change is an urgent threat\"",
+    "Claim": " \"Most scientists saw climate change as a distant prospect.\"",
+    "Implication": " \"Climate change is an urgent threat.\"",
     "Referring expressions": " Most scientists, climate change  Climate change, urgent threat",
     "Properties": " IsDistant(a)  IsUrgent(c)",
     "Formula": "(exists b (exists a (MostScientists(b) and IsDistant(a)))) -> (exists c (IsUrgent(c)))"

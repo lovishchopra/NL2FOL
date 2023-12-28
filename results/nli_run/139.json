@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man is taking a picture while a woman walks behind him.\"",
+    "Implication": " \"A man is taking a picture outdoors while a woman walks behind him.\"",
+    "Referring expressions": " A man, woman, picture, behind him.  A man, woman, picture, outdoors",
+    "Properties": " IsTakingAPicture(a),  IsBehind(b)  IsTakingAPicture(a),  IsOutdoors(c),  IsBehind(b)",
+    "Formula": "(exists a (exists b (IsTakingAPicture(a) and IsBehind(b)))) -> (exists c (exists a (exists b (IsTakingAPicture(a) and IsOutdoors(c) and IsBehind(b)))))"
+}

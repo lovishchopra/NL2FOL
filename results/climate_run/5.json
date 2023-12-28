@@ -3,5 +3,5 @@
     "Implication": " \"We all live in regions, not the globe\"",
     "Referring expressions": " No one, nothing  We, regions, globe",
     "Properties": " IsExperiencedDirectly(a),  IsExperiencedDirectly(b)  IsInRegion(c),  IsNotInGlobe(d)",
-    "Formula": "(exists b (exists a (~IsExperiencedDirectly(a) and ~IsExperiencedDirectly(b)))) -> (exists c (exists e (IsInRegion(c) and ~IsInGlobe(e))))"
+    "Formula": "(exists b (exists a (~IsExperiencedDirectly(a) and ~IsExperiencedDirectly(b)))) -> (exists e (exists c (IsInRegion(c) and ~IsInGlobe(e))))"
 }

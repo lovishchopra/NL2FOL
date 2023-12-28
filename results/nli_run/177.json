@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Three girls are standing and talking to each other.\"",
+    "Implication": " \"Three girls are talking.\"",
+    "Referring expressions": " Three girls, each other.  Three girls",
+    "Properties": " IsStanding(a),  AreTalkingToEachOther(a)  IsTalking(a)",
+    "Formula": "(exists a (IsStanding(a) and AreTalkingToEachOther(a)) & (forall c (  AreTalkingToEachOther(c) ->  IsTalking(c))) & (forall d ( IsTalking(d) ->   AreTalkingToEachOther(d)))) -> (exists c (exists a (exists b (IsTalking(a) and (IsTalking(b) and IsTalking(c))))))"
+}

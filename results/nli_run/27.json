@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The large white bird grazes the water.\"",
+    "Implication": " \"The bird is in a tiny cage.\"",
+    "Referring expressions": " large white bird, water  Bird, tiny cage",
+    "Properties": " IsLarge(a),  IsWhite(a),  GrazesWater(a)  IsInTinyCage(c)",
+    "Formula": "(exists a (IsLarge(a) and IsWhite(a) and GrazesWater(a))) -> (exists d (IsInTinyCage(d)))"
+}

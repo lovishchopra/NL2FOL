@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man and a woman are standing.\"",
+    "Implication": " \"A consequence occurred.\"",
+    "Referring expressions": " Man, woman  A consequence, occurred",
+    "Properties": " IsStanding(a),  IsStanding(b)  IsOccurred(d)",
+    "Formula": "(exists a (exists b (IsStanding(a) and IsStanding(b)))) -> (exists d (IsOccurred(d)))"
+}

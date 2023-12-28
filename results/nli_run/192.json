@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A group of people are sight seeing and taking pictures.\"",
+    "Implication": " \"There are a group of people.\"",
+    "Referring expressions": " A group of people, sight seeing, pictures.  a group of people",
+    "Properties": " IsSightSeeing(a),  IsTakingPictures(c)  IsAGoupOfPeople(a)",
+    "Formula": "(exists c (exists a (IsSightSeeing(a) and IsTakingPictures(c)))) -> (exists a (IsAGoupOfPeople(a)))"
+}

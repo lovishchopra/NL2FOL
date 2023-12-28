@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man is wearing a suit.\"",
+    "Implication": " \"A public speaker in a plaid shirt speaks on the microphone.\"",
+    "Referring expressions": " A man, suit  Public speaker, plaid shirt, microphone.",
+    "Properties": " IsWearing(a,b)  IsPublicSpeaker(c),  IsInPlaidShirt(d),  IsSpeakingOnMicrophone(e)",
+    "Formula": "(exists a (exists b (IsWearing(a,b)))) -> (exists e (exists c (exists d (IsPublicSpeaker(c) and IsInPlaidShirt(d) and IsSpeakingOnMicrophone(e)))))"
+}

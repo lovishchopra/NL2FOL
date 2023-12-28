@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man is laying a wooden bench.\"",
+    "Implication": " \"A man relaxes on a bench.\"",
+    "Referring expressions": " A man, wooden bench  A man, bench",
+    "Properties": " IsLaying(a,b)  IsRelaxing(a,c)",
+    "Formula": "(exists a (exists b (IsLaying(a,b))) & (forall f (forall e (forall d ( IsLaying(d,e) ->  IsRelaxing(d,f))))) & (forall i (forall h (forall g ( IsRelaxing(g,h) ->  IsLaying(g,i)))))) -> (exists c (exists a (IsRelaxing(a,c))))"
+}

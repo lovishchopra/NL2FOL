@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A group of women sing together while wearing matching black dresses.\"",
+    "Implication": " \"There are women singing.\"",
+    "Referring expressions": " A group of women, matching black dresses  Women, singing",
+    "Properties": " IsInGroup(a),  MatchingBlackDresses(b)  IsSinging(d)",
+    "Formula": "(exists a (exists b (IsInGroup(a) and MatchingBlackDresses(b)))) -> (exists c (IsSinging(c)))"
+}

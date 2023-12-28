@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A boy and girl play together on a pile of rocks.\"",
+    "Implication": " \"The boy and girl are outside.\"",
+    "Referring expressions": " A boy, girl, pile of rocks.  Boy, girl, outside.",
+    "Properties": " IsPlayingTogether(b,a),  IsOnPileOfRocks(c)  IsOutside(a),  IsBoy(d)",
+    "Formula": "(exists c (exists a (exists b (IsPlayingTogether(b,a) and IsOnPileOfRocks(c))))) -> (exists a (exists d (IsOutside(a) and IsBoy(d))))"
+}

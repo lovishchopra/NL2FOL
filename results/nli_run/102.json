@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Six women are outside.\"",
+    "Implication": " \"Women wait to use a port-o-john in a field.\"",
+    "Referring expressions": " Six women, outside  Women, port-o-john, field",
+    "Properties": " IsOutside(a)  IsWaitingToUse(c),  IsInField(e)",
+    "Formula": "(exists b (IsOutside(b)) & (forall f (forall g ( IsOutside(f) ->  IsWaitingToUse(g))))) -> (exists e (exists c (IsWaitingToUse(c) and IsInField(e))))"
+}

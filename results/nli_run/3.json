@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A woman holds a golden axe.\"",
+    "Implication": " \"A man holds a sword.\"",
+    "Referring expressions": " A woman, golden axe.  A man, sword",
+    "Properties": " IsHeldBy(a,b)  IsHeldBy(c,d)",
+    "Formula": "(exists a (exists b (IsHeldBy(a,b)))) -> (exists c (exists d (IsHeldBy(c,d))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man scales a rock climbing wall.\"",
+    "Implication": " \"A man rock climbing.\"",
+    "Referring expressions": " A man, rock climbing wall  A man, rock climbing",
+    "Properties": " IsScaling(a,b)  IsRockClimbing(a,c)",
+    "Formula": "(exists a (exists b (IsScaling(a,b)))) -> (exists c (exists a (IsRockClimbing(a,c))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"There is a worker on a break.\"",
+    "Implication": " \"A yellow backhoe is near a large pile of dirt and rocks near a blue machine.\"",
+    "Referring expressions": " worker, break  A yellow backhoe, large pile of dirt and rocks, blue machine.",
+    "Properties": " IsOnBreak(a)  IsNear(c,d),  IsBlue(e)",
+    "Formula": "(exists a (IsOnBreak(a))) -> (exists e (exists c (exists d (IsNear(c,d) and IsBlue(e)))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man in green kicked a soccer ball.\"",
+    "Implication": " \"A man in purple and white fell down.\"",
+    "Referring expressions": " A man, green, soccer ball  Man in purple and white",
+    "Properties": " IsInGreen(b),  KickedSoccerBall(c)  IsInPurpleAndWhite(d),  FellDown(d)",
+    "Formula": "(exists c (exists b (IsInGreen(b) and KickedSoccerBall(c)))) -> (exists d (IsInPurpleAndWhite(d) and FellDown(d)))"
+}

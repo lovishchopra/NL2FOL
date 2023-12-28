@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two workers are working in front of a house.\"",
+    "Implication": " \"The workers are sleeping.\"",
+    "Referring expressions": " Two workers, house  The workers",
+    "Properties": " IsWorkingInFrontOf(a,b)  IsSleeping(c)",
+    "Formula": "(exists a (exists b (IsWorkingInFrontOf(a,b)))) -> (exists c (IsSleeping(c)))"
+}

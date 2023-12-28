@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A choir is performing.\"",
+    "Implication": " \"The choir is singing.\"",
+    "Referring expressions": " A choir  Choice",
+    "Properties": " IsPerforming(a)  IsSinging(b)",
+    "Formula": "(exists a (IsPerforming(a)) & (forall c (forall d ( IsPerforming(c) ->  IsSinging(d)))) & (forall f (forall e ( IsSinging(e) ->  IsPerforming(f))))) -> (exists b (IsSinging(b)))"
+}

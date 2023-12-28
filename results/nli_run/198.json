@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A male guitar player is vigorously singing a not to a song in a poorly lit room.\"",
+    "Implication": " \"A man is singing indoors.\"",
+    "Referring expressions": " Male guitar player, not to a song, poorly lit room.  A man, indoors",
+    "Properties": " IsMale(a),  IsSinging(a),  IsInPoorlyLitRoom(c)  IsSinging(d),  IsIndoors(e)",
+    "Formula": "(exists c (exists a (IsMale(a) and IsSinging(a) and IsInPoorlyLitRoom(c))) & (forall f (forall g (  IsInPoorlyLitRoom(f) ->   IsIndoors(g)))) & (forall i (forall h (  IsIndoors(h) ->   IsInPoorlyLitRoom(i))))) -> (exists e (exists d (IsSinging(d) and IsIndoors(e))))"
+}

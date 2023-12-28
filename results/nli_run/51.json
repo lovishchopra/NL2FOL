@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man adjusts his tie while looking at a laptop computer.\"",
+    "Implication": " \"A woman adjusts her bra.\"",
+    "Referring expressions": " A man, tie, laptop computer  Woman, bra",
+    "Properties": " IsAdjusting(a),  IsLookingAt(b),  IsAComputer(c)  IsAdjusting(d),  IsABra(e)",
+    "Formula": "(exists c (exists a (exists b (IsAdjusting(a) and IsLookingAt(b) and IsAComputer(c))))) -> (exists e (exists d (IsAdjusting(d) and IsABra(e))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Villagers are pulling in the fish boat.\"",
+    "Implication": " \"The villagers are sitting around the camp fire.\"",
+    "Referring expressions": " Villagers, fish boat  The villagers, camp fire",
+    "Properties": " IsPullingIn(a,b)  IsSittingAround(c),  IsAtCampFire(d)",
+    "Formula": "(exists a (exists b (IsPullingIn(a,b)))) -> (exists c (exists d (IsSittingAround(c) and IsAtCampFire(d))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The man is sweeping with a red broom.\"",
+    "Implication": " \"The man is dancing with a woman.\"",
+    "Referring expressions": " Man, red broom  Man, woman",
+    "Properties": " IsSweeping(a),  IsRed(b)  IsDancing(a),  IsWith(a,c)",
+    "Formula": "(exists a (exists b (IsSweeping(a) and IsRed(b)))) -> (exists c (exists a (IsDancing(a) and IsWith(a,c))))"
+}

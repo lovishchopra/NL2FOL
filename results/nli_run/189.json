@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The dogs are cruising down the street.\"",
+    "Implication": " \"Three dogs together.\"",
+    "Referring expressions": " The dogs  Three dogs",
+    "Properties": " IsCruising(a)  IsTogether(b)",
+    "Formula": "(exists a (IsCruising(a)) & (forall c (forall d ( IsTogether(c) ->  IsCruising(d))))) -> (exists b (IsTogether(b)))"
+}

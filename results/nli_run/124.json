@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The boy is walking.\"",
+    "Implication": " \"The boy walks through the grass.\"",
+    "Referring expressions": " The boy  The boy, grass",
+    "Properties": " IsWalking(a)  IsWalking(a),  IsInGrass(b)",
+    "Formula": "(exists a (IsWalking(a))) -> (exists a (exists b (IsWalking(a) and IsInGrass(b))))"
+}

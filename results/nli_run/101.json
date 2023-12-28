@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two men watched one man make a golf putt on the set of Sports Center.\"",
+    "Implication": " \"People watch sports.\"",
+    "Referring expressions": " Two men, one man, golf putt, Sports Center.  People, sports",
+    "Properties": " IsWatched(a,b),  IsOnSportsCenter(c)  IsWatched(e,f)",
+    "Formula": "(exists c (exists a (exists b (IsWatched(a,b) and IsOnSportsCenter(c)))) & (forall i (forall h (forall g (  IsOnSportsCenter(g) ->  IsWatched(h,i)))))) -> (exists f (exists e (IsWatched(e,f))))"
+}

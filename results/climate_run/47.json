@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Most of the ice was extremely thin in 2008.\"",
+    "Implication": " \"Most of the ice has been at least two meters thick this year.\"",
+    "Referring expressions": " Most of the ice, 2008  Most of the ice, two meters, this year.",
+    "Properties": " IsThin(a),  WasIn2008(b)  IsAtLeastTwoMetersThick(a),  IsThisYear(d)",
+    "Formula": "(exists b (exists a (IsThin(a) and WasIn2008(b))) & (forall f (forall e (  WasIn2008(e) ->   IsThisYear(f)))) & (forall g (forall h (  IsThisYear(g) ->   WasIn2008(h))))) -> (exists d (exists a (IsAtLeastTwoMetersThick(a) and IsThisYear(d))))"
+}

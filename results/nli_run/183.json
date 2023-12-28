@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A person is at a podium.\"",
+    "Implication": " \"A woman is at a podium.\"",
+    "Referring expressions": " A person, podium  Woman, podium",
+    "Properties": " IsAt(a,b)  IsAt(a,c)",
+    "Formula": "(exists a (exists b (IsAt(a,b)))) -> (exists c (exists a (IsAt(a,c))))"
+}

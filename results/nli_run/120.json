@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man is in front of a camera.\"",
+    "Implication": " \"A young man in a blue T-shirt and sweatpants stands over a stove and looks at the camera.\"",
+    "Referring expressions": " Man, camera  Young man, blue T-shirt, sweatpants, stove, camera",
+    "Properties": " IsInFrontOf(b,a)  IsYoung(c),   WearsBlueTShirt(d),   WearsSweatpants(e),   StandsOnStove(f),   LooksAtCamera(a)",
+    "Formula": "(exists a (exists b (IsInFrontOf(b,a))) & (forall i (forall h (forall g ( IsInFrontOf(g,h) ->  IsYoung(i))))) & (forall j (forall k ( IsInFrontOf(j,k) ->    LooksAtCamera(k))))) -> (exists f (exists e (exists c (exists d (exists a ((IsYoung(c) and WearsBlueTShirt(d) and WearsSweatpants(e) and StandsOnStove(f)) and LooksAtCamera(a)))))))"
+}

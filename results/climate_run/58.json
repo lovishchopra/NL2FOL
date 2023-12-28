@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Global warming leads to more frequent precipitation and improved soil moisture.\"",
+    "Implication": " \"Global warming is creating a safer, more peaceful world.\"",
+    "Referring expressions": " Global warming, precipitation, soil moisture  Global warming, world",
+    "Properties": " IsLeadsTo(a,b),  IsImprovedSoilMoisture(c)  IsCreating(a),  IsSafer(d),  IsMorePeaceful(d)",
+    "Formula": "(exists c (exists b (exists a (IsLeadsTo(a,b) and IsImprovedSoilMoisture(c)))) & (forall f (forall e ( IsLeadsTo(e,f) ->  IsCreating(e))))) -> (exists d (exists a (IsCreating(a) and (IsSafer(d) and IsMorePeaceful(d)))))"
+}

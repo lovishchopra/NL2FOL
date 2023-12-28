@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A person stands in the middle of a crowd of teenagers.\"",
+    "Implication": " \"Thus, a person stands in the middle of a crowd of teenagers.\"",
+    "Referring expressions": " A person, crowd of teenagers  person, crowd, teenagers",
+    "Properties": " IsInCrowd(a),  IsTeenager(b)  IsInCrowd(c),  IsTeenager(e)",
+    "Formula": "(exists a (exists b (IsInCrowd(a) and IsTeenager(b)))) -> (exists e (exists c (IsInCrowd(c) and IsTeenager(e))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A girl is making a snow angel.\"",
+    "Implication": " \"A girl plays in the snow.\"",
+    "Referring expressions": " A girl, snow angel  A girl, snow",
+    "Properties": " IsMaking(a),  IsSnowAngel(b)  IsPlays(a),  IsSnow(c)",
+    "Formula": "(exists a (exists b (IsMaking(a) and IsSnowAngel(b))) & (forall d ( IsMaking(d) ->  IsPlays(d))) & (forall e ( IsPlays(e) ->  IsMaking(e)))) -> (exists c (exists a (IsPlays(a) and IsSnow(c))))"
+}

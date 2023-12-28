@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Scientists research ways to eliminate male baldness.\"",
+    "Implication": " \"A group of scientists walked into a bar and ordered a drink.\"",
+    "Referring expressions": " Scientists, male baldness  A group of scientists, bar, drink",
+    "Properties": " IsResearched(a,b),  IsMale(a),  IsBald(b)  IsWalkedIn(c),  IsOrdered(c,d),  IsDrink(e)",
+    "Formula": "(exists a (exists b (IsResearched(a,b) and IsMale(a) and IsBald(b))) & (forall f (forall h (forall g (  IsOrdered(f,g) ->   IsMale(h)))))) -> (exists e (exists c (exists d ((IsWalkedIn(c) and IsOrdered(c,d)) and IsDrink(e)))))"
+}

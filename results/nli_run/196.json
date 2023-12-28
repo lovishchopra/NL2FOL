@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man is reaching for something.\"",
+    "Implication": " \"A woman is talking.\"",
+    "Referring expressions": " A man, something  Woman, talking",
+    "Properties": " IsReachingFor(a,b)  IsTalking(c)",
+    "Formula": "(exists a (exists b (IsReachingFor(a,b)))) -> (exists d (IsTalking(d)))"
+}

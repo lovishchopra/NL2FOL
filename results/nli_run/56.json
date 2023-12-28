@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A woman is sitting in an office.\"",
+    "Implication": " \"A woman is outside.\"",
+    "Referring expressions": " Woman, office.  Woman, outside",
+    "Properties": " IsSittingIn(a,b)  IsOutside(a,c)",
+    "Formula": "(exists a (exists b (IsSittingIn(a,b)))) -> (exists c (exists a (IsOutside(a,c))))"
+}

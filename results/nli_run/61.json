@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Person fishing in river.\"",
+    "Implication": " \"The man is shopping at the mall.\"",
+    "Referring expressions": " Person, river  Man, mall",
+    "Properties": " IsFishingInRiver(a,b)  IsShoppingAtMall(c,d)",
+    "Formula": "(exists a (exists b (IsFishingInRiver(a,b)))) -> (exists c (exists d (IsShoppingAtMall(c,d))))"
+}

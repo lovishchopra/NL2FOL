@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man in a black cap is swinging with some children.\"",
+    "Implication": " \"A man in a black hat is swinging with some children.\"",
+    "Referring expressions": " A man in a black cap, some children ",
+    "Properties": " IsInBlackCap(b),  IsSwingingWithChildren(a)  IsInBlackHat(a),  IsSwingingWithChildren(a)",
+    "Formula": "(exists a (exists b (IsInBlackCap(b) and IsSwingingWithChildren(a))) & (forall e (forall d ( IsInBlackHat(d) ->  IsInBlackCap(e))))) -> (exists a (IsInBlackHat(a) and (IsSwingingWithChildren(a) or IsChildren(a))))"
+}

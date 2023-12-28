@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The people are at a play.\"",
+    "Implication": " \"A music concerto is happening on stage, with the lights on spot, while the audience listens in the dark.\"",
+    "Referring expressions": " The people, play  A music concerto, stage, lights, audience, dark",
+    "Properties": " IsAt(a,b)  IsOnStage(c),  IsInDark(f),  IsSpotlit(e)",
+    "Formula": "(exists a (exists b (IsAt(a,b)))) -> (exists f (exists e (exists c ((IsOnStage(c) and IsSpotlit(e)) and (IsInDark(f) or IsAudience(f))))))"
+}

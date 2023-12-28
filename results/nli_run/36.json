@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A group of people examine a boat with an orange flag.\"",
+    "Implication": " \"People don't like sand.\"",
+    "Referring expressions": " A group of people, boat, orange flag  People, sand",
+    "Properties": " IsExamined(a),  IsOrange(c)  IsNotLiked(d)",
+    "Formula": "(exists c (exists a (IsExamined(a) and IsOrange(c)))) -> (exists e (exists d (IsNotLiked(d) and ~LikesSand(e))))"
+}

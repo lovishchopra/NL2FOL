@@ -1,0 +1,7 @@
+{
+    "Claim": " \"People are attending an outdoor art festival.\"",
+    "Implication": " \"A few people are sitting inside a building with lots of photography on the walls.\"",
+    "Referring expressions": " People, outdoor art festival.  A few people, building, photography on the walls.",
+    "Properties": " IsAttending(a,b)  IsSitting(c),  IsInBuilding(d),  HasPhotographyOnWalls(e)",
+    "Formula": "(exists a (exists b (IsAttending(a,b)))) -> (exists e (exists c (exists d ((IsSitting(c) and IsInBuilding(d)) and HasPhotographyOnWalls(e)))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two people look out a window.\"",
+    "Implication": " \"Hair at Hart is a place where people look out windows.\"",
+    "Referring expressions": " Two people, window  People, Hart, windows.",
+    "Properties": " IsLookedOut(a),  IsAtWindow(b)  IsAtHart(d),  IsLookedOut(c)",
+    "Formula": "(exists a (exists b (IsLookedOut(a) and IsAtWindow(b)))) -> (exists e (exists d (IsAtHart(d) and IsLookedOut(e))))"
+}

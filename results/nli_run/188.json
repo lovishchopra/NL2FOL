@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A group of soldiers march in a parade.\"",
+    "Implication": " \"A group of people march in a parade.\"",
+    "Referring expressions": " A group of soldiers, parade  A group of people, parade",
+    "Properties": " IsInParade(b)  IsInParade(c)",
+    "Formula": "(exists b (IsInParade(b))) -> (exists c (IsInParade(c)))"
+}

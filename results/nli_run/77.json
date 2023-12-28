@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A woman is in a green nun uniform.\"",
+    "Implication": " \"An elderly woman is in a green nun uniform.\"",
+    "Referring expressions": " woman, green nun uniform.  elderly woman, green nun uniform.",
+    "Properties": " IsInGreenNunUniform(b)  IsElderly(c),  IsInGreenNunUniform(a)",
+    "Formula": "(exists b (IsInGreenNunUniform(b))) -> (exists c (exists a (IsElderly(c) and IsInGreenNunUniform(a))))"
+}

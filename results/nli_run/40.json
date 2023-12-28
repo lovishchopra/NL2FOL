@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Three people are dressed in costumes and playing musical instruments.\"",
+    "Implication": " \"The people are working at an office.\"",
+    "Referring expressions": " Three people, costumes, musical instruments  People, office.",
+    "Properties": " IsDressedInCostumes(a),   IsPlayingMusicalInstruments(a)  IsWorkingAtOffice(d)",
+    "Formula": "(exists a (IsDressedInCostumes(a) and IsPlayingMusicalInstruments(a))) -> (exists d (IsWorkingAtOffice(d)))"
+}

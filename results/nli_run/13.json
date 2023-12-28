@@ -1,0 +1,7 @@
+{
+    "Claim": " \"There is no food on the plate.\"",
+    "Implication": " \"A girl sits at a table.\"",
+    "Referring expressions": " There is no food on the plate.  A girl, table",
+    "Properties": " IsOnPlate(a)  IsSittingAt(b),  IsAtTable(c)",
+    "Formula": "(exists a (~IsOnPlate(a))) -> (exists c (exists b (IsSittingAt(b) and IsAtTable(c))))"
+}

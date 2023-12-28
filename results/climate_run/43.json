@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The cost of weather disasters has risen over time.\"",
+    "Implication": " \"Modern society builds more infrastructure in areas prone to damage from weather\u2014which is almost everywhere.\"",
+    "Referring expressions": " weather disasters, time.  Modern society, areas prone to damage from weather, almost everywhere",
+    "Properties": " IsRisenOverTime(a)  IsBuiltIn(c,d),  IsAlmostEverywhere(e)",
+    "Formula": "(exists b (IsRisenOverTime(b))) -> (exists e (exists d (exists c ((IsBuiltIn(c,d) and IsAlmostEverywhere(e))))))"
+}

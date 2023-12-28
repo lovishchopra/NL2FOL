@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man in a white shirt speaks into a microphone.\"",
+    "Implication": " \"A man in a white shirt is making a speech in front of a crowd.\"",
+    "Referring expressions": " A man, white shirt, microphone.  A man in a white shirt, crowd",
+    "Properties": " IsInWhiteShirt(a),  SpeaksIntoMicrophone(a)  IsMakingASpeech(d),  IsInFrontOfCrowd(e)",
+    "Formula": "(exists a (IsInWhiteShirt(a) and SpeaksIntoMicrophone(a)) & (forall f (forall g ( IsInWhiteShirt(f) ->  IsMakingASpeech(g)))) & (forall i (forall h ( IsMakingASpeech(h) ->  IsInWhiteShirt(i)))) & (forall j (forall k (  SpeaksIntoMicrophone(j) ->  IsMakingASpeech(k)))) & (forall l (forall m ( IsMakingASpeech(l) ->   SpeaksIntoMicrophone(m))))) -> (exists e (exists d (IsMakingASpeech(d) and IsInFrontOfCrowd(e))))"
+}

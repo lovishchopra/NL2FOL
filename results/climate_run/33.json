@@ -1,6 +1,6 @@
 {
-    "Claim": " \"Carbon dioxide is not a pollutant\"",
-    "Implication": " \"It is dishonest to say it is\"",
+    "Claim": " \"Carbon dioxide is not a pollutant.\"",
+    "Implication": " \"It is dishonest to say it is.\"",
     "Referring expressions": " Carbon dioxide, pollutant  It, is, dishonest",
     "Properties": " IsNotAPollutant(a)  IsDishonest(d)",
     "Formula": "(exists b (~IsAPollutant(b))) -> (exists e (IsDishonest(e)))"

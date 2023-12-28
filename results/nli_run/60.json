@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A brown dog is in the middle of a huge field.\"",
+    "Implication": " \"A dog is riding in a car.\"",
+    "Referring expressions": " Brown dog, huge field  A dog, car",
+    "Properties": " IsInHugeField(a),  IsBrown(a)  IsRidingInCar(c)",
+    "Formula": "(exists a (IsInHugeField(a) and IsBrown(a))) -> (exists c (IsRidingInCar(c)))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man is being filmed by another man.\"",
+    "Implication": " \"The man is on a sports field with a huge audience of people watching and cheering.\"",
+    "Referring expressions": " A man, another man.  Man, sports field, audience, people, cheering",
+    "Properties": " IsBeingFilmedBy(a,b)  IsOnSportsField(c),  IsWatchedByHugeAudience(d),  IsCheeredBy(e)",
+    "Formula": "(exists a (exists b (IsMan(a) and IsBeingFilmedBy(a,b)))) -> (exists e (exists c (exists d ((IsOnSportsField(c) and IsWatchedByHugeAudience(d)) and IsCheeredBy(e)))))"
+}

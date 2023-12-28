@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The girls are having a great time looking for seashells.\"",
+    "Implication": " \"The girls are happy.\"",
+    "Referring expressions": " The girls, seashells  The girls",
+    "Properties": " IsHaving(a),  IsLooking(a),  IsSeashells(b)  IsHappy(a)",
+    "Formula": "(exists a (exists b (IsHaving(a) and IsLooking(a) and IsSeashells(b))) & (forall c ( IsHaving(c) ->  IsHappy(c))) & (forall d ( IsHappy(d) ->  IsHaving(d))) & (forall e ( IsHappy(e) ->   IsLooking(e)))) -> (exists a (IsHappy(a)))"
+}

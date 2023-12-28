@@ -1,0 +1,7 @@
+{
+    "Claim": " \"An older man with gray hair wears a gray suit.\"",
+    "Implication": " \"A taxi is green and yellow.\"",
+    "Referring expressions": " Older man, gray hair, gray suit  A taxi",
+    "Properties": " IsOlder(a),  HasGrayHair(b),  WearsGraySuit(c)  IsGreen(d),  IsYellow(d)",
+    "Formula": "(exists c (exists a (exists b (IsOlder(a) and HasGrayHair(b) and WearsGraySuit(c))))) -> (exists d (IsGreen(d) and IsYellow(d)))"
+}

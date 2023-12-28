@@ -3,5 +3,5 @@
     "Implication": " \"Climate scientists were surprised by the warmth of 2017\"",
     "Referring expressions": " 2017, warm  Climate scientists, 2017",
     "Properties": " IsRemarkablyWarm(b)  IsSurprisedBy(c,a)",
-    "Formula": "(exists b (IsWarm(b) and IsRemarkablyWarm(b)) & (forall d (forall f (forall e ( IsRemarkablyWarm(d) ->  IsSurprisedBy(e,f))))) & (forall g (forall h (forall i ( IsSurprisedBy(g,h) ->  IsRemarkablyWarm(i)))))) -> (exists c (exists a (IsSurprisedBy(c,a))))"
+    "Formula": "(exists b (IsWarm(b) and IsRemarkablyWarm(b)) & (forall f (forall e (forall d ( IsRemarkablyWarm(d) ->  IsSurprisedBy(e,f))))) & (forall g (forall h (forall i ( IsSurprisedBy(g,h) ->  IsRemarkablyWarm(i)))))) -> (exists c (exists a (IsSurprisedBy(c,a))))"
 }

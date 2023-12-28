@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A brown and white dog is chained up near a red chair.\"",
+    "Implication": " \"The dog is chained to a chair.\"",
+    "Referring expressions": " Brown and white dog, red chair  dog, chair",
+    "Properties": " IsBrownAndWhite(a),  IsChainedUp(a),  IsNear(a,b)  IsChainedTo(c,d)",
+    "Formula": "(exists a (exists b (IsBrownAndWhite(a) and IsNear(a,b))) & (forall f (forall e (forall h (forall g ( IsChainedTo(e,f) ->   IsNear(g,h))))))) -> (exists c (exists d (IsChainedTo(c,d))))"
+}

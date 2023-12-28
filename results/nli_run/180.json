@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man in a suit cheered in a library in front of children.\"",
+    "Implication": " \"A guy is cheering near some children.\"",
+    "Referring expressions": " A man in a suit, children, library ",
+    "Properties": " IsInLibrary(b),  IsCheeredInFrontOf(a,b)  IsCheering(d),  IsNearChildren(d)",
+    "Formula": "(exists a (exists b (IsInLibrary(b) and IsCheeredInFrontOf(a,b))) & (forall f (forall e ( IsInLibrary(e) ->   IsNearChildren(f)))) & (forall i (forall h (forall g (  IsCheeredInFrontOf(g,h) ->  IsCheering(i))))) & (forall l (forall j (forall k (  IsCheeredInFrontOf(j,k) ->   IsNearChildren(l)))))) -> (exists d (IsCheering(d) and IsNearChildren(d)))"
+}

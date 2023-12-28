@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A group of dogs stand in the snow.\"",
+    "Implication": " \"There are animals outdoors.\"",
+    "Referring expressions": " A group of dogs, snow  There are (animals) (outdoors)",
+    "Properties": " IsStandingIn(a,b)  IsOutdoors(c)",
+    "Formula": "(exists a (exists b (IsStandingIn(a,b))) & (forall f (forall e (forall d ( IsStandingIn(d,e) ->  IsOutdoors(f)))))) -> (exists c (IsOutdoors(c)))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Some of the people here have been in the armed forces.\"",
+    "Implication": " \"Army men are grilling a lot of meat.\"",
+    "Referring expressions": " Some of the people, armed forces.  Army men, meat",
+    "Properties": " IsInArmedForces(b)  IsGrilling(d)",
+    "Formula": "(exists b (IsInArmedForces(b))) -> (exists c (exists d (IsArmyMen(c) and IsGrilling(d))))"
+}

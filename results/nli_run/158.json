@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A little white dog runs outside.\"",
+    "Implication": " \"There is an animal outside.\"",
+    "Referring expressions": " little white dog  animal, outside",
+    "Properties": " IsLittle(a),  IsWhite(a),  RunsOutside(a)  IsOutside(b)",
+    "Formula": "(exists a (IsLittle(a) and IsWhite(a) and RunsOutside(a)) & (forall e (forall d (  IsWhite(d) ->  IsOutside(e)))) & (forall f (forall g (  RunsOutside(f) ->  IsOutside(g))))) -> (exists c (IsOutside(c)))"
+}

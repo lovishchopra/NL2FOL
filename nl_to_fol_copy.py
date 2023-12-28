@@ -338,23 +338,28 @@ def setup_dataset(fallacy_set='logic',length=100):
         df_fallacies=df_fallacies[['source_article','logical_fallacies','label']]
         df_fallacies=df_fallacies.sample(length,random_state=683)
     elif fallacy_set=='nli':
-        df_fallacies=pd.read_csv('data/nli_fallacies.csv')
+        df_fallacies=pd.read_csv('data/nli_fallacies_test.csv')
         df_fallacies['label']=[0]*len(df_fallacies)
-        df_fallacies=df_fallacies[['source_article','logical_fallacies','label']]
+        df_fallacies=df_fallacies[['sentence','label']]
         df_fallacies=df_fallacies.sample(length,random_state=683)
-    df_valids=pd.read_csv('data/nli_entailments.csv')
+    df_valids=pd.read_csv('data/nli_entailments_test.csv')
     df_valids['label']=[1]*len(df_valids)
     df_valids=df_valids[['sentence','label']]
     df_valids=df_valids.sample(length,random_state=113)
     df = pd.concat([df_fallacies, df_valids])
-    df['articles'] = df['source_article'].combine_first(df['sentence'])
-    df = df.drop(['source_article', 'sentence'], axis=1)
+    print(df.columns)
+    if 'source_article' in df.columns:
+        df['articles'] = df['source_article'].combine_first(df['sentence'])
+        df = df.drop(['source_article', 'sentence'], axis=1)
+    else:
+        df['articles'] = df['sentence']
     return df
 
 if __name__ == '__main__':
     model = "meta-llama/Llama-2-7b-chat-hf"
     fallacy_set='nli'
     run_name='nli_run'
+    length=100
     nli_tokenizer = AutoTokenizer.from_pretrained('facebook/bart-large-mnli')
     nli_model = AutoModelForSequenceClassification.from_pretrained('facebook/bart-large-mnli')
     tokenizer = AutoTokenizer.from_pretrained(model)
@@ -365,7 +370,7 @@ if __name__ == '__main__':
         max_length=1024,
         device_map="auto",
     )
-    df=setup_dataset(fallacy_set='logicclimate',length=100)
+    df=setup_dataset(fallacy_set=fallacy_set,length=length)
     final_lfs=[]
     final_lfs2=[]
     count=0

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A woman swings on a rope overlooking a red farmhouse and gated pastures and tall trees.\"",
+    "Implication": " \"The woman cooked an apple pie.\"",
+    "Referring expressions": " Woman, rope, farmhouse, pastures, trees.  Woman, apple pie",
+    "Properties": " IsOnRope(a),  IsOverlooking(c),  IsGated(d),  IsTall(e)  IsCooked(a,f)",
+    "Formula": "(exists c (exists e (exists a (exists d (IsOnRope(a) and IsOverlooking(c) and IsGated(d) and IsTall(e)))))) -> (exists f (exists a (IsCooked(a,f))))"
+}

@@ -1,7 +1,7 @@
 {
-    "Claim": " \"Sea levels will rise by more than 3 feet\"",
-    "Implication": " \"Economic and environmental impacts will be significant\"",
-    "Referring expressions": " Sea levels, more than 3 feet  Economic impacts, environmental impacts, will be significant",
-    "Properties": " IsRising(b),  IsMoreThan3Feet(a)  IsEconomicImpact(c),  IsEnvironmentalImpact(d),  IsSignificant(a)",
-    "Formula": "(exists b (exists a (IsRising(b) and IsMoreThan3Feet(a))) & (forall g (forall f ( IsRising(f) ->   IsEnvironmentalImpact(g)))) & (forall h (forall i ( IsRising(h) ->   IsSignificant(i)))) & (forall k (forall j (  IsMoreThan3Feet(j) ->  IsEconomicImpact(k)))) & (forall l (forall m (  IsMoreThan3Feet(l) ->   IsEnvironmentalImpact(m)))) & (forall n (  IsMoreThan3Feet(n) ->   IsSignificant(n)))) -> (exists d (exists c (exists a (IsEconomicImpact(c) and IsEnvironmentalImpact(d) and IsSignificant(a)))))"
+    "Claim": " \"Sea levels will rise by more than 3 feet by the end of the century.\"",
+    "Implication": " \"Economic and environmental impacts will be significant.\"",
+    "Referring expressions": " Sea levels, end of the century  Economic impacts, environmental impacts, will be significant.",
+    "Properties": " WillRiseMoreThan3Feet(a)  IsEconomicImpactSignificant(c),  IsEnvironmentalImpactSignificant(d),  IsSignificant(e)",
+    "Formula": "(exists a (WillRiseMoreThan3Feet(a)) & (forall f (forall g ( WillRiseMoreThan3Feet(f) ->  IsEconomicImpactSignificant(g)))) & (forall h (forall i ( WillRiseMoreThan3Feet(h) ->   IsEnvironmentalImpactSignificant(i)))) & (forall j (forall k ( WillRiseMoreThan3Feet(j) ->   IsSignificant(k))))) -> (exists e (exists d (exists c ((IsEconomicImpactSignificant(c) and IsEnvironmentalImpactSignificant(d)) and IsSignificant(e)))))"
 }

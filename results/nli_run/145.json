@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man visits a friend in the hospital.\"",
+    "Implication": " \"A man in a hospital receives a visiting friend.\"",
+    "Referring expressions": " A man, friend, hospital  A man, hospital, visiting friend",
+    "Properties": " IsVisiting(a,c),  IsInHospital(b)  IsInHospital(a),  IsVisiting(a,d)",
+    "Formula": "(exists c (exists a (exists b (IsVisiting(a,c) and IsInHospital(b))))) -> (exists a (exists d (IsInHospital(a) and IsVisiting(a,d))))"
+}

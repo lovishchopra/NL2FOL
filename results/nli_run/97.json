@@ -1,0 +1,7 @@
+{
+    "Claim": " \"One man is golfing.\"",
+    "Implication": " \"Four guys go bowling.\"",
+    "Referring expressions": " One man, golfing  Four guys, bowling",
+    "Properties": " IsGolfing(b)  IsGoingBowling(c)",
+    "Formula": "(exists b (IsGolfing(b))) -> (exists c (exists d (IsGoingBowling(c) and IsBowling(d))))"
+}

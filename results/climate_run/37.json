@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The sun's energy output varies over time.\"",
+    "Implication": " \"Global warming alarmists are going to bury the study.\"",
+    "Referring expressions": " The sun, energy output, time  Global warming alarmists, study",
+    "Properties": " IsVarious(b),  IsOutput(b),  IsOver(c)  IsBury(d),  IsStudy(e)",
+    "Formula": "(exists c (exists b (IsVarious(b) and (IsOutput(b) and IsOver(c)))) & (forall f (forall g ( IsBury(f) ->   IsOver(g))))) -> (exists e (exists d (IsBury(d) and IsStudy(e))))"
+}

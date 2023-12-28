@@ -1,0 +1,7 @@
+{
+    "Claim": " \"There are people wrestling.\"",
+    "Implication": " \"A group stands and watches two men wrestling.\"",
+    "Referring expressions": " People, wrestling  A group, two men, wrestling",
+    "Properties": " IsWrestling(a)  IsInGroup(c),  IsWatching(d)",
+    "Formula": "(exists b (IsWrestling(b))) -> (exists c (exists d (IsInGroup(c) and IsWatching(d))))"
+}

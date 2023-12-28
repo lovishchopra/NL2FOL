@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two kids in black trunks bounced on a wet trampoline.\"",
+    "Implication": " \"Children play on trampolines outdoors.\"",
+    "Referring expressions": " Two kids, black trunks, wet trampoline.  Children, trampolines, outdoors",
+    "Properties": " IsInBlackTrunks(a),  IsBouncedOnWetTrampoline(c)  IsPlayedOn(d,e),  IsOutdoors(f)",
+    "Formula": "(exists c (exists a (IsInBlackTrunks(a) and IsBouncedOnWetTrampoline(c))) & (forall i (forall h (forall g (  IsBouncedOnWetTrampoline(g) ->  IsPlayedOn(h,i))))) & (forall l (forall j (forall k ( IsPlayedOn(j,k) ->   IsBouncedOnWetTrampoline(l)))))) -> (exists f (exists e (exists d (IsPlayedOn(d,e) and IsOutdoors(f)))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A girl is playing an instrument.\"",
+    "Implication": " \"A girl plays an instrument.\"",
+    "Referring expressions": " Girl, instrument  A girl, instrument",
+    "Properties": " IsPlaying(a)  IsPlay(a)",
+    "Formula": "(exists a (exists b (IsGirl(b) and IsPlaying(a))) & (forall d ( IsPlaying(d) ->  IsPlay(d))) & (forall e ( IsPlay(e) ->  IsPlaying(e)))) -> (exists c (IsPlay(c)))"
+}

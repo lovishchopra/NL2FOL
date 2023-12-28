@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The skateboarder is jumping his board in the air.\"",
+    "Implication": " \"A skateboarder is jumping.\"",
+    "Referring expressions": " Skateboarder, board, air  A skateboarder",
+    "Properties": " IsJumping(a),  IsOnBoard(b),  IsInAir(c)  IsJumping(d)",
+    "Formula": "(exists c (exists a (exists b (IsJumping(a) and IsOnBoard(b) and IsInAir(c)))) & (forall f (forall e ( IsJumping(e) ->   IsOnBoard(f))))) -> (exists d (IsJumping(d)))"
+}

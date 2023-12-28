@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A male with sunglasses is poking at a tree with a pole.\"",
+    "Implication": " \"Nobody is poking.\"",
+    "Referring expressions": " Male, sunglasses, tree, pole  Nobody, poking.",
+    "Properties": " IsMale(a),  IsWearingSunglasses(b),  IsPokingAt(c),  IsHoldingPole(d)  IsNobody(e),  IsPoking(f)",
+    "Formula": "(exists c (exists a (exists d (exists b (IsMale(a) and IsWearingSunglasses(b) and IsPokingAt(c) and IsHoldingPole(d))))) & (forall h (forall g (  IsPokingAt(g) ->   IsPoking(h))))) -> (exists f (~IsPoking(f)))"
+}

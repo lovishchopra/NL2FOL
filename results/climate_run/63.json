@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The rate of sea-level rise has not accelerated\"",
+    "Implication": " \"Good news for coastal cities\"",
+    "Referring expressions": " The rate of sea-level rise, sea level, accelerated  coastal cities",
+    "Properties": " IsNotAccelerated(c)  IsGoodNewsFor(a)",
+    "Formula": "(exists c (~IsAccelerated(c))) -> (exists a (IsGoodNewsFor(a)))"
+}

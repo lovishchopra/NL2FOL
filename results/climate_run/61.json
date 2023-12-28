@@ -1,0 +1,7 @@
+{
+    "Claim": " Howard Browman has published a review of papers on ocean acidification.",
+    "Implication": " The methodology used by the studies was often flawed.",
+    "Referring expressions": " Howard Browman, ocean acidification, papers.  The studies, methodology, flawed.",
+    "Properties": " IsPublished(a),  IsAboutOceanAcidification(b),  IsACollectionOf(c)  IsFlawed(e)",
+    "Formula": "(exists c (exists b (exists a (IsPublished(a) and (IsAboutOceanAcidification(b) and IsACollectionOf(c)))))) -> (exists e (exists d (IsFlawed(e) and (IsMethodology(d) and IsFlawed(e)))))"
+}

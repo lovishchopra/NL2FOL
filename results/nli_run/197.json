@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A crowd is watching a skateboarder.\"",
+    "Implication": " \"A person is skateboarding.\"",
+    "Referring expressions": " A crowd, skateboarder  A person, skateboarding",
+    "Properties": " IsWatching(a,b)  IsSkateboarding(c)",
+    "Formula": "(exists a (exists b (IsWatching(a,b)))) -> (exists c (IsSkateboarding(c)))"
+}

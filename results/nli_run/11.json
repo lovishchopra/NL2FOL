@@ -1,0 +1,7 @@
+{
+    "Claim": " \"People survived a horrible train crash.\"",
+    "Implication": " \"People were waiting on a train platform.\"",
+    "Referring expressions": " People, train crash  People, train platform",
+    "Properties": " IsSurvived(a,b)  IsWaiting(a,c)",
+    "Formula": "(exists a (exists b (IsSurvived(a,b)))) -> (exists c (exists a (IsWaiting(a,c))))"
+}

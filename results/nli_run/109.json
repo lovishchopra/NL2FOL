@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A large number of people are watching men in kilts.\"",
+    "Implication": " \"People watch men in kilts as a consequence of one of them throwing a long pole.\"",
+    "Referring expressions": " A large number of people, men in kilts.  People, men in kilts, one of them, long pole",
+    "Properties": " IsWatching(a),  AreInKilts(b)  IsWatching(c),  ThrowsLongPole(e)",
+    "Formula": "(exists a (exists b (IsWatching(a) and AreInKilts(b)))) -> (exists e (exists c (IsWatching(c) and ThrowsLongPole(e))))"
+}

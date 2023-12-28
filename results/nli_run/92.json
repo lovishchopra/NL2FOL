@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A woman is sitting inside.\"",
+    "Implication": " \"A woman is sitting outside at a table, using a knife to cut into a sandwich.\"",
+    "Referring expressions": " Woman, inside  Woman, table, knife, sandwich",
+    "Properties": " IsSittingInside(a)  IsSittingOutside(a),  IsUsingKnife(d),  IsCuttingIntoSandwich(e)",
+    "Formula": "(exists a (exists b (IsSitting(a,b)))) -> (exists e (exists a (exists d (IsSittingOutside(a) and IsUsingKnife(d) and IsCuttingIntoSandwich(e)))))"
+}

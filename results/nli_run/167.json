@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man with a blue, collared shirt sits in front of another man.\"",
+    "Implication": " \"A man sits in front of another man.\"",
+    "Referring expressions": "  A man, another man.",
+    "Properties": " IsInBlueCollaredShirt(a),  IsSatInFrontOf(b)  IsSatInFrontOf(b)",
+    "Formula": "(exists a (exists b (IsInBlueCollaredShirt(a) and IsSatInFrontOf(b)))) -> (exists b (IsSatInFrontOf(b)))"
+}

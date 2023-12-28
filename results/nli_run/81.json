@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A girl with curly hair is drinking juice.\"",
+    "Implication": " \"A girl with curly hair is taking a big bite from a hamburger.\"",
+    "Referring expressions": " Girl, curly hair, juice  Girl, curly hair, hamburger",
+    "Properties": " IsCurlyHaired(a),  IsDrinkingJuice(a)  IsTakingABigBite(a),  IsCurlyHaired(a)",
+    "Formula": "(exists a (IsCurlyHaired(a) and IsDrinkingJuice(a))) -> (exists a (IsTakingABigBite(a) and IsCurlyHaired(a)))"
+}

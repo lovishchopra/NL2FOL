@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A woman with red-hair staples some papers.\"",
+    "Implication": " \"A red-haired woman is working on the computer.\"",
+    "Referring expressions": " Woman, red-hair, staples, papers  Red-haired woman, computer",
+    "Properties": " IsRedHaired(b),  StaplesPapers(c)  IsRedHaired(e),  IsWorkingOnComputer(e)",
+    "Formula": "(exists c (exists b (IsRedHaired(b) and StaplesPapers(c))) & (forall h (forall g (  IsWorkingOnComputer(g) ->  IsRedHaired(h))))) -> (exists e (IsRedHaired(e) and IsWorkingOnComputer(e)))"
+}

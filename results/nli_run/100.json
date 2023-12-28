@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Coach talks with football player\"",
+    "Implication": " \"A football coach talks with his player in front of the team and the crowd.\"",
+    "Referring expressions": " Coach, football player ",
+    "Properties": " IsTalkWith(a,b)  IsTalkWith(a,b),  IsInFrontOfTeam(c),  IsInCrowd(c)",
+    "Formula": "(exists a (exists b (IsTalkWith(a,b))) & (forall f (forall e (forall d ( IsTalkWith(d,e) ->   IsInFrontOfTeam(f)))))) -> (exists c (exists a (exists b (IsTalkWith(a,b) and IsInFrontOfTeam(c) and IsInCrowd(c)))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Some people are seated on a bench outside.\"",
+    "Implication": " \"People are sitting on a bench in front of buildings.\"",
+    "Referring expressions": " Some people, bench, outside.  People, bench, buildings",
+    "Properties": " IsSeatedOn(b,a),  IsOutside(c)  IsSittingOn(d,a),  IsInFrontOf(e)",
+    "Formula": "(exists c (exists a (exists b (IsSeatedOn(b,a) and IsOutside(c)))) & (forall f (forall h (forall g ( IsSeatedOn(f,g) ->  IsSittingOn(h,g))))) & (forall i (forall j (forall k ( IsSittingOn(i,j) ->  IsSeatedOn(k,j)))))) -> (exists e (exists a (exists d (IsSittingOn(d,a) and IsInFrontOf(e)))))"
+}

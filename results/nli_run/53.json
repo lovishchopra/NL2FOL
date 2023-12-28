@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two men in costumes have fake carrot noses, top hats, sunglasses, and white fur coats that contain white electrical lights.\"",
+    "Implication": " \"Nobody has a costume.\"",
+    "Referring expressions": " Two men, carrot noses, top hats, sunglasses, white fur coats, white electrical lights.  Nobody, costume",
+    "Properties": " IsInCostumes(a),   HasFakeCarrotNose(b),   HasTopHat(c),   HasSunglasses(d),   HasWhiteFurCoat(e),   HasWhiteElectricalLights(f)  IsInCostume(h)",
+    "Formula": "(exists f (exists e (exists c (exists d (exists b (exists a ((IsInCostumes(a) and HasFakeCarrotNose(b)) and (HasTopHat(c) and HasSunglasses(d)) and (HasWhiteFurCoat(e) and HasWhiteElectricalLights(f)))))))) & (forall i (forall j ( IsInCostumes(i) ->  IsInCostume(j)))) & (forall l (forall k (   HasTopHat(k) ->  IsInCostume(l)))) & (forall m (forall n (   HasWhiteFurCoat(m) ->  IsInCostume(n))))) -> (exists g (~IsInCostume(g)))"
+}

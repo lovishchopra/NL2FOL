@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two people kickboxing\"",
+    "Implication": " \"Two people are ticking each other\"",
+    "Referring expressions": " Two people  Two people, each other",
+    "Properties": " IsKickboxing(a)  IsTicking(a,b)",
+    "Formula": "(exists a (IsKickboxing(a) and IsTwoPeople(a))) -> (exists a (exists b (IsTicking(a,b))))"
+}

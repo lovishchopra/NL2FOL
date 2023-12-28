@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A person is doing a trick on a snowboard.\"",
+    "Implication": " \"A person is ice skating.\"",
+    "Referring expressions": " A person, snowboard, trick  A person, ice skating",
+    "Properties": " IsDoingTrick(a,c)  IsIceSkating(a,d)",
+    "Formula": "(exists c (exists a (IsDoingTrick(a,c)))) -> (exists a (exists d (IsIceSkating(a,d))))"
+}

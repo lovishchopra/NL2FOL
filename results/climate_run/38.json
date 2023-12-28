@@ -1,0 +1,7 @@
+{
+    "Claim": " Activists do not value a truthful debate.",
+    "Implication": " Activists do not value truth.",
+    "Referring expressions": " Activists, truthful debate  Activists, truth",
+    "Properties": " IsNotValuing(a,b)  IsNotValuing(a,c)",
+    "Formula": "(exists b (exists a (~IsValuing(a,b)))) -> (exists c (exists a (~IsValuing(a,c))))"
+}

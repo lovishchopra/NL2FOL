@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The church choir sings to the masses.\"",
+    "Implication": " \"The church is filled with song.\"",
+    "Referring expressions": " The church choir, masses  Church, song",
+    "Properties": " IsSings(a),  IsTo(b)  IsFilledWith(c),  IsSong(d)",
+    "Formula": "(exists a (exists b (IsSings(a) and IsTo(b))) & (forall f (forall e ( IsSings(e) ->  IsFilledWith(f)))) & (forall h (forall g ( IsSings(g) ->   IsSong(h)))) & (forall i (forall j (  IsTo(i) ->  IsFilledWith(j))))) -> (exists c (exists d (IsFilledWith(c) and IsSong(d))))"
+}

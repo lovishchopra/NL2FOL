@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man is painting letters onto a round stand-up sign.\"",
+    "Implication": " \"A woman is writing on a napkin and showing it to her friend.\"",
+    "Referring expressions": " A man, letters, round stand-up sign.  Woman, napkin, friend",
+    "Properties": " IsPainting(a,b),  IsRound(c),  IsStandUp(c)  IsWriting(d,e),  IsShowing(d,f)",
+    "Formula": "(exists c (exists a (exists b (IsPainting(a,b) and IsRound(c) and IsStandUp(c))))) -> (exists f (exists e (exists d (IsWriting(d,e) and IsShowing(d,f)))))"
+}

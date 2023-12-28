@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The girls are in a rocket ship.\"",
+    "Implication": " \"Two girls jumping on a trampoline are in a rocket ship.\"",
+    "Referring expressions": " The girls, rocket ship  Two girls, rocket ship",
+    "Properties": " IsInRocketShip(b)  IsJumping(c),  IsInRocketShip(c)",
+    "Formula": "(exists b (IsInRocketShip(b)) & (forall e (forall d ( IsInRocketShip(d) ->  IsJumping(e))))) -> (exists c (IsJumping(c) and IsInRocketShip(c)))"
+}

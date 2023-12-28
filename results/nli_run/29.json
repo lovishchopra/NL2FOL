@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A woman poses for a picture with a child.\"",
+    "Implication": " \"A woman and child climb a tree.\"",
+    "Referring expressions": " A woman, child  Woman, child, tree.",
+    "Properties": " IsPosing(a),  IsInPicture(b)  IsClimbing(a),  IsWith(c,a)",
+    "Formula": "(exists a (exists b (IsPosing(a) and IsInPicture(b))) & (forall f (forall e (forall g (  IsWith(e,f) ->   IsInPicture(g)))))) -> (exists c (exists a (IsClimbing(a) and IsWith(c,a))))"
+}

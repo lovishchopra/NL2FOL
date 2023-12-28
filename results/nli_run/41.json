@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The man is VanGogh.\"",
+    "Implication": " \"The man is soliciting business for tattoos on the street.\"",
+    "Referring expressions": " Man, VanGogh  Man, tattoos, street",
+    "Properties": " IsVanGogh(b)  IsSoliciting(a),  IsOnStreet(d)",
+    "Formula": "(exists b (IsVanGogh(b))) -> (exists a (exists d (IsSoliciting(a) and IsOnStreet(d))))"
+}

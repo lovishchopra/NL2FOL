@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A canoe is in the distance on a lake.\"",
+    "Implication": " \"A canoe goes over a waterfall.\"",
+    "Referring expressions": " A canoe, lake  A canoe, waterfall",
+    "Properties": " IsInLake(a),  IsA canoe(a)  IsGoesOverWaterfall(a)",
+    "Formula": "(exists a (IsInLake(a) and IsA canoe(a)) & (forall d ( IsGoesOverWaterfall(d) ->   IsA canoe(d)))) -> (exists a (IsGoesOverWaterfall(a)))"
+}

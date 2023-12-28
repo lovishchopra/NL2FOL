@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Cato Institute scientists have noted that climate models have been over-hyping warming for decades.\"",
+    "Implication": " \"Climate models show 2.5 times more warming in the bulk atmosphere than has been observed.\"",
+    "Referring expressions": " Cato Institute, scientists, climate models, warming  Climate models, bulk atmosphere, observed",
+    "Properties": " IsAtCatoInstitute(b),  HasOverhypedWarming(c)  HasMoreWarmingInBulkAtmosphere(a),  HasBeenObserved(f)",
+    "Formula": "(exists c (exists b (IsAtCatoInstitute(b) and HasOverhypedWarming(c))) & (forall h (forall i ( IsAtCatoInstitute(h) ->   HasBeenObserved(i))))) -> (exists f (exists a (HasMoreWarmingInBulkAtmosphere(a) and ~HasBeenObserved(f))))"
+}

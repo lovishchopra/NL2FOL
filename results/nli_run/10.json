@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A woman and two children walk along stones to cross a river while a dog swims.\"",
+    "Implication": " \"A dog is sleeping.\"",
+    "Referring expressions": " Woman, children, dog, river stones  A dog",
+    "Properties": " IsWalkingAlong(a,b),  IsInRiverStones(d),  HasDog(c)  IsSleeping(e)",
+    "Formula": "(exists c (exists a (exists d (exists b ((IsWalkingAlong(a,b) and IsInRiverStones(d)) and HasDog(c))))) & (forall f (forall g (  HasDog(f) ->  IsSleeping(g)))) & (forall i (forall h ( IsSleeping(h) ->   HasDog(i))))) -> (exists e (IsSleeping(e)))"
+}

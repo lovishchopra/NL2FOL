@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man in a black shirt is about to cross the road while on his cellphone.\"",
+    "Implication": " \"A child is upset and crying on the ground.\"",
+    "Referring expressions": " Man in a black shirt, cellphone, road  A child, ground",
+    "Properties": " IsOnCellphone(a),  IsAboutToCrossTheRoad(c)  IsUpset(d),  IsCrying(d),  IsOnTheGround(e)",
+    "Formula": "(exists c (exists a (IsOnCellphone(a) and IsAboutToCrossTheRoad(c)))) -> (exists e (exists d (IsUpset(d) and IsCrying(d) and IsOnTheGround(e))))"
+}

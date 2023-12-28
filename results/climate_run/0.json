@@ -1,7 +1,7 @@
 {
-    "Claim": " \"Access to cleaner water has increased\"",
-    "Implication": " \"Mortality from 'Extreme Weather Events' has declined by 99 per cent since the 1920s\"",
-    "Referring expressions": " cleaner water, water  Extreme weather events, mortality, 1920s",
-    "Properties": " IsAccessible(a),  IsCleanerWater(a)  IsExtremeWeatherEvent(c),  HasDeclinedBy(d,e)",
-    "Formula": "(exists b (exists a (IsAccessible(b) and IsCleanerWater(a)))) -> (exists d (exists c (exists e (IsExtremeWeatherEvent(c) and HasDeclinedBy(d,e)))))"
+    "Claim": " \"Access to cleaner water has increased.\"",
+    "Implication": " \"Mortality from 'Extreme Weather Events' has declined by 99 per cent since the 1920s.\"",
+    "Referring expressions": " cleaner water  Extreme weather events, mortality, 1920s",
+    "Properties": " IsAccessed(a)  IsExtreme(b),  HasDeclined(c),  IsIn1920s(d)",
+    "Formula": "(exists a (IsAccessed(a))) -> (exists c (exists b (IsExtreme(b) and HasDeclined(c))))"
 }

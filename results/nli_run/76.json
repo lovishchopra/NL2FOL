@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A young boy in green shorts balances on a pipe above a river.\"",
+    "Implication": " \"Nobody is balancing.\"",
+    "Referring expressions": " Young boy, green shorts, pipe, river  Nobody",
+    "Properties": " IsYoung(a),  IsInGreenShorts(b),  IsOnPipe(c),  IsAboveRiver(d)  IsBalancing(e)",
+    "Formula": "(exists c (exists a (exists d (IsYoung(a) and IsOnPipe(c) and IsAboveRiver(d))))) -> (exists e (~IsBalancing(e)))"
+}

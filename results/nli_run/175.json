@@ -1,0 +1,7 @@
+{
+    "Claim": " \"There are computers and a projector screen in the room.\"",
+    "Implication": " \"Men are in the office.\"",
+    "Referring expressions": " There are...in the room.  Men, office",
+    "Properties": " IsComputer(a),  IsProjectorScreen(a)  IsInOffice(b)",
+    "Formula": "(exists a (IsComputer(a) and IsProjectorScreen(a))) -> (exists b (IsInOffice(b)))"
+}

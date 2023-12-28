@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The man is playing the guitar while smoking a cigarette.\"",
+    "Implication": " \"The man is playing the drums.\"",
+    "Referring expressions": " Man, guitar, cigarette  Man, drums",
+    "Properties": " IsPlaying(a),  IsSmoking(c)  IsPlaying(a)",
+    "Formula": "(exists c (exists a (IsPlaying(a) and IsSmoking(c)))) -> (exists a (IsPlaying(a)))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A white dog is fighting a black dog.\"",
+    "Implication": " \"The dogs are fighting in a fenced in room.\"",
+    "Referring expressions": " White dog, black dog  The dogs, fenced in room",
+    "Properties": " IsWhite(a),  IsFighting(b)  IsInFencedInRoom(c)",
+    "Formula": "(exists a (exists b (IsWhite(a) and IsFighting(b)))) -> (exists c (exists d (IsInFencedInRoom(c) and (IsFighting(c,d) or IsNotFighting(c,d)))))"
+}

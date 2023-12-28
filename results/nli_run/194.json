@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The basketball player in red is challenging the player in white for the ball.\"",
+    "Implication": " \"People are playing basketball.\"",
+    "Referring expressions": " The basketball player in red, player in white, ball.  People, basketball",
+    "Properties": " IsInRed(a),  IsChallenging(a,b),  HasBall(a)  IsPlayingBasketball(d)",
+    "Formula": "(exists a (exists b (IsInRed(a) and IsChallenging(a,b) and HasBall(a))) & (forall f (forall g ( IsInRed(f) ->  IsPlayingBasketball(g)))) & (forall i (forall h (  HasBall(h) ->  IsPlayingBasketball(i))))) -> (exists d (IsPlayingBasketball(d)))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Recent warming is producing crop production records.\"",
+    "Implication": " \"There are billions of dollars in new economic and human welfare benefits each year.\"",
+    "Referring expressions": " Recent warming, crop production records.  dollars, new economic benefits, new human welfare benefits, each year.",
+    "Properties": " IsRecent(a),  HasCropProductionRecords(b)  IsInDollars(c),  HasNewEconomicBenefits(d),  HasNewHumanWelfareBenefits(e),  IsEachYear(f)",
+    "Formula": "(exists b (exists a (IsRecent(a) and HasCropProductionRecords(b)))) -> (exists f (exists e (exists d (exists c (IsInDollars(c) and (HasNewEconomicBenefits(d) and HasNewHumanWelfareBenefits(e)) and IsEachYear(f))))))"
+}

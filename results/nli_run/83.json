@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Four men on bikes serve as the focal point of the picture.\"",
+    "Implication": " \"Local robbers escape after stealing an otter.\"",
+    "Referring expressions": " Four men, bikes, picture.  Local robbers, otter",
+    "Properties": " IsOnBikes(a),  IsFocalPointOf(c)  IsLocal(d),  IsStolen(e)",
+    "Formula": "(exists c (exists a (IsOnBikes(a) and IsFocalPointOf(c)))) -> (exists e (exists d (IsLocal(d) and IsStolen(e))))"
+}

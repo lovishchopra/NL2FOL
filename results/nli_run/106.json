@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A red dog jumps and catches a tennis ball in its mouth.\"",
+    "Implication": " \"A dog catches a ball.\"",
+    "Referring expressions": " A red dog, tennis ball, its mouth.  A dog, ball",
+    "Properties": " IsRed(a),  Jumps(b),  IsCaughtInMouth(c)  IsCaught(d),  IsBall(e)",
+    "Formula": "(exists c (exists a (exists b (IsRed(a) and Jumps(b) and IsCaughtInMouth(c)))) & (forall f (forall g (  Jumps(f) ->   IsBall(g))))) -> (exists e (exists d (IsCaught(d) and IsBall(e))))"
+}

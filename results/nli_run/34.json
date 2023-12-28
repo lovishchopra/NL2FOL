@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man rides a bicycle while a young girl holds onto the back of him.\"",
+    "Implication": " \"The man is sitting on the ground.\"",
+    "Referring expressions": " A man, young girl, bicycle  Man, ground",
+    "Properties": " IsRides(a),  IsHeldBy(b),  IsBicycle(c)  IsSittingOn(d),  IsGround(e)",
+    "Formula": "(exists c (exists a (exists b (IsRides(a) and IsHeldBy(b) and IsBicycle(c)))) & (forall f (forall g ( IsRides(f) ->  IsSittingOn(g))))) -> (exists e (exists d (IsSittingOn(d) and IsGround(e))))"
+}

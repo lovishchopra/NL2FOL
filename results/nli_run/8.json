@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man in a blue shirt and tan shorts is working on the control panel of an exercise bicycle.\"",
+    "Implication": " \"There is no man.\"",
+    "Referring expressions": "  No man",
+    "Properties": " IsInBlueShirt(a),  IsWorkingOnExerciseBicycleControlPanel(a)  IsNoMan(b)",
+    "Formula": "(exists a (IsInBlueShirt(a) and IsWorkingOnExerciseBicycleControlPanel(a))) -> (exists a (exists b (~IsBald(a) and ~IsTouching(a,b))))"
+}

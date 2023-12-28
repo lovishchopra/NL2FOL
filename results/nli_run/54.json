@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two people climbed up some sort of wore structure.\"",
+    "Implication": " \"Two people took a ship to the moon.\"",
+    "Referring expressions": " Two people, wore structure  Two people, ship, moon",
+    "Properties": " IsClimbedUp(a),  IsWoreStructure(b)  IsTook(a,c),  IsOnMoon(d)",
+    "Formula": "(exists a (exists b (IsClimbedUp(a) and IsWoreStructure(b)))) -> (exists c (exists a (exists d (IsOnMoon(d) and (IsTook(a,c) and IsOnMoon(d))))))"
+}

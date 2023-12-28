@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The pitcher is pitching the ball.\"",
+    "Implication": " \"The pitcher throws the ball.\"",
+    "Referring expressions": " The pitcher, ball  The pitcher, ball",
+    "Properties": " IsPitching(a),  IsTheBall(b)  IsThrows(a),  IsTheBall(b)",
+    "Formula": "(exists a (exists b (IsPitching(a) and IsTheBall(b))) & (forall c ( IsPitching(c) ->  IsThrows(c))) & (forall d ( IsThrows(d) ->  IsPitching(d)))) -> (exists a (exists b (IsThrows(a) and IsTheBall(b))))"
+}

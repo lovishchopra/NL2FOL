@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man is sitting in front of another man.\"",
+    "Implication": " \"A man is lying at the bach.\"",
+    "Referring expressions": " A man, another man.  A man, bach",
+    "Properties": " IsSittingInFrontOf(a,b)  IsLyingAt(a,c)",
+    "Formula": "(exists a (exists b (IsSittingInFrontOf(a,b)))) -> (exists c (exists a (IsLyingAt(a,c))))"
+}

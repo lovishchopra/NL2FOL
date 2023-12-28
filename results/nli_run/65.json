@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A bird is flapping its wings on the water.\"",
+    "Implication": " \"The bird is flying over the trees.\"",
+    "Referring expressions": " Bird, water  Bird, trees",
+    "Properties": " IsFlapping(a),  IsOnWater(b)  IsFlying(a),  IsOver(c)",
+    "Formula": "(exists a (exists b (IsFlapping(a) and IsOnWater(b))) & (forall d ( IsFlapping(d) ->  IsFlying(d))) & (forall e ( IsFlying(e) ->  IsFlapping(e)))) -> (exists c (exists a (IsFlying(a) and IsOver(c))))"
+}

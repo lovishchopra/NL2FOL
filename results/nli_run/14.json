@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A skateboard is grinding on a curb.\"",
+    "Implication": " \"The skateboard is resting.\"",
+    "Referring expressions": " A skateboard, curb  The skateboard",
+    "Properties": " IsGrindingOn(a,b)  IsResting(c)",
+    "Formula": "(exists a (exists b (IsGrindingOn(a,b)))) -> (exists c (IsResting(c)))"
+}

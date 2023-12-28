@@ -11,7 +11,7 @@ Here are some examples of extracting claims and implication from an input paragr
  Implication: "The new math teacher doesn't know anything"
 
  Input: "I don’t care what scientists say, my mother always told me that the world is flat, and she would never lie to me!"
- Claims: "Mother said the world is flat" and "Mother never lies"
+ Claim: "Mother said the world is flat and mother never lies"
  Implication: "The world is flat"
 
  Input: Dave wants you to break into the spooky cabin with him. Everyone does it

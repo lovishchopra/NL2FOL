@@ -1,0 +1,7 @@
+{
+    "Claim": " \"There is a guy holding a football.\"",
+    "Implication": " \"A guy with a football is being watched by a crowd.\"",
+    "Referring expressions": " guy, football  A guy, football, crowd",
+    "Properties": " IsHolding(b),  IsAFootball(a)  IsWithFootball(c),  IsBeingWatchedBy(d)",
+    "Formula": "(exists a (exists b (IsHolding(b) and IsAFootball(a))) & (forall f (forall e ( IsWithFootball(e) ->   IsAFootball(f))))) -> (exists c (exists d (IsWithFootball(c) and IsBeingWatchedBy(d))))"
+}

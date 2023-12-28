@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A group of people are camping out on some rocks.\"",
+    "Implication": " \"People are outdoors.\"",
+    "Referring expressions": " Some rocks, group of people  People, outdoors",
+    "Properties": " IsCampingOn(a),  IsInGroup(b)  IsOutdoors(d)",
+    "Formula": "(exists a (exists b (IsCampingOn(a) and IsInGroup(b))) & (forall f (forall e ( IsCampingOn(e) ->  IsOutdoors(f))))) -> (exists c (IsOutdoors(c)))"
+}

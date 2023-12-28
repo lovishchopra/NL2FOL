@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The player in the black shirt reaches for the football.\"",
+    "Implication": " \"Two players are sitting on a couch.\"",
+    "Referring expressions": " The player, black shirt, football  Two players, couch",
+    "Properties": " IsInBlackShirt(a),  ReachesFor(b),  HasFootball(c)  AreSittingOn(d),  HasCouch(e)",
+    "Formula": "(exists c (exists a (exists b (IsInBlackShirt(a) and ReachesFor(b) and HasFootball(c))))) -> (exists e (exists d (AreSittingOn(d) and HasCouch(e))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A blond woman has a tattoo of an angel on her arm.\"",
+    "Implication": " \"Nobody has a tattoo.\"",
+    "Referring expressions": " Blond woman, tattoo of an angel, her arm.  Nobody, tattoo",
+    "Properties": " IsBlond(a),  HasTattooOfAnAngel(b),  IsOnHerArm(c)  IsNobody(d),  HasTattoo(e)",
+    "Formula": "(exists c (exists a (exists b (IsBlond(a) and HasTattooOfAnAngel(b) and IsOnHerArm(c)))) & (forall f (forall g (  HasTattooOfAnAngel(f) ->   HasTattoo(g)))) & (forall i (forall h (  HasTattoo(h) ->   HasTattooOfAnAngel(i))))) -> (exists e (exists d (IsNobody(d) and ~HasTattoo(e))))"
+}

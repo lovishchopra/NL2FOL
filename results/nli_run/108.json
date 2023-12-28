@@ -1,0 +1,7 @@
+{
+    "Claim": " \"This person looks to be snowboarding on a very small pile of snow.\"",
+    "Implication": " \"Young snowboarders are sizing up their next jump.\"",
+    "Referring expressions": " This person, snowboarding, small pile of snow.  You, young snowboarders, next jump.",
+    "Properties": " IsSnowboarding(a),  IsOnSmallPileOfSnow(c)  IsYou(d),  IsYoungSnowboarder(e),  IsSizingUp(f)",
+    "Formula": "(exists c (exists a (IsSnowboarding(a) and IsOnSmallPileOfSnow(c))) & (forall h (forall g ( IsSnowboarding(g) ->   IsYoungSnowboarder(h)))) & (forall i (forall j (  IsYoungSnowboarder(i) ->  IsSnowboarding(j))))) -> (exists f (exists e (exists d (IsYou(d) and IsYoungSnowboarder(e) and IsSizingUp(f)))))"
+}

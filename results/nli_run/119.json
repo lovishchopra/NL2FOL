@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man wearing a brown hoodie is shopping for snacks.\"",
+    "Implication": " \"The man is wearing brown.\"",
+    "Referring expressions": " A man, brown hoodie, snacks.  Man, brown",
+    "Properties": " IsWearing(a,b),  IsShoppingFor(c)  IsWearing(d,e)",
+    "Formula": "(exists c (exists a (exists b (IsWearing(a,b) and IsShoppingFor(c))))) -> (exists e (exists d (IsWearing(d,e))))"
+}

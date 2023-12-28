@@ -1,7 +1,7 @@
 {
-    "Claim": " \"Habitat loss and human predation are a far greater problem for most animals.\"",
-    "Implication": " \"Elephants won't make it to see a warmer climate.\"",
-    "Referring expressions": " Habitat loss, human predation, most animals.  Elephants, warmer climate",
-    "Properties": " IsHabitatLoss(a),  IsHumanPredation(b),  IsMostAnimals(c)  IsInElephants(d),  WillSee(d,e)",
-    "Formula": "(exists c (exists b (exists a (IsHabitatLoss(a) and (IsHumanPredation(b) and IsMostAnimals(c)))))) -> (exists d (exists e (IsInElephants(d) and ~WillSee(d,e))))"
+    "Claim": " \"Elephants won't make it to see a warmer climate.\"",
+    "Implication": " \"Habitat loss and human predation are a far greater problem for most animals.\"",
+    "Referring expressions": " Elephants, warmer climate  Habitat loss, human predation, most animals.",
+    "Properties": " IsWarm(b),  WillNotReach(a)  IsHabitatLoss(c),  IsHumanPredation(d),  IsMostAnimals(e)",
+    "Formula": "(exists b (exists a (IsWarm(b) and ~WillNotReach(a)))) -> (exists e (exists d (exists c (IsHabitatLoss(c) and (IsHumanPredation(d) or IsMostAnimals(e))))))"
 }

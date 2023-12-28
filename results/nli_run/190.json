@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The gentleman is speaking.\"",
+    "Implication": " \"The man is being given respect.\"",
+    "Referring expressions": " gentleman, speaker  Man, respect",
+    "Properties": " IsSpeaking(b)  IsGivenRespect(d)",
+    "Formula": "(exists b (IsSpeaking(b))) -> (exists d (IsGivenRespect(d)))"
+}

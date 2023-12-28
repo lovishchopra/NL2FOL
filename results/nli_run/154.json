@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A person is outside.\"",
+    "Implication": " \"There is a flood with cars in the water.\"",
+    "Referring expressions": " A person, outside  There is, cars, water.",
+    "Properties": " IsOutside(a)  IsInWater(d),  IsInFlood(c)",
+    "Formula": "(exists b (IsOutside(b))) -> (exists c (exists d (IsInWater(d) and IsInFlood(c))))"
+}

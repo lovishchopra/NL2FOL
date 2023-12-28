@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A dog yawns.\"",
+    "Implication": " \"A dog is singing the National Anthem.\"",
+    "Referring expressions": " A dog  A dog, National Anthem",
+    "Properties": " IsYawns(a)  IsSinging(a,b)",
+    "Formula": "(exists a (IsYawns(a))) -> (exists a (exists b (IsSinging(a,b))))"
+}

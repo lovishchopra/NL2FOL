@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A woman is carrying a young girl.\"",
+    "Implication": " \"A woman is driving her kids around.\"",
+    "Referring expressions": " Woman, young girl  Woman, kids, around.",
+    "Properties": " IsCarrying(a,b)  IsDriving(a,c)",
+    "Formula": "(exists a (exists b (IsCarrying(a,b)))) -> (exists c (exists a (IsDriving(a,c))))"
+}

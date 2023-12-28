@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A boy is riding down the road.\"",
+    "Implication": " \"A boy, a road, and two cows.\"",
+    "Referring expressions": " A boy, road  A boy, road, cows",
+    "Properties": " IsRiding(a,b)  IsWith(a,b),  AreTwo(c)",
+    "Formula": "(exists a (exists b (IsRiding(a,b))) & (forall e (forall d ( IsRiding(d,e) ->  IsWith(d,e))))) -> (exists c (exists a (exists b (IsWith(a,b) and AreTwo(c)))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The woman is doing a handstand.\"",
+    "Implication": " \"She is lucky.\"",
+    "Referring expressions": " Woman, handstand  She, lucky.",
+    "Properties": " IsDoingHandstand(a)  IsLucky(c)",
+    "Formula": "(exists a (IsDoingHandstand(a))) -> (exists c (IsLucky(c)))"
+}

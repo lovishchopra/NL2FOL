@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Three dogs run through the grass.\"",
+    "Implication": " \"Three dogs sleep in the shade of an old tree.\"",
+    "Referring expressions": " Three dogs, grass  Three dogs, old tree",
+    "Properties": " IsRunThrough(a),  IsGrass(b)  IsSleep(a),  IsShadedBy(a,c)",
+    "Formula": "(exists a (exists b (IsRunThrough(a) and IsGrass(b)))) -> (exists c (exists a (IsSleep(a) and IsShadedBy(a,c))))"
+}

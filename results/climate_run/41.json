@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Polar bears were moving from ice to land earlier and staying on land longer.\"",
+    "Implication": " \"Polar bears are experiencing starvation due to the decline of their icy hunting grounds.\"",
+    "Referring expressions": " Polar bears, ice, land, longer  Polar bears, icy hunting grounds",
+    "Properties": " IsOnLand(a),  IsMovingFromIceToLand(a),  IsStayingOnLandLonger(a)  IsExperiencingStarvation(a),  IsOnIcyHuntingGrounds(e)",
+    "Formula": "(exists a (IsOnLand(a) and (IsMovingFromIceToLand(a) and IsStayingOnLandLonger(a)))) -> (exists e (exists a (IsOnIcyHuntingGrounds(e) and IsExperiencingStarvation(a))))"
+}

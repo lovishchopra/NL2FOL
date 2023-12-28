@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The young Asian girl is outside in the rubble.\"",
+    "Implication": " \"The young Asian girl is sitting on the ground in rubble.\"",
+    "Referring expressions": " Young Asian girl, outside, rubble.  Young Asian girl, ground, rubble.",
+    "Properties": " IsYoung(a),  IsOutside(c),  IsInRubble(b)  IsSitting(a),  IsOnGround(d),  IsInRubble(b)",
+    "Formula": "(exists c (exists a (exists b (IsYoung(a) and IsOutside(c) and IsInRubble(b)))) & (forall e ( IsSitting(e) ->  IsYoung(e)))) -> (exists b (exists a (exists d (IsSitting(a) and IsOnGround(d) and IsInRubble(b)))))"
+}

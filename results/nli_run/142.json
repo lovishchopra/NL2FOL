@@ -1,0 +1,7 @@
+{
+    "Claim": " \"2 people are at a table.\"",
+    "Implication": " \"The woman with a beige blazer is sitting behind the table.\"",
+    "Referring expressions": " 2 people, table  Woman, beige blazer, table",
+    "Properties": " IsAtTable(a)  IsSittingBehindTable(a),  HasBeigeBlazer(d)",
+    "Formula": "(exists b (IsAtTable(b))) -> (exists a (exists d (IsSittingBehindTable(a) and HasBeigeBlazer(d))))"
+}

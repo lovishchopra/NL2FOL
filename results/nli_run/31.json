@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The chef is sleeping in his canoe.\"",
+    "Implication": " \"The chef cut a piece off of a large slab of rotating meat on a stick, probably lamb.\"",
+    "Referring expressions": " chef, canoe  The chef, a piece, large slab, rotating meat, probably lamb.",
+    "Properties": " IsSleepingIn(a,b)  IsCutting(d,e),  IsLargeSlab(e),  IsRotatingMeat(f),  IsProbablyLamb(g)",
+    "Formula": "(exists a (exists b (IsSleepingIn(a,b)))) -> (exists f (exists e (exists g (exists d (IsCutting(d,e) and (IsLargeSlab(e) and IsRotatingMeat(f)) and IsProbablyLamb(g))))))"
+}

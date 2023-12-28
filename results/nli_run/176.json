@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The child's hands are on the man's head.\"",
+    "Implication": " \"The child is on the man's shoulders.\"",
+    "Referring expressions": " Child's hands, man's head  The child, man's shoulders",
+    "Properties": " IsOn(a,b)  IsOn(c,d)",
+    "Formula": "(exists a (exists b (IsOn(a,b)))) -> (exists c (exists d (IsOn(c,d))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man has many sticks of cotton candy.\"",
+    "Implication": " \"A naked man is picking apples.\"",
+    "Referring expressions": " A man, cotton candy  A naked man, apples",
+    "Properties": " IsMany(b)  IsNaked(c),  IsPicking(d)",
+    "Formula": "(exists a (exists b (IsMany(b) and IsAMan(a)))) -> (exists c (exists d (IsNaked(c) and IsPicking(d))))"
+}

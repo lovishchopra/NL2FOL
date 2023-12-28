@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A person is obscured in shadow in a gymnasium.\"",
+    "Implication": " \"The person is a vampire avoiding the sun.\"",
+    "Referring expressions": " person, gymnasium, shadow  person, vampire, sun",
+    "Properties": " IsObscuredInShadow(a),  IsInGymnasium(b)  IsVampire(a),  AvoidsSun(d)",
+    "Formula": "(exists a (exists b (IsObscuredInShadow(a) and IsInGymnasium(b))) & (forall f (forall g (  AvoidsSun(f) ->  IsObscuredInShadow(g))))) -> (exists a (exists d (IsVampire(a) and AvoidsSun(d))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"People are riding their bikes down a road.\"",
+    "Implication": " \"No one is riding a bike.\"",
+    "Referring expressions": " People, their bikes, road.  No one, bike",
+    "Properties": " IsRiding(a,b),  IsOnRoad(c)  IsNotRiding(d,e)",
+    "Formula": "(exists c (exists a (exists b (IsRiding(a,b) and IsOnRoad(c))))) -> (exists e (exists d (~IsRiding(e,d))))"
+}

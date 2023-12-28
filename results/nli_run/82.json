@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A person is inside the woods.\"",
+    "Implication": " \"The person is strolling through the woods.\"",
+    "Referring expressions": " A person, woods  person, woods",
+    "Properties": " IsInside(b,a)  IsStrolling(c,a)",
+    "Formula": "(exists a (exists b (IsInside(b,a)))) -> (exists c (exists a (IsStrolling(c,a))))"
+}

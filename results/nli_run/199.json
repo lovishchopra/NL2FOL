@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The sun breaks through the trees.\"",
+    "Implication": " \"A child rides a swing in the daytime.\"",
+    "Referring expressions": " The sun, trees.  A child, swing, daytime",
+    "Properties": " IsBreakingThrough(a),  IsTrees(b)  IsRides(c),  IsSwing(d),  IsDaytime(e)",
+    "Formula": "(exists a (exists b (IsBreakingThrough(a) and IsTrees(b))) & (forall f (forall g ( IsBreakingThrough(f) ->   IsDaytime(g)))) & (forall i (forall h (  IsDaytime(h) ->  IsBreakingThrough(i))))) -> (exists e (exists c (exists d (IsRides(c) and IsSwing(d) and IsDaytime(e)))))"
+}

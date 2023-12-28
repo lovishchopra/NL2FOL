@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man in an overcoat is putting on his gloves at a subway station.\"",
+    "Implication": " \"A person is in the subway station.\"",
+    "Referring expressions": " Man in an overcoat, subway station  A person, subway station",
+    "Properties": " IsInOvercoat(b),  IsPuttingOnGloves(b)  IsInSubwayStation(a)",
+    "Formula": "(exists b (IsInOvercoat(b) and IsPuttingOnGloves(b))) -> (exists c (IsInSubwayStation(c)))"
+}

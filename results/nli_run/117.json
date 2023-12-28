@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two people in coats kissed on the side of a road.\"",
+    "Implication": " \"People show their appreciation for another.\"",
+    "Referring expressions": " Two people, coats, road  People, another.",
+    "Properties": " IsInCoats(a),  IsOnSideOfRoad(b),  IsKissed(a,b)  IsShownAppreciationFor(d,e)",
+    "Formula": "(exists a (exists b (IsInCoats(a) and IsOnSideOfRoad(b) and IsKissed(a,b))) & (forall f (forall h (forall g ( IsInCoats(f) ->  IsShownAppreciationFor(g,h))))) & (forall l (forall i (forall j (forall k (  IsKissed(i,j) ->  IsShownAppreciationFor(k,l))))))) -> (exists e (exists d (IsShownAppreciationFor(d,e) and IsAppreciated(d))))"
+}

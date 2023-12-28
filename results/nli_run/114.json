@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two small boys use a wooden set of steps to wash their hands.\"",
+    "Implication": " \"Two boys wash their hands.\"",
+    "Referring expressions": " Two small boys, wooden set of steps, their hands.  Two boys, their hands.",
+    "Properties": " IsSmall(b),  IsUsed(b),  IsHands(a)  IsTwo(d),  IsHands(a)",
+    "Formula": "(exists a (exists b (IsSmall(b) and IsUsed(b) and IsHands(a))) & (forall f (forall e ( IsSmall(e) ->  IsTwo(f)))) & (forall h (forall g ( IsTwo(g) ->  IsSmall(h)))) & (forall i (forall j (  IsUsed(i) ->  IsTwo(j)))) & (forall l (forall k ( IsTwo(k) ->   IsUsed(l))))) -> (exists a (exists d (IsTwo(d) and IsHands(a))))"
+}

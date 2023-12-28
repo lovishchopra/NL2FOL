@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A large group of people walk in a busy city at night.\"",
+    "Implication": " \"People walk in a city.\"",
+    "Referring expressions": " A large group of people, busy city, night.  People, city",
+    "Properties": " IsLarge(a),  IsBusy(b),  IsAtNight(c)  IsWalk(d),  IsInCity(e)",
+    "Formula": "(exists c (exists a (exists b (IsLarge(a) and IsBusy(b) and IsAtNight(c)))) & (forall f (forall g (  IsBusy(f) ->   IsInCity(g)))) & (forall i (forall h (  IsInCity(h) ->   IsBusy(i))))) -> (exists e (exists d (IsWalk(d) and IsInCity(e))))"
+}

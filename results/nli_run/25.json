@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Laura Bush is driving a jet-ski near the Washington monument.\"",
+    "Implication": " \"Laura Bush is not at the White House Conference on Global Literacy.\"",
+    "Referring expressions": " Laura Bush, jet-ski, Washington monument.  Laura Bush, White House Conference on Global Literacy",
+    "Properties": " IsDriving(a),  IsNear(b),  IsAt(c)  IsNotAt(a),  IsAt(d)",
+    "Formula": "(exists c (exists a (exists b (IsDriving(a) and IsNear(b) and IsAt(c))))) -> (exists a (exists d (IsNotAt(a) and IsAt(d))))"
+}

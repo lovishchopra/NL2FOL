@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The woman has a green headscarf, blue shirt, and a very big grin.\"",
+    "Implication": " \"The woman has been shot.\"",
+    "Referring expressions": " Woman, green headscarf, blue shirt, big grin.  Woman, shot",
+    "Properties": " IsWearingGreenHeadscarf(a),   HasBlueShirt(a),   HasBigGrin(a)  HasBeenShot(a)",
+    "Formula": "(exists a ((IsWearingGreenHeadscarf(a) and HasBigGrin(a)) or (HasBlueShirt(a) and IsWearingGreenHeadscarf(a)))) -> (exists a (HasBeenShot(a)))"
+}

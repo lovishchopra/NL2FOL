@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A tan girl runs and leans over an object.\"",
+    "Implication": " \"A person in a wool hat sits on the ground.\"",
+    "Referring expressions": " Tan girl, object  A person, wool hat, ground",
+    "Properties": " IsTan(a),  Runs(a),  LeansOver(b)  IsInWoolHat(d),  SitsOnGround(e)",
+    "Formula": "(exists a (exists b (IsTan(a) and Runs(a) and LeansOver(b)))) -> (exists e (exists d (IsInWoolHat(d) and SitsOnGround(e))))"
+}

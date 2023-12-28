@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Woman wearing a black top and glasses speaks into a blue tipped microphone while another woman writes beside her.\"",
+    "Implication": " \"One woman speaks into a microphone while a second woman writes beside her.\"",
+    "Referring expressions": " Woman, black top, glasses, blue tipped microphone, another woman, beside her.  One woman, second woman, microphone, beside her.",
+    "Properties": " IsWearingBlackTop(c),  HasGlasses(d),  IsSpeakingIntoBlueTippedMicrophone(e),  IsBesideHer(a)  IsSpeakingIntoMicrophone(g),  IsBesideHer(h)",
+    "Formula": "(exists e (exists c (exists a ((IsWearingBlackTop(c) and IsSpeakingIntoBlueTippedMicrophone(e)) and IsBesideHer(a)))) & (forall j (forall k (  IsSpeakingIntoBlueTippedMicrophone(j) ->  IsSpeakingIntoMicrophone(k))))) -> (exists h (exists g (IsSpeakingIntoMicrophone(g) and IsBesideHer(h))))"
+}

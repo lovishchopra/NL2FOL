@@ -1,0 +1,7 @@
+{
+    "Claim": " \"There are 6 men in priest robes.\"",
+    "Implication": " \"Four men in safety gear are standing on a platform.\"",
+    "Referring expressions": " men, priest robes  Four men, safety gear, platform",
+    "Properties": " IsInPriestRobes(a)  IsInSafetyGear(c),  IsOnPlatform(d)",
+    "Formula": "(exists a (IsInPriestRobes(a))) -> (exists c (exists d ((IsInSafetyGear(c) and IsOnPlatform(d)))))"
+}

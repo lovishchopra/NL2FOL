@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A soccer player in white kicks a ball.\"",
+    "Implication": " \"There are three soccer players.\"",
+    "Referring expressions": " A soccer player, white, ball  three soccer players",
+    "Properties": " IsInWhite(b),  IsKicked(c)  IsThree(d)",
+    "Formula": "(exists c (exists b (IsInWhite(b) and IsKicked(c)))) -> (exists d (3 and IsThree(d)))"
+}
