@@ -2,17 +2,19 @@ from cvc import CVCGenerator
 import pandas as pd
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import transformers
-import torch
+# import torch
 import ast
 from helpers import *
 import json
-
+from openai import OpenAI
+client = OpenAI()
 class NL2FOL:
     """
     Class to convert natural language to first-order logical expression
     """
-    def __init__(self, sentence, pipeline, tokenizer, nli_model, nli_tokenizer, debug=False):
+    def __init__(self, sentence, model_type, pipeline=None, tokenizer=None, nli_model=None, nli_tokenizer=None, debug=False):
         self.sentence = sentence
+        self.model_type = model_type
         self.claim = ""
         self.implication = ""
         self.claim_ref_exp = ""
@@ -38,12 +40,23 @@ class NL2FOL:
             yield obj
 
     def get_llm_result(self, prompt):
-        sequences = self.pipeline(prompt,
-            do_sample=False,
-            num_return_sequences=1,
-            eos_token_id=self.tokenizer.eos_token_id
-        )
-        return sequences[0]["generated_text"].removeprefix(prompt)
+        if self.model_type=='llama':
+            sequences = self.pipeline(prompt,
+                do_sample=False,
+                num_return_sequences=1,
+                eos_token_id=self.tokenizer.eos_token_id
+            )
+            return sequences[0]["generated_text"].removeprefix(prompt)
+        elif self.model_type=='gpt3.5':
+            completion = client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "user", "content": "prompt"}
+            ]
+            )
+            return completion.choices[0].message
+
+            
 
     def extract_claim_and_implication(self):
         with open("prompts/prompt_nl_to_ci.txt", encoding="ascii", errors="ignore") as f:
@@ -327,6 +340,7 @@ class NL2SMT:
             file.write(script)
 
 def setup_dataset(fallacy_set='logic',length=100):
+    print("called")
     if fallacy_set=='logic':
         df_fallacies=pd.read_csv('data/fallacies.csv')
         df_fallacies['label']=[0]*len(df_fallacies)
@@ -338,40 +352,49 @@ def setup_dataset(fallacy_set='logic',length=100):
         df_fallacies=df_fallacies[['source_article','logical_fallacies','label']]
         df_fallacies=df_fallacies.sample(length,random_state=683)
     elif fallacy_set=='nli':
-        df_fallacies=pd.read_csv('data/nli_fallacies.csv')
+        df_fallacies=pd.read_csv('data/nli_fallacies_test.csv')
         df_fallacies['label']=[0]*len(df_fallacies)
-        df_fallacies=df_fallacies[['source_article','logical_fallacies','label']]
+        df_fallacies=df_fallacies[['sentence','label']]
         df_fallacies=df_fallacies.sample(length,random_state=683)
-    df_valids=pd.read_csv('data/nli_entailments.csv')
+    df_valids=pd.read_csv('data/nli_entailments_test.csv')
     df_valids['label']=[1]*len(df_valids)
     df_valids=df_valids[['sentence','label']]
     df_valids=df_valids.sample(length,random_state=113)
-    df = pd.concat([df_fallacies, df_valids])
-    df['articles'] = df['source_article'].combine_first(df['sentence'])
-    df = df.drop(['source_article', 'sentence'], axis=1)
+    df = pd.concat([df_fallacies, df_valids],ignore_index=True)
+    print(df)
+    if 'source_article' in df.columns:
+        print(df.columns)
+        df['articles'] = df['source_article'].combine_first(df['sentence'])
+        df = df.drop_duplicates()
+        print(len(df))
+        df = df.drop(['source_article', 'sentence'], axis=1)
+    else:
+        df['articles'] = df['sentence']
     return df
 
 if __name__ == '__main__':
-    model = "meta-llama/Llama-2-7b-chat-hf"
-    fallacy_set='logicclimate'
-    run_name='climate_run'
-    nli_tokenizer = AutoTokenizer.from_pretrained('facebook/bart-large-mnli')
-    nli_model = AutoModelForSequenceClassification.from_pretrained('facebook/bart-large-mnli')
-    tokenizer = AutoTokenizer.from_pretrained(model)
-    pipeline = transformers.pipeline(
-        "text-generation",
-        model=model,
-        torch_dtype=torch.float16,
-        max_length=1024,
-        device_map="auto",
-    )
-    df=setup_dataset(fallacy_set='logicclimate',length=100)
+    # model = "meta-llama/Llama-2-7b-chat-hf"
+    model_type='gpt3.5'
+    fallacy_set='nli'
+    run_name='gpt3.5_logic_run'
+    length=100
+    # nli_tokenizer = AutoTokenizer.from_pretrained('facebook/bart-large-mnli')
+    # nli_model = AutoModelForSequenceClassification.from_pretrained('facebook/bart-large-mnli'
+    # pipeline = transformers.pipeline(
+    #     "text-generation",
+    #     model=model,
+    #     torch_dtype=torch.float16,
+    #     max_length=1024,
+    #     device_map="auto",
+    # )
+    df=setup_dataset(fallacy_set='logic',length=length)
     final_lfs=[]
     final_lfs2=[]
     count=0
     for i,row in df.iterrows():
         print(count)
-        nl2fol=NL2FOL(row['articles'],pipeline,tokenizer,nli_model,nli_tokenizer,debug=True)
+        # nl2fol=NL2FOL(row['articles'],pipeline,tokenizer,nli_model,nli_tokenizer,debug=True)
+        nl2fol=NL2FOL(row['articles'],model_type='gpt3.5',debug=True)
         nl2fol.convert_to_first_order_logic()
         final_lfs.append(nl2fol.final_lf)
         final_lfs2.append(nl2fol.final_lf2)
