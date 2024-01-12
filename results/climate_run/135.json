@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A redheaded child is interested in the water and the people playing on the beach in a distance.\"",
+    "Implication": " \"A redheaded child sits looking through a railing at the water while people play on the beach in a distance.\"",
+    "Referring expressions": " ",
+    "Properties": " IsRedheaded(a),  IsInterestedInWater(a),  IsInterestedInPeople(a),  IsInDistance(a)  IsSitting(a),  IsLookingThroughRailing(a),  IsAtWater(a),  IsPeoplePlayingOnBeach(a),  IsInDistance(a)",
+    "Formula": "(exists a (IsRedheaded(a) and IsInterestedInWater(a) and IsInterestedInPeople(a) and IsInDistance(a)) & (forall b (  IsInterestedInWater(b) ->   IsAtWater(b)))) -> (exists a (IsSitting(a) and IsLookingThroughRailing(a) and IsAtWater(a) and IsPeoplePlayingOnBeach(a) and IsInDistance(a)))"
+}

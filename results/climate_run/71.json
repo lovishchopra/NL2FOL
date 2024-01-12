@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Australia's symbolic suicidal climate policy makes everybody poorer.\"",
+    "Implication": " \"Australia's climate policy is symbolic and suicidal.\"",
+    "Referring expressions": " Australia, climate policy, everybody, poorer  Australia, climate policy, symbolic, suicidal",
+    "Properties": " IsSymbolic(b),  IsClimatePolicy(a),  IsEverybody(d),  IsPoorer(c)  IsSymbolic(b),  IsSuicidal(e)",
+    "Formula": "(exists c (exists a (exists b (exists d (IsSymbolic(b) and (IsClimatePolicy(a) and IsEverybody(d)) and IsPoorer(c)))))) -> (exists e (exists b (IsSymbolic(b) and IsSuicidal(e))))"
+}

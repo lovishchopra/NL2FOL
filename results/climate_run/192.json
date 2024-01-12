@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A dog is jumping up at a man wearing a search and rescue jacket.\"",
+    "Implication": " \"A man is near a dog.\"",
+    "Referring expressions": " A dog, man, search and rescue jacket  Man, dog",
+    "Properties": " IsJumpingUp(b),  IsWearingSearchAndRescueJacket(c)  IsNear(a,d)",
+    "Formula": "(exists c (exists b (IsJumpingUp(b) and IsWearingSearchAndRescueJacket(c)))) -> (exists a (exists d (IsNear(a,d))))"
+}

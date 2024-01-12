@@ -1,0 +1,7 @@
+{
+    "Claim": " \"People walk on a sidewalk in front of a Hyatt.\"",
+    "Implication": " \"There are people walking in front of a hotel.\"",
+    "Referring expressions": " People, sidewalk, Hyatt.  People, hotel",
+    "Properties": " IsWalkingOn(a,b),  IsInFrontOf(a,c)  IsWalkingInFrontOf(a,d)",
+    "Formula": "(exists c (exists a (exists b (IsWalkingOn(a,b) and IsInFrontOf(a,c)))) & (forall e (forall f (forall g (  IsInFrontOf(e,f) ->  IsWalkingInFrontOf(e,g))))) & (forall j (forall h (forall i ( IsWalkingInFrontOf(h,i) ->   IsInFrontOf(h,j)))))) -> (exists a (exists d (IsWalkingInFrontOf(a,d))))"
+}

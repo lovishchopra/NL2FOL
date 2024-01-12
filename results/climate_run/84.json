@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The Chinese 'airpocalypse' of 2013 peaked at an Air Quality Index of over 800.\"",
+    "Implication": " \"Smog was responsible for a third of all deaths in the country.\"",
+    "Referring expressions": " Chinese, airpocalypse, Air Quality Index  Smog, country",
+    "Properties": " IsChinese(a),  HasAirpocalypse(b),  HasAirQualityIndex(c)  IsResponsibleFor(d),  HasDeaths(e)",
+    "Formula": "(exists c (exists a (exists b (IsChinese(a) and HasAirpocalypse(b) and HasAirQualityIndex(c))))) -> (exists e (exists d (IsResponsibleFor(d) and HasDeaths(e))))"
+}

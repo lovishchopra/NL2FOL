@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Changes in extreme precipitation events are one of global warming's most well-documented climate change impacts.\"",
+    "Implication": " \"It's too soon to say precisely how global warming may have affected the rare confluence of events that conspired to dump at least 26.88 inches of rain in less than four days on South Carolina.\"",
+    "Referring expressions": " Changes in extreme precipitation events, global warming, climate change impacts.  It, global warming, rare confluence of events, South Carolina.",
+    "Properties": " IsInGlobalWarming(b),  IsAnImpactOfClimateChange(c)  IsInGlobalWarming(b),  IsAConfluenceOfRareEvents(a)",
+    "Formula": "(exists c (exists b (IsInGlobalWarming(b) and IsAnImpactOfClimateChange(c))) & (forall h (forall g (  IsAnImpactOfClimateChange(g) ->  IsInGlobalWarming(h)))) & (forall j (forall i ( IsInGlobalWarming(i) ->   IsAnImpactOfClimateChange(j))))) -> (exists a (exists b (IsInGlobalWarming(b) and IsAConfluenceOfRareEvents(a))))"
+}

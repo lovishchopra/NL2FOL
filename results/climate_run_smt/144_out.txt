@@ -1,0 +1,25 @@
+unknown
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_3 () UnboundSet)
+(define-fun IsStandingBy ((BOUND_VARIABLE_414 BoundSet) (BOUND_VARIABLE_415 BoundSet)) Bool true)
+(define-fun IsNearby ((BOUND_VARIABLE_422 BoundSet)) Bool false)
+(define-fun IsTouching ((BOUND_VARIABLE_414 BoundSet) (BOUND_VARIABLE_415 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_8 () UnboundSet)
+(define-fun IsStandingBy ((BOUND_VARIABLE_481 BoundSet) (BOUND_VARIABLE_482 BoundSet)) Bool true)
+(define-fun IsNearby ((BOUND_VARIABLE_485 BoundSet)) Bool true)
+(define-fun IsTouching ((BOUND_VARIABLE_481 BoundSet) (BOUND_VARIABLE_482 BoundSet)) Bool false)
+)

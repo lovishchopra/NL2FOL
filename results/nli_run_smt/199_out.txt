@@ -1,0 +1,29 @@
+unknown
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_3 () UnboundSet)
+(define-fun IsBreakingThrough ((BOUND_VARIABLE_462 BoundSet)) Bool true)
+(define-fun IsTrees ((BOUND_VARIABLE_462 BoundSet)) Bool true)
+(define-fun IsDaytime ((BOUND_VARIABLE_462 BoundSet)) Bool false)
+(define-fun IsRides ((BOUND_VARIABLE_462 BoundSet)) Bool false)
+(define-fun IsSwing ((BOUND_VARIABLE_462 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_9 () UnboundSet)
+(define-fun IsBreakingThrough ((BOUND_VARIABLE_520 BoundSet)) Bool true)
+(define-fun IsTrees ((BOUND_VARIABLE_520 BoundSet)) Bool true)
+(define-fun IsDaytime ((BOUND_VARIABLE_520 BoundSet)) Bool true)
+(define-fun IsRides ((BOUND_VARIABLE_520 BoundSet)) Bool false)
+(define-fun IsSwing ((BOUND_VARIABLE_520 BoundSet)) Bool false)
+)

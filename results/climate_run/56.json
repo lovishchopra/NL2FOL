@@ -3,5 +3,5 @@
     "Implication": " \"Brainwashing is necessary to address climate change.\"",
     "Referring expressions": " Brown, world, climate change  Brainwashing, climate change",
     "Properties": " IsSays(b,a),  IsNeeds(b,c)  IsNecessary(d,a)",
-    "Formula": "(exists c (exists b (exists a (IsSays(b,a) and IsNeeds(b,c))))) -> (exists d (exists a (IsNecessary(d,a))))"
+    "Formula": "(exists c (exists a (exists b (IsSays(b,a) and IsNeeds(b,c))))) -> (exists d (exists a (IsNecessary(d,a))))"
 }

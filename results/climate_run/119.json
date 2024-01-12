@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A woman works at a loom.\"",
+    "Implication": " \"A woman wearing a floral head covering works at a loom.\"",
+    "Referring expressions": " Woman, loom  A woman, floral head covering, loom.",
+    "Properties": " IsWorkingAt(a)  IsWearing(c,d),  IsWorkingAt(e)",
+    "Formula": "(exists a (IsWorkingAt(a))) -> (exists e (exists c (exists d (IsWearing(c,d) and IsWorkingAt(e)))))"
+}

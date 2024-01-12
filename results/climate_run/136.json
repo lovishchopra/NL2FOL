@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two women are standing on a sidewalk.\"",
+    "Implication": " \"All women stand on sidewalks.\"",
+    "Referring expressions": " Two women, sidewalk  All women, sidewalks.",
+    "Properties": " IsStandingOn(a,b)  IsStandingOn(c,d)",
+    "Formula": "(exists a (exists b (IsStandingOn(a,b)))) -> (exists c (exists d (IsStandingOn(c,d))))"
+}

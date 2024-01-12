@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Many African American children gather in a small classroom where their studies are provided by Unicef.\"",
+    "Implication": " \"Many kids at school.\"",
+    "Referring expressions": " Many African American children, small classroom, Unicef.  Many kids, school.",
+    "Properties": " IsMany(a),  IsInSmallClassroom(b),  IsProvidedByUnicef(c)  IsMany(d),  IsAtSchool(e)",
+    "Formula": "(exists c (exists a (exists b (IsMany(a) and (IsInSmallClassroom(b) and IsProvidedByUnicef(c)))))) -> (exists e (exists d (IsMany(d) and IsAtSchool(e))))"
+}

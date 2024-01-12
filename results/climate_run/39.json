@@ -3,5 +3,5 @@
     "Implication": " \"The internal cohesion of nation-states like the US and China would unravel.\"",
     "Referring expressions": " Someone, billion people, unlivable conditions.  Nation-states, US, China",
     "Properties": " IsSomeone(a),  AreBillionPeople(b),  AreUnlivableConditions(c)  IsNationState(d),  IsUnraveling(e,f)",
-    "Formula": "(exists c (exists b (exists a (IsSomeone(a) and (AreBillionPeople(b) and AreUnlivableConditions(c))))) & (forall g (forall h (forall i (  IsUnraveling(g,h) ->   AreUnlivableConditions(i)))))) -> (exists f (exists e (exists d (IsNationState(d) and (IsUnraveling(e,f) or IsUnraveling(f,e))))))"
+    "Formula": "(exists c (exists a (exists b (IsSomeone(a) and (AreBillionPeople(b) and AreUnlivableConditions(c))))) & (forall i (forall h (forall g (  IsUnraveling(g,h) ->   AreUnlivableConditions(i)))))) -> (exists e (exists d (exists f (IsNationState(d) and (IsUnraveling(e,f) or IsUnraveling(f,e))))))"
 }

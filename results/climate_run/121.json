@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A young man stopped another person from kicking him.\"",
+    "Implication": " \"A young man blocks a kick during a sparring match.\"",
+    "Referring expressions": " A young man, another person, him.  A young man, sparring match, kick",
+    "Properties": " IsYoung(a),  IsStoppedFromKicking(b),  IsHim(c)  IsYoung(a),  IsBlockedDuringSparringMatch(d),  IsKicked(e)",
+    "Formula": "(exists c (exists a (exists b (IsYoung(a) and IsStoppedFromKicking(b) and IsHim(c)))) & (forall f (forall g (  IsStoppedFromKicking(f) ->   IsBlockedDuringSparringMatch(g)))) & (forall h (forall i (  IsBlockedDuringSparringMatch(h) ->   IsStoppedFromKicking(i)))) & (forall k (forall j (  IsHim(j) ->  IsYoung(k))))) -> (exists e (exists a (exists d (IsYoung(a) and IsBlockedDuringSparringMatch(d) and IsKicked(e)))))"
+}

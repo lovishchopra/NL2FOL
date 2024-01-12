@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A girl with a flower on her shirt rides a skateboard.\"",
+    "Implication": " \"A girl rides a skateboard with a boy.\"",
+    "Referring expressions": " Girl, flower, shirt, skateboard.  A girl, boy, skateboard",
+    "Properties": " IsWithFlower(a),  IsOnShirt(b),  IsRidesSkateboard(d)  IsRidesSkateboard(g),  IsWithBoy(f)",
+    "Formula": "(exists a (exists b (exists d (IsWithFlower(a) and IsOnShirt(b) and IsRidesSkateboard(d))))) -> (exists f (exists g (IsRidesSkateboard(g) and IsWithBoy(f))))"
+}

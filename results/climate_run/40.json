@@ -3,5 +3,5 @@
     "Implication": " \"Boat owners should join rescue efforts.\"",
     "Referring expressions": " Interstates, feet, water  Boat owners, rescue efforts",
     "Properties": " IsUnderFeetOfWater(a)  ShouldJoin(d,e)",
-    "Formula": "(exists b (exists a (IsUnderFeetOfWater(a) and IsWater(b)))) -> (exists e (exists d (ShouldJoin(d,e))))"
+    "Formula": "(exists a (exists b (IsUnderFeetOfWater(a) and IsWater(b)))) -> (exists e (exists d (ShouldJoin(d,e))))"
 }

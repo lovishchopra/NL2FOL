@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Global warming is real\"",
+    "Implication": " \"The climate lobby's policy agenda follows inexorably\"",
+    "Referring expressions": " Global warming  climate lobby, policy agenda",
+    "Properties": " IsReal(a)  IsFollows(b,c)",
+    "Formula": "(exists a (IsReal(a))) -> (exists c (exists b (IsFollows(b,c))))"
+}

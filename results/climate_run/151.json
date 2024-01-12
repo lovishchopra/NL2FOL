@@ -1,0 +1,7 @@
+{
+    "Claim": " \"An older man is carrying flowers.\"",
+    "Implication": " \"An old man is carrying flowers.\"",
+    "Referring expressions": " Older man, flowers  Old man, flowers",
+    "Properties": " IsOlder(b),  IsCarrying(a)  IsOld(c),  IsCarrying(a)",
+    "Formula": "(exists a (exists b (IsOlder(b) and IsCarrying(a))) & (forall e (forall d ( IsOlder(d) ->  IsOld(e)))) & (forall f (forall g ( IsOld(f) ->  IsOlder(g))))) -> (exists c (exists a (IsOld(c) and IsCarrying(a))))"
+}

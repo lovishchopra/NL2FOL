@@ -1,0 +1,25 @@
+unknown
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_3 () UnboundSet)
+(define-fun IsVisit ((BOUND_VARIABLE_378 BoundSet) (BOUND_VARIABLE_379 BoundSet)) Bool true)
+(define-fun HasOpportunity ((BOUND_VARIABLE_378 BoundSet) (BOUND_VARIABLE_379 BoundSet)) Bool true)
+(define-fun IsLiving ((BOUND_VARIABLE_388 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_5 () UnboundSet)
+(define-fun IsVisit ((BOUND_VARIABLE_409 BoundSet) (BOUND_VARIABLE_410 BoundSet)) Bool true)
+(define-fun HasOpportunity ((BOUND_VARIABLE_409 BoundSet) (BOUND_VARIABLE_410 BoundSet)) Bool true)
+(define-fun IsLiving ((BOUND_VARIABLE_416 BoundSet)) Bool false)
+)

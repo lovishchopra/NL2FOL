@@ -3,5 +3,5 @@
     "Implication": " \"El Nino has nothing to do with greenhouse gas emissions by humans\"",
     "Referring expressions": " El Nino  El Nino, greenhouse gas emissions, humans",
     "Properties": " IsCausedBy(a)  IsNothingToDoWith(a,b),  IsEmittedBy(c)",
-    "Formula": "(exists a (IsCausedBy(a))) -> (exists c (exists b (exists a (IsNothingToDoWith(a,b) and ~IsEmittedBy(c)))))"
+    "Formula": "(exists a (IsCausedBy(a))) -> (exists c (exists a (exists b (IsNothingToDoWith(a,b) and ~IsEmittedBy(c)))))"
 }

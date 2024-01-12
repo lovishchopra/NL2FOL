@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A blond woman smiles behind a bar.\"",
+    "Implication": " \"The woman behind the bar with blond hair smiles.\"",
+    "Referring expressions": " Blond woman, bar ",
+    "Properties": " IsBlond(a),  IsBehind(b)  IsBehind(c),  IsBlond(c)",
+    "Formula": "(exists a (exists b (IsBlond(a) and IsBehind(b) and ~IsSmiling(a,b)))) -> (exists c (IsBehind(c) and IsBlond(c)))"
+}

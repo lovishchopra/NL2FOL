@@ -3,5 +3,5 @@
     "Implication": " \"Habitat loss and human predation are a far greater problem for most animals.\"",
     "Referring expressions": " Elephants, warmer climate  Habitat loss, human predation, most animals.",
     "Properties": " IsWarm(b),  WillNotReach(a)  IsHabitatLoss(c),  IsHumanPredation(d),  IsMostAnimals(e)",
-    "Formula": "(exists b (exists a (IsWarm(b) and ~WillNotReach(a)))) -> (exists e (exists d (exists c (IsHabitatLoss(c) and (IsHumanPredation(d) or IsMostAnimals(e))))))"
+    "Formula": "(exists a (exists b (IsWarm(b) and ~WillNotReach(a)))) -> (exists e (exists c (exists d (IsHabitatLoss(c) and (IsHumanPredation(d) or IsMostAnimals(e))))))"
 }

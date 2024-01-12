@@ -1,0 +1,7 @@
+{
+    "Claim": " \"There is a little girl riding her pink bicycle along a waterway.\"",
+    "Implication": " \"There is a girl outside.\"",
+    "Referring expressions": " little girl, pink bicycle, waterway  girl, outside",
+    "Properties": " IsLittle(a),  IsOnPinkBicycle(b),  IsAlongWaterway(c)  IsOutside(e)",
+    "Formula": "(exists c (exists a (exists b (IsLittle(a) and IsOnPinkBicycle(b) and IsAlongWaterway(c))))) -> (exists e (IsOutside(e)))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Without carbon dioxide, there would be no complex life on earth.\"",
+    "Implication": " \"Complex life on earth depends on carbon dioxide.\"",
+    "Referring expressions": " Carbon dioxide, complex life, earth  carbon dioxide, earth",
+    "Properties": " IsInCarbonDioxide(a),  HasComplexLife(c),  IsOnEarth(b)  DependsOn(a,b)",
+    "Formula": "(exists c (exists a (exists b (IsInCarbonDioxide(a) and HasComplexLife(c) and IsOnEarth(b)))) & (forall e (forall f ( IsInCarbonDioxide(e) ->  DependsOn(e,f)))) & (forall h (forall g ( DependsOn(g,h) ->  IsInCarbonDioxide(g)))) & (forall j (forall i ( DependsOn(i,j) ->   IsOnEarth(j))))) -> (exists a (exists b (DependsOn(a,b))))"
+}

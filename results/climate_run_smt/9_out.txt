@@ -1,0 +1,32 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_4 () UnboundSet)
+(define-fun IsDiedPrematurely ((BOUND_VARIABLE_508 BoundSet)) Bool true)
+(define-fun IsFromPollution ((BOUND_VARIABLE_508 BoundSet)) Bool true)
+(define-fun IsIn2015 ((BOUND_VARIABLE_508 BoundSet)) Bool true)
+(define-fun IsDeaths ((BOUND_VARIABLE_508 BoundSet)) Bool false)
+(define-fun IsCausedBy ((BOUND_VARIABLE_508 BoundSet)) Bool false)
+(define-fun IsWorldwide ((BOUND_VARIABLE_508 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_13 () UnboundSet)
+(define-fun IsDiedPrematurely ((BOUND_VARIABLE_638 BoundSet)) Bool true)
+(define-fun IsFromPollution ((BOUND_VARIABLE_638 BoundSet)) Bool true)
+(define-fun IsIn2015 ((BOUND_VARIABLE_638 BoundSet)) Bool true)
+(define-fun IsDeaths ((BOUND_VARIABLE_638 BoundSet)) Bool true)
+(define-fun IsCausedBy ((BOUND_VARIABLE_638 BoundSet)) Bool true)
+(define-fun IsWorldwide ((BOUND_VARIABLE_638 BoundSet)) Bool false)
+)

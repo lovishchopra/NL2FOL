@@ -1,0 +1,7 @@
+{
+    "Claim": " \"There was more subsequent warming in the following years.\"",
+    "Implication": " \"The rate of warming appeared to be rising.\"",
+    "Referring expressions": " There, subsequent warming, following years.  rate of warming, appeared, rising",
+    "Properties": " IsSubsequent(b),  IsWarming(b),  IsFollowing(c)  IsAppeared(e),  IsRising(f)",
+    "Formula": "(exists c (exists b (IsSubsequent(b) and IsWarming(b) and IsFollowing(c))) & (forall h (forall g ( IsSubsequent(g) ->   IsRising(h)))) & (forall j (forall i (  IsRising(i) ->  IsSubsequent(j)))) & (forall k (forall l (  IsWarming(k) ->   IsRising(l)))) & (forall n (forall m (  IsRising(m) ->   IsWarming(n))))) -> (exists e (exists f (IsAppeared(e) and IsRising(f))))"
+}

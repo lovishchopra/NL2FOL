@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man and woman are in front of some bikes.\"",
+    "Implication": " \"A man and woman are preparing a mixture in front of a row of bikes.\"",
+    "Referring expressions": " Man, woman, bikes  A man, woman, mixture, bikes",
+    "Properties": " IsInFrontOf(a,b),  IsMan(c),  IsWoman(a)  IsPreparing(a,e),  IsInFrontOf(b,e),  IsMan(d),  IsWoman(a)",
+    "Formula": "(exists c (exists a (exists b (IsInFrontOf(a,b) and IsMan(c)))) & (forall f (forall g ( IsInFrontOf(f,g) ->   IsWoman(f)))) & (forall h (forall i ( IsPreparing(h,i) ->   IsWoman(h))))) -> (exists e (exists a (exists b (exists d (IsPreparing(a,e) and IsInFrontOf(b,e) and IsMan(d) and IsWoman(a))))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Six people play sports outside in the daytime.\"",
+    "Implication": " \"People can play sports.\"",
+    "Referring expressions": " Six people, outside, daytime  People, sports",
+    "Properties": " IsPlaySports(a),  IsOutside(b),  IsInDaytime(c)  IsPlaySports(d)",
+    "Formula": "(exists c (exists a (exists b (IsPlaySports(a) and IsOutside(b) and IsInDaytime(c))))) -> (exists d (IsPlaySports(d)))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A boy in a blue shirt is holding a snowball.\"",
+    "Implication": " \"There is a boy holding a snowball.\"",
+    "Referring expressions": " A boy, blue shirt, snowball.  boy, snowball",
+    "Properties": " IsInBlueShirt(a),  IsHoldingSnowball(a)  IsHoldingSnowball(d)",
+    "Formula": "(exists a (IsInBlueShirt(a) and IsHoldingSnowball(a))) -> (exists d (IsHoldingSnowball(d)))"
+}

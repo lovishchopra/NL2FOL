@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two firefighters spray water onto smoldering trash pile.\"",
+    "Implication": " \"Firefighters are putting out a fire.\"",
+    "Referring expressions": " Two firefighters, smoldering trash pile.  Firefighters, fire",
+    "Properties": " IsSprayingWater(a),  IsSmoldering(b)  IsPuttingOut(c),  IsOnFire(d)",
+    "Formula": "(exists a (exists b (IsSprayingWater(a) and IsSmoldering(b))) & (forall e (forall f (  IsSmoldering(e) ->   IsOnFire(f))))) -> (exists c (exists d (IsPuttingOut(c) and IsOnFire(d))))"
+}

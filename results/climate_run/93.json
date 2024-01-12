@@ -1,0 +1,7 @@
+{
+    "Claim": " \"This research trip has been sad\"",
+    "Implication": " \"Life is sad\"",
+    "Referring expressions": " This research trip, sad  Life, sad",
+    "Properties": " IsSad(a)  IsSad(a)",
+    "Formula": "(exists a (IsSad(a))) -> (exists a (IsSad(a)))"
+}

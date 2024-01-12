@@ -3,5 +3,5 @@
     "Implication": " \"The first coat of white paint does most of the work of concealing the red wall.\"",
     "Referring expressions": " CO2 molecules, atmosphere, red wall.  The first coat, white paint, red wall",
     "Properties": " IsAddedTo(a,b),  IsConcealedBy(a,c)  IsFirstCoat(d),  IsConcealedBy(e,f)",
-    "Formula": "(exists c (exists b (exists a (IsAddedTo(a,b) and IsConcealedBy(a,c))))) -> (exists f (exists e (exists d (IsFirstCoat(d) and IsConcealedBy(e,f)))))"
+    "Formula": "(exists c (exists a (exists b (IsAddedTo(a,b) and IsConcealedBy(a,c))))) -> (exists e (exists d (exists f (IsFirstCoat(d) and IsConcealedBy(e,f)))))"
 }

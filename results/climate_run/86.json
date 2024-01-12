@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Global warming alarmism provides politicians, environmentalists, and the media with what they most want.\"",
+    "Implication": " \"Politicians, environmentalists, and the media are motivated by money and ideology rather than a genuine concern for the environment.\"",
+    "Referring expressions": " Global warming, politicians, environmentalists, media  Politicians, environmentalists, media",
+    "Properties": " IsAlarmist(d),  ArePoliticians(a),  AreEnvironmentalists(b),  AreMedia(c)  IsMotivatedByMoney(a),  IsMotivatedByIdeology(b),  IsGenuinelyConcerned(c)",
+    "Formula": "(exists c (exists d (exists b (exists a (IsAlarmist(d) and (ArePoliticians(a) and AreEnvironmentalists(b) and AreMedia(c)))))) & (forall f (forall g ( IsAlarmist(f) ->   IsMotivatedByIdeology(g)))) & (forall h (  AreEnvironmentalists(h) ->   IsMotivatedByIdeology(h))) & (forall i (  IsMotivatedByIdeology(i) ->   AreEnvironmentalists(i)))) -> (exists c (exists a (exists b ((IsMotivatedByMoney(a) and IsMotivatedByIdeology(b)) and ~IsGenuinelyConcerned(c)))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man jumped from one boulder to another.\"",
+    "Implication": " \"Men jumping from boulder to boulder.\"",
+    "Referring expressions": " A man, boulders  Men, boulder",
+    "Properties": " IsJumpedFrom(a,b)  IsJumpingFrom(c,d)",
+    "Formula": "(exists a (exists b (IsJumpedFrom(a,b))) & (forall e (forall h (forall f (forall g ( IsJumpedFrom(e,f) ->  IsJumpingFrom(g,h)))))) & (forall k (forall j (forall i (forall l ( IsJumpingFrom(i,j) ->  IsJumpedFrom(k,l))))))) -> (exists c (exists d (IsJumpingFrom(c,d))))"
+}

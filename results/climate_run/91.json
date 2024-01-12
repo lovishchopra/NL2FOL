@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Any increase in flooding activity is due to human alterations of river and stream flow.\"",
+    "Implication": " \"Human alterations of river and stream flow cause flooding activity.\"",
+    "Referring expressions": " Any, flooding activity, human alterations, river, stream flow.  Human, river, stream, flow, flooding activity.",
+    "Properties": " IsAny(b),  IsFloodingActivity(c),  IsHumanAlterations(d),  IsRiver(a),  IsStreamFlow(e)  IsHuman(f),  IsRiver(a),  IsStream(g),  CausesFloodingActivity(h)",
+    "Formula": "(exists c (exists b (exists d (IsAny(b) and (IsFloodingActivity(c) and IsHumanAlterations(d))))) & (forall k (forall j (  IsFloodingActivity(j) ->   CausesFloodingActivity(k)))) & (forall m (forall l (  CausesFloodingActivity(l) ->   IsFloodingActivity(m)))) & (forall o (forall n (  IsHumanAlterations(n) ->  IsHuman(o)))) & (forall q (forall p ( IsHuman(p) ->   IsHumanAlterations(q)))) & (forall s (forall r (  IsRiver(r) ->   IsStream(s)))) & (forall u (forall t (  IsRiver(t) ->   CausesFloodingActivity(u)))) & (forall w (forall v (  IsRiver(v) ->   IsStreamFlow(w))))) -> (exists h (exists a (exists f (exists g (IsHuman(f) and (IsRiver(a) and IsStream(g)) and CausesFloodingActivity(h))))))"
+}

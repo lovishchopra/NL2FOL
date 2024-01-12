@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The Little Ice Age ended recently.\"",
+    "Implication": " \"We are currently experiencing a period of warming.\"",
+    "Referring expressions": " Little Ice Age, recently  We, warming",
+    "Properties": " IsRecentlyEnded(a)  IsExperiencingWarming(a)",
+    "Formula": "(exists a (IsRecentlyEnded(a))) -> (exists a (IsExperiencingWarming(a)))"
+}

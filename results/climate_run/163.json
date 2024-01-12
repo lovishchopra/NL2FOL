@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The man is seen very well under lights.\"",
+    "Implication": " \"The man sits under lights and signs on a wall.\"",
+    "Referring expressions": " Man, lights  Man, lights, signs, wall.",
+    "Properties": " IsSeenWell(a,b)  IsSitsUnderLights(a,b),  IsSignsOnWall(c)",
+    "Formula": "(exists a (exists b (IsSeenWell(a,b)))) -> (exists c (exists a (exists b (IsSitsUnderLights(a,b) and IsSignsOnWall(c)))))"
+}

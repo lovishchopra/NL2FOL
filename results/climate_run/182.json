@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The bike rider runs with his red bike while another gains on him.\"",
+    "Implication": " \"One rider closes the gap between himself and a biker in front of them.\"",
+    "Referring expressions": "  One rider, himself, biker",
+    "Properties": " IsRuns(a),  IsOnBike(a),  IsRed(a)  IsClosesGap(b,d),  IsInFrontOf(c,d)",
+    "Formula": "(exists a (IsRuns(a) and (IsOnBike(a) and IsRed(a))) & (forall e (forall f (forall g (  IsOnBike(e) ->  IsClosesGap(f,g))))) & (forall j (forall h (forall i (  IsOnBike(h) ->   IsInFrontOf(i,j))))) & (forall k (forall m (forall l (  IsInFrontOf(k,l) ->   IsOnBike(m)))))) -> (exists c (exists d (exists b (IsClosesGap(b,d) and IsInFrontOf(c,d)))))"
+}

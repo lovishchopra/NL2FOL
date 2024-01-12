@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man in a white t-shirt does a trick with a bronze colored yo-yo.\"",
+    "Implication": " \"There is a tricky male making fools of other people.\"",
+    "Referring expressions": " A man in a white t-shirt, bronze colored yo-yo  There is a tricky male, other people.",
+    "Properties": " IsInWhiteTShirt(a),  DoesTrick(a)  IsTricky(c),  MakesFoolsOf(d)",
+    "Formula": "(exists a (exists b (IsInWhiteTShirt(a) and DoesTrick(a,b))) & (forall e (forall f (  DoesTrick(e) ->  IsTricky(f)))) & (forall h (forall g (  DoesTrick(g) ->   MakesFoolsOf(h))))) -> (exists c (exists d (IsTricky(c) and MakesFoolsOf(d))))"
+}

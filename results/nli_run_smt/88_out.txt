@@ -1,0 +1,26 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_4 () UnboundSet)
+(define-fun IsStandingOn ((BOUND_VARIABLE_386 BoundSet) (BOUND_VARIABLE_387 BoundSet)) Bool true)
+(define-fun IsInForest ((BOUND_VARIABLE_390 BoundSet)) Bool true)
+(define-fun IsStanding ((BOUND_VARIABLE_390 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_6 () UnboundSet)
+(define-fun IsStandingOn ((BOUND_VARIABLE_405 BoundSet) (BOUND_VARIABLE_406 BoundSet)) Bool true)
+(define-fun IsInForest ((BOUND_VARIABLE_409 BoundSet)) Bool true)
+(define-fun IsStanding ((BOUND_VARIABLE_409 BoundSet)) Bool true)
+)

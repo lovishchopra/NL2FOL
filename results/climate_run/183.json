@@ -1,0 +1,7 @@
+{
+    "Claim": " \"There are kids in the water.\"",
+    "Implication": " \"A little girl and boy are playing in the water.\"",
+    "Referring expressions": " kids, water  little girl, boy, water.",
+    "Properties": " IsInWater(a)  IsPlayingInWater(c,d)",
+    "Formula": "(exists a (IsInWater(a)) & (forall h (forall f (forall g ( IsInWater(f) ->  IsPlayingInWater(g,h))))) & (forall k (forall j (forall i ( IsPlayingInWater(i,j) ->  IsInWater(k)))))) -> (exists c (exists d (IsPlayingInWater(c,d))))"
+}

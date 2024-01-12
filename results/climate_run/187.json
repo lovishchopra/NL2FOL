@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man hugs an infant in a hospital room.\"",
+    "Implication": " \"This baby has just been born.\"",
+    "Referring expressions": " A man, infant, hospital room.  This baby, born",
+    "Properties": " IsHugged(a,b),  IsInHospitalRoom(c)  IsBorn(d)",
+    "Formula": "(exists c (exists a (exists b (IsHugged(a,b) and IsInHospitalRoom(c)))) & (forall h (forall f (forall g ( IsHugged(f,g) ->  IsBorn(h))))) & (forall k (forall j (forall i ( IsBorn(i) ->  IsHugged(j,k)))))) -> (exists d (IsBorn(d)))"
+}

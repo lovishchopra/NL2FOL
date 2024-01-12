@@ -1,0 +1,22 @@
+unknown
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_2 () UnboundSet)
+(define-fun IsAccelerated ((BOUND_VARIABLE_340 BoundSet)) Bool false)
+(define-fun IsGoodNewsFor ((BOUND_VARIABLE_340 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_4 () UnboundSet)
+(define-fun IsAccelerated ((BOUND_VARIABLE_361 BoundSet)) Bool false)
+(define-fun IsGoodNewsFor ((BOUND_VARIABLE_361 BoundSet)) Bool false)
+)

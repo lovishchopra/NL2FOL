@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two men talk outdoors.\"",
+    "Implication": " \"A third man looks on.\"",
+    "Referring expressions": " Two men, outdoors  A third man",
+    "Properties": " IsTalking(a),  IsOutdoors(b)  IsLookingOn(c)",
+    "Formula": "(exists a (exists b (IsTalking(a) and IsOutdoors(b)))) -> (exists c (IsLookingOn(c)))"
+}

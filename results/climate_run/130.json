@@ -1,0 +1,7 @@
+{
+    "Claim": " \"There are games being played near the water.\"",
+    "Implication": " \"Two women are playing volleyball at the beach.\"",
+    "Referring expressions": " games, water  Two women, volleyball, beach",
+    "Properties": " IsNearWater(a)  IsPlayingVolleyball(c),  IsAtBeach(e)",
+    "Formula": "(exists a (exists b (IsNearWater(a) and IsPlayed(a,b)))) -> (exists e (exists c (IsPlayingVolleyball(c) and IsAtBeach(e))))"
+}

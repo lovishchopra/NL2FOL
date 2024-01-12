@@ -1,0 +1,8 @@
+(set-logic ALL)
+(set-option :produce-models true)
+(declare-sort BoundSet 0)
+(declare-sort UnboundSet 0)
+(declare-fun IsDancedOn (BoundSet BoundSet) Bool)
+(assert (not (=> (exists ((a BoundSet)) (exists ((b BoundSet)) (IsDancedOn a b))) (exists ((c BoundSet)) (exists ((d BoundSet)) (IsDancedOn c d))))))
+(check-sat)
+(get-model)

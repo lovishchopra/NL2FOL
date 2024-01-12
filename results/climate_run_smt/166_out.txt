@@ -1,0 +1,26 @@
+unknown
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_2 () UnboundSet)
+(define-fun IsOutdoors ((BOUND_VARIABLE_464 BoundSet)) Bool true)
+(define-fun IsOnStoneBench ((BOUND_VARIABLE_476 BoundSet) (BOUND_VARIABLE_477 BoundSet)) Bool false)
+(define-fun IsOnDustyTrail ((BOUND_VARIABLE_476 BoundSet) (BOUND_VARIABLE_477 BoundSet)) Bool false)
+(define-fun IsSitOn ((BOUND_VARIABLE_476 BoundSet) (BOUND_VARIABLE_477 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_6 () UnboundSet)
+(define-fun IsOutdoors ((BOUND_VARIABLE_509 BoundSet)) Bool true)
+(define-fun IsOnStoneBench ((BOUND_VARIABLE_516 BoundSet) (BOUND_VARIABLE_517 BoundSet)) Bool true)
+(define-fun IsOnDustyTrail ((BOUND_VARIABLE_516 BoundSet) (BOUND_VARIABLE_517 BoundSet)) Bool true)
+(define-fun IsSitOn ((BOUND_VARIABLE_516 BoundSet) (BOUND_VARIABLE_517 BoundSet)) Bool false)
+)

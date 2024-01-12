@@ -1,0 +1,8 @@
+(set-logic ALL)
+(set-option :produce-models true)
+(declare-sort BoundSet 0)
+(declare-sort UnboundSet 0)
+(declare-fun IsHeldBy (BoundSet BoundSet) Bool)
+(assert (not (=> (exists ((a BoundSet)) (exists ((b BoundSet)) (IsHeldBy a b))) (exists ((c BoundSet)) (exists ((d BoundSet)) (IsHeldBy c d))))))
+(check-sat)
+(get-model)

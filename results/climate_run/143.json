@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A white dog with a blue collar plays with a red ball.\"",
+    "Implication": " \"A dog is playing with his toy.\"",
+    "Referring expressions": " White dog, blue collar, red ball.  A dog, his toy",
+    "Properties": " IsWhite(a),  HasBlueCollar(b),  PlaysWith(c)  IsPlayingWith(d,e)",
+    "Formula": "(exists c (exists a (exists b (IsWhite(a) and HasBlueCollar(b) and PlaysWith(c))))) -> (exists e (exists d (IsPlayingWith(d,e))))"
+}

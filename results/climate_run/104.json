@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two women are getting money out at the ATM.\"",
+    "Implication": " \"The lady on the left has two children.\"",
+    "Referring expressions": " Two women, ATM  Lady, left, children",
+    "Properties": " IsGettingMoneyOut(a),  IsAtATM(b)  IsOnTheLeft(d),  HasTwoChildren(e)",
+    "Formula": "(exists a (exists b (IsGettingMoneyOut(a) and IsAtATM(b)))) -> (exists e (exists d (IsOnTheLeft(d) and HasTwoChildren(e))))"
+}

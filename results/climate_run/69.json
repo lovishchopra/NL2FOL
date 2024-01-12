@@ -1,0 +1,7 @@
+{
+    "Claim": " \"You get scared\"",
+    "Implication": " \"The ghost is real\"",
+    "Referring expressions": " You, scared  Ghost",
+    "Properties": " IsScared(b)  IsReal(c)",
+    "Formula": "(exists b (IsScared(b))) -> (exists c (IsReal(c)))"
+}

@@ -3,5 +3,5 @@
     "Implication": " \"Coal-fired generators are needed to support wind and solar facilities.\"",
     "Referring expressions": " Wind, solar facilities, carbon dioxide, they.  Coal-fired generators, wind and solar facilities.",
     "Properties": " IsReleasedMore(a,b),   SavesMore(c,d)  IsNeeded(e,f)",
-    "Formula": "(exists d (exists c (exists b (exists a ((IsReleasedMore(a,b) and SavesMore(c,d)) and ~They(d)))))) -> (exists f (exists e (IsNeeded(e,f) and (IsWind(f) and IsSolar(f)))))"
+    "Formula": "(exists c (exists a (exists b (exists d ((IsReleasedMore(a,b) and SavesMore(c,d)) and ~They(d)))))) -> (exists e (exists f (IsNeeded(e,f) and (IsWind(f) and IsSolar(f)))))"
 }

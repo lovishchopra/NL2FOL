@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A girl is in a tree and smiles.\"",
+    "Implication": " \"A smiling girl is sitting in a tree.\"",
+    "Referring expressions": " Girl, tree, smile  A smiling girl, tree",
+    "Properties": " IsInTree(b),  HasSmile(c)  IsSmiling(d),  IsSittingInTree(a)",
+    "Formula": "(exists c (exists b (IsInTree(b) and HasSmile(c))) & (forall e (forall f (  HasSmile(e) ->  IsSmiling(f)))) & (forall h (forall g ( IsSmiling(g) ->   HasSmile(h))))) -> (exists d (exists a (IsSmiling(d) and IsSittingInTree(a))))"
+}

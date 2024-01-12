@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Singapore is densely populated.\"",
+    "Implication": " \"You should visit Singapore.\"",
+    "Referring expressions": " Singapore  You, Singapore",
+    "Properties": " IsDenselyPopulated(a)  ShouldVisit(b,a)",
+    "Formula": "(exists a (IsDenselyPopulated(a))) -> (exists a (exists b (ShouldVisit(b,a))))"
+}

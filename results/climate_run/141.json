@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A dog and a man are at the beach.\"",
+    "Implication": " \"A dog is running and a man is looking in the background.\"",
+    "Referring expressions": " A dog, a man, beach  A dog, man",
+    "Properties": " IsAtBeach(a,b)  IsRunning(a),  IsLookingInBackground(d)",
+    "Formula": "(exists a (exists b (IsAtBeach(a,b)))) -> (exists a (exists d (IsRunning(a) and IsLookingInBackground(d))))"
+}

@@ -3,5 +3,5 @@
     "Implication": " \"If the glaciers of Pine Island Bay melt, it would submerge every coastal city on the planet.\"",
     "Referring expressions": " Pine Island Bay, glaciers, Antarctica  Pine Island Bay, glaciers, coastal cities, planet.",
     "Properties": " IsInPineIslandBay(a),  AreFastestMelting(b),  IsInAntarctica(c)  IsMelt(b),  AreSubmerged(d),  IsOnPlanet(e)",
-    "Formula": "(exists c (exists b (exists a (IsInPineIslandBay(a) and (AreFastestMelting(b) and IsInAntarctica(c))))) & (forall f (  AreFastestMelting(f) ->  IsMelt(f)))) -> (exists e (exists d (exists b (IsMelt(b) and (AreSubmerged(d) and IsOnPlanet(e))))))"
+    "Formula": "(exists c (exists a (exists b (IsInPineIslandBay(a) and (AreFastestMelting(b) and IsInAntarctica(c))))) & (forall f (  AreFastestMelting(f) ->  IsMelt(f)))) -> (exists e (exists d (exists b (IsMelt(b) and (AreSubmerged(d) and IsOnPlanet(e))))))"
 }

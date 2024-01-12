@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two women eating together and smiling.\"",
+    "Implication": " \"Two women eating together and smiling.\"",
+    "Referring expressions": " Two women, together, smiling.  Two women, together, smiling.",
+    "Properties": " IsEatingTogether(a),  IsSmiling(c)  IsEatingTogether(a),  IsSmiling(c)",
+    "Formula": "(exists c (exists a (IsEatingTogether(a) and IsSmiling(c)))) -> (exists c (exists a (IsEatingTogether(a) and IsSmiling(c))))"
+}

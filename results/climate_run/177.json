@@ -1,0 +1,7 @@
+{
+    "Claim": " \"An older looking woman is taking notes in a lecture hall at a university.\"",
+    "Implication": " \"Many students sit in a lecture hall.\"",
+    "Referring expressions": " Older looking woman, lecture hall, university  Many students, lecture hall",
+    "Properties": " IsOlderLooking(b),  IsInLectureHall(a),  IsAtUniversity(c)  IsMany(d),  IsInLectureHall(a)",
+    "Formula": "(exists c (exists a (exists b (IsOlderLooking(b) and (IsInLectureHall(a) and IsAtUniversity(c)))))) -> (exists d (exists a (IsMany(d) and IsInLectureHall(a))))"
+}

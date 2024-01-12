@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two women are using a computer.\"",
+    "Implication": " \"The third person is also using a computer.\"",
+    "Referring expressions": " Two women, computer  third person, computer",
+    "Properties": " IsUsing(a,b)  IsUsing(a,c)",
+    "Formula": "(exists a (exists b (IsUsing(a,b)))) -> (exists c (exists a (IsUsing(a,c))))"
+}

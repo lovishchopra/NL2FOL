@@ -1,0 +1,7 @@
+{
+    "Claim": " \"There are two children at home.\"",
+    "Implication": " \"There are two children inside the house.\"",
+    "Referring expressions": " Two children, home.  Two children, house",
+    "Properties": " IsAtHome(b)  IsInsideTheHouse(c)",
+    "Formula": "(exists a (exists b (IsAtHome(b) and (IsChild(a) or IsChild(a)))) & (forall e (forall d ( IsAtHome(d) ->  IsInsideTheHouse(e)))) & (forall f (forall g ( IsInsideTheHouse(f) ->  IsAtHome(g))))) -> (exists c (exists b (exists a (IsInsideTheHouse(c) and (IsChild(a) or IsChild(b))))))"
+}

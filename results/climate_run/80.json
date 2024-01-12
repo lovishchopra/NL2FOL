@@ -1,0 +1,7 @@
+{
+    "Claim": " \"He and his students cried when he showed them maps of the damage.\"",
+    "Implication": " \"He calculated the damage by flying low in small planes and helicopters.\"",
+    "Referring expressions": " He, his students, maps, damage.  He, damage, small planes, helicopters.",
+    "Properties": " IsTeacherOf(a,b),  IsCried(b),  IsShown(c),  IsDamage(d)  IsCalculated(a),  IsFlying(f),  IsInSmallPlanes(f),  IsInHelicopters(g)",
+    "Formula": "(exists c (exists a (exists b (exists d ((IsTeacherOf(a,b) and IsCried(b)) and IsShown(c) and IsDamage(d)))))) -> (exists a (exists f (exists g (IsCalculated(a) and (IsFlying(f) and IsInSmallPlanes(f)) or (IsFlying(g) and IsInHelicopters(g))))))"
+}

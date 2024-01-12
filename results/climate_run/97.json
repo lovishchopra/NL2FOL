@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Temperature cannot be meaningfully averaged.\"",
+    "Implication": " \"There is no such thing as global temperature.\"",
+    "Referring expressions": " Temperature  There, global temperature",
+    "Properties": " IsMeaningfullyAveraged(a)  IsExistent(b),  IsNotGlobalTemperature(c)",
+    "Formula": "(exists a (~IsMeaningfullyAveraged(a))) -> (exists c (exists b (IsExistent(b) and ~IsGlobalTemperature(c))))"
+}

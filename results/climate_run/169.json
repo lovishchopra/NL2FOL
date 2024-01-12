@@ -1,0 +1,7 @@
+{
+    "Claim": " \"City workers are trimming tree branches.\"",
+    "Implication": " \"Workers are picking up debris.\"",
+    "Referring expressions": " City workers, tree branches  Workers, debris",
+    "Properties": " IsTrimming(a,b)  IsPickingUp(c,d)",
+    "Formula": "(exists a (exists b (IsTrimming(a,b))) & (forall e (forall h (forall f (forall g ( IsTrimming(e,f) ->  IsPickingUp(g,h))))))) -> (exists c (exists d (IsPickingUp(c,d))))"
+}

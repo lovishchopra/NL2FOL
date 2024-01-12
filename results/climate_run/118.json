@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man with a clown nose is outdoors.\"",
+    "Implication": " \"A man with a clown nose is holding a small crying child in a wizard outfit.\"",
+    "Referring expressions": " A man, clown nose, outdoors  A man, clown nose, small crying child, wizard outfit",
+    "Properties": " IsOutdoors(c)  IsHolding(d,e),  IsSmall(d),  IsCrying(d),  IsWizard(e)",
+    "Formula": "(exists c (IsOutdoors(c))) -> (exists e (exists a (exists b (exists d (IsHolding(a,b) and IsSmall(d) and IsCrying(d) and IsWizard(e))))))"
+}

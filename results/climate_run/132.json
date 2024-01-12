@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Some children are playing a ball game.\"",
+    "Implication": " \"There are four boys playing soccer.\"",
+    "Referring expressions": " Some children, ball game.  four boys, playing soccer",
+    "Properties": " IsPlaying(a,b)  IsPlaying(c,d)",
+    "Formula": "(exists a (exists b (IsPlaying(a,b)))) -> (exists c (exists d (IsPlaying(c,d))))"
+}

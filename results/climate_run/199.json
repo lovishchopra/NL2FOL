@@ -1,0 +1,7 @@
+{
+    "Claim": " \"There is a crowd of older men outside.\"",
+    "Implication": " \"Older men stand on the edge of a crowded public street.\"",
+    "Referring expressions": " older men  Older men, public street",
+    "Properties": " IsInCrowd(a)  IsOnPublicStreet(a),  IsStandingOnEdge(a)",
+    "Formula": "(exists a (IsOlder(a) and IsInCrowd(a))) -> (exists a (IsOnPublicStreet(a) and IsStandingOnEdge(a)))"
+}

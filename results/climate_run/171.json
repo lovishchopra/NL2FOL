@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man holds a net while a boy bats a ball into it.\"",
+    "Implication": " \"Two males play together.\"",
+    "Referring expressions": "  Two males, together",
+    "Properties": " IsHeld(a),  IsBatted(a),  IsInNet(a)  IsPlayedTogether(b,c)",
+    "Formula": "(exists a (IsHeld(a) and (IsBatted(a) and IsInNet(a)))) -> (exists c (exists b (IsPlayedTogether(b,c))))"
+}

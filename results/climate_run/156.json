@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A tall, skinny guy with long black hair is walking while talking on a cellphone and carrying a drum on his head.\"",
+    "Implication": " \"A guy is who is not short is currently in motion.\"",
+    "Referring expressions": " Tall, skinny guy, long black hair, cellphone, drum ",
+    "Properties": " IsTall(a),  HasLongBlackHair(b),  IsWalking(c),  IsTalkingOnCellphone(d),  IsCarryingDrum(e)  IsNotShort(f)",
+    "Formula": "(exists c (exists a (exists b (exists d ((IsTall(a) and IsWalking(c)) and (HasLongBlackHair(b) and IsTalkingOnCellphone(d)))))) & (forall h (forall g ( IsTall(g) ->  IsNotShort(h)))) & (forall j (forall i (  HasLongBlackHair(i) ->  IsNotShort(j))))) -> (exists f (IsInMotion(f)))"
+}

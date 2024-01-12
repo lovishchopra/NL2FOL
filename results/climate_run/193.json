@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two women are near each other.\"",
+    "Implication": " \"Two women are in shorts and protective equipment.\"",
+    "Referring expressions": " Two women  Two women, shorts, protective equipment.",
+    "Properties": " IsNear(a,a)  IsInShorts(a),  IsProtectivelyEquipped(a)",
+    "Formula": "(exists a (IsNear(a,a)) & (forall d ( IsInShorts(d) ->  IsNear(d,d))) & (forall e ( IsNear(e,e) ->   IsProtectivelyEquipped(e)))) -> (exists a (IsInShorts(a) and IsProtectivelyEquipped(a)))"
+}

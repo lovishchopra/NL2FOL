@@ -1,0 +1,7 @@
+{
+    "Claim": " \"There is a man in the bowling alley.\"",
+    "Implication": " \"The man is preparing to bowl.\"",
+    "Referring expressions": " man, bowling alley  Man, bowl",
+    "Properties": " IsInBowlingAlley(a)  IsPreparingToBowl(a)",
+    "Formula": "(exists a (IsInBowlingAlley(a))) -> (exists c (exists a (IsPreparingToBowl(a) and IsBowling(c))))"
+}

@@ -6,35 +6,33 @@ import subprocess
 if __name__ == "__main__":
     # Check if file paths are provided as a command-line argument
     if len(sys.argv) != 2:
-        print("Usage: python fol_to_cvc.py <csv file with results>")
+        print("Usage: python fol_to_cvc.py <run name>")
         sys.exit(1)
-
-    csv_file = sys.argv[1]
+    run_name = sys.argv[1]
+    csv_file = "results/{}.csv".format(run_name)
     data = pd.read_csv(csv_file)
     fol = data['Logical Form 2']
     results = []
     for i in range(len(fol)):
         print(i, fol[i])
-
         try:
             script = CVCGenerator(fol[i].replace("ForAll", "forall").replace("ThereExists", "exists").replace("&","and").replace("~","not ")).generateCVCScript()
-            with open("results/final_run_smt/{0}.smt2".format(i), "w") as f:
+            with open("results/{}_smt/{}.smt2".format(run_name,i), "w") as f:
                 f.write(script)
-            with open("results/final_run_smt/{0}_out.txt".format(i), "w") as f:
+            with open("results/{}_smt/{}_out.txt".format(run_name,i), "w") as f:
                 # Run CVC5 and capture output
-                proc = subprocess.run(["cvc4", "results/final_run_smt/{0}.smt2".format(i)], capture_output=True, text=True, check=True)
+                proc = subprocess.run(["./cvc4", "results/{}_smt/{}.smt2".format(run_name,i)], capture_output=True, text=True, check=True)
                 proc_result = proc.stdout
                 f.write(proc_result)
                 if len(proc_result) == 0:
                     results.append("")
                 result, _ = proc_result.split("\n", 1)
-                
                 if "unknown" in result:
                     script = CVCGenerator(fol[i].replace("ForAll", "forall").replace("ThereExists", "exists").replace("&", "and").replace("~", "not ")).generateCVCScript(finite_model_finding=True)
-                    with open("results/final_run_smt/{0}.smt2".format(i), "w") as f2:
+                    with open("results/{}_smt/{}.smt2".format(run_name,i), "w") as f2:
                         f2.write(script)
                     # Run CVC5 and capture output
-                    proc = subprocess.run(["cvc4", "results/final_run_smt/{0}.smt2".format(i)], capture_output=True, text=True, check=True)
+                    proc = subprocess.run(["./cvc4", "results/{}_smt/{}.smt2".format(run_name,i)], capture_output=True, text=True, check=True)
                     proc_result = proc.stdout
                     f.write(proc_result)
                     if len(proc_result) == 0:
@@ -48,10 +46,10 @@ if __name__ == "__main__":
                 else:
                     results.append("")
 
-        except:
-            print("Cannot run this statement")
+        except Exception as e:
+            print("Cannot run this statement : {}".format(e))
             results.append("")
             pass
     data['result'] = results
-    data.to_csv("results/final_run_results.csv")
+    data.to_csv("results/{}_results.csv".format(run_name))
 

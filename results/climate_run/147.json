@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The woman walks down the street.\"",
+    "Implication": " \"The woman is looking at a mannequin in a red dress.\"",
+    "Referring expressions": " Woman, street  Woman, mannequin, red dress",
+    "Properties": " IsWalking(a),  IsOnStreet(b)  IsLooking(a),  IsInRedDress(c)",
+    "Formula": "(exists a (exists b (IsWalking(a) and IsOnStreet(b)))) -> (exists c (exists a (IsLooking(a) and IsInRedDress(c))))"
+}

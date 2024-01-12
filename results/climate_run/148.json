@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two men stand on a golf course.\"",
+    "Implication": " \"Therefore, two men are standing on a golf course.\"",
+    "Referring expressions": " Two men, golf course  Two men, golf course",
+    "Properties": " IsOnGolfCourse(a)  IsStandingOnGolfCourse(a)",
+    "Formula": "(exists a (exists b (IsOnGolfCourse(a) and IsOnGolfCourse(b))) & (forall c ( IsStandingOnGolfCourse(c) ->  IsOnGolfCourse(c)))) -> (exists a (exists b (IsTwoMen(a,b))))"
+}

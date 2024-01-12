@@ -3,5 +3,5 @@
     "Implication": " Activists do not value truth.",
     "Referring expressions": " Activists, truthful debate  Activists, truth",
     "Properties": " IsNotValuing(a,b)  IsNotValuing(a,c)",
-    "Formula": "(exists b (exists a (~IsValuing(a,b)))) -> (exists c (exists a (~IsValuing(a,c))))"
+    "Formula": "(exists a (exists b (~IsValuing(a,b)))) -> (exists c (exists a (~IsValuing(a,c))))"
 }

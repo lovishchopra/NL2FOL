@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Alaska has been buffeted by cyclical swings in climate for thousands of years.\"",
+    "Implication": " \"There was a 300-year-long Medieval heat wave.\"",
+    "Referring expressions": " Alaska, cyclical swings, climate  There, 300-year-long, Medieval, heat wave.",
+    "Properties": " IsInAlaska(a),  HasCyclicalSwings(b),  HasClimate(c)  IsThere(d),  Is300YearLong(e),  IsMedieval(f),  HasHeatWave(g)",
+    "Formula": "(exists c (exists a (exists b (IsInAlaska(a) and HasCyclicalSwings(b) and HasClimate(c)))) & (forall h (forall i ( IsInAlaska(h) ->   Is300YearLong(i))))) -> (exists e (exists d (exists f (exists g (IsThere(d) and (Is300YearLong(e) and IsMedieval(f)) and HasHeatWave(g))))))"
+}

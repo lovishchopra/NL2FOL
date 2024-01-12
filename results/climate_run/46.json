@@ -3,5 +3,5 @@
     "Implication": " \"Without salmon, the largest trees on Earth wouldn't exist.\"",
     "Referring expressions": " Salmon, their coastal ecosystem.  Salmon, Earth, largest trees",
     "Properties": " IsCrucialTo(a,b)  IsWithout(a,c),  AreLargestTreesOnEarth(d)",
-    "Formula": "(exists b (exists a (IsCrucialTo(a,b)))) -> (exists d (exists c (exists a (IsWithout(a,c) and (AreLargestTreesOnEarth(d) or ~IsOnEarth(d))))))"
+    "Formula": "(exists a (exists b (IsCrucialTo(a,b)))) -> (exists c (exists a (exists d (IsWithout(a,c) and (AreLargestTreesOnEarth(d) or ~IsOnEarth(d))))))"
 }

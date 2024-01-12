@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Human civilization might collapse in coming decades due to climate change.\"",
+    "Implication": " \"A former Australian defense chief and senior royal navy commander endorses the scenario analysis.\"",
+    "Referring expressions": " Human civilization, climate change ",
+    "Properties": " IsAffectedByClimateChange(b)  IsFormer(a),  EndorsesScenarioAnalysis(a)",
+    "Formula": "(exists a (exists b (IsAffectedByClimateChange(b) and (IsWarmingUp(a) or IsRisingSeaLevels(a))))) -> (exists a (IsFormer(a) and EndorsesScenarioAnalysis(a)))"
+}

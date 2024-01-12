@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man and his girl are crossing the street.\"",
+    "Implication": " \"A man and a woman are outside.\"",
+    "Referring expressions": " Man, girl, street  Man, woman, outside.",
+    "Properties": " IsCrossing(a,b),  IsMan'sGirl(b)  IsOutside(d)",
+    "Formula": "(exists a (exists b (IsCrossing(a,b) and IsMan'sGirl(b)))) -> (exists a (exists d (IsMan(a) and IsOutside(d))))"
+}

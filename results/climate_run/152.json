@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man is riding a scooter.\"",
+    "Implication": " \"Some people in a large crowd are paying attention to the man.\"",
+    "Referring expressions": " A man, scooter  Some people, man",
+    "Properties": " IsRiding(a,b)  IsInLargeCrowd(c),  IsPayingAttentionTo(d)",
+    "Formula": "(exists a (exists b (IsRiding(a,b)))) -> (exists c (exists d ((IsInLargeCrowd(c) and IsPayingAttentionTo(d)))))"
+}

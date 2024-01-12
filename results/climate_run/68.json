@@ -1,0 +1,7 @@
+{
+    "Claim": " \"12 million people in the United States would be displaced.\"",
+    "Implication": " \"Shanghai, Mumbai, and Ho Chi Minh City could be wiped off the map.\"",
+    "Referring expressions": " 12 million people, United States  Shanghai, Mumbai, Ho Chi Minh City",
+    "Properties": " IsDisplaced(a)  IsWipedOffTheMap(c),  IsWipedOffTheMap(d),  IsWipedOffTheMap(e)",
+    "Formula": "(exists a (IsDisplaced(a))) -> (exists e (exists c (exists d ((IsWipedOffTheMap(c) and IsWipedOffTheMap(d)) or IsWipedOffTheMap(e)))))"
+}

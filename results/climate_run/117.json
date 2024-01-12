@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man in black plays the harmonica.\"",
+    "Implication": " \"There's a man playing the harmonica.\"",
+    "Referring expressions": " Man in black, harmonica  Man, harmonica",
+    "Properties": " IsInBlack(b),  PlaysHarmonica(a)  IsPlayingHarmonica(a)",
+    "Formula": "(exists a (exists b (IsInBlack(b) and PlaysHarmonica(a))) & (forall d (  PlaysHarmonica(d) ->  IsPlayingHarmonica(d))) & (forall e ( IsPlayingHarmonica(e) ->   PlaysHarmonica(e)))) -> (exists a (IsPlayingHarmonica(a)))"
+}

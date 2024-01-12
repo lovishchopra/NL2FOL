@@ -3,5 +3,5 @@
     "Implication": " \"A teenager today can experience many terrors.\"",
     "Referring expressions": " sea-level rise, terrors  A teenager, terrors",
     "Properties": " IsBarelyScratching(a),  ArePossible(b)  IsExperiencing(a)",
-    "Formula": "(exists b (exists a (IsBarelyScratching(a) and ArePossible(b)))) -> (exists c (IsExperiencing(c)))"
+    "Formula": "(exists a (exists b (IsBarelyScratching(a) and ArePossible(b)))) -> (exists c (IsExperiencing(c)))"
 }

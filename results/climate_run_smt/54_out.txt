@@ -1,0 +1,35 @@
+unknown
+(model
+; cardinality of BoundSet is 4
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_5 () UnboundSet)
+(define-fun Is80 ((BOUND_VARIABLE_554 BoundSet)) Bool true)
+(define-fun IsGlobalWarming ((BOUND_VARIABLE_554 BoundSet)) Bool true)
+(define-fun IsScare ((BOUND_VARIABLE_554 BoundSet)) Bool true)
+(define-fun IsOverdone ((BOUND_VARIABLE_554 BoundSet)) Bool true)
+(define-fun IsInGlobalWarming ((BOUND_VARIABLE_554 BoundSet)) Bool true)
+(define-fun IsProblem ((BOUND_VARIABLE_554 BoundSet)) Bool true)
+(define-fun IsUnusual ((BOUND_VARIABLE_554 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_10 () UnboundSet)
+(define-fun Is80 ((BOUND_VARIABLE_543 BoundSet)) Bool true)
+(define-fun IsGlobalWarming ((BOUND_VARIABLE_543 BoundSet)) Bool true)
+(define-fun IsScare ((BOUND_VARIABLE_543 BoundSet)) Bool true)
+(define-fun IsOverdone ((BOUND_VARIABLE_543 BoundSet)) Bool true)
+(define-fun IsInGlobalWarming ((BOUND_VARIABLE_543 BoundSet)) Bool true)
+(define-fun IsProblem ((BOUND_VARIABLE_543 BoundSet)) Bool true)
+(define-fun IsUnusual ((BOUND_VARIABLE_543 BoundSet)) Bool false)
+)

@@ -1,0 +1,8 @@
+(set-logic ALL)
+(set-option :produce-models true)
+(declare-sort BoundSet 0)
+(declare-sort UnboundSet 0)
+(declare-fun IsChoose (BoundSet BoundSet) Bool)
+(assert (not (=> (exists ((a BoundSet)) (exists ((b BoundSet)) (IsChoose b a))) (exists ((c BoundSet)) (exists ((a BoundSet)) (IsChoose c a))))))
+(check-sat)
+(get-model)

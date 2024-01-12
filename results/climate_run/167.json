@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A group of people sit in chairs in a circle.\"",
+    "Implication": " \"A group of people are sitting on chairs in a circle.\"",
+    "Referring expressions": " A group of people, chairs, circle.  A group of people, chairs, circle.",
+    "Properties": " IsSitInChairs(a),  IsInCircle(c)  IsSittingOnChairs(a),  IsInCircle(c)",
+    "Formula": "(exists c (exists a (IsSitInChairs(a) and IsInCircle(c))) & (forall d ( IsSitInChairs(d) ->  IsSittingOnChairs(d))) & (forall e ( IsSittingOnChairs(e) ->  IsSitInChairs(e)))) -> (exists c (exists a (IsSittingOnChairs(a) and IsInCircle(c))))"
+}

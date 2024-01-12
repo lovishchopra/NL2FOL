@@ -3,5 +3,5 @@
     "Implication": " \"If the Greenland ice sheet were lost entirely, the oceans would rise by six meters around the world, flooding many of the world's largest cities.\"",
     "Referring expressions": " Greenland ice sheet, rising sea levels.  Greenland ice sheet, oceans, world, cities",
     "Properties": " IsInGreenland(a),  ContributesTo(b)  IsLost(a),  RisesBy(c),  Contains(d),  Floods(e)",
-    "Formula": "(exists b (exists a (IsInGreenland(a) and ContributesTo(b))) & (forall f (forall g (  ContributesTo(f) ->   RisesBy(g)))) & (forall h (forall i (  RisesBy(h) ->   ContributesTo(i)))) & (forall j (forall k (  Floods(j) ->   ContributesTo(k))))) -> (exists d (exists c (exists a (IsLost(a) and (RisesBy(c) and Contains(d))))))"
+    "Formula": "(exists a (exists b (IsInGreenland(a) and ContributesTo(b))) & (forall f (forall g (  ContributesTo(f) ->   RisesBy(g)))) & (forall h (forall i (  RisesBy(h) ->   ContributesTo(i)))) & (forall k (forall j (  Floods(j) ->   ContributesTo(k))))) -> (exists c (exists a (exists d (IsLost(a) and (RisesBy(c) and Contains(d))))))"
 }

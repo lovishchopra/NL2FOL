@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two ladies danced on stage.\"",
+    "Implication": " \"Two women danced on a platform.\"",
+    "Referring expressions": " Two ladies, stage.  Two women, platform",
+    "Properties": " IsDancedOn(a,b)  IsDancedOn(c,d)",
+    "Formula": "(exists a (exists b (IsDancedOn(a,b)))) -> (exists c (exists d (IsDancedOn(c,d))))"
+}

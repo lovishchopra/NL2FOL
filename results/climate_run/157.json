@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A dog is shaking water off of itself.\"",
+    "Implication": " \"The dog shook off the water.\"",
+    "Referring expressions": " A dog, itself  The dog, water",
+    "Properties": " IsShaking(a),  IsWater(b)  IsShakenOff(c),  IsWater(d)",
+    "Formula": "(exists a (exists b (IsShaking(a) and IsWater(b))) & (forall e (forall f ( IsShaking(e) ->  IsShakenOff(f)))) & (forall h (forall g ( IsShakenOff(g) ->  IsShaking(h))))) -> (exists c (exists d (IsShakenOff(c) and IsWater(d))))"
+}

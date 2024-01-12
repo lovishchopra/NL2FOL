@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man in a yellow shirt and blue pants balances himself on a log.\"",
+    "Implication": " \"Two men are standing on a log.\"",
+    "Referring expressions": " A man, yellow shirt, blue pants, log  Two men, log",
+    "Properties": " IsInYellowShirt(c),  IsInBluePants(d),  IsOnLog(a)  AreStandingOn(e,a)",
+    "Formula": "(exists c (exists d (exists a (IsInYellowShirt(c) and IsOnLog(a) and IsInBluePants(d)))) & (forall f (forall g ( AreStandingOn(f,g) ->   IsOnLog(g))))) -> (exists e (exists a (AreStandingOn(e,a))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two people sign books.\"",
+    "Implication": " \"A person signs a book.\"",
+    "Referring expressions": " Two people, books  A person, book",
+    "Properties": " IsSigned(a),  IsBook(b)  IsSigned(c),  IsBook(d)",
+    "Formula": "(exists a (exists b (IsSigned(a) and IsBook(b)))) -> (exists c (exists d (IsSigned(c) and IsBook(d))))"
+}

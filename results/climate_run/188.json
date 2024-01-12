@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A nurse is walking outside.\"",
+    "Implication": " \"A nurse is all dressed in white.\"",
+    "Referring expressions": " nurse, outside  nurse, white",
+    "Properties": " IsWalkingOutside(a)  IsAllDressedInWhite(a)",
+    "Formula": "(exists a (IsWalkingOutside(a))) -> (exists a (IsAllDressedInWhite(a)))"
+}

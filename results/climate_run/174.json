@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two women eat at a table.\"",
+    "Implication": " \"People eat at tables.\"",
+    "Referring expressions": " Two women, table  People, tables",
+    "Properties": " IsEatenAt(a,b)  IsEatenAt(c,d)",
+    "Formula": "(exists a (exists b (IsEatenAt(a,b)))) -> (exists c (exists d (IsEatenAt(c,d))))"
+}

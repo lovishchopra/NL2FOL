@@ -14,6 +14,8 @@ class NL2FOL:
     """
     def __init__(self, sentence, model_type, pipeline=None, tokenizer=None, nli_model=None, nli_tokenizer=None, debug=False):
         self.sentence = sentence
+        if not isinstance(self.sentence, str):
+            self.sentence = ""
         self.model_type = model_type
         self.claim = ""
         self.implication = ""
@@ -305,17 +307,21 @@ class NL2FOL:
             print("Final Lf2= ",self.final_lf2)
 
     def convert_to_first_order_logic(self):
-        self.extract_claim_and_implication()
-        self.get_referring_expressions()
-        self.get_entity_relations()
-        self.get_entity_mapping()
-        self.get_properties()
-        self.get_properties_relations()
-        self.get_fol()
-        self.apply_heuristics()
-        self.get_final_lf()
-        self.get_final_lf2()
-        return self.final_lf,self.final_lf2
+        try:
+            self.extract_claim_and_implication()
+            self.get_referring_expressions()
+            self.get_entity_relations()
+            self.get_entity_mapping()
+            self.get_properties()
+            self.get_properties_relations()
+            self.get_fol()
+            self.apply_heuristics()
+            self.get_final_lf()
+            self.get_final_lf2()
+            return self.final_lf,self.final_lf2
+        except Exception as e:
+            print(f"Failed with error {e}")
+            return "",""
     
     def apply_heuristics(self):
         self.claim_lf = self.claim_lf.replace('->','&')
@@ -327,17 +333,6 @@ class NL2FOL:
         if self.debug:
             print("Updated Claim Lf= ",self.claim_lf)
             print("Updated Implication Lf=",self.implication_lf)
-
-
-class NL2SMT:
-    def __init__(self, sentence):
-        self.sentence = sentence
-    
-    def save_smt(self, file_path):
-        first_order_logic = NL2FOL(self.sentence).convert_to_first_order_logic()
-        script = CVCGenerator(first_order_logic).generateCVCScript()
-        with open(file_path, "w") as file:
-            file.write(script)
 
 def setup_dataset(fallacy_set='logic',length=100):
     print("called")
@@ -360,16 +355,9 @@ def setup_dataset(fallacy_set='logic',length=100):
     df_valids['label']=[1]*len(df_valids)
     df_valids=df_valids[['sentence','label']]
     df_valids=df_valids.sample(length,random_state=113)
-    df = pd.concat([df_fallacies, df_valids],ignore_index=True)
-    print(df)
-    if 'source_article' in df.columns:
-        print(df.columns)
-        df['articles'] = df['source_article'].combine_first(df['sentence'])
-        df = df.drop_duplicates()
-        print(len(df))
-        df = df.drop(['source_article', 'sentence'], axis=1)
-    else:
-        df['articles'] = df['sentence']
+    df = pd.concat([df_fallacies, df_valids])
+    df['articles'] = df['source_article'].combine_first(df['sentence'])
+    df = df.drop(['source_article', 'sentence'], axis=1)
     return df
 
 if __name__ == '__main__':

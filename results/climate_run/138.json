@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A small kid wearing a helmet smiles.\"",
+    "Implication": " \"The kid is happy.\"",
+    "Referring expressions": " Small kid, helmet  Kid",
+    "Properties": " IsSmall(a),  IsWearingHelmet(a),  Smiles(a)  IsHappy(c)",
+    "Formula": "(exists a (IsSmall(a) and IsWearingHelmet(a) and Smiles(a)) & (forall e (forall d (  Smiles(d) ->  IsHappy(e)))) & (forall f (forall g ( IsHappy(f) ->   Smiles(g))))) -> (exists c (IsHappy(c)))"
+}

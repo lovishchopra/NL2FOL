@@ -3,5 +3,5 @@
     "Implication": " He told a House Science Committee hearing in March 2017 that the U.N. climate models have failed badly.",
     "Referring expressions": " NASA, him, achievement.  He, House Science Committee, March 2017, U.N. climate models.",
     "Properties": " IsHonoredByNASA(b),  HasAchievement(c)  IsTold(d),  IsInHouseScienceCommittee(e),  IsInMarch2017(f),  AreFailed(g)",
-    "Formula": "(exists c (exists b (IsHonoredByNASA(b) and HasAchievement(c))) & (forall h (forall i (  IsInHouseScienceCommittee(h) ->   HasAchievement(i)))) & (forall j (forall k (  IsInMarch2017(j) ->   HasAchievement(k))))) -> (exists f (exists e (exists g (exists d (IsTold(d) and (IsInHouseScienceCommittee(e) and IsInMarch2017(f)) and AreFailed(g))))))"
+    "Formula": "(exists c (exists b (IsHonoredByNASA(b) and HasAchievement(c))) & (forall h (forall i (  IsInHouseScienceCommittee(h) ->   HasAchievement(i)))) & (forall k (forall j (  IsInMarch2017(j) ->   HasAchievement(k))))) -> (exists e (exists d (exists f (exists g (IsTold(d) and (IsInHouseScienceCommittee(e) and IsInMarch2017(f)) and AreFailed(g))))))"
 }

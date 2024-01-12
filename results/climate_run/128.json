@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man has marker on his arm.\"",
+    "Implication": " \"Thus, a man has marker on his arm.\"",
+    "Referring expressions": " Man, marker, arm  Man, marker, arm.",
+    "Properties": " IsOnArm(c)  IsOnArm(d)",
+    "Formula": "(exists c (IsOnArm(c))) -> (exists a (exists d (IsMan(a) and IsOnArm(d))))"
+}

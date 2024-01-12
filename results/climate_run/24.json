@@ -3,5 +3,5 @@
     "Implication": " \"Polar bear numbers are rising.\"",
     "Referring expressions": " The Arctic, its thickness  Polar bear numbers",
     "Properties": " IsPredictedToBeIceFree(a),  IncreasedByAThird(b)  IsRising(c)",
-    "Formula": "(exists b (exists a (IsPredictedToBeIceFree(a) and ~IncreasedByAThird(b)))) -> (exists c (IsRising(c)))"
+    "Formula": "(exists a (exists b (IsPredictedToBeIceFree(a) and ~IncreasedByAThird(b)))) -> (exists c (IsRising(c)))"
 }

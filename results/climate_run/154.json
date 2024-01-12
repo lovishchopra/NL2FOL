@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A guy is being kissed on the cheeks by two girls.\"",
+    "Implication": " \"The people are near a lighthouse.\"",
+    "Referring expressions": " guy, two girls  People, lighthouse",
+    "Properties": " IsBeingKissed(a),  AreTwo(b)  IsNear(c,d)",
+    "Formula": "(exists a (exists b (IsBeingKissed(a) and AreTwo(b)))) -> (exists c (exists d (IsNear(c,d))))"
+}

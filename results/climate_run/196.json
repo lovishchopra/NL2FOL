@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two men celebrate at the bar.\"",
+    "Implication": " \"There are people at a social gathering.\"",
+    "Referring expressions": " Two men, bar  People, social gathering",
+    "Properties": " IsCelebrate(a),  IsAt(b)  IsAt(d)",
+    "Formula": "(exists a (exists b (IsAt(b) and IsCelebrate(a))) & (forall e (forall f ( IsCelebrate(e) ->  IsAt(f))))) -> (exists c (IsAt(c)))"
+}

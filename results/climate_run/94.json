@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Russia is gaining ground.\" ",
+    "Implication": " \"The race for newly accessible resources is beginning.\"",
+    "Referring expressions": "  The race, newly accessible resources",
+    "Properties": " IsGainingGround(a)  IsBeginning(b),  IsAccessible(c)",
+    "Formula": "(exists a (IsGainingGround(a))) -> (exists c (exists b (IsBeginning(b) and IsAccessible(c))))"
+}

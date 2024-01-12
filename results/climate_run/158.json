@@ -1,0 +1,7 @@
+{
+    "Claim": " \"There is a football game.\"",
+    "Implication": " \"There is a sporting event.\"",
+    "Referring expressions": " football game  There is, sporting event",
+    "Properties": " IsThere(a)  IsThere(b),  IsSportingEvent(c)",
+    "Formula": "(exists a (IsThere(a)) & (forall e (forall d ( IsThere(d) ->   IsSportingEvent(e))))) -> (exists c (exists b (IsThere(b) and IsSportingEvent(c))))"
+}

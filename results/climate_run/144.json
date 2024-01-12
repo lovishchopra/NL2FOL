@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man is standing by a building.\"",
+    "Implication": " \"Others are nearby.\"",
+    "Referring expressions": " A man, building  Others, nearby",
+    "Properties": " IsStandingBy(a,b)  IsNearby(c)",
+    "Formula": "(exists a (exists b (IsStandingBy(a,b))) & (forall e (forall f (forall g ( IsStandingBy(e,f) ->  IsNearby(g)))))) -> (exists c (exists b (exists a (IsNearby(c) and (IsNearby(c) and IsTouching(a,b))))))"
+}

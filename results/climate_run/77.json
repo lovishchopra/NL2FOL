@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Brazil exports red meat.\"",
+    "Implication": " \"Brazil has abscesses, collections of pus in the meat.\"",
+    "Referring expressions": " Brazil, red meat  Brazil, abscesses, collections of pus, meat",
+    "Properties": " IsExports(a),  IsRedMeat(b)  HasAbscesses(a),  IsInMeat(e)",
+    "Formula": "(exists a (exists b (IsExports(a) and IsRedMeat(b)))) -> (exists e (exists a (exists d (HasAbscesses(a) and (IsInMeat(e) and  HasCollectionsOfPus(d))))))"
+}

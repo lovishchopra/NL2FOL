@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A teacher teaches a class.\"",
+    "Implication": " \"An instructor teaches students.\"",
+    "Referring expressions": " A teacher, class  Instructor, students",
+    "Properties": " IsTeaches(a,b)  IsTeaches(c,d)",
+    "Formula": "(exists a (exists b (IsTeaches(a,b)))) -> (exists c (exists d (IsInstructor(c) and IsTeaches(c,d))))"
+}

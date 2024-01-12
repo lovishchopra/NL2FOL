@@ -1,0 +1,7 @@
+{
+    "Claim": " \"There were passerbys as the woman and child sat.\"",
+    "Implication": " \"The woman and child sat together in a door frame along a gray sidewalk.\"",
+    "Referring expressions": " Woman, child, passersby  Woman, child, door frame, sidewalk",
+    "Properties": " IsSat(a),  IsPasserby(c)  IsSat(a),  IsInDoorFrame(b),  IsOnGraySidewalk(e)",
+    "Formula": "(exists c (exists a (exists b (IsSat(a) and (IsPasserby(c) or a = b))))) -> (exists e (exists a (exists b (IsSat(a) and IsInDoorFrame(b) and IsOnGraySidewalk(e)))))"
+}

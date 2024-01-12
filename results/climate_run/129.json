@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A young boy is inside a tractor.\"",
+    "Implication": " \"A young boy is posing inside a tractor shovel.\"",
+    "Referring expressions": " A young boy, tractor  Young boy, tractor shovel",
+    "Properties": " IsInside(a,b)  IsPosing(c),  IsInside(c,d)",
+    "Formula": "(exists a (exists b (IsYoung(a) and IsInside(a,b)))) -> (exists c (exists d (IsPosing(c) and IsInside(c,d))))"
+}

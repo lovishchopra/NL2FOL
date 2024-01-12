@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The man is outdoors.\"",
+    "Implication": " \"The man is in a city park.\"",
+    "Referring expressions": " Man, outdoors  Man, city park",
+    "Properties": " IsOutdoors(a)  IsInCityPark(a)",
+    "Formula": "(exists b (IsOutdoors(b)) & (forall d ( IsInCityPark(d) ->  IsOutdoors(d)))) -> (exists a (IsInCityPark(a)))"
+}

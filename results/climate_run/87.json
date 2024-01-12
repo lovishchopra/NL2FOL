@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The surface temperature stays at the freezing point until all the ice melts.\"",
+    "Implication": " \"If the ice-water mix is well-stirred, the surface temperature will stay at the freezing point.\"",
+    "Referring expressions": " The surface temperature, freezing point, ice, melts  ice-water mix, surface temperature, freezing point.",
+    "Properties": " IsAtFreezingPoint(a),  IsMelted(c)  IsWellStirred(e),  IsAtFreezingPoint(f)",
+    "Formula": "(exists c (exists a (IsAtFreezingPoint(a) and IsMelted(c))) & (forall h (forall i (  IsMelted(h) ->   IsAtFreezingPoint(i))))) -> (exists e (exists f (IsWellStirred(e) and IsAtFreezingPoint(f))))"
+}

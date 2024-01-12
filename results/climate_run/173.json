@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A woman with an orange and gray shirt is fixing something.\"",
+    "Implication": " \"Something is being repaired.\"",
+    "Referring expressions": " Woman, orange and gray shirt, something  Something, being repaired.",
+    "Properties": " IsInOrangeAndGrayShirt(c),  IsFixing(a)  IsBeingRepaired(a)",
+    "Formula": "(exists c (exists a (IsInOrangeAndGrayShirt(c) and IsFixing(a))) & (forall f (  IsFixing(f) ->  IsBeingRepaired(f))) & (forall g ( IsBeingRepaired(g) ->   IsFixing(g)))) -> (exists a (IsBeingRepaired(a)))"
+}

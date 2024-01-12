@@ -3,5 +3,5 @@
     "Implication": " \"The world is experiencing a polar ice increase.\"",
     "Referring expressions": " There, polar ice, world, satellite records, 1979  The world, polar ice increase",
     "Properties": " IsInPolarIce(b),  IsInWorld(c),  IsSinceSatelliteRecords(d),  IsIn1979(e)  IsExperiencing(f),  IsInPolarIceIncrease(g)",
-    "Formula": "(exists d (exists c (exists b (IsInPolarIce(b) and (IsInWorld(c) and IsSinceSatelliteRecords(d))))) & (forall h (forall i ( IsInPolarIce(h) ->   IsInPolarIceIncrease(i)))) & (forall j (forall k (  IsInPolarIceIncrease(j) ->  IsInPolarIce(k)))) & (forall l (forall m (  IsInWorld(l) ->  IsExperiencing(m)))) & (forall n (forall o ( IsExperiencing(n) ->   IsInWorld(o)))) & (forall p (forall q (  IsIn1979(p) ->  IsExperiencing(q))))) -> (exists f (exists g (IsExperiencing(f) and IsInPolarIceIncrease(g))))"
+    "Formula": "(exists c (exists b (exists d (IsInPolarIce(b) and (IsInWorld(c) and IsSinceSatelliteRecords(d))))) & (forall h (forall i ( IsInPolarIce(h) ->   IsInPolarIceIncrease(i)))) & (forall k (forall j (  IsInPolarIceIncrease(j) ->  IsInPolarIce(k)))) & (forall m (forall l (  IsInWorld(l) ->  IsExperiencing(m)))) & (forall o (forall n ( IsExperiencing(n) ->   IsInWorld(o)))) & (forall q (forall p (  IsIn1979(p) ->  IsExperiencing(q))))) -> (exists f (exists g (IsExperiencing(f) and IsInPolarIceIncrease(g))))"
 }

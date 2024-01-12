@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A rapper is performing in front of a camera.\"",
+    "Implication": " \"Someone is looking at the rapper over his shoulder.\"",
+    "Referring expressions": " A rapper, camera  Someone, rapper, his shoulder",
+    "Properties": " IsPerforming(a),  IsInFrontOf(b)  IsLookingAt(c,d),  IsOnHisShoulder(e)",
+    "Formula": "(exists a (exists b (IsPerforming(a) and IsInFrontOf(b)))) -> (exists e (exists c (exists d (IsLookingAt(c,d) and IsOnHisShoulder(e)))))"
+}

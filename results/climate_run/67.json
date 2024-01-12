@@ -1,0 +1,7 @@
+{
+    "Claim": " \"China's carbon dioxide emissions have increased by 53% in the past decade.\"",
+    "Implication": " \"China is the largest emitter of carbon dioxide.\"",
+    "Referring expressions": " China, carbon dioxide emissions, past decade  China",
+    "Properties": " IsIncreasedBy(b,a),  IsInPastDecade(c)  IsLargestEmiter(a)",
+    "Formula": "(exists c (exists a (exists b (IsIncreasedBy(b,a) and IsInPastDecade(c)))) & (forall e (forall d ( IsLargestEmiter(d) ->  IsIncreasedBy(e,d))))) -> (exists a (IsLargestEmiter(a)))"
+}

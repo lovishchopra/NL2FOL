@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A woman is wearing a shoe.\"",
+    "Implication": " \"The bride is wearing a shoe.\"",
+    "Referring expressions": " Woman, shoe  The bride, shoe",
+    "Properties": " IsWearing(a)  IsWearing(a)",
+    "Formula": "(exists b (IsWearing(b))) -> (exists a (IsWearing(a)))"
+}

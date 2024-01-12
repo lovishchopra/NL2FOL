@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Eight people choose green vegetables.\"",
+    "Implication": " \"Asian people choose green vegetables.\"",
+    "Referring expressions": " Eight people, green vegetables  Asian people, green vegetables",
+    "Properties": " IsChoose(b,a)  IsChoose(c,a)",
+    "Formula": "(exists a (exists b (IsChoose(b,a)))) -> (exists c (exists a (IsChoose(c,a))))"
+}

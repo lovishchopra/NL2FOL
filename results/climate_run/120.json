@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A woman has dark hair.\"",
+    "Implication": " \"The woman is bending towards the back of a dark-headed toddler's head.\"",
+    "Referring expressions": " Woman, dark hair.  woman, toddler, dark-headed",
+    "Properties": " IsDarkHair(b)  IsBending(a),  IsDarkHeaded(d)",
+    "Formula": "(exists a (exists b (IsWoman(a) and IsDarkHair(b))) & (forall f (forall g ( IsDarkHair(f) ->   IsDarkHeaded(g)))) & (forall h (forall i (  IsDarkHeaded(h) ->  IsDarkHair(i))))) -> (exists a (exists d (IsBending(a) and IsDarkHeaded(d))))"
+}

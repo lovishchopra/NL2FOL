@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A female chef is presenting a pineapple and watermelon.\"",
+    "Implication": " \"Food is being displayed by a chef.\"",
+    "Referring expressions": " Female chef, pineapple, watermelon.  Food, chef",
+    "Properties": " IsFemale(a),  IsPresenting(a),  IsPineapple(b),  IsWatermelon(c)  IsDisplayed(d),  IsChef(e)",
+    "Formula": "(exists c (exists a (exists b (IsFemale(a) and IsPresenting(a) and IsPineapple(b) and IsWatermelon(c)))) & (forall f (forall g ( IsFemale(f) ->  IsDisplayed(g)))) & (forall h (forall i ( IsFemale(h) ->   IsChef(i)))) & (forall k (forall j (  IsChef(j) ->  IsFemale(k)))) & (forall m (forall l (  IsPresenting(l) ->  IsDisplayed(m)))) & (forall o (forall n (  IsPresenting(n) ->   IsChef(o)))) & (forall q (forall p (  IsPineapple(p) ->  IsDisplayed(q)))) & (forall s (forall r (  IsWatermelon(r) ->  IsDisplayed(s))))) -> (exists e (exists d (IsDisplayed(d) and IsChef(e))))"
+}

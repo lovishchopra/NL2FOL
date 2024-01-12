@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The sea has crept up to the point where a high tide and a brisk wind are all it takes to send water pouring into streets and homes.\"",
+    "Implication": " \"Streets and homes will be flooded.\"",
+    "Referring expressions": " The sea, high tide, brisk wind, water, streets, homes.  Streets, homes",
+    "Properties": " IsInTheSea(b),  IsAHighTide(c),  IsABriskWind(d),  IsPouringWater(e),  IsInStreets(a),  IsInHomes(f)  IsFlooded(a),  IsFlooded(g)",
+    "Formula": "(exists e (exists c (exists b (exists d ((IsInTheSea(b) and IsAHighTide(c)) and (IsABriskWind(d) and IsPouringWater(e)))))) & (forall j (forall i ( IsFlooded(i) ->   IsPouringWater(j)))) & (forall k (forall l (  IsFlooded(k) ->   IsPouringWater(l)))) & (forall m ( IsFlooded(m) ->   IsInStreets(m)))) -> (exists a (exists g (IsFlooded(a) or IsFlooded(g))))"
+}

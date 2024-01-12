@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The changes will usher in a sustained period of 'climate system mayhem'.\"",
+    "Implication": " \"It could prove difficult to resolve.\"",
+    "Referring expressions": " The changes, climate system, mayhem  It, could, prove, difficult, resolve",
+    "Properties": " IsUsherIn(a,b),  IsMayhem(c)  IsDifficult(g),  IsProve(e),  IsResolve(h)",
+    "Formula": "(exists c (exists a (exists b (IsUsherIn(a,b) and IsMayhem(c)))) & (forall j (forall i (  IsMayhem(i) ->  IsDifficult(j))))) -> (exists e (exists h (exists g (IsDifficult(g) and (IsProve(e) and IsResolve(h))))))"
+}

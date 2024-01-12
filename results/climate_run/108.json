@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Four young children are playing the same thing.\"",
+    "Implication": " \"Four young children are playing horseshoes.\"",
+    "Referring expressions": " Four young children, same thing.  Four young children, horseshoes.",
+    "Properties": " IsFour(a),  IsPlaying(a)  IsFour(a),  IsPlaying(a)",
+    "Formula": "(exists a (exists b (IsFour(a) and IsPlaying(a,b))) & (forall d ( IsFour(d) ->   IsPlaying(d))) & (forall e (  IsPlaying(e) ->  IsFour(e))) & (forall f (  IsPlaying(f) ->  IsFour(f))) & (forall g ( IsFour(g) ->   IsPlaying(g)))) -> (exists a (IsFour(a) and IsPlaying(a)))"
+}

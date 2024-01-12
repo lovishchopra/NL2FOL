@@ -1,0 +1,36 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_4 () UnboundSet)
+(define-fun IsAny ((BOUND_VARIABLE_618 BoundSet)) Bool true)
+(define-fun IsFloodingActivity ((BOUND_VARIABLE_618 BoundSet)) Bool true)
+(define-fun IsHumanAlterations ((BOUND_VARIABLE_618 BoundSet)) Bool true)
+(define-fun CausesFloodingActivity ((BOUND_VARIABLE_618 BoundSet)) Bool false)
+(define-fun IsHuman ((BOUND_VARIABLE_618 BoundSet)) Bool false)
+(define-fun IsRiver ((BOUND_VARIABLE_618 BoundSet)) Bool false)
+(define-fun IsStream ((BOUND_VARIABLE_618 BoundSet)) Bool false)
+(define-fun IsStreamFlow ((BOUND_VARIABLE_618 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_14 () UnboundSet)
+(define-fun IsAny ((BOUND_VARIABLE_715 BoundSet)) Bool true)
+(define-fun IsFloodingActivity ((BOUND_VARIABLE_715 BoundSet)) Bool true)
+(define-fun IsHumanAlterations ((BOUND_VARIABLE_715 BoundSet)) Bool true)
+(define-fun CausesFloodingActivity ((BOUND_VARIABLE_715 BoundSet)) Bool true)
+(define-fun IsHuman ((BOUND_VARIABLE_715 BoundSet)) Bool true)
+(define-fun IsRiver ((BOUND_VARIABLE_715 BoundSet)) Bool false)
+(define-fun IsStream ((BOUND_VARIABLE_715 BoundSet)) Bool false)
+(define-fun IsStreamFlow ((BOUND_VARIABLE_715 BoundSet)) Bool false)
+)

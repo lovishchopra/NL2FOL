@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two young soccer players compete for the ball.\"",
+    "Implication": " \"Two soccer players are competing.\"",
+    "Referring expressions": " Two young soccer players, ball.  Two soccer players",
+    "Properties": " IsYoung(a),  IsCompetingFor(a,b)  IsCompeting(c)",
+    "Formula": "(exists a (exists b (IsYoung(a) and IsCompetingFor(a,b))) & (forall e (forall d (forall f (  IsCompetingFor(d,e) ->  IsCompeting(f))))) & (forall i (forall h (forall g ( IsCompeting(g) ->   IsCompetingFor(h,i)))))) -> (exists c (IsCompeting(c) and IsCompeting(c)))"
+}

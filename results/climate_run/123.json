@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A black and brown dog shakes water off of itself.\"",
+    "Implication": " \"A black and brown dog is shaking itself dry.\"",
+    "Referring expressions": " Black and brown dog, water, itself.  Black and brown dog, itself, dry.",
+    "Properties": " IsBlackAndBrown(a),  IsShakingWater(a),  IsOnItself(c)  IsBlackAndBrown(a),  IsShakingItself(a),  IsDry(d)",
+    "Formula": "(exists c (exists a (IsBlackAndBrown(a) and IsShakingWater(a) and IsOnItself(c))) & (forall f (  IsShakingItself(f) ->  IsBlackAndBrown(f))) & (forall g (  IsShakingWater(g) ->  IsBlackAndBrown(g)))) -> (exists a (exists d (IsBlackAndBrown(a) and IsShakingItself(a) and IsDry(d))))"
+}

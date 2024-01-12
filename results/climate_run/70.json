@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The ground is rising up.\"",
+    "Implication": " \"The climate is changing.\"",
+    "Referring expressions": " The ground, rising up  The climate, changing",
+    "Properties": " IsRisingUp(b)  IsChanging(d)",
+    "Formula": "(exists b (IsRisingUp(b))) -> (exists c (IsChanging(c)))"
+}

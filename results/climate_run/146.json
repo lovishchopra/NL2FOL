@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A dog is running and jumping through the woods.\"",
+    "Implication": " \"A dog is outdoors.\"",
+    "Referring expressions": " A dog, woods  A dog, outdoors",
+    "Properties": " IsRunning(a),  IsJumping(a)  IsOutdoors(a)",
+    "Formula": "(exists a (IsRunning(a) and IsJumping(a)) & (forall d ( IsRunning(d) ->  IsOutdoors(d))) & (forall e (  IsJumping(e) ->  IsOutdoors(e)))) -> (exists a (IsOutdoors(a)))"
+}

@@ -3,5 +3,5 @@
     "Implication": " \"Something is the greatest American foe since the Axis Powers\"",
     "Referring expressions": " Green activists, something  Something, American, axis powers",
     "Properties": " IsAtWarWith(a)  IsTheGreatest(a),  IsAmerican(b),  IsAxisPowers(c)",
-    "Formula": "(exists a (IsAtWarWith(a))) -> (exists c (exists b (exists a (IsTheGreatest(a) and (IsAmerican(b) and IsAxisPowers(c))))))"
+    "Formula": "(exists a (IsAtWarWith(a))) -> (exists c (exists a (exists b (IsTheGreatest(a) and (IsAmerican(b) and IsAxisPowers(c))))))"
 }

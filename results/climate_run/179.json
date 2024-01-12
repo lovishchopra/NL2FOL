@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The weather looks clear\"",
+    "Implication": " \"It was a nice day outside\"",
+    "Referring expressions": " The weather, clear  It, day, outside",
+    "Properties": " IsClear(b)  IsDay(d),  IsOutside(e)",
+    "Formula": "(exists b (IsClear(b))) -> (exists e (exists d (IsDay(d) and IsOutside(e))))"
+}

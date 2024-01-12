@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The shift is precisely what cyclone experts said would be expected from climate change.\"",
+    "Implication": " \"Climate change causes shifts in cyclones\"",
+    "Referring expressions": " The shift, cyclone experts, climate change  Climate change, cyclones",
+    "Properties": " IsExpectedFrom(c,a)  Causes(a,d)",
+    "Formula": "(exists c (exists a (IsExpectedFrom(c,a)))) -> (exists a (exists d (Causes(a,d))))"
+}

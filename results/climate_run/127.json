@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Four ladies are sitting on a bench.\"",
+    "Implication": " \"Three others are standing nearby.\"",
+    "Referring expressions": " Four ladies, bench  Three, others, nearby.",
+    "Properties": " IsSittingOn(b,a)  IsStandingNearby(a,c)",
+    "Formula": "(exists a (exists b (IsSittingOn(b,a)))) -> (exists c (exists a (IsStandingNearby(a,c))))"
+}

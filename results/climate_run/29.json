@@ -3,5 +3,5 @@
     "Implication": " \"Major hurricane activity in the Gulf of Mexico has been less frequent than in centuries past.\"",
     "Referring expressions": " overall, hurricanes, tornadoes  Major hurricane activity, Gulf of Mexico, centuries past",
     "Properties": " IsIncreased(a),  IsNotMaterialized(b,c)  IsLessFrequent(d),  IsInGulfOfMexico(e),  IsInCenturiesPast(f)",
-    "Formula": "(exists c (exists b (exists a (IsIncreased(a) and ~IsNotMaterialized(b,c))))) -> (exists f (exists e (exists d (IsLessFrequent(d) and (IsInGulfOfMexico(e) and IsInCenturiesPast(f))))))"
+    "Formula": "(exists c (exists a (exists b (IsIncreased(a) and ~IsNotMaterialized(b,c))))) -> (exists e (exists d (exists f (IsLessFrequent(d) and (IsInGulfOfMexico(e) and IsInCenturiesPast(f))))))"
 }

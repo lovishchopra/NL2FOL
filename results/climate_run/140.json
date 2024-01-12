@@ -1,0 +1,7 @@
+{
+    "Claim": " \"People are standing in line.\"",
+    "Implication": " \"Holding lit Roman candles.\"",
+    "Referring expressions": " People, line  lit Roman candles.",
+    "Properties": " IsStandingInLine(a)  IsHoldingLitRomanCandles(c)",
+    "Formula": "(exists a (IsStandingInLine(a))) -> (exists c (IsHoldingLitRomanCandles(c)))"
+}

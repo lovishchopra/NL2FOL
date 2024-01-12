@@ -3,5 +3,5 @@
     "Implication": " \"The warming of the stratosphere occurred several weeks ago.\"",
     "Referring expressions": " Arctic temperatures, stratosphere  The warming, stratosphere",
     "Properties": " IsTiedTo(a,b),  IsSudden(a)  IsOccurred(a,c),  IsSeveralWeeksAgo(c)",
-    "Formula": "(exists b (exists a (IsTiedTo(a,b) and IsSudden(a))) & (forall f (forall e (forall d ( IsTiedTo(d,e) ->  IsOccurred(d,f))))) & (forall g (forall h (  IsSudden(g) ->  IsOccurred(g,h))))) -> (exists c (exists a (IsOccurred(a,c) and IsSeveralWeeksAgo(c))))"
+    "Formula": "(exists a (exists b (IsTiedTo(a,b) and IsSudden(a))) & (forall e (forall d (forall f ( IsTiedTo(d,e) ->  IsOccurred(d,f))))) & (forall h (forall g (  IsSudden(g) ->  IsOccurred(g,h))))) -> (exists c (exists a (IsOccurred(a,c) and IsSeveralWeeksAgo(c))))"
 }

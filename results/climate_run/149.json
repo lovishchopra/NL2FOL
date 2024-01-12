@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The dog has something in its mouth.\"",
+    "Implication": " \"The dog is brown.\"",
+    "Referring expressions": " dog, something  dog",
+    "Properties": " IsInMouth(b)  IsBrown(a)",
+    "Formula": "(exists b (IsInMouth(b))) -> (exists a (IsBrown(a)))"
+}

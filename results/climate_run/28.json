@@ -3,5 +3,5 @@
     "Implication": " \"Climate change isn't occurring.\"",
     "Referring expressions": " Scientists, ice gain, Southern Hemisphere, atmosphere.  Climate change, isn't occurring",
     "Properties": " IsWarned(a),  IsCausedBy(b),  IsIn(c),  IsIn(d)  IsOccurring(e),  Isn'tOccurring(f)",
-    "Formula": "(exists c (exists b (exists a (IsWarned(a) and (IsCausedBy(b) and IsIn(c)))))) -> (exists f (exists e (Isn'tOccurring(f) and ~IsOccurring(e))))"
+    "Formula": "(exists c (exists a (exists b (IsWarned(a) and (IsCausedBy(b) and IsIn(c)))))) -> (exists e (exists f (Isn'tOccurring(f) and ~IsOccurring(e))))"
 }

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A woman wears a green dress.\"",
+    "Implication": " \"A woman takes a photo next to a large man in a dark suit.\"",
+    "Referring expressions": " A woman, green dress  Woman, large man, dark suit",
+    "Properties": " IsWorn(a),  IsGreen(b)  IsTaken(c),  IsLarge(d),  IsDark(e)",
+    "Formula": "(exists a (exists b (IsWorn(a) and IsGreen(b))) & (forall f (forall g ( IsWorn(f) ->  IsTaken(g)))) & (forall h (forall i ( IsTaken(h) ->  IsWorn(i))))) -> (exists e (exists c (exists d (IsTaken(c) and (IsLarge(d) and IsDark(e))))))"
+}

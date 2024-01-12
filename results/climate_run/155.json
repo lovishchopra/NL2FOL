@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man and a woman are on a bench.\"",
+    "Implication": " \"Man and woman are looking at a building.\"",
+    "Referring expressions": " Man, woman, bench.  Man, woman, building",
+    "Properties": " IsOnBench(a,b)  IsLookingAt(a,b,d)",
+    "Formula": "(exists a (exists b (IsOnBench(a,b)))) -> (exists a (exists b (exists d (IsLookingAt(a,b,d)))))"
+}

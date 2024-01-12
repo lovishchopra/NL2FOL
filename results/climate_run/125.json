@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A worker is in the picture.\"",
+    "Implication": " \"The construction worker is bored.\"",
+    "Referring expressions": " A worker, picture  construction worker, bored",
+    "Properties": " IsInPicture(a)  IsBored(d)",
+    "Formula": "(exists a (IsInPicture(a))) -> (exists d (IsBored(d)))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A woman is standing near a replica of an airplane.\"",
+    "Implication": " \"A woman stands near a replica of an airplane.\"",
+    "Referring expressions": " Woman, airplane replica  Woman, replica of an airplane.",
+    "Properties": " IsStandingNear(a,b)  IsStandingNear(a,c)",
+    "Formula": "(exists a (exists b (IsStandingNear(a,b)))) -> (exists c (exists a (IsStandingNear(a,c))))"
+}

@@ -3,5 +3,5 @@
     "Implication": " \"There is a clear correlation between solar activity and temperature on Earth.\"",
     "Referring expressions": " There, solar activity, Medieval Warm Period.  There is, solar activity, temperature, Earth.",
     "Properties": " IsHigh(a),  OccurredDuring(b,c)  IsClear(d),  HasCorrelation(a,e)",
-    "Formula": "(exists c (exists b (exists a (IsHigh(a) and OccurredDuring(b,c)))) & (forall g (forall h ( IsHigh(g) ->   HasCorrelation(g,h)))) & (forall j (forall i (  HasCorrelation(i,j) ->  IsHigh(i)))) & (forall n (forall m (forall l (forall k (  OccurredDuring(k,l) ->   HasCorrelation(m,n))))))) -> (exists e (exists d (exists a (IsClear(d) and HasCorrelation(a,e)))))"
+    "Formula": "(exists c (exists a (exists b (IsHigh(a) and OccurredDuring(b,c)))) & (forall h (forall g ( IsHigh(g) ->   HasCorrelation(g,h)))) & (forall j (forall i (  HasCorrelation(i,j) ->  IsHigh(i)))) & (forall k (forall n (forall m (forall l (  OccurredDuring(k,l) ->   HasCorrelation(m,n))))))) -> (exists e (exists d (exists a (IsClear(d) and HasCorrelation(a,e)))))"
 }

@@ -1,0 +1,28 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_4 () UnboundSet)
+(define-fun IsMany ((BOUND_VARIABLE_417 BoundSet)) Bool true)
+(define-fun IsInSmallClassroom ((BOUND_VARIABLE_417 BoundSet)) Bool true)
+(define-fun IsProvidedByUnicef ((BOUND_VARIABLE_417 BoundSet)) Bool true)
+(define-fun IsAtSchool ((BOUND_VARIABLE_417 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_6 () UnboundSet)
+(define-fun IsMany ((BOUND_VARIABLE_452 BoundSet)) Bool true)
+(define-fun IsInSmallClassroom ((BOUND_VARIABLE_452 BoundSet)) Bool true)
+(define-fun IsProvidedByUnicef ((BOUND_VARIABLE_452 BoundSet)) Bool true)
+(define-fun IsAtSchool ((BOUND_VARIABLE_452 BoundSet)) Bool false)
+)

@@ -3,5 +3,5 @@
     "Implication": " \"Dirty water, dirty air, and insect-borne diseases are a far greater problem today for most people world-wide.\"",
     "Referring expressions": " Global warming, environmental threat  Dirty water, dirty air, insect-borne diseases, most people, world-wide",
     "Properties": " IsObvious(b),  IsTopEnvironmentalThreat(a)  IsInsectBorne(e),  IsFarGreater(d),  IsForMostPeople(f),  IsWorldWide(g)",
-    "Formula": "(exists b (exists a (IsObvious(b) and IsTopEnvironmentalThreat(a))) & (forall h (forall i (  IsFarGreater(h) ->  IsObvious(i))))) -> (exists f (exists e (exists g (exists d ((IsInsectBorne(e) and IsFarGreater(d)) and (IsForMostPeople(f) and IsWorldWide(g)))))))"
+    "Formula": "(exists a (exists b (IsObvious(b) and IsTopEnvironmentalThreat(a))) & (forall h (forall i (  IsFarGreater(h) ->  IsObvious(i))))) -> (exists e (exists d (exists f (exists g ((IsInsectBorne(e) and IsFarGreater(d)) and (IsForMostPeople(f) and IsWorldWide(g)))))))"
 }

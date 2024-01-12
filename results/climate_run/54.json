@@ -3,5 +3,5 @@
     "Implication": " \"The evidence doesn't support the idea that global warming is unusual or a problem.\"",
     "Referring expressions": " There are, 80 graphs, global warming, scare, overdone.  The evidence, global warming, idea, problem",
     "Properties": " Is80(c),  IsGlobalWarming(a),  IsScare(d),  IsOverdone(e)  IsInGlobalWarming(a),  IsUnusual(g),  IsProblem(a)",
-    "Formula": "(exists e (exists d (exists c (exists a (Is80(c) and (IsGlobalWarming(a) and IsScare(d)) and IsOverdone(e))))) & (forall i (  IsGlobalWarming(i) ->  IsInGlobalWarming(i))) & (forall j ( IsInGlobalWarming(j) ->   IsGlobalWarming(j))) & (forall k (  IsGlobalWarming(k) ->   IsProblem(k)))) -> (exists g (exists a (IsInGlobalWarming(a) and ~IsUnusual(g) and ~IsProblem(a))))"
+    "Formula": "(exists e (exists c (exists d (exists a (Is80(c) and (IsGlobalWarming(a) and IsScare(d)) and IsOverdone(e))))) & (forall i (  IsGlobalWarming(i) ->  IsInGlobalWarming(i))) & (forall j ( IsInGlobalWarming(j) ->   IsGlobalWarming(j))) & (forall k (  IsGlobalWarming(k) ->   IsProblem(k)))) -> (exists a (exists g (IsInGlobalWarming(a) and ~IsUnusual(g) and ~IsProblem(a))))"
 }

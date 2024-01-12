@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The mechanic is wearing an orange jumpsuit while working on the train.\"",
+    "Implication": " \"The mechanic is working on the train.\"",
+    "Referring expressions": " The mechanic, orange jumpsuit, train  The mechanic, train",
+    "Properties": " IsWearing(a,c),  IsOnTrain(b)  IsWorking(a),  IsOnTrain(b)",
+    "Formula": "(exists c (exists a (exists b (IsWearing(a,c) and IsOnTrain(b)))) & (forall e (forall d ( IsWearing(d,e) ->  IsWorking(d))))) -> (exists a (exists b (IsWorking(a) and IsOnTrain(b))))"
+}

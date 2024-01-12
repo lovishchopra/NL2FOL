@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Scientists suspect smallpox and the bubonic plague are trapped in Siberian ice.\"",
+    "Implication": " \"Human sickness has a long history of devastating people.\"",
+    "Referring expressions": " Scientists, smallpox, bubonic plague, Siberian ice.  Human sickness, people",
+    "Properties": " IsSuspected(a),  IsTrappedIn(d)  IsHuman(e),  HasDevastated(f)",
+    "Formula": "(exists a (exists b (exists d (IsSuspected(a) and IsTrappedIn(d,b))))) -> (exists e (exists f (IsHuman(e) and HasDevastated(f))))"
+}

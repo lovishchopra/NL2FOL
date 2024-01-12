@@ -3,5 +3,5 @@
     "Implication": " \"Science is a religion.\"",
     "Referring expressions": " proponents, man-made climate change theories, arrogant, zealous  Science, religion",
     "Properties": " IsArrogant(a),  IsZealous(d)  IsReligion(f)",
-    "Formula": "(exists d (exists a ((IsArrogant(a) and IsZealous(d))))) -> (exists f (IsReligion(f)))"
+    "Formula": "(exists a (exists d ((IsArrogant(a) and IsZealous(d))))) -> (exists f (IsReligion(f)))"
 }

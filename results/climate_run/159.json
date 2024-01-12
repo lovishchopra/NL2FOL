@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Three casually-dressed young men walk together.\"",
+    "Implication": " \"Three young men walk.\"",
+    "Referring expressions": " Three casually-dressed young men  Three young men",
+    "Properties": " IsCasuallyDressed(a),  WalkTogether(a)  IsWalk(b)",
+    "Formula": "(exists a (IsCasuallyDressed(a) and WalkTogether(a)) & (forall c (forall d ( IsWalk(c) ->  IsCasuallyDressed(d)))) & (forall e (forall f (  WalkTogether(e) ->  IsWalk(f)))) & (forall h (forall g ( IsWalk(g) ->   WalkTogether(h))))) -> (exists b (IsWalk(b)))"
+}

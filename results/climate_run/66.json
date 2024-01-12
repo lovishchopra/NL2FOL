@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Mr. Tuckman said the predictions are real.\"",
+    "Implication": " \"We have to be prepared for the worst.\"",
+    "Referring expressions": " Mr. Tuckman, predictions  We, worst",
+    "Properties": " IsPredictions(b)  IsWorst(d)",
+    "Formula": "(exists b (IsPredictions(b))) -> (exists c (exists d (IsWorst(d) and (IsPrepared(c) or IsBad(d)))))"
+}

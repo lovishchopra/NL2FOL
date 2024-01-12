@@ -3,5 +3,5 @@
     "Implication": " \"The global warming we are currently undergoing is unparalleled within the last 100 million years and far worse than we had previously calculated.\"",
     "Referring expressions": " The oceans, hundreds of millions of years ago  global warming, we, last 100 million years, previously calculated.",
     "Properties": " IsCooler(a),  IsInHundredsOfMillionsOfYearsAgo(b)  IsUnparalleled(c),  IsWithinLast100MillionYears(e),  IsWorseThanPreviouslyCalculated(f)",
-    "Formula": "(exists b (exists a (IsCooler(a) and IsInHundredsOfMillionsOfYearsAgo(b))) & (forall g (forall h (  IsWithinLast100MillionYears(g) ->   IsInHundredsOfMillionsOfYearsAgo(h))))) -> (exists f (exists e (exists c (IsUnparalleled(c) and (IsWithinLast100MillionYears(e) and IsWorseThanPreviouslyCalculated(f))))))"
+    "Formula": "(exists a (exists b (IsCooler(a) and IsInHundredsOfMillionsOfYearsAgo(b))) & (forall h (forall g (  IsWithinLast100MillionYears(g) ->   IsInHundredsOfMillionsOfYearsAgo(h))))) -> (exists e (exists c (exists f (IsUnparalleled(c) and (IsWithinLast100MillionYears(e) and IsWorseThanPreviouslyCalculated(f))))))"
 }

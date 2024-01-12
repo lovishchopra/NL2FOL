@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A crowded dock has people on it.\"",
+    "Implication": " \"A crowded dock has people standing next to a freight car.\"",
+    "Referring expressions": " A crowded dock, people  A crowded dock, people, freight car",
+    "Properties": " IsCrowded(a),  HasPeople(a)  IsStandingNextTo(a,b),  IsOnFreightCar(a)",
+    "Formula": "(exists a (IsCrowded(a) and HasPeople(a)) & (forall e (forall d ( IsStandingNextTo(d,e) ->   HasPeople(d))))) -> (exists a (exists b (IsStandingNextTo(a,b) and IsOnFreightCar(a))))"
+}

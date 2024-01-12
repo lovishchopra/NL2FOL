@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Two women are outdoors.\"",
+    "Implication": " \"Two women sit beside a black backpack on a stone bench beside a dusty trail.\"",
+    "Referring expressions": " Two women  Two women, black backpack, stone bench, dusty trail",
+    "Properties": " IsOutdoors(a)  IsSitOn(a,b),  IsOnStoneBench(a,c),  IsOnDustyTrail(a,d)",
+    "Formula": "(exists a (exists b (IsOutdoors(a) and IsOutdoors(b))) & (forall e (forall f (  IsOnStoneBench(e,f) ->  IsOutdoors(e)))) & (forall h (forall g (  IsOnDustyTrail(g,h) ->  IsOutdoors(g))))) -> (exists c (exists a (exists b (exists d (IsSitOn(a,b) and IsOnStoneBench(a,c) and IsOnDustyTrail(a,d))))))"
+}

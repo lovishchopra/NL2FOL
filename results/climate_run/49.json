@@ -3,5 +3,5 @@
     "Implication": " \"Unprecedented changes are required to limit global warming to 1.5 degree C.\"",
     "Referring expressions": " global warming, 1.5 degree C, laws of chemistry and physics.  Unprecedented changes, global warming, 1.5 degree C.",
     "Properties": " IsWithinLawsOfChemistryAndPhysics(b)  IsRequired(a),  IsWithinLawsOfChemistryAndPhysics(b)",
-    "Formula": "(exists b (IsWithinLawsOfChemistryAndPhysics(b))) -> (exists b (exists a (IsRequired(a) and IsWithinLawsOfChemistryAndPhysics(b))))"
+    "Formula": "(exists b (IsWithinLawsOfChemistryAndPhysics(b))) -> (exists a (exists b (IsRequired(a) and IsWithinLawsOfChemistryAndPhysics(b))))"
 }

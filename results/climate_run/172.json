@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man is digging a hole on the beach.\"",
+    "Implication": " \"A man is digging a hole on the beach while wearing a black tank top.\"",
+    "Referring expressions": " Man, hole, beach  Man, hole, beach, black tank top",
+    "Properties": " IsDigging(a),  IsOnBeach(b)  IsWearing(d),  IsDigging(a)",
+    "Formula": "(exists a (exists b (IsDigging(a) and IsOnBeach(b)))) -> (exists d (exists a (IsWearing(d) and IsDigging(a))))"
+}

@@ -1,0 +1,7 @@
+{
+    "Claim": " \"People are doing things on the street.\"",
+    "Implication": " \"People are going about their business at the corner of 5th Avenue and W 58th streets.\"",
+    "Referring expressions": " People, street  People, their business, 5th Avenue, W 58th streets.",
+    "Properties": " IsDoingThings(a)  IsGoingAboutTheirBusiness(a),  IsAt(d,e)",
+    "Formula": "(exists a (exists b (IsDoingThings(a) and IsOnTheStreet(b))) & (forall f ( IsDoingThings(f) ->  IsGoingAboutTheirBusiness(f))) & (forall g ( IsGoingAboutTheirBusiness(g) ->  IsDoingThings(g)))) -> (exists e (exists d (exists a (IsAt(d,e) and IsGoingAboutTheirBusiness(a)))))"
+}

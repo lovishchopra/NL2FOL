@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Our current trajectory leads to a largely uninhabitable Earth.\"",
+    "Implication": " \"The breakdown of nations and the international order is imminent.\"",
+    "Referring expressions": " Our current trajectory, Earth  Nations, international order",
+    "Properties": " IsInhabitable(b)  IsBreakingDown(c),  IsImminent(d)",
+    "Formula": "(exists a (exists b (IsInhabitable(b) and ~IsCurrentTrajectory(a)))) -> (exists c (exists d (IsBreakingDown(c) and IsImminent(d))))"
+}

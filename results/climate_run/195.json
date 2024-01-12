@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Woman looks through telescope.\"",
+    "Implication": " \"Woman uses telescope.\"",
+    "Referring expressions": " Woman, telescope  Woman, telescope",
+    "Properties": " IsLookingThrough(a),  IsTelescope(b)  IsUsed(a),  IsTelescope(b)",
+    "Formula": "(exists a (exists b (IsLookingThrough(a) and IsTelescope(b)))) -> (exists a (exists b (IsUsed(a) and IsTelescope(b))))"
+}

@@ -3,5 +3,5 @@
     "Implication": " \"The island nation has chronic government corruption, chronic domestic violence, child abuse, sex trafficking, and lack of legal provisions protecting worker's rights.\"",
     "Referring expressions": " U.S. State Department, island nation. ",
     "Properties": " IsSignificant(a),  ExistsIn(b)  IsChronic(c),  HasGovernmentCorruption(c),  HasDomesticViolence(c),  HasChildAbuse(c),  HasSexTrafficking(c),  LacksLegalProvisionsProtectingWorkerRights(c)",
-    "Formula": "(exists b (exists a (IsSignificant(a) and ExistsIn(b)))) -> (exists c ((IsChronic(c) and HasGovernmentCorruption(c)) or (HasDomesticViolence(c) and HasChildAbuse(c)) or (HasSexTrafficking(c) and LacksLegalProvisionsProtectingWorkerRights(c))))"
+    "Formula": "(exists a (exists b (IsSignificant(a) and ExistsIn(b)))) -> (exists c ((IsChronic(c) and HasGovernmentCorruption(c)) or (HasDomesticViolence(c) and HasChildAbuse(c)) or (HasSexTrafficking(c) and LacksLegalProvisionsProtectingWorkerRights(c))))"
 }

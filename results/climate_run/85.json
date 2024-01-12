@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Global warming activists claimed 2015 was the warmest year on record.\"",
+    "Implication": " \"Global warming is real.\"",
+    "Referring expressions": " Global warming activists, 2015, record.  Global warming",
+    "Properties": " IsClaimedBy(a,b),  IsOnRecord(b)  IsReal(d)",
+    "Formula": "(exists a (exists b (IsClaimedBy(a,b) and IsOnRecord(b)))) -> (exists d (IsReal(d)))"
+}

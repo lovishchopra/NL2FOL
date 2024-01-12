@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Ignoring history and geology can make any claim of unusual weather sensational.\"",
+    "Implication": " \"Any claim of unusual weather can be made sensational by ignoring history and geology.\"",
+    "Referring expressions": " history, geology, unusual weather, sensational.  Any claim, unusual weather, sensational, history, geology.",
+    "Properties": " IsIgnored(a),  IsUnusualWeather(b),  IsSensational(d)  IsAnyClaim(e),  IsUnusualWeather(b),  IsSensational(f),  IsIgnored(a),  IsIgnored(g)",
+    "Formula": "(exists a (exists b (exists d ((IsIgnored(a) and IsUnusualWeather(b)) and IsSensational(d))))) -> (exists e (exists a (exists f (exists b (IsAnyClaim(e) and (IsUnusualWeather(b) and IsIgnored(a)) and IsSensational(f))))))"
+}

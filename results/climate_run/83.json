@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Alarmists claim that thriving forests are harmful.\"",
+    "Implication": " \"Global warming is severely harmful.\"",
+    "Referring expressions": " Alarmists, thriving forests, harmful.  Global warming",
+    "Properties": " IsAlarmist(a),  IsThriving(b),  IsHarmful(c)  IsSeverelyHarmful(d)",
+    "Formula": "(exists c (exists a (IsAlarmist(a) and IsHarmful(c))) & (forall e (forall f ( IsSeverelyHarmful(e) ->   IsHarmful(f))))) -> (exists d (IsSeverelyHarmful(d)))"
+}

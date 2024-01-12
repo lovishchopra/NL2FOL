@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Most of the bubbles are dissolving in the water.\"",
+    "Implication": " \"Methane levels at the surface are four to eight times what would normally be expected and this is venting into the atmosphere.\"",
+    "Referring expressions": " Most of the bubbles, water  Methane levels, surface, atmosphere",
+    "Properties": " IsDissolving(a)  IsFourToEightTimes(c),  IsVenting(d)",
+    "Formula": "( Most of the bubbles are dissolving in the water.) -> (exists c (exists d (IsFourToEightTimes(c) and IsVenting(d))))"
+}

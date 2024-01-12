@@ -1,0 +1,7 @@
+{
+    "Claim": " \"All young people are wearing red shirts.\"",
+    "Implication": " \"People are carrying something.\"",
+    "Referring expressions": " young people, red shirts  People, something",
+    "Properties": " IsYoung(a),  IsWearingRedShirt(b)  IsCarrying(c,d)",
+    "Formula": "(exists a (exists b (IsYoung(a) and IsWearingRedShirt(b))) & (forall e (forall f (forall g ( IsYoung(e) ->  IsCarrying(f,g))))) & (forall j (forall h (forall i ( IsCarrying(h,i) ->  IsYoung(j)))))) -> (exists c (exists d (IsCarrying(c,d))))"
+}

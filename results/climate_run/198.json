@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A surfer rides a wave.\"",
+    "Implication": " \"There is a person outdoors.\"",
+    "Referring expressions": " A surfer, wave  person, outdoors",
+    "Properties": " IsRides(a,b)  IsOutdoors(d)",
+    "Formula": "(exists a (exists b (IsRides(a,b))) & (forall e (forall f (forall g ( IsRides(e,f) ->  IsOutdoors(g)))))) -> (exists d (IsOutdoors(d)))"
+}

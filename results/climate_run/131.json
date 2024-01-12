@@ -1,0 +1,7 @@
+{
+    "Claim": " \"Red is on ice.\"",
+    "Implication": " \"People are on ice.\"",
+    "Referring expressions": " Red, ice  People, ice.",
+    "Properties": " IsOnIce(a)  IsOnIce(c)",
+    "Formula": "(exists b (IsOnIce(b))) -> (exists c (IsOnIce(c)))"
+}

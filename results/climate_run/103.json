@@ -1,0 +1,7 @@
+{
+    "Claim": " \"The little kids sit outdoors.\"",
+    "Implication": " \"The little kids sit outdoors.\"",
+    "Referring expressions": " little kids, outdoors  little kids, outdoors",
+    "Properties": " IsLittle(a),  IsOutdoors(b)  IsLittle(a),  IsOutdoors(b)",
+    "Formula": "(exists a (exists b (IsLittle(a) and IsOutdoors(b)))) -> (exists a (exists b (IsLittle(a) and IsOutdoors(b))))"
+}

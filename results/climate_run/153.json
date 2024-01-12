@@ -1,0 +1,7 @@
+{
+    "Claim": " \"A man in a blue shirt smokes a cigarette.\"",
+    "Implication": " \"A man in blue smokes a cigarette.\"",
+    "Referring expressions": " A man, blue shirt, cigarette  A man in blue, cigarette",
+    "Properties": " IsSmokes(a),  IsInBlueShirt(b)  IsInBlue(d),  IsSmokes(a)",
+    "Formula": "(exists a (exists b (IsSmokes(a) and IsInBlueShirt(b))) & (forall e (forall f (  IsInBlueShirt(e) ->  IsInBlue(f)))) & (forall h (forall g ( IsInBlue(g) ->   IsInBlueShirt(h))))) -> (exists d (exists a (IsInBlue(d) and IsSmokes(a))))"
+}

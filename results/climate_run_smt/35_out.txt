@@ -1,0 +1,32 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_4 () UnboundSet)
+(define-fun IsHonoredByNASA ((BOUND_VARIABLE_485 BoundSet)) Bool true)
+(define-fun HasAchievement ((BOUND_VARIABLE_485 BoundSet)) Bool (= @uc_BoundSet_1 BOUND_VARIABLE_485))
+(define-fun IsInHouseScienceCommittee ((BOUND_VARIABLE_485 BoundSet)) Bool false)
+(define-fun IsInMarch2017 ((BOUND_VARIABLE_485 BoundSet)) Bool false)
+(define-fun IsTold ((BOUND_VARIABLE_485 BoundSet)) Bool false)
+(define-fun AreFailed ((BOUND_VARIABLE_485 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_9 () UnboundSet)
+(define-fun IsHonoredByNASA ((BOUND_VARIABLE_552 BoundSet)) Bool true)
+(define-fun HasAchievement ((BOUND_VARIABLE_552 BoundSet)) Bool true)
+(define-fun IsInHouseScienceCommittee ((BOUND_VARIABLE_552 BoundSet)) Bool false)
+(define-fun IsInMarch2017 ((BOUND_VARIABLE_552 BoundSet)) Bool false)
+(define-fun IsTold ((BOUND_VARIABLE_552 BoundSet)) Bool false)
+(define-fun AreFailed ((BOUND_VARIABLE_552 BoundSet)) Bool false)
+)

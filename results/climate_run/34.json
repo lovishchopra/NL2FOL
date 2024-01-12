@@ -3,5 +3,5 @@
     "Implication": " \"The entire ecosystem is affected.\"",
     "Referring expressions": " The ice sheet, alarming rate  entire ecosystem",
     "Properties": " IsMelting(a),  IsAlarming(b)  IsAffected(c)",
-    "Formula": "(exists b (exists a (IsMelting(a) and IsAlarming(b)))) -> (exists c (IsAffected(c)))"
+    "Formula": "(exists a (exists b (IsMelting(a) and IsAlarming(b)))) -> (exists c (IsAffected(c)))"
 }
