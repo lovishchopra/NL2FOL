@@ -7,7 +7,10 @@ import ast
 from helpers import *
 import json
 from openai import OpenAI
-client = OpenAI()
+client = OpenAI(
+    # This is the default and can be omitted
+    api_key="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"
+)
 class NL2FOL:
     """
     Class to convert natural language to first-order logical expression
@@ -56,7 +59,7 @@ class NL2FOL:
                 {"role": "user", "content": "prompt"}
             ]
             )
-            return completion.choices[0].message
+            return completion.choices[0].message.content
 
             
 
@@ -363,7 +366,7 @@ def setup_dataset(fallacy_set='logic',length=100):
 if __name__ == '__main__':
     # model = "meta-llama/Llama-2-7b-chat-hf"
     model_type='gpt3.5'
-    fallacy_set='nli'
+    fallacy_set=''
     run_name='gpt3.5_logic_run'
     length=100
     # nli_tokenizer = AutoTokenizer.from_pretrained('facebook/bart-large-mnli')

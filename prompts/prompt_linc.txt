@@ -1,0 +1,29 @@
+Given a sentence, convert the sentence into a first order logical form.  Use -> to represent implies, & to represent and, | to represent or and ~ to represent negations. 
+ 
+Example 1:  
+ 
+Input Sentence: I met a tall man who loved to eat cheese. Now I believe that all tall people like cheese.
+ 
+Logical Form: (exists a IsTall(a) & LovesCheese(a)) -> (forall b IsTall(b) & LikesCheese(b)) & (forall c LovesCheese(c) -> LikesCheese(c)) & (forall d LikesCheese(d) -> LovesCheese(d)) 
+ 
+Example 2: 
+ 
+Input Sentence: "What can our new math teacher know? Have you seen how fat she is?"   
+
+Logical Form: (IsFat(a) -> DoesntKnowAnything(a))
+ 
+Example 3: 
+ 
+Input Sentence: "A person on a horse jumps over a broken down airplane. Therefore, a person is outdoors, on a horse." 
+
+Logical Form: (exists a (IsOnHorse(a) & JumpsOverBrokenAirplane(a))) -> ()
+
+Example 4:
+
+Input Sentence: "A bald man is touching another person."
+
+Referring expressions:
+
+Properties: A bald man: a, another person: b
+
+LogicalForm: IsBald(a) & IsTouching(a,b)

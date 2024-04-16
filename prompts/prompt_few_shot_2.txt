@@ -1,7 +1,3 @@
-Logical fallacies are common errors in reasoning that undermine the logic of an argument.
-
-A sentence is logically valid if and only if it is not possible for it to be false
-
 Here are some examples of classifying sentences as logical fallacies or valid sentences. 
 
 Input: "I met a tall man who loved to eat cheese, now I believe all tall people like cheese 
@@ -16,12 +12,8 @@ Answer: Valid
 Input: Children smiling and waving at camera. This implies that there are children present
 Answer: Valid
 
-Input: "I don’t care what scientists say, my mother always told me that the world is flat, and she would never lie to me!"
-Answer: Logical Fallacy
-
-Input: A boy is jumping on skateboard in the middle of a red bridge. Therefore, the boy does a skateboarding trick.
-Answer: Valid
-
 Now, classify the following sentence. Answer with either "Logical Fallacy" or "Valid" at the start of your answer.
+
+Explain your answer step-by-step.
 
 Input: 

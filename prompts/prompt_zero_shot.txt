@@ -1,0 +1,9 @@
+Logical fallacies are common errors in reasoning that undermine the logic of an argument.
+
+A sentence is logically valid if and only if it is not possible for it to be false
+
+Classifying the given sentence as a logical fallacies or valid sentences. 
+
+Now, classify the following sentence. Answer with either "Logical Fallacy" or "Valid" at the start of your answer.
+
+Input: 
