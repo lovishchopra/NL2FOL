@@ -364,20 +364,16 @@ def setup_dataset(fallacy_set='logic',length=100):
     return df
 
 if __name__ == '__main__':
-    # model = "meta-llama/Llama-2-7b-chat-hf"
-    model_type='gpt3.5'
-    fallacy_set=''
-    run_name='gpt3.5_logic_run'
-    length=100
-    # nli_tokenizer = AutoTokenizer.from_pretrained('facebook/bart-large-mnli')
-    # nli_model = AutoModelForSequenceClassification.from_pretrained('facebook/bart-large-mnli'
-    # pipeline = transformers.pipeline(
-    #     "text-generation",
-    #     model=model,
-    #     torch_dtype=torch.float16,
-    #     max_length=1024,
-    #     device_map="auto",
-    # )
+    model = "meta-llama/Llama-2-7b-chat-hf"
+    nli_tokenizer = AutoTokenizer.from_pretrained('facebook/bart-large-mnli')
+    nli_model = AutoModelForSequenceClassification.from_pretrained('facebook/bart-large-mnli'
+    pipeline = transformers.pipeline(
+        "text-generation",
+        model=model,
+        torch_dtype=torch.float16,
+        max_length=1024,
+        device_map="auto",
+    )
     df=setup_dataset(fallacy_set='logic',length=length)
     final_lfs=[]
     final_lfs2=[]
