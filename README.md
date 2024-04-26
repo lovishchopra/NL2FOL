@@ -1,4 +1,6 @@
-# NL2FOL: Translating Natural Language to First Order Logic for Logical Fallacy Detection
+# NL2FOL: Translating Natural Language to First Order Logic for Logical Fallacy Detection 
+
+[Paper](https://drive.google.com/file/d/16ZvnYwbNfGO-LctbT7u9gA4dq1SfGlrQ/view?usp=sharing)
 
 Necessary packages to run the code:
 - transformers
