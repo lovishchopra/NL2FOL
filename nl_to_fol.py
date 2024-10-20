@@ -1,21 +1,20 @@
+#!/share/software/user/open/python/3.9.0/bin/python3
+
 from cvc import CVCGenerator
 import pandas as pd
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import transformers
-# import torch
+import torch
 import ast
 from helpers import *
 import json
 from openai import OpenAI
-client = OpenAI(
-    # This is the default and can be omitted
-    api_key="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"
-)
+import argparse
 class NL2FOL:
     """
     Class to convert natural language to first-order logical expression
     """
-    def __init__(self, sentence, model_type, pipeline=None, tokenizer=None, nli_model=None, nli_tokenizer=None, debug=False):
+    def __init__(self, sentence, model_type, pipeline, tokenizer, nli_model, nli_tokenizer, debug=False):
         self.sentence = sentence
         if not isinstance(self.sentence, str):
             self.sentence = ""
@@ -66,7 +65,6 @@ class NL2FOL:
     def extract_claim_and_implication(self):
         with open("prompts/prompt_nl_to_ci.txt", encoding="ascii", errors="ignore") as f:
             prompt = f.read() + self.sentence
-        
         result = self.get_llm_result(prompt)
 
         for line in result.split("\n"):
@@ -359,14 +357,37 @@ def setup_dataset(fallacy_set='logic',length=100):
     df_valids=df_valids[['sentence','label']]
     df_valids=df_valids.sample(length,random_state=113)
     df = pd.concat([df_fallacies, df_valids])
+    df = df.reset_index(drop=True)
     df['articles'] = df['source_article'].combine_first(df['sentence'])
     df = df.drop(['source_article', 'sentence'], axis=1)
     return df
 
 if __name__ == '__main__':
-    model = "meta-llama/Llama-2-7b-chat-hf"
-    nli_tokenizer = AutoTokenizer.from_pretrained('facebook/bart-large-mnli')
-    nli_model = AutoModelForSequenceClassification.from_pretrained('facebook/bart-large-mnli'
+    if torch.cuda.is_available():
+        print("CUDA is available. GPUs are accessible.")
+        num_gpus = torch.cuda.device_count()
+        print(f"Number of GPUs available: {num_gpus}")
+        for i in range(num_gpus):
+            gpu_name = torch.cuda.get_device_name(i)
+            compute_capability = torch.cuda.get_device_capability(i)
+            total_memory = torch.cuda.get_device_properties(i).total_memory / (1024 ** 3)
+            print(f"Name: {gpu_name}")
+            print(f"Compute Capability: {compute_capability}")
+            print(f"Total Memory: {total_memory:.2f} GB")
+            print(f"Memory Allocated: {torch.cuda.memory_allocated(i) / (1024 ** 2):.2f} MB")
+            print(f"Memory Reserved: {torch.cuda.memory_reserved(i) / (1024 ** 2):.2f} MB")
+    parser = argparse.ArgumentParser(description="Run text generation and logic conversion pipeline")
+    parser.add_argument('--model_name', type=str, required=True, help="Model name for text generation pipeline")
+    parser.add_argument('--nli_model_name', type=str, required=True, help="Model name for NLI")
+    parser.add_argument('--run_name', type=str, required=True, help="Run name for saving results")
+    parser.add_argument('--length', type=int, required=True, help="Length for dataset setup")
+    args = parser.parse_args()
+    # Initialize models and tokenizers
+    model = args.model_name
+    tokenizer = AutoTokenizer.from_pretrained(args.model_name)
+    nli_tokenizer = AutoTokenizer.from_pretrained(args.nli_model_name)
+    nli_model = AutoModelForSequenceClassification.from_pretrained(args.nli_model_name)
+
     pipeline = transformers.pipeline(
         "text-generation",
         model=model,
@@ -374,30 +395,31 @@ if __name__ == '__main__':
         max_length=1024,
         device_map="auto",
     )
-    df=setup_dataset(fallacy_set='logic',length=length)
+    # Setup dataset
+    df = setup_dataset(fallacy_set='logic', length=args.length)
+    df.to_csv('dataset.csv', index=False)
     final_lfs=[]
     final_lfs2=[]
     count=0
     for i,row in df.iterrows():
         print(count)
-        # nl2fol=NL2FOL(row['articles'],pipeline,tokenizer,nli_model,nli_tokenizer,debug=True)
-        nl2fol=NL2FOL(row['articles'],model_type='gpt3.5',debug=True)
+        nl2fol=NL2FOL(row['articles'],'llama',pipeline,tokenizer,nli_model,nli_tokenizer,debug=True)
         nl2fol.convert_to_first_order_logic()
         final_lfs.append(nl2fol.final_lf)
         final_lfs2.append(nl2fol.final_lf2)
-        results_dict={}
-        results_dict['Claim']=nl2fol.claim
-        results_dict['Implication']=nl2fol.implication
-        results_dict['Referring expressions']=nl2fol.claim_ref_exp+" "+nl2fol.implication_ref_exp
-        results_dict['Properties']=nl2fol.claim_properties+" "+nl2fol.implication_properties
-        results_dict['Formula']=nl2fol.final_lf2
-        json_object = json.dumps(results_dict, indent=4)
-        with open("results/{}/{}.json".format(run_name,count), "w") as outfile:
-            outfile.write(json_object)
-        count=count+1
+    #     results_dict={}
+    #     results_dict['Claim']=nl2fol.claim
+    #     results_dict['Implication']=nl2fol.implication
+    #     results_dict['Referring expressions']=nl2fol.claim_ref_exp+" "+nl2fol.implication_ref_exp
+    #     results_dict['Properties']=nl2fol.claim_properties+" "+nl2fol.implication_properties
+    #     results_dict['Formula']=nl2fol.final_lf2
+    #     json_object = json.dumps(results_dict, indent=4)
+    #     with open("results/{}/{}.json".format(run_name,count), "w") as outfile:
+    #         outfile.write(json_object)
+    #     count=count+1
     df['Logical Form']=final_lfs
     df['Logical Form 2']=final_lfs2
-    df.to_csv(f'results/{run_name}.csv',index=False)
+    df.to_csv(f'results/{args.run_name}.csv',index=False)
 
 
     

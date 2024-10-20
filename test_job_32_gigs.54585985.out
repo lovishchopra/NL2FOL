@@ -1,0 +1,43 @@
+Python 3.9.0
+CUDA is available. GPUs are accessible.
+Number of GPUs available: 1
+Name: Tesla V100S-PCIE-32GB
+Compute Capability: (7, 0)
+Total Memory: 31.73 GB
+Memory Allocated: 0.00 MB
+Memory Reserved: 0.00 MB
+called
+0
+Claim:   "Giving 10% of your income to the Church will free a child's soul from Limbo into Heaven."
+Implication:   "You should give your money to the Church."
+Referring Expressions, Claim:  Your income, church, child's soul, limbo, heaven
+Referring Expressions, Implication:  Your money, church
+Subset entities:  [(' Your money', ' Your income'), (' heaven', ' church')]
+Equal entities:  [(' church', ' church')]
+Mappings:  {' church': 'a', ' Your income': 'b', " child's soul": 'c', ' limbo': 'd', ' heaven': 'e', ' Your money': 'f'}
+Claim Properties:   IsGiven(b,a),  IsInLimbo(c),  IsInHeaven(c)
+Implication Proeprties   IsGiven(f,a)
+property implications:  []
+Claim Lf:  (IsGiven(b,a) & IsInLimbo(c)) -> IsInHeaven(e)
+Impliation Lf:  IsGiven(f,a)
+Updated Claim Lf=  (IsGiven(b,a) and IsInLimbo(c)) and IsInHeaven(e)
+Updated Implication Lf= IsGiven(f,a)
+Final Lf=  (exists e (forall b ((IsGiven(b,a) and IsInLimbo(c)) and IsInHeaven(e)))) -> (forall a (exists f (IsGiven(f,a))))
+Final Lf2=  (exists e (exists b (exists c (exists a ((IsGiven(b,a) and IsInLimbo(c)) and IsInHeaven(e)))))) -> (exists f (exists a (IsGiven(f,a))))
+0
+Claim:   "Coach talks with football player"
+Implication:   "A football coach talks with his player in front of the team and the crowd."
+Referring Expressions, Claim:  Coach, football player
+Referring Expressions, Implication: 
+Subset entities:  [(' Coach', '')]
+Equal entities:  []
+Mappings:  {' Coach': 'a', ' football player': 'b', '': 'c'}
+Claim Properties:   IsTalkWith(a,b)
+Implication Proeprties   IsTalkWith(a,b),  IsInFrontOfTeam(c),  IsInCrowd(c)
+property implications:  [(' IsTalkWith(a,b)', '  IsInFrontOfTeam(c)')]
+Claim Lf:  IsTalkWith(a,b)
+Impliation Lf:  IsTalkWith(a,b) & IsInFrontOfTeam(c) & IsInCrowd(c)
+Updated Claim Lf=  IsTalkWith(a,b)
+Updated Implication Lf= IsTalkWith(a,b) and IsInFrontOfTeam(c) and IsInCrowd(c)
+Final Lf=  (exists a (IsTalkWith(a,b)) & (forall b (forall c (forall a ( IsTalkWith(a,b) ->   IsInFrontOfTeam(c)))))) -> (forall c (IsTalkWith(a,b) and IsInFrontOfTeam(c) and IsInCrowd(c)))
+Final Lf2=  (exists b (exists a (IsTalkWith(a,b))) & (forall d (forall f (forall e ( IsTalkWith(d,e) ->   IsInFrontOfTeam(f)))))) -> (exists b (exists c (exists a (IsTalkWith(a,b) and IsInFrontOfTeam(c) and IsInCrowd(c)))))

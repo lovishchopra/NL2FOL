@@ -1,0 +1,64 @@
+/home/groups/trippel/python/lib/python3.9/site-packages/urllib3/__init__.py:34: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 3.2.1'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/home/groups/trippel/python/lib/python3.9/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/home/groups/trippel/python/lib/python3.9/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/huggingface_hub/utils/_errors.py", line 304, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/transformers/utils/hub.py", line 398, in cached_file
+    resolved_file = hf_hub_download(
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 1221, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 1325, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 1823, in _raise_on_head_call_error
+    raise head_call_error
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 1722, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(url=url, proxies=proxies, timeout=etag_timeout, headers=headers)
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 1645, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 372, in _request_wrapper
+    response = _request_wrapper(
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/huggingface_hub/file_download.py", line 396, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/huggingface_hub/utils/_errors.py", line 321, in hf_raise_for_status
+    raise GatedRepoError(message, response) from e
+huggingface_hub.utils._errors.GatedRepoError: 403 Client Error. (Request ID: Root=1-6714a2c5-448b1f790f3c55bc0385d7d9;e4c0f0c6-8695-4544-8e19-246ccda6bfef)
+
+Cannot access gated repo for url https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/main/config.json.
+Access to model meta-llama/Llama-3.1-8B-Instruct is restricted and you are not in the authorized list. Visit https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct to ask for access.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/users/lalwani/NL2FOL/nl_to_fol.py", line 387, in <module>
+    tokenizer = AutoTokenizer.from_pretrained(args.model_name)
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/transformers/models/auto/tokenization_auto.py", line 782, in from_pretrained
+    config = AutoConfig.from_pretrained(
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/transformers/models/auto/configuration_auto.py", line 1111, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/transformers/configuration_utils.py", line 633, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/transformers/configuration_utils.py", line 688, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/transformers/utils/hub.py", line 416, in cached_file
+    raise EnvironmentError(
+OSError: You are trying to access a gated repo.
+Make sure to have access to it at https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct.
+403 Client Error. (Request ID: Root=1-6714a2c5-448b1f790f3c55bc0385d7d9;e4c0f0c6-8695-4544-8e19-246ccda6bfef)
+
+Cannot access gated repo for url https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/main/config.json.
+Access to model meta-llama/Llama-3.1-8B-Instruct is restricted and you are not in the authorized list. Visit https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct to ask for access.

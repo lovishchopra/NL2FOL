@@ -1,0 +1,23 @@
+/home/groups/trippel/python/lib/python3.9/site-packages/urllib3/__init__.py:34: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 3.2.1'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/home/groups/trippel/python/lib/python3.9/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/home/groups/trippel/python/lib/python3.9/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+/home/groups/trippel/python/lib/python3.9/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/users/lalwani/NL2FOL/nl_to_fol.py", line 391, in <module>
+    pipeline = transformers.pipeline(
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/transformers/pipelines/__init__.py", line 815, in pipeline
+    config = AutoConfig.from_pretrained(
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/transformers/models/auto/configuration_auto.py", line 1135, in from_pretrained
+    return config_class.from_dict(config_dict, **unused_kwargs)
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/transformers/configuration_utils.py", line 763, in from_dict
+    config = cls(**config_dict)
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/transformers/models/llama/configuration_llama.py", line 160, in __init__
+    self._rope_scaling_validation()
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/transformers/models/llama/configuration_llama.py", line 180, in _rope_scaling_validation
+    raise ValueError(
+ValueError: `rope_scaling` must be a dictionary with with two fields, `type` and `factor`, got {'factor': 8.0, 'low_freq_factor': 1.0, 'high_freq_factor': 4.0, 'original_max_position_embeddings': 8192, 'rope_type': 'llama3'}

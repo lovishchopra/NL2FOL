@@ -1,0 +1,26 @@
+/home/groups/trippel/python/lib/python3.9/site-packages/urllib3/__init__.py:34: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 3.2.1'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/home/groups/trippel/python/lib/python3.9/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/home/groups/trippel/python/lib/python3.9/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/groups/trippel/python/lib/python3.9/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]Downloading shards: 100%|██████████| 2/2 [00:00<00:00, 112.91it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [01:29<01:29, 89.50s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:59<00:00, 54.29s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:59<00:00, 59.57s/it]
+Traceback (most recent call last):
+  File "/home/users/lalwani/NL2FOL/nl_to_fol.py", line 385, in <module>
+    df = setup_dataset(fallacy_set='logic', length=args.length)
+  File "/home/users/lalwani/NL2FOL/nl_to_fol.py", line 361, in setup_dataset
+    df['articles'] = df['source_article'].combine_first(df['sentence'])
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/pandas/core/series.py", line 3411, in combine_first
+    this = this.reindex(keep_this, copy=False)
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/pandas/core/series.py", line 4981, in reindex
+    return super().reindex(
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/pandas/core/generic.py", line 5521, in reindex
+    return self._reindex_axes(
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/pandas/core/generic.py", line 5544, in _reindex_axes
+    new_index, indexer = ax.reindex(
+  File "/home/groups/trippel/python/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 4434, in reindex
+    raise ValueError("cannot reindex on an axis with duplicate labels")
+ValueError: cannot reindex on an axis with duplicate labels
