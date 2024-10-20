@@ -1,3 +1,0 @@
-  File "/home/users/lalwani/NL2FOL/nl_to_fol.py", line 47
-    if self.model_type=='llama':
-IndentationError: unexpected indent
