@@ -1,16 +1,19 @@
-from cvc import CVCGenerator
-import pandas as pd
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
-import transformers
-# import torch
 import ast
-from helpers import *
 import json
+import pandas as pd
+import torch
+import transformers
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
+
+from cvc import CVCGenerator
+from helpers import *
 from openai import OpenAI
+
 client = OpenAI(
     # This is the default and can be omitted
     api_key="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"
 )
+
 class NL2FOL:
     """
     Class to convert natural language to first-order logical expression
