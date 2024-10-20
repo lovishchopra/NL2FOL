@@ -366,7 +366,7 @@ def setup_dataset(fallacy_set='logic',length=100):
 if __name__ == '__main__':
     model = "meta-llama/Llama-2-7b-chat-hf"
     nli_tokenizer = AutoTokenizer.from_pretrained('facebook/bart-large-mnli')
-    nli_model = AutoModelForSequenceClassification.from_pretrained('facebook/bart-large-mnli'
+    nli_model = AutoModelForSequenceClassification.from_pretrained('facebook/bart-large-mnli')
     pipeline = transformers.pipeline(
         "text-generation",
         model=model,
