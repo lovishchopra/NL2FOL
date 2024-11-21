@@ -13,16 +13,13 @@ from helpers import *
 from openai import OpenAI
 import argparse
 
-client = OpenAI(
-    # This is the default and can be omitted
-    api_key="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"
-)
+client = OpenAI()
 
 class NL2FOL:
     """
     Class to convert natural language to first-order logical expression
     """
-    def __init__(self, sentence, model_type, pipeline, tokenizer, nli_model, nli_tokenizer, debug=False):
+    def __init__(self, sentence, model_type, pipeline, tokenizer, nli_model, nli_tokenizer, debug=False, direct = False):
         self.sentence = sentence
         if not isinstance(self.sentence, str):
             self.sentence = ""
@@ -46,35 +43,38 @@ class NL2FOL:
         self.final_lf = ""
         self.final_lf2 = ""
         self.debug = debug
+        self.direct = True
 
     def yield_data(data):
         for obj in data:
             yield obj
 
-    def get_llm_result(self, prompt):
-        if self.model_type=='llama':
+    def get_llm_result(self, prompt, model_type=None):
+        if(model_type==None):
+            model_type=self.model_type
+        if model_type=='llama':
             sequences = self.pipeline(prompt,
                 do_sample=False,
                 num_return_sequences=1,
                 eos_token_id=self.tokenizer.eos_token_id
             )
             return sequences[0]["generated_text"].removeprefix(prompt)
-        elif self.model_type=='gpt3.5':
+        elif model_type=='gpt':
             completion = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini",
             messages=[
-                {"role": "user", "content": "prompt"}
+                {"role": "user", "content": prompt}
             ]
             )
             return completion.choices[0].message.content
+        
 
-            
 
     def extract_claim_and_implication(self):
         with open("prompts/prompt_nl_to_ci.txt", encoding="ascii", errors="ignore") as f:
             prompt = f.read() + self.sentence
         result = self.get_llm_result(prompt)
-
+        # print("LLM Response: ", result)
         for line in result.split("\n"):
             if 'Claim' in line:
                 self.claim = line[line.find(':') + 1:]
@@ -114,6 +114,7 @@ class NL2FOL:
         "Properties: ".format(self.claim,label_values(self.claim_ref_exp,self.entity_mappings))
         prompt1=prompt+prompt_template
         self.claim_properties = first_non_empty_line(self.get_llm_result(prompt1))
+        print("Claim Properties: ", self.claim_properties)
         with open("prompts/prompt_properties2.txt", encoding="ascii", errors="ignore") as f:
             prompt = f.read()
         prompt_template="Input {}" \
@@ -125,6 +126,7 @@ class NL2FOL:
         "Properties: ".format(self.claim,label_values(self.claim_ref_exp,self.entity_mappings),self.claim_properties,self.implication,label_values(self.implication_ref_exp,self.entity_mappings))
         prompt1=prompt+prompt_template
         self.implication_properties = first_non_empty_line(self.get_llm_result(prompt1))
+        print("Implication Properties: ", self.claim_properties)
         self.claim_properties, self.implication_properties = fix_inconsistent_arities(split_string_except_in_brackets(self.claim_properties,','),split_string_except_in_brackets(self.implication_properties,','))
         if self.debug:
             print("Claim Properties: ", self.claim_properties)
@@ -141,14 +143,42 @@ class NL2FOL:
                 predicate2 = i_p.split('(')[0]
                 if(predicate1.strip()==predicate2.strip()):
                     continue
-                p=self.get_nli_prob(replace_variables(self.entity_mappings,c_p),replace_variables(self.entity_mappings,i_p))
-                p2=self.get_nli_prob(replace_variables(self.entity_mappings,i_p),replace_variables(self.entity_mappings,c_p))
-                if p>70:
-                    self.property_implications.append((c_p,i_p))
-                if p2>70:
-                    self.property_implications.append((i_p,c_p))
+                c_p_replaced = replace_variables(self.entity_mappings,c_p)
+                i_p_replaced = replace_variables(self.entity_mappings,i_p)
+                if self.model_type == 'llama':
+                    p=self.get_nli_prob(c_p_replaced,i_p_replaced)
+                    p2=self.get_nli_prob(i_p_replaced,c_p_replaced)
+                    if p>70:
+                        self.property_implications.append((c_p,i_p))
+                    if p2>70:
+                        self.property_implications.append((i_p,c_p))
+                else:
+                    c_p_replaced = replace_variables(self.entity_mappings,c_p)
+                    i_p_replaced = replace_variables(self.entity_mappings,i_p)
+                    if self.check_entailment(c_p_replaced, i_p_replaced):
+                        self.property_implications.append((c_p, i_p))
+                    # Check if i_p entails c_p
+                    if self.check_entailment(i_p_replaced, c_p_replaced):
+                        self.property_implications.append((i_p, c_p))
+
         if self.debug:
             print("property implications: ",self.property_implications)
+    
+    def check_entailment(self, clause1, clause2):
+        with open("prompts/prompt_prop_relation_context.txt", encoding="ascii", errors="ignore") as f:
+            prompt = f.read()
+        prompt_template="""
+        Input Sentence: {}
+        Clause 1: {}
+        Clause 2: {}
+        Answer: 
+        """.format(self.sentence, clause1, clause2)
+        prompt = prompt + prompt_template
+        response = self.get_llm_result(prompt, model_type='gpt')
+        print(f"Check Entailment response for {clause1} and {clause2}: {response}")
+        if response.startswith('E'):
+            return True
+        return False
         
     def get_fol(self):
         with open("prompts/prompt_fol.txt", encoding="ascii", errors="ignore") as f:
@@ -173,6 +203,17 @@ class NL2FOL:
         if self.debug:
             print("Claim Lf: ", self.claim_lf)
             print("Impliation Lf: ",self.implication_lf)
+    
+    def get_direct_fol(self):
+        with open("prompts/prompt_direct_fol.txt", encoding="ascii", errors="ignore") as f:
+            prompt = f.read()
+        prompt_template=" Input Sentence: {} ".format(self.sentence)
+        prompt1=prompt+prompt_template
+        result=first_non_empty_line(self.get_llm_result(prompt1))
+        result = result.replace('->','&')
+        result = result.replace('&','and')
+        result = result.replace('|','or')
+        
 
     def get_nli_prob(self, premise, hypothesis):
         input_ids = self.nli_tokenizer.encode(premise, hypothesis, return_tensors='pt')
@@ -198,20 +239,33 @@ class NL2FOL:
                 if c_re.strip().lower() == i_re.strip().lower():
                     self.equal_entities.append((c_re,i_re))
                     continue
-                premise=""
-                hypothesis_list=["{} is a subset of {}".format(c_re,i_re),"{} is equal to {}".format(c_re,i_re),"{} is a subset of {}".format(i_re,c_re),'{} is not related to {}'.format(i_re,c_re)]
-                probs=self.get_nli_prob_list(premise, hypothesis_list)
-                result_idx=probs.index(max(probs))
-                if(max(probs)<65):
-                    result="Unrelated"
+                if(self.model_type=='llama'):
+                    premise=""
+                    hypothesis_list=["{} is a subset of {}".format(c_re,i_re),"{} is equal to {}".format(c_re,i_re),"{} is a subset of {}".format(i_re,c_re),'{} is not related to {}'.format(i_re,c_re)]
+                    probs=self.get_nli_prob_list(premise, hypothesis_list)
+                    result_idx=probs.index(max(probs))
+                    if(max(probs)<65):
+                        result="Unrelated"
+                    else:
+                        result=hypothesis_list[result_idx]
+                        if result_idx==0:
+                            self.subset_entities.append((c_re,i_re))
+                        elif result_idx==1:
+                            self.equal_entities.append((c_re,i_re))
+                        elif result_idx==2:
+                            self.subset_entities.append((i_re,c_re))
                 else:
-                    result=hypothesis_list[result_idx]
-                    if result_idx==0:
-                        self.subset_entities.append((c_re,i_re))
-                    elif result_idx==1:
+                    with open("prompts/prompt_entity_relation.txt", encoding="ascii", errors="ignore") as f:
+                        prompt = f.read().format(c_re,i_re)
+                    result = self.get_llm_result(prompt)
+                    relationship = int(result)
+                    # Ensure the response is one of the expected options
+                    if relationship == 1:
                         self.equal_entities.append((c_re,i_re))
-                    elif result_idx==2:
-                        self.subset_entities.append((i_re,c_re))
+                    elif relationship == 2:
+                        self.subset_entities.append((c_re,i_re))
+                    elif relationship == 3:
+                        self.equal_entities.append((i_re,c_re))
         if self.debug:
             print("Subset entities: ", self.subset_entities)
             print("Equal entities: ", self.equal_entities)
@@ -317,6 +371,8 @@ class NL2FOL:
 
     def convert_to_first_order_logic(self):
         try:
+            if(self.debug):
+                print(self.sentence)
             self.extract_claim_and_implication()
             self.get_referring_expressions()
             self.get_entity_relations()
@@ -386,47 +442,75 @@ if __name__ == '__main__':
             print(f"Memory Reserved: {torch.cuda.memory_reserved(i) / (1024 ** 2):.2f} MB")
     parser = argparse.ArgumentParser(description="Run text generation and logic conversion pipeline")
     parser.add_argument('--model_name', type=str, required=True, help="Model name for text generation pipeline")
-    parser.add_argument('--nli_model_name', type=str, required=True, help="Model name for NLI")
+    parser.add_argument('--nli_model_name', type=str, help="Model name for NLI")
     parser.add_argument('--run_name', type=str, required=True, help="Run name for saving results")
     parser.add_argument('--length', type=int, required=True, help="Length for dataset setup")
+    parser.add_argument('--dataset', type=str, required=True, help="dataset for testing")
     args = parser.parse_args()
-    # Initialize models and tokenizers
+    # Initialize models and tokenizer
     model = args.model_name
-    tokenizer = AutoTokenizer.from_pretrained(args.model_name)
-    nli_tokenizer = AutoTokenizer.from_pretrained(args.nli_model_name)
-    nli_model = AutoModelForSequenceClassification.from_pretrained(args.nli_model_name)
-
-    pipeline = transformers.pipeline(
-        "text-generation",
-        model=model,
-        torch_dtype=torch.float16,
-        max_length=1024,
-        device_map="auto",
-    )
+    if model.startswith('gpt'):
+        model_type = 'gpt'
+        tokenizer = None
+        nli_tokenizer = None
+        nli_model = None
+        pipeline = None
+    else:
+        model_type = 'llama'
+        tokenizer = AutoTokenizer.from_pretrained(args.model_name)
+        nli_tokenizer = AutoTokenizer.from_pretrained(args.nli_model_name)
+        nli_model = AutoModelForSequenceClassification.from_pretrained(args.nli_model_name)
+        pipeline = transformers.pipeline(
+            "text-generation",
+            model=model,
+            torch_dtype=torch.float16,
+            max_length=1024,
+            device_map="auto",
+        )
     # Setup dataset
-    df = setup_dataset(fallacy_set='logic', length=args.length)
+    df = setup_dataset(fallacy_set=args.dataset, length=args.length)
     df.to_csv('dataset.csv', index=False)
-    final_lfs=[]
-    final_lfs2=[]
+    claims = []
+    implications = []
+    claim_ref_exps = []
+    implication_ref_exps = []
+    claim_properties = []
+    implication_properties = []
+    property_implications = []
+    equal_entities = []
+    subset_entities = []
+    claim_lfs = []
+    implication_lfs = []
+    final_lfs = []
+    final_lfs2 = []
     count=0
     for i,row in df.iterrows():
         print(count)
-        nl2fol=NL2FOL(row['articles'],'llama',pipeline,tokenizer,nli_model,nli_tokenizer,debug=True)
+        nl2fol=NL2FOL(row['articles'],model_type,pipeline,tokenizer,nli_model,nli_tokenizer,debug=True)
         nl2fol.convert_to_first_order_logic()
+        claims.append(nl2fol.claim)
+        implications.append(nl2fol.implication)
+        claim_ref_exps.append(nl2fol.claim_properties)
+        implication_ref_exps.append(nl2fol.implication_properties)
+        property_implications.append(nl2fol.property_implications)
+        equal_entities.append(nl2fol.equal_entities)
+        subset_entities.append(nl2fol.subset_entities)
+        claim_lfs.append(nl2fol.claim_lf)
+        implication_lfs.append(nl2fol.implication_lf)
         final_lfs.append(nl2fol.final_lf)
         final_lfs2.append(nl2fol.final_lf2)
-    #     results_dict={}
-    #     results_dict['Claim']=nl2fol.claim
-    #     results_dict['Implication']=nl2fol.implication
-    #     results_dict['Referring expressions']=nl2fol.claim_ref_exp+" "+nl2fol.implication_ref_exp
-    #     results_dict['Properties']=nl2fol.claim_properties+" "+nl2fol.implication_properties
-    #     results_dict['Formula']=nl2fol.final_lf2
-    #     json_object = json.dumps(results_dict, indent=4)
-    #     with open("results/{}/{}.json".format(run_name,count), "w") as outfile:
-    #         outfile.write(json_object)
-    #     count=count+1
-    df['Logical Form']=final_lfs
-    df['Logical Form 2']=final_lfs2
+    
+    df['Claim'] = claims
+    df['Implication'] = implications
+    df['Referring Expressions - Claim'] = claim_ref_exps
+    df['Referring Expressions - Implication'] = implication_ref_exps
+    df['Property Implications'] = property_implications
+    df['Equal Entities'] = equal_entities
+    df['Subset Entities'] = subset_entities
+    df['Claim Lfs'] = claim_lfs
+    df['Implication Lfs'] = implication_lfs
+    df['Logical Form']= final_lfs
+    df['Logical Form 2']= final_lfs2
     df.to_csv(f'results/{args.run_name}.csv',index=False)
 
 
