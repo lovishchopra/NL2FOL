@@ -12,8 +12,7 @@ Answer: Valid
 Input: Children smiling and waving at camera. This implies that there are children present
 Answer: Valid
 
-Now, classify the following sentence. Answer with either "Logical Fallacy" or "Valid" at the start of your answer.
+Now, classify the following sentence.
+Explain your answer step-by-step, then end your answer with ‘Answer: Logical Fallacy’ or ‘Answer: Valid’.
 
-Explain your answer step-by-step.
-
-Input: 
+Input:
