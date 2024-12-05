@@ -7,12 +7,13 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 openai.api_key = "your_openai_key_here"
 
-model = "o1-mini"  # [gpt-4o, gpt-4o-mini, o1-preview, o1-mini]
-method = "few_shot"  # [zero_shot, few_shot, few_shot_cot]
-input_file = "climate_run_results"  # [final_run_results, climate_run_results]
+model = "gpt-4o"  # [gpt-4o, gpt-4o-mini, o1-preview, o1-mini]
+method = "few_shot_cot"  # [zero_shot, few_shot, few_shot_cot]
+input_file = "climate_run_results"  # [logic_run_results, climate_run_results]
+num_rows = 10
 
 df = pd.read_csv(f"results/{input_file}.csv")
-df=df[0:400]
+df=df[0:num_rows]
 results=[]
 explanations=[]
 
@@ -22,7 +23,7 @@ for i,row in df.iterrows():
         continue
     with open(f"prompts/prompt_{method}.txt", encoding="ascii", errors="ignore") as f:
         prompt = f.read() + row['articles'] + " \nAnswer this question by implementing a solver function\n. def solver()\n#Let's write a Python program step by step, and then return the answer.\n"
-    chat_completion = client.chat.completions.create(
+    chat_completion = openai.ChatCompletion.create(
         messages=[
             {
                 "role": "user",
