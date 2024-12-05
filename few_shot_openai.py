@@ -1,19 +1,26 @@
+import openai
 import pandas as pd
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import transformers
 import torch
-from openai import OpenAI
-client = OpenAI()
-model="gpt-4"
-df=pd.read_csv('results/combined_results.csv')
+
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
+
+openai.api_key = "your_openai_key_here"
+
+model = "o1-mini"  # [gpt-4o, gpt-4o-mini, o1-preview, o1-mini]
+method = "few_shot"  # [zero_shot, few_shot, few_shot_cot]
+input_file = "climate_run_results"  # [final_run_results, climate_run_results]
+
+df = pd.read_csv(f"results/{input_file}.csv")
 df=df[0:400]
 results=[]
 explanations=[]
+
 for i,row in df.iterrows():
     if isinstance(row['articles'],float):
         results.append(0)
         continue
-    with open("prompts/prompt_zero_shot.txt", encoding="ascii", errors="ignore") as f:
+    with open(f"prompts/prompt_{method}.txt", encoding="ascii", errors="ignore") as f:
         prompt = f.read() + row['articles'] + " \nAnswer this question by implementing a solver function\n. def solver()\n#Let's write a Python program step by step, and then return the answer.\n"
     chat_completion = client.chat.completions.create(
         messages=[
@@ -33,5 +40,6 @@ for i,row in df.iterrows():
         results.append(0)
         print(0)
     print(result)
+
 df['result']=results
-df.to_csv('results/zero_shot_gpt4_combined_results.csv')
+df.to_csv(f"results/{method}_{model}_{input_file}.csv")
