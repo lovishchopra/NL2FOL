@@ -22,7 +22,7 @@ for i,row in df.iterrows():
         results.append(0)
         continue
     with open(f"prompts/prompt_{method}.txt", encoding="ascii", errors="ignore") as f:
-        prompt = f.read() + row['articles'] + " \nAnswer this question by implementing a solver function\n. def solver()\n#Let's write a Python program step by step, and then return the answer.\n"
+        prompt = f.read() + row['articles']
     chat_completion = openai.ChatCompletion.create(
         messages=[
             {
