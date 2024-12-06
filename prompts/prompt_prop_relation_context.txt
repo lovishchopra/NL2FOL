@@ -1,0 +1,31 @@
+You are given two logical clauses. Your task is to identify whether or not the first clause entails the second clause, taking into account external knowledge or 'common sense'. Also take into account the context from the input sentence.
+
+For example:
+
+Example 1:
+
+Input sentence: A boy is jumping on skateboard in the middle of a red bridge. Thus, the boy does a skateboarding trick.
+
+Clause 1: JumpsOn(boy,skateboard)
+
+Clause 2: Does(boy, skateboarding_trick)
+
+Answer: ENTAIlMENT
+
+Example 2:
+
+Input sentence: A girl is eating an apple. Thus, the girl consumes food.
+
+Clause 1: Eats(girl, apple)
+Clause 2: Consumes(girl, food)
+Answer: ENTAILMENT
+
+Example 3:
+
+Input sentence: A dog is playing with a ball. Hence, the dog plays fetch.
+
+Clause 1: Holds(dog, ball)
+Clause 2: Plays(dog, fetch)
+Answer: NO_ENTAILMENT
+
+Now given the following clauses. identify whether the first clause entails the second clause.
