@@ -1,25 +1,26 @@
 #!/share/software/user/open/python/3.9.0/bin/python3
 
-from cvc import CVCGenerator
+import argparse
 import ast
 import json
+import openai
 import pandas as pd
+import time
 import torch
 import transformers
+
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 from cvc import CVCGenerator
 from helpers import *
-from openai import OpenAI
-import argparse
 
-client = OpenAI()
+openai.api_key = "your_api_key"
 
 class NL2FOL:
     """
     Class to convert natural language to first-order logical expression
     """
-    def __init__(self, sentence, model_type, pipeline, tokenizer, nli_model, nli_tokenizer, debug=False, direct = False):
+    def __init__(self, sentence, model_type, pipeline, tokenizer, nli_model, nli_tokenizer, debug=False, direct=False):
         self.sentence = sentence
         if not isinstance(self.sentence, str):
             self.sentence = ""
@@ -43,32 +44,40 @@ class NL2FOL:
         self.final_lf = ""
         self.final_lf2 = ""
         self.debug = debug
-        self.direct = True
+        self.direct = direct
 
     def yield_data(data):
         for obj in data:
             yield obj
 
-    def get_llm_result(self, prompt, model_type=None):
-        if(model_type==None):
-            model_type=self.model_type
-        if model_type=='llama':
-            sequences = self.pipeline(prompt,
-                do_sample=False,
-                num_return_sequences=1,
-                eos_token_id=self.tokenizer.eos_token_id
-            )
-            return sequences[0]["generated_text"].removeprefix(prompt)
-        elif model_type=='gpt':
-            completion = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                {"role": "user", "content": prompt}
-            ]
-            )
-            return completion.choices[0].message.content
-        
-
+    def get_llm_result(self, prompt, model_type=None, max_retries=10):
+        retries = 0
+        while retries < max_retries:
+            try:
+                if(model_type==None):
+                    model_type=self.model_type
+                if model_type=='llama':
+                    sequences = self.pipeline(prompt,
+                        do_sample=False,
+                        num_return_sequences=1,
+                        eos_token_id=self.tokenizer.eos_token_id
+                    )
+                    return sequences[0]["generated_text"].removeprefix(prompt)
+                if model_type == 'gpt':
+                    completion = openai.ChatCompletion.create(
+                        model="gpt-4",
+                        messages=[{"role": "user", "content": prompt}]
+                    )
+                    return completion.choices[0].message.content
+            except openai.error.RateLimitError as e:
+                wait_time = (3 ** retries) + 5  # exponential backoff
+                print(f"Rate limit reached. Retrying in {wait_time} seconds...")
+                time.sleep(wait_time)
+                retries += 1
+            except Exception as e:
+                print(f"Failed with error: {e}")
+                break
+        return "Failed to get a result due to repeated rate limit errors."
 
     def extract_claim_and_implication(self):
         with open("prompts/prompt_nl_to_ci.txt", encoding="ascii", errors="ignore") as f:
@@ -123,11 +132,19 @@ class NL2FOL:
         "Now extract the properties for the following input: " \
         "Input {} " \
         "Referring Expressions: {} " \
-        "Properties: ".format(self.claim,label_values(self.claim_ref_exp,self.entity_mappings),self.claim_properties,self.implication,label_values(self.implication_ref_exp,self.entity_mappings))
+        "Properties: ".format(
+            self.claim,label_values(self.claim_ref_exp,self.entity_mappings),
+            self.claim_properties,
+            self.implication,
+            label_values(self.implication_ref_exp,self.entity_mappings)
+        )
         prompt1=prompt+prompt_template
         self.implication_properties = first_non_empty_line(self.get_llm_result(prompt1))
         print("Implication Properties: ", self.claim_properties)
-        self.claim_properties, self.implication_properties = fix_inconsistent_arities(split_string_except_in_brackets(self.claim_properties,','),split_string_except_in_brackets(self.implication_properties,','))
+        self.claim_properties, self.implication_properties = fix_inconsistent_arities(
+            split_string_except_in_brackets(self.claim_properties,','),
+            split_string_except_in_brackets(self.implication_properties,',')
+        )
         if self.debug:
             print("Claim Properties: ", self.claim_properties)
             print("Implication Proeprties ", self.implication_properties)
@@ -188,13 +205,21 @@ class NL2FOL:
         prompt_template=" Input {} " \
         "Referring Expressions: {} " \
         "Properties: {} " \
-        "Logical Form:".format(self.claim,label_values(self.claim_ref_exp,self.entity_mappings),self.claim_properties)
+        "Logical Form:".format(
+            self.claim,
+            label_values(self.claim_ref_exp,self.entity_mappings),
+            self.claim_properties
+        )
         prompt1=prompt+prompt_template
         self.claim_lf=first_non_empty_line(self.get_llm_result(prompt1))
         prompt_template=" Input {} " \
         "Referring Expressions: {} " \
         "Properties: {} " \
-        "Logical Form: ".format(self.implication,label_values(self.implication_ref_exp,self.entity_mappings),self.implication_properties)
+        "Logical Form: ".format(
+            self.implication,
+            label_values(self.implication_ref_exp,self.entity_mappings),
+            self.implication_properties
+        )
 
         prompt1=prompt+prompt_template
         self.implication_lf=first_non_empty_line(self.get_llm_result(prompt1))
@@ -241,7 +266,12 @@ class NL2FOL:
                     continue
                 if(self.model_type=='llama'):
                     premise=""
-                    hypothesis_list=["{} is a subset of {}".format(c_re,i_re),"{} is equal to {}".format(c_re,i_re),"{} is a subset of {}".format(i_re,c_re),'{} is not related to {}'.format(i_re,c_re)]
+                    hypothesis_list=[
+                        "{} is a subset of {}".format(c_re,i_re),
+                        "{} is equal to {}".format(c_re,i_re),
+                        "{} is a subset of {}".format(i_re,c_re),
+                        '{} is not related to {}'.format(i_re,c_re)
+                    ]
                     probs=self.get_nli_prob_list(premise, hypothesis_list)
                     result_idx=probs.index(max(probs))
                     if(max(probs)<65):
@@ -405,21 +435,21 @@ def setup_dataset(fallacy_set='logic',length=100):
         df_fallacies=pd.read_csv('data/fallacies.csv')
         df_fallacies['label']=[0]*len(df_fallacies)
         df_fallacies=df_fallacies[['source_article','label','updated_label']]
-        df_fallacies=df_fallacies.sample(length,random_state=683)
+        df_fallacies=df_fallacies.sample(length, random_state=683)
     elif fallacy_set=='logicclimate':
         df_fallacies=pd.read_csv('data/fallacies_climate.csv')
         df_fallacies['label']=[0]*len(df_fallacies)
         df_fallacies=df_fallacies[['source_article','logical_fallacies','label']]
-        df_fallacies=df_fallacies.sample(length,random_state=683)
+        df_fallacies=df_fallacies.sample(length, random_state=683)
     elif fallacy_set=='nli':
         df_fallacies=pd.read_csv('data/nli_fallacies_test.csv')
         df_fallacies['label']=[0]*len(df_fallacies)
         df_fallacies=df_fallacies[['sentence','label']]
-        df_fallacies=df_fallacies.sample(length,random_state=683)
+        df_fallacies=df_fallacies.sample(length, random_state=683)
     df_valids=pd.read_csv('data/nli_entailments_test.csv')
     df_valids['label']=[1]*len(df_valids)
     df_valids=df_valids[['sentence','label']]
-    df_valids=df_valids.sample(length,random_state=113)
+    df_valids=df_valids.sample(length, random_state=113)
     df = pd.concat([df_fallacies, df_valids])
     df = df.reset_index(drop=True)
     df['articles'] = df['source_article'].combine_first(df['sentence'])
@@ -467,6 +497,7 @@ if __name__ == '__main__':
             max_length=1024,
             device_map="auto",
         )
+
     # Setup dataset
     df = setup_dataset(fallacy_set=args.dataset, length=args.length)
     df.to_csv('dataset.csv', index=False)
@@ -484,9 +515,10 @@ if __name__ == '__main__':
     final_lfs = []
     final_lfs2 = []
     count=0
+
     for i,row in df.iterrows():
         print(count)
-        nl2fol=NL2FOL(row['articles'],model_type,pipeline,tokenizer,nli_model,nli_tokenizer,debug=True)
+        nl2fol=NL2FOL(row['articles'], model_type, pipeline, tokenizer, nli_model, nli_tokenizer, debug=True)
         nl2fol.convert_to_first_order_logic()
         claims.append(nl2fol.claim)
         implications.append(nl2fol.implication)
@@ -511,7 +543,4 @@ if __name__ == '__main__':
     df['Implication Lfs'] = implication_lfs
     df['Logical Form']= final_lfs
     df['Logical Form 2']= final_lfs2
-    df.to_csv(f'results/{args.run_name}.csv',index=False)
-
-
-    
+    df.to_csv(f'results/{args.run_name}.csv', index=False)
