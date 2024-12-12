@@ -9,12 +9,17 @@ import time
 import torch
 import transformers
 
+from datasets import load_dataset
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 from cvc import CVCGenerator
 from helpers import *
 
 openai.api_key = "your_api_key"
+
+folio_dataset = load_dataset("benlipkin/folio")
+folio_validation = folio_dataset["validation"]
+folio_validation.to_csv("data/folio.csv", index=False)
 
 class NL2FOL:
     """
@@ -431,7 +436,13 @@ class NL2FOL:
 
 def setup_dataset(fallacy_set='logic',length=100):
     print("called")
-    if fallacy_set=='logic':
+    if fallacy_set == 'folio':
+        df = pd.read_csv("data/folio.csv")
+        df = df.sample(length, random_state=683)
+        df = df.rename(columns={"premises": "articles"})  # align
+        df['label'] = 1  # assign default labels
+        return df
+    elif fallacy_set=='logic':
         df_fallacies=pd.read_csv('data/fallacies.csv')
         df_fallacies['label']=[0]*len(df_fallacies)
         df_fallacies=df_fallacies[['source_article','label','updated_label']]
