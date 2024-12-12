@@ -1,4 +1,6 @@
 #!/share/software/user/open/python/3.9.0/bin/python3
+# Example command:
+#   python3 nl_to_fol.py --model_name "gpt-4o" --nli_model_name "facebook/bart-large-mnli" --run_name "folio_nl2fol" --length 200 --dataset "folio"
 
 import argparse
 import ast
