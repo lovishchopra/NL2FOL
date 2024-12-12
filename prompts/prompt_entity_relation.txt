@@ -1,0 +1,38 @@
+Please determine the relationship between the two entities provided below. Choose the number corresponding to the statement that best describes their relationship:
+1. "[Entity A]" is equal to "[Entity B]".
+2. "[Entity A]" is a subset of "[Entity B]".
+3. "[Entity B]" is a subset of "[Entity A]".
+4. "[Entity A]" is not related to "[Entity B]".
+Instructions:
+- **Equality Check**: If the two entities are equal (case-insensitive after stripping whitespace), select statement **1**.
+- **Subset Determination**: If they are not equal, assess whether one entity is a subset of the other based on general knowledge and logical reasoning.
+    - If "[Entity A]" is a subset of "[Entity B]", select statement **2**.
+    - If "[Entity B]" is a subset of "[Entity A]", select statement **3**.
+- **Unrelated Entities**: If none of the above statements accurately describes the relationship
+**Examples:**
+- **Example 1:**
+    - **Entity A**: "dogs"
+    - **Entity B**: "animals"
+    - **Analysis**: All dogs are animals, so "dogs" is a subset of "animals".
+    - **Answer**: **2**
+- **Example 2:**
+    - **Entity A**: "fruits"
+    - **Entity B**: "apples"
+    - **Analysis**: All apples are fruits, so "apples" is a subset of "fruits".
+    - **Answer**: **3**
+- **Example 3:**
+    - **Entity A**: "table"
+    - **Entity B**: "chair"
+    - **Analysis**: They are different types of furniture, but not subsets of each other.
+    - **Answer**: **4**
+- **Example 4:**
+    - **Entity A**: "liquid"
+    - **Entity B**: "water"
+    - **Analysis**: Water is a type of liquid, so "water" is a subset of "liquid".
+    - **Answer**: **1**
+Entities:
+- **Entity A**: {}
+- **Entity B**: {}
+Your Task:
+- Analyze the relationship between "Entity A" and "Entity B" based on the instructions.
+- Provide only the number (1, 2, 3, or 4) that corresponds to the statement you have selected.

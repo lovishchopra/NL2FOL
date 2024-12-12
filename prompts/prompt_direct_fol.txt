@@ -1,0 +1,31 @@
+Given a sentence, use the given properties to convert the sentence into a first-order logical form. Use -> to represent "implies", & to represent "and", | to represent "or", and ~ to represent negations.
+
+Also, identify any relations between the clauses you generate. For example, if one clause implies another, add this to the logical form.
+
+Example 1:
+
+Input Sentence: I met a tall man who loved to eat cheese. Now I believe that all tall people like cheese.
+
+Logical Form: ((forall x (LovesCheese(x) -> LikesCheese(x))) & (forall y (LikesCheese(y) -> LovesCheese(y)))) -> ((exists z (IsTall(z) & LovesCheese(z))) -> (forall w (IsTall(w) -> LikesCheese(w))))
+
+Example 2:
+
+Input Sentence: It's common sense that if you smack your children, they will stop the bad behavior. So don't tell me not to hit my kids.
+
+Logical Form: (forall x ((IsSmacked(x) & IsKid(x)) -> ~HasBadBehavior(x))) -> (forall y (IsKid(y) -> IsSmacked(y)))
+
+Example 3:
+
+Input Sentence: A person on a horse jumps over a broken down airplane. It follows that a person is outdoors, on a horse.
+
+Logical Form: ((forall x (IsJumpingOverAirplane(x) -> IsOutdoor(x))) -> (forall y ((IsOnHorse(y) & IsJumpingOverAirplane(y)) -> (IsOutdoor(y) & IsOnHorse(y)))))
+
+Example 4:
+
+Input Sentence: Children smiling and waving at camera. Therefore, there are children present.
+
+Logical Form: ((forall x exists y (IsSmilingAndWavingAt(x, y))) -> IsPresent(x)) -> (forall z forall w (IsSmilingAndWavingAt(z, w) -> IsPresent(z)))
+
+Now, given the following data, return the logical form of the sentence:
+
+Do not output any explanations, only the logical forms.

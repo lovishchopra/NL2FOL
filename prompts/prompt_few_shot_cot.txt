@@ -22,6 +22,7 @@ Answer: Logical Fallacy
 Input: "A boy is jumping on skateboard in the middle of a red bridge. Therefore, the boy does a skateboarding trick."
 Answer: Valid
 
-Now, classify the following sentence. Answer with either "Logical Fallacy" or "Valid" at the start of your answer.
+Now, classify the following sentence.
+Explain your answer step-by-step, then end your answer with ‘Answer: Logical Fallacy’ or ‘Answer: Valid’.
 
 Input:
