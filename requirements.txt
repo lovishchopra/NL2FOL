@@ -20,7 +20,7 @@ httpx==0.27.2
 huggingface-hub==0.26.0
 hyperframe @ file:///home/conda/feedstock_root/build_artifacts/hyperframe_1619110129307/work
 idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1726459485162/work
-Jinja2==3.1.4
+Jinja2==3.1.5
 jiter==0.6.1
 joblib @ file:///home/conda/feedstock_root/build_artifacts/joblib_1714665484399/work
 MarkupSafe==2.1.5
