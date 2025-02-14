@@ -1,0 +1,30 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_4 () UnboundSet)
+(define-fun IsHoldingUmbrella ((BOUND_VARIABLE_416 BoundSet)) Bool true)
+(define-fun Observes ((BOUND_VARIABLE_416 BoundSet)) Bool true)
+(define-fun IsInWater ((BOUND_VARIABLE_416 BoundSet)) Bool true)
+(define-fun IsFlooded ((BOUND_VARIABLE_416 BoundSet)) Bool true)
+(define-fun IsOutside ((BOUND_VARIABLE_416 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_6 () UnboundSet)
+(define-fun IsHoldingUmbrella ((BOUND_VARIABLE_454 BoundSet)) Bool true)
+(define-fun Observes ((BOUND_VARIABLE_454 BoundSet)) Bool true)
+(define-fun IsInWater ((BOUND_VARIABLE_454 BoundSet)) Bool true)
+(define-fun IsFlooded ((BOUND_VARIABLE_454 BoundSet)) Bool true)
+(define-fun IsOutside ((BOUND_VARIABLE_454 BoundSet)) Bool false)
+)

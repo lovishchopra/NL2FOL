@@ -1,0 +1,16 @@
+sat
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+; rep: @uc_UnboundSet_0
+(define-fun boys () UnboundSet @uc_UnboundSet_0)
+(define-fun IsSmall ((BOUND_VARIABLE_417 BoundSet)) Bool true)
+(define-fun IsInBlueSoccerUniforms ((BOUND_VARIABLE_417 BoundSet)) Bool true)
+(define-fun HasHands ((BOUND_VARIABLE_417 BoundSet)) Bool true)
+(define-fun IsInAdultSizedBathroom ((BOUND_VARIABLE_417 BoundSet)) Bool true)
+(define-fun IsTwo ((BOUND_VARIABLE_422 UnboundSet)) Bool false)
+)

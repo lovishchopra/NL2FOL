@@ -1,0 +1,19 @@
+unknown
+(model
+; cardinality of BoundSet is 6
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; rep: @uc_BoundSet_4
+; rep: @uc_BoundSet_5
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_7 () UnboundSet)
+(define-fun ClaimedLives ((BOUND_VARIABLE_561 BoundSet) (BOUND_VARIABLE_562 BoundSet) (BOUND_VARIABLE_563 BoundSet)) Bool (ite (= @uc_BoundSet_1 BOUND_VARIABLE_561) (ite (= @uc_BoundSet_2 BOUND_VARIABLE_562) (= @uc_BoundSet_0 BOUND_VARIABLE_563) false) false))
+(define-fun Soared ((BOUND_VARIABLE_580 BoundSet)) Bool false)
+(define-fun OccurredBefore ((BOUND_VARIABLE_589 BoundSet) (BOUND_VARIABLE_590 BoundSet)) Bool false)
+)
+unsat
+(error "Cannot get model unless immediately preceded by SAT/NOT_ENTAILED or UNKNOWN response.")

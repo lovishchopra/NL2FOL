@@ -1,0 +1,28 @@
+unknown
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_2 () UnboundSet)
+(define-fun WearsBlackHat ((BOUND_VARIABLE_407 BoundSet)) Bool true)
+(define-fun WearsCoat ((BOUND_VARIABLE_407 BoundSet)) Bool true)
+(define-fun MakesFace ((BOUND_VARIABLE_407 BoundSet)) Bool true)
+(define-fun IsBehindCrowd ((BOUND_VARIABLE_407 BoundSet)) Bool true)
+(define-fun StandsNearCrowd ((BOUND_VARIABLE_407 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_4 () UnboundSet)
+(define-fun WearsBlackHat ((BOUND_VARIABLE_437 BoundSet)) Bool true)
+(define-fun WearsCoat ((BOUND_VARIABLE_437 BoundSet)) Bool true)
+(define-fun MakesFace ((BOUND_VARIABLE_437 BoundSet)) Bool true)
+(define-fun IsBehindCrowd ((BOUND_VARIABLE_437 BoundSet)) Bool true)
+(define-fun StandsNearCrowd ((BOUND_VARIABLE_437 BoundSet)) Bool false)
+)

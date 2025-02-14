@@ -1,0 +1,43 @@
+unknown
+(model
+; cardinality of BoundSet is 8
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; rep: @uc_BoundSet_4
+; rep: @uc_BoundSet_5
+; rep: @uc_BoundSet_6
+; rep: @uc_BoundSet_7
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_9 () UnboundSet)
+(define-fun IsWalkingUnder ((BOUND_VARIABLE_535 BoundSet) (BOUND_VARIABLE_536 BoundSet)) Bool true)
+(define-fun IsOpen ((BOUND_VARIABLE_539 BoundSet)) Bool true)
+(define-fun IsIndoors ((BOUND_VARIABLE_539 BoundSet)) Bool true)
+(define-fun IsSpilled ((BOUND_VARIABLE_539 BoundSet)) Bool true)
+(define-fun IsInFrontOf ((BOUND_VARIABLE_535 BoundSet) (BOUND_VARIABLE_536 BoundSet)) Bool true)
+(define-fun ForgotToKnockOnWood ((BOUND_VARIABLE_535 BoundSet) (BOUND_VARIABLE_536 BoundSet)) Bool true)
+(define-fun IsLucky ((BOUND_VARIABLE_539 BoundSet)) Bool true)
+(define-fun IsHavingBadDay ((BOUND_VARIABLE_535 BoundSet) (BOUND_VARIABLE_536 BoundSet)) Bool false)
+(define-fun IsCausedByBadLuck ((BOUND_VARIABLE_535 BoundSet) (BOUND_VARIABLE_536 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_11 () UnboundSet)
+(define-fun IsWalkingUnder ((BOUND_VARIABLE_623 BoundSet) (BOUND_VARIABLE_624 BoundSet)) Bool true)
+(define-fun IsOpen ((BOUND_VARIABLE_627 BoundSet)) Bool true)
+(define-fun IsIndoors ((BOUND_VARIABLE_627 BoundSet)) Bool true)
+(define-fun IsSpilled ((BOUND_VARIABLE_627 BoundSet)) Bool true)
+(define-fun IsInFrontOf ((BOUND_VARIABLE_623 BoundSet) (BOUND_VARIABLE_624 BoundSet)) Bool true)
+(define-fun ForgotToKnockOnWood ((BOUND_VARIABLE_623 BoundSet) (BOUND_VARIABLE_624 BoundSet)) Bool true)
+(define-fun IsLucky ((BOUND_VARIABLE_627 BoundSet)) Bool true)
+(define-fun IsHavingBadDay ((BOUND_VARIABLE_623 BoundSet) (BOUND_VARIABLE_624 BoundSet)) Bool false)
+(define-fun IsCausedByBadLuck ((BOUND_VARIABLE_623 BoundSet) (BOUND_VARIABLE_624 BoundSet)) Bool true)
+)

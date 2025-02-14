@@ -1,0 +1,41 @@
+unknown
+(model
+; cardinality of BoundSet is 8
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; rep: @uc_BoundSet_4
+; rep: @uc_BoundSet_5
+; rep: @uc_BoundSet_6
+; rep: @uc_BoundSet_7
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_9 () UnboundSet)
+(define-fun WalkedUnder ((BOUND_VARIABLE_511 BoundSet) (BOUND_VARIABLE_512 BoundSet)) Bool true)
+(define-fun HasOpenUmbrella ((BOUND_VARIABLE_515 BoundSet)) Bool true)
+(define-fun IsIndoors ((BOUND_VARIABLE_515 BoundSet)) Bool true)
+(define-fun SpilledSalt ((BOUND_VARIABLE_511 BoundSet) (BOUND_VARIABLE_512 BoundSet)) Bool true)
+(define-fun InFrontOfBlackCat ((BOUND_VARIABLE_511 BoundSet) (BOUND_VARIABLE_512 BoundSet)) Bool true)
+(define-fun ForgotToKnockOn ((BOUND_VARIABLE_515 BoundSet)) Bool true)
+(define-fun HasLuckyDice ((BOUND_VARIABLE_515 BoundSet)) Bool true)
+(define-fun Causes ((BOUND_VARIABLE_511 BoundSet) (BOUND_VARIABLE_512 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_11 () UnboundSet)
+(define-fun WalkedUnder ((BOUND_VARIABLE_584 BoundSet) (BOUND_VARIABLE_585 BoundSet)) Bool true)
+(define-fun HasOpenUmbrella ((BOUND_VARIABLE_588 BoundSet)) Bool true)
+(define-fun IsIndoors ((BOUND_VARIABLE_588 BoundSet)) Bool true)
+(define-fun SpilledSalt ((BOUND_VARIABLE_584 BoundSet) (BOUND_VARIABLE_585 BoundSet)) Bool true)
+(define-fun InFrontOfBlackCat ((BOUND_VARIABLE_584 BoundSet) (BOUND_VARIABLE_585 BoundSet)) Bool true)
+(define-fun ForgotToKnockOn ((BOUND_VARIABLE_588 BoundSet)) Bool true)
+(define-fun HasLuckyDice ((BOUND_VARIABLE_588 BoundSet)) Bool true)
+(define-fun Causes ((BOUND_VARIABLE_584 BoundSet) (BOUND_VARIABLE_585 BoundSet)) Bool false)
+)

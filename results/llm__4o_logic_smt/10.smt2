@@ -1,0 +1,8 @@
+(set-logic ALL)
+(set-option :produce-models true)
+(declare-sort BoundSet 0)
+(declare-sort UnboundSet 0)
+(declare-fun OccurIn (BoundSet BoundSet) Bool)
+(assert (not (=> (exists ((a BoundSet)) (exists ((b BoundSet)) (OccurIn b a))) (exists ((a BoundSet)) (exists ((d BoundSet)) (exists ((c BoundSet)) (or (OccurIn c a) (OccurIn d a))))))))
+(check-sat)
+(get-model)

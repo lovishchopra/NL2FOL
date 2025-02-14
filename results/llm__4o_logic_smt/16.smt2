@@ -1,0 +1,8 @@
+(set-logic ALL)
+(set-option :produce-models true)
+(declare-sort BoundSet 0)
+(declare-sort UnboundSet 0)
+(declare-fun IsOnDiet (BoundSet BoundSet) Bool)
+(assert (not (=> (exists ((a BoundSet)) (exists ((b BoundSet)) (IsOnDiet b a))) (exists ((a BoundSet)) (exists ((c BoundSet)) (IsOnDiet c a))))))
+(check-sat)
+(get-model)

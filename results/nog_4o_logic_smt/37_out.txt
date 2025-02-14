@@ -1,0 +1,26 @@
+unknown
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+(declare-fun groundTerm_1 () BoundSet)
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_2 () UnboundSet)
+(define-fun AreInAmerica ((BOUND_VARIABLE_338 BoundSet)) Bool false)
+(define-fun IsBad ((BOUND_VARIABLE_338 BoundSet)) Bool false)
+(define-fun IsInRussia ((BOUND_VARIABLE_338 BoundSet)) Bool false)
+(define-fun IsUnderStalin ((BOUND_VARIABLE_338 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_4 () UnboundSet)
+(define-fun AreInAmerica ((BOUND_VARIABLE_364 BoundSet)) Bool false)
+(define-fun IsBad ((BOUND_VARIABLE_364 BoundSet)) Bool true)
+(define-fun IsInRussia ((BOUND_VARIABLE_364 BoundSet)) Bool false)
+(define-fun IsUnderStalin ((BOUND_VARIABLE_364 BoundSet)) Bool false)
+)

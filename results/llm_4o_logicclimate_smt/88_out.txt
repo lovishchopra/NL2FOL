@@ -1,0 +1,21 @@
+unknown
+(model
+; cardinality of BoundSet is 7
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; rep: @uc_BoundSet_4
+; rep: @uc_BoundSet_5
+; rep: @uc_BoundSet_6
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_8 () UnboundSet)
+(define-fun HasCrept ((BOUND_VARIABLE_568 BoundSet)) Bool true)
+(define-fun SendsWaterPouring ((BOUND_VARIABLE_568 BoundSet)) Bool true)
+(define-fun IsIn ((BOUND_VARIABLE_575 BoundSet) (BOUND_VARIABLE_576 BoundSet)) Bool true)
+(define-fun IsFlooded ((BOUND_VARIABLE_568 BoundSet)) Bool false)
+)
+unsat
+(error "Cannot get model unless immediately preceded by SAT/NOT_ENTAILED or UNKNOWN response.")

@@ -1,0 +1,34 @@
+unknown
+(model
+; cardinality of BoundSet is 5
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; rep: @uc_BoundSet_4
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_6 () UnboundSet)
+(define-fun IsOpponent ((BOUND_VARIABLE_449 BoundSet)) Bool true)
+(define-fun AttemptsToRefute ((BOUND_VARIABLE_456 BoundSet) (BOUND_VARIABLE_457 BoundSet)) Bool true)
+(define-fun IsFallacious ((BOUND_VARIABLE_449 BoundSet)) Bool true)
+(define-fun IsIncoherent ((BOUND_VARIABLE_449 BoundSet)) Bool true)
+(define-fun IsIllogical ((BOUND_VARIABLE_449 BoundSet)) Bool true)
+(define-fun IsStrong ((BOUND_VARIABLE_449 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_8 () UnboundSet)
+(define-fun IsOpponent ((BOUND_VARIABLE_499 BoundSet)) Bool true)
+(define-fun AttemptsToRefute ((BOUND_VARIABLE_506 BoundSet) (BOUND_VARIABLE_507 BoundSet)) Bool true)
+(define-fun IsFallacious ((BOUND_VARIABLE_499 BoundSet)) Bool true)
+(define-fun IsIncoherent ((BOUND_VARIABLE_499 BoundSet)) Bool true)
+(define-fun IsIllogical ((BOUND_VARIABLE_499 BoundSet)) Bool true)
+(define-fun IsStrong ((BOUND_VARIABLE_499 BoundSet)) Bool false)
+)

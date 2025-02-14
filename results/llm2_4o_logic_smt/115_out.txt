@@ -1,0 +1,20 @@
+unknown
+(model
+; cardinality of BoundSet is 4
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_5 () UnboundSet)
+(define-fun IsInWhite ((BOUND_VARIABLE_582 BoundSet)) Bool true)
+(define-fun KicksBall ((BOUND_VARIABLE_582 BoundSet)) Bool true)
+(define-fun LungesTowardsBall ((BOUND_VARIABLE_582 BoundSet)) Bool true)
+(define-fun IsInRed ((BOUND_VARIABLE_582 BoundSet)) Bool true)
+(define-fun FollowsClose ((BOUND_VARIABLE_582 BoundSet)) Bool true)
+(define-fun AreSoccerPlayers ((BOUND_VARIABLE_582 BoundSet)) Bool false)
+)
+unsat
+(error "Cannot get model unless immediately preceded by SAT/NOT_ENTAILED or UNKNOWN response.")

@@ -1,0 +1,30 @@
+unknown
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_2 () UnboundSet)
+(define-fun IsWhite ((BOUND_VARIABLE_577 BoundSet)) Bool true)
+(define-fun IsGreyhound ((BOUND_VARIABLE_577 BoundSet)) Bool true)
+(define-fun IsWearingMuzzle ((BOUND_VARIABLE_577 BoundSet)) Bool true)
+(define-fun RunsAroundTrack ((BOUND_VARIABLE_577 BoundSet)) Bool true)
+(define-fun IsRacing ((BOUND_VARIABLE_577 BoundSet)) Bool true)
+(define-fun IsRacingWithOtherDogs ((BOUND_VARIABLE_589 BoundSet) (BOUND_VARIABLE_590 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_10 () UnboundSet)
+(define-fun IsWhite ((BOUND_VARIABLE_590 BoundSet)) Bool true)
+(define-fun IsGreyhound ((BOUND_VARIABLE_590 BoundSet)) Bool true)
+(define-fun IsWearingMuzzle ((BOUND_VARIABLE_590 BoundSet)) Bool true)
+(define-fun RunsAroundTrack ((BOUND_VARIABLE_590 BoundSet)) Bool true)
+(define-fun IsRacing ((BOUND_VARIABLE_590 BoundSet)) Bool true)
+(define-fun IsRacingWithOtherDogs ((BOUND_VARIABLE_598 BoundSet) (BOUND_VARIABLE_599 BoundSet)) Bool false)
+)

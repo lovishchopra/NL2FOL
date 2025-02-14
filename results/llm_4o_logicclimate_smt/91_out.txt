@@ -1,0 +1,29 @@
+unknown
+(model
+; cardinality of BoundSet is 4
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_5 () UnboundSet)
+(define-fun IsIncreased ((BOUND_VARIABLE_498 BoundSet)) Bool true)
+(define-fun IsDueTo ((BOUND_VARIABLE_505 BoundSet) (BOUND_VARIABLE_506 BoundSet)) Bool true)
+(define-fun Alters ((BOUND_VARIABLE_505 BoundSet) (BOUND_VARIABLE_506 BoundSet)) Bool true)
+(define-fun IsNotResponsibleFor ((BOUND_VARIABLE_505 BoundSet) (BOUND_VARIABLE_506 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_9 () UnboundSet)
+(define-fun IsIncreased ((BOUND_VARIABLE_543 BoundSet)) Bool true)
+(define-fun IsDueTo ((BOUND_VARIABLE_550 BoundSet) (BOUND_VARIABLE_551 BoundSet)) Bool true)
+(define-fun Alters ((BOUND_VARIABLE_550 BoundSet) (BOUND_VARIABLE_551 BoundSet)) Bool true)
+(define-fun IsNotResponsibleFor ((BOUND_VARIABLE_550 BoundSet) (BOUND_VARIABLE_551 BoundSet)) Bool false)
+)

@@ -1,0 +1,35 @@
+unknown
+(model
+; cardinality of BoundSet is 8
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; rep: @uc_BoundSet_4
+; rep: @uc_BoundSet_5
+; rep: @uc_BoundSet_6
+; rep: @uc_BoundSet_7
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_9 () UnboundSet)
+(define-fun IsForcedToRelocate ((BOUND_VARIABLE_465 BoundSet) (BOUND_VARIABLE_466 BoundSet)) Bool true)
+(define-fun FacesScarcity ((BOUND_VARIABLE_465 BoundSet) (BOUND_VARIABLE_466 BoundSet)) Bool true)
+(define-fun Collapses ((BOUND_VARIABLE_465 BoundSet) (BOUND_VARIABLE_466 BoundSet)) Bool true)
+(define-fun SuffersDramatically ((BOUND_VARIABLE_465 BoundSet) (BOUND_VARIABLE_466 BoundSet)) Bool true)
+(define-fun Unravels ((BOUND_VARIABLE_465 BoundSet) (BOUND_VARIABLE_466 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_11 () UnboundSet)
+(define-fun IsForcedToRelocate ((BOUND_VARIABLE_529 BoundSet) (BOUND_VARIABLE_530 BoundSet)) Bool true)
+(define-fun FacesScarcity ((BOUND_VARIABLE_529 BoundSet) (BOUND_VARIABLE_530 BoundSet)) Bool true)
+(define-fun Collapses ((BOUND_VARIABLE_529 BoundSet) (BOUND_VARIABLE_530 BoundSet)) Bool true)
+(define-fun SuffersDramatically ((BOUND_VARIABLE_529 BoundSet) (BOUND_VARIABLE_530 BoundSet)) Bool true)
+(define-fun Unravels ((BOUND_VARIABLE_529 BoundSet) (BOUND_VARIABLE_530 BoundSet)) Bool false)
+)

@@ -1,0 +1,33 @@
+unknown
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_3 () UnboundSet)
+(define-fun Skipped ((BOUND_VARIABLE_431 BoundSet) (BOUND_VARIABLE_432 BoundSet)) Bool true)
+(define-fun WillDropOut ((BOUND_VARIABLE_439 BoundSet)) Bool false)
+(define-fun WillNeverGraduate ((BOUND_VARIABLE_439 BoundSet)) Bool false)
+(define-fun WillNotGetInto ((BOUND_VARIABLE_431 BoundSet) (BOUND_VARIABLE_432 BoundSet)) Bool false)
+(define-fun WillEndUpUnemployed ((BOUND_VARIABLE_439 BoundSet)) Bool false)
+(define-fun WillLiveAt ((BOUND_VARIABLE_431 BoundSet) (BOUND_VARIABLE_432 BoundSet)) Bool false)
+(define-fun WillLiveFor ((BOUND_VARIABLE_431 BoundSet) (BOUND_VARIABLE_432 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_5 () UnboundSet)
+(define-fun Skipped ((BOUND_VARIABLE_511 BoundSet) (BOUND_VARIABLE_512 BoundSet)) Bool true)
+(define-fun WillDropOut ((BOUND_VARIABLE_516 BoundSet)) Bool false)
+(define-fun WillNeverGraduate ((BOUND_VARIABLE_516 BoundSet)) Bool true)
+(define-fun WillNotGetInto ((BOUND_VARIABLE_511 BoundSet) (BOUND_VARIABLE_512 BoundSet)) Bool true)
+(define-fun WillEndUpUnemployed ((BOUND_VARIABLE_516 BoundSet)) Bool true)
+(define-fun WillLiveAt ((BOUND_VARIABLE_511 BoundSet) (BOUND_VARIABLE_512 BoundSet)) Bool true)
+(define-fun WillLiveFor ((BOUND_VARIABLE_511 BoundSet) (BOUND_VARIABLE_512 BoundSet)) Bool true)
+)

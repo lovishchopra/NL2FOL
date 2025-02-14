@@ -1,0 +1,33 @@
+unknown
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_3 () UnboundSet)
+(define-fun IsMale ((BOUND_VARIABLE_478 BoundSet)) Bool true)
+(define-fun PlaysGuitar ((BOUND_VARIABLE_478 BoundSet)) Bool true)
+(define-fun IsSinging ((BOUND_VARIABLE_478 BoundSet)) Bool true)
+(define-fun IsInPoorlyLitRoom ((BOUND_VARIABLE_478 BoundSet)) Bool true)
+(define-fun IsASong ((BOUND_VARIABLE_478 BoundSet)) Bool true)
+(define-fun IsMan ((BOUND_VARIABLE_478 BoundSet)) Bool false)
+(define-fun IsIndoors ((BOUND_VARIABLE_478 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_5 () UnboundSet)
+(define-fun IsMale ((BOUND_VARIABLE_490 BoundSet)) Bool true)
+(define-fun PlaysGuitar ((BOUND_VARIABLE_490 BoundSet)) Bool true)
+(define-fun IsSinging ((BOUND_VARIABLE_490 BoundSet)) Bool true)
+(define-fun IsInPoorlyLitRoom ((BOUND_VARIABLE_490 BoundSet)) Bool true)
+(define-fun IsASong ((BOUND_VARIABLE_490 BoundSet)) Bool true)
+(define-fun IsMan ((BOUND_VARIABLE_490 BoundSet)) Bool false)
+(define-fun IsIndoors ((BOUND_VARIABLE_490 BoundSet)) Bool false)
+)

@@ -1,0 +1,30 @@
+unknown
+(model
+; cardinality of BoundSet is 12
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; rep: @uc_BoundSet_4
+; rep: @uc_BoundSet_5
+; rep: @uc_BoundSet_6
+; rep: @uc_BoundSet_7
+; rep: @uc_BoundSet_8
+; rep: @uc_BoundSet_9
+; rep: @uc_BoundSet_10
+; rep: @uc_BoundSet_11
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_13 () UnboundSet)
+(define-fun IsSmall ((BOUND_VARIABLE_664 BoundSet)) Bool true)
+(define-fun HasShortBrownHair ((BOUND_VARIABLE_664 BoundSet)) Bool true)
+(define-fun IsPushing ((BOUND_VARIABLE_671 BoundSet) (BOUND_VARIABLE_672 BoundSet)) Bool true)
+(define-fun IsPink ((BOUND_VARIABLE_664 BoundSet)) Bool true)
+(define-fun IsOverGrass ((BOUND_VARIABLE_671 BoundSet) (BOUND_VARIABLE_672 BoundSet)) Bool true)
+(define-fun HasBrownLeaves ((BOUND_VARIABLE_671 BoundSet) (BOUND_VARIABLE_672 BoundSet)) Bool true)
+(define-fun HasTreesInBackground ((BOUND_VARIABLE_671 BoundSet) (BOUND_VARIABLE_672 BoundSet)) Bool true)
+(define-fun IsOutside ((BOUND_VARIABLE_664 BoundSet)) Bool false)
+)
+unsat
+(error "Cannot get model unless immediately preceded by SAT/NOT_ENTAILED or UNKNOWN response.")

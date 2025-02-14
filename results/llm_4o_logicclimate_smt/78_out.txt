@@ -1,0 +1,32 @@
+unknown
+(model
+; cardinality of BoundSet is 5
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; rep: @uc_BoundSet_4
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_6 () UnboundSet)
+(define-fun LedToMoreWarming ((BOUND_VARIABLE_468 BoundSet) (BOUND_VARIABLE_469 BoundSet)) Bool true)
+(define-fun InFollowingYears ((BOUND_VARIABLE_468 BoundSet) (BOUND_VARIABLE_469 BoundSet)) Bool true)
+(define-fun AppearsToBeRising ((BOUND_VARIABLE_478 BoundSet)) Bool false)
+(define-fun DueToEmissions ((BOUND_VARIABLE_468 BoundSet) (BOUND_VARIABLE_469 BoundSet)) Bool false)
+(define-fun DueToFactors ((BOUND_VARIABLE_468 BoundSet) (BOUND_VARIABLE_469 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_9 () UnboundSet)
+(define-fun LedToMoreWarming ((BOUND_VARIABLE_545 BoundSet) (BOUND_VARIABLE_546 BoundSet)) Bool true)
+(define-fun InFollowingYears ((BOUND_VARIABLE_545 BoundSet) (BOUND_VARIABLE_546 BoundSet)) Bool true)
+(define-fun AppearsToBeRising ((BOUND_VARIABLE_551 BoundSet)) Bool true)
+(define-fun DueToEmissions ((BOUND_VARIABLE_545 BoundSet) (BOUND_VARIABLE_546 BoundSet)) Bool false)
+(define-fun DueToFactors ((BOUND_VARIABLE_545 BoundSet) (BOUND_VARIABLE_546 BoundSet)) Bool false)
+)

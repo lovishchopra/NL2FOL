@@ -1,0 +1,31 @@
+unknown
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_3 () UnboundSet)
+(define-fun Increased ((BOUND_VARIABLE_617 BoundSet)) Bool true)
+(define-fun HaveNotMaterialized ((BOUND_VARIABLE_617 BoundSet)) Bool false)
+(define-fun IsRecent ((BOUND_VARIABLE_617 BoundSet)) Bool false)
+(define-fun IsMajor ((BOUND_VARIABLE_617 BoundSet)) Bool false)
+(define-fun IsHurricaneActivity ((BOUND_VARIABLE_617 BoundSet)) Bool false)
+(define-fun IsLessFrequent ((BOUND_VARIABLE_617 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_12 () UnboundSet)
+(define-fun Increased ((BOUND_VARIABLE_689 BoundSet)) Bool true)
+(define-fun HaveNotMaterialized ((BOUND_VARIABLE_689 BoundSet)) Bool false)
+(define-fun IsRecent ((BOUND_VARIABLE_689 BoundSet)) Bool true)
+(define-fun IsMajor ((BOUND_VARIABLE_689 BoundSet)) Bool true)
+(define-fun IsHurricaneActivity ((BOUND_VARIABLE_689 BoundSet)) Bool true)
+(define-fun IsLessFrequent ((BOUND_VARIABLE_689 BoundSet)) Bool false)
+)

@@ -1,0 +1,32 @@
+unknown
+(model
+; cardinality of BoundSet is 5
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; rep: @uc_BoundSet_4
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_6 () UnboundSet)
+(define-fun Smokes ((BOUND_VARIABLE_550 BoundSet)) Bool true)
+(define-fun LeansAgainst ((BOUND_VARIABLE_557 BoundSet) (BOUND_VARIABLE_558 BoundSet)) Bool true)
+(define-fun HasMissingPersonFlyer ((BOUND_VARIABLE_550 BoundSet)) Bool true)
+(define-fun Against ((BOUND_VARIABLE_557 BoundSet) (BOUND_VARIABLE_558 BoundSet)) Bool false)
+(define-fun HasFlyer ((BOUND_VARIABLE_550 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_13 () UnboundSet)
+(define-fun Smokes ((BOUND_VARIABLE_614 BoundSet)) Bool true)
+(define-fun LeansAgainst ((BOUND_VARIABLE_621 BoundSet) (BOUND_VARIABLE_622 BoundSet)) Bool true)
+(define-fun HasMissingPersonFlyer ((BOUND_VARIABLE_614 BoundSet)) Bool true)
+(define-fun Against ((BOUND_VARIABLE_621 BoundSet) (BOUND_VARIABLE_622 BoundSet)) Bool true)
+(define-fun HasFlyer ((BOUND_VARIABLE_614 BoundSet)) Bool false)
+)

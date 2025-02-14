@@ -1,0 +1,21 @@
+unknown
+(model
+; cardinality of BoundSet is 5
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; rep: @uc_BoundSet_4
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_6 () UnboundSet)
+(define-fun IsOcean ((BOUND_VARIABLE_702 BoundSet)) Bool (= @uc_BoundSet_0 BOUND_VARIABLE_702))
+(define-fun IsHundredsOfMillionsOfYearsAgo ((BOUND_VARIABLE_702 BoundSet)) Bool (= @uc_BoundSet_0 BOUND_VARIABLE_702))
+(define-fun IsCoolerThanPreviouslyThought ((BOUND_VARIABLE_702 BoundSet)) Bool (ite (= @uc_BoundSet_4 BOUND_VARIABLE_702) true (= @uc_BoundSet_0 BOUND_VARIABLE_702)))
+(define-fun IsOccurring ((BOUND_VARIABLE_702 BoundSet)) Bool false)
+(define-fun IsWorseThanPreviouslyCalculated ((BOUND_VARIABLE_702 BoundSet)) Bool false)
+(define-fun IsUnparalleledWithin ((BOUND_VARIABLE_702 BoundSet)) Bool false)
+)
+unsat
+(error "Cannot get model unless immediately preceded by SAT/NOT_ENTAILED or UNKNOWN response.")

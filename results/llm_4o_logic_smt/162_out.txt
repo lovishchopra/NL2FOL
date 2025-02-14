@@ -1,0 +1,30 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_4 () UnboundSet)
+(define-fun IsInWhiteShirt ((BOUND_VARIABLE_667 BoundSet)) Bool true)
+(define-fun SpeaksInto ((BOUND_VARIABLE_674 BoundSet) (BOUND_VARIABLE_675 BoundSet)) Bool true)
+(define-fun IsAtPublicEvent ((BOUND_VARIABLE_674 BoundSet) (BOUND_VARIABLE_675 BoundSet)) Bool true)
+(define-fun IsMakingSpeech ((BOUND_VARIABLE_674 BoundSet) (BOUND_VARIABLE_675 BoundSet)) Bool false)
+(define-fun IsInFrontOf ((BOUND_VARIABLE_674 BoundSet) (BOUND_VARIABLE_675 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_14 () UnboundSet)
+(define-fun IsInWhiteShirt ((BOUND_VARIABLE_718 BoundSet)) Bool true)
+(define-fun SpeaksInto ((BOUND_VARIABLE_725 BoundSet) (BOUND_VARIABLE_726 BoundSet)) Bool true)
+(define-fun IsAtPublicEvent ((BOUND_VARIABLE_725 BoundSet) (BOUND_VARIABLE_726 BoundSet)) Bool true)
+(define-fun IsMakingSpeech ((BOUND_VARIABLE_725 BoundSet) (BOUND_VARIABLE_726 BoundSet)) Bool true)
+(define-fun IsInFrontOf ((BOUND_VARIABLE_725 BoundSet) (BOUND_VARIABLE_726 BoundSet)) Bool false)
+)

@@ -1,0 +1,28 @@
+unknown
+(model
+; cardinality of BoundSet is 5
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; rep: @uc_BoundSet_4
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_6 () UnboundSet)
+(define-fun SpentTimeOn ((BOUND_VARIABLE_414 BoundSet) (BOUND_VARIABLE_415 BoundSet) (BOUND_VARIABLE_416 BoundSet)) Bool true)
+(define-fun MissedEvent ((BOUND_VARIABLE_414 BoundSet) (BOUND_VARIABLE_415 BoundSet) (BOUND_VARIABLE_416 BoundSet)) Bool true)
+(define-fun Give ((BOUND_VARIABLE_414 BoundSet) (BOUND_VARIABLE_415 BoundSet) (BOUND_VARIABLE_416 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_8 () UnboundSet)
+(define-fun SpentTimeOn ((BOUND_VARIABLE_463 BoundSet) (BOUND_VARIABLE_464 BoundSet) (BOUND_VARIABLE_465 BoundSet)) Bool true)
+(define-fun MissedEvent ((BOUND_VARIABLE_463 BoundSet) (BOUND_VARIABLE_464 BoundSet) (BOUND_VARIABLE_465 BoundSet)) Bool true)
+(define-fun Give ((BOUND_VARIABLE_463 BoundSet) (BOUND_VARIABLE_464 BoundSet) (BOUND_VARIABLE_465 BoundSet)) Bool false)
+)
