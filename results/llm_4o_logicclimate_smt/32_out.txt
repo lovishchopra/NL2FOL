@@ -1,0 +1,29 @@
+unknown
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_3 () UnboundSet)
+(define-fun DisputesConclusion ((BOUND_VARIABLE_445 BoundSet) (BOUND_VARIABLE_446 BoundSet)) Bool true)
+(define-fun IsAboutStoppingGlobalWarming ((BOUND_VARIABLE_449 BoundSet)) Bool true)
+(define-fun RequiresEndingCoalUse ((BOUND_VARIABLE_449 BoundSet)) Bool true)
+(define-fun DoesNotRequireEnding ((BOUND_VARIABLE_449 BoundSet)) Bool false)
+(define-fun IsStopped ((BOUND_VARIABLE_449 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_6 () UnboundSet)
+(define-fun DisputesConclusion ((BOUND_VARIABLE_490 BoundSet) (BOUND_VARIABLE_491 BoundSet)) Bool true)
+(define-fun IsAboutStoppingGlobalWarming ((BOUND_VARIABLE_494 BoundSet)) Bool true)
+(define-fun RequiresEndingCoalUse ((BOUND_VARIABLE_494 BoundSet)) Bool true)
+(define-fun DoesNotRequireEnding ((BOUND_VARIABLE_494 BoundSet)) Bool false)
+(define-fun IsStopped ((BOUND_VARIABLE_494 BoundSet)) Bool false)
+)

@@ -1,0 +1,26 @@
+unknown
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_2 () UnboundSet)
+(define-fun Drinks ((BOUND_VARIABLE_494 BoundSet)) Bool true)
+(define-fun Parties ((BOUND_VARIABLE_494 BoundSet)) Bool true)
+(define-fun HasMultiplePartners ((BOUND_VARIABLE_494 BoundSet)) Bool true)
+(define-fun NotTrustedToSell ((BOUND_VARIABLE_506 BoundSet) (BOUND_VARIABLE_507 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_8 () UnboundSet)
+(define-fun Drinks ((BOUND_VARIABLE_501 BoundSet)) Bool true)
+(define-fun Parties ((BOUND_VARIABLE_501 BoundSet)) Bool true)
+(define-fun HasMultiplePartners ((BOUND_VARIABLE_501 BoundSet)) Bool true)
+(define-fun NotTrustedToSell ((BOUND_VARIABLE_508 BoundSet) (BOUND_VARIABLE_509 BoundSet)) Bool true)
+)

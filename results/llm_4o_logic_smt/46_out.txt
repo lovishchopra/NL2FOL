@@ -1,0 +1,28 @@
+unknown
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_2 () UnboundSet)
+(define-fun IsInexpensive ((BOUND_VARIABLE_434 BoundSet)) Bool true)
+(define-fun RequiresNoMaintenance ((BOUND_VARIABLE_434 BoundSet)) Bool true)
+(define-fun IsPretty ((BOUND_VARIABLE_434 BoundSet)) Bool true)
+(define-fun IsSoothingToWatch ((BOUND_VARIABLE_434 BoundSet)) Bool true)
+(define-fun IsTheEasiestToKeep ((BOUND_VARIABLE_434 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_6 () UnboundSet)
+(define-fun IsInexpensive ((BOUND_VARIABLE_462 BoundSet)) Bool true)
+(define-fun RequiresNoMaintenance ((BOUND_VARIABLE_462 BoundSet)) Bool true)
+(define-fun IsPretty ((BOUND_VARIABLE_462 BoundSet)) Bool true)
+(define-fun IsSoothingToWatch ((BOUND_VARIABLE_462 BoundSet)) Bool true)
+(define-fun IsTheEasiestToKeep ((BOUND_VARIABLE_462 BoundSet)) Bool false)
+)

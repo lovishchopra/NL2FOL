@@ -1,0 +1,16 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_4 () UnboundSet)
+(define-fun AreGrilling ((BOUND_VARIABLE_461 BoundSet) (BOUND_VARIABLE_462 BoundSet)) Bool true)
+(define-fun LooksOn ((BOUND_VARIABLE_465 BoundSet)) Bool true)
+(define-fun HaveBeenIn ((BOUND_VARIABLE_461 BoundSet) (BOUND_VARIABLE_462 BoundSet)) Bool false)
+)
+unsat
+(error "Cannot get model unless immediately preceded by SAT/NOT_ENTAILED or UNKNOWN response.")

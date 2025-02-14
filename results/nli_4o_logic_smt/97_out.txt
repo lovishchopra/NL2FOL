@@ -1,0 +1,26 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_4 () UnboundSet)
+(define-fun SpentInLibrary ((BOUND_VARIABLE_392 BoundSet) (BOUND_VARIABLE_393 BoundSet) (BOUND_VARIABLE_394 BoundSet)) Bool true)
+(define-fun AreAbout ((BOUND_VARIABLE_405 BoundSet) (BOUND_VARIABLE_406 BoundSet)) Bool false)
+(define-fun AreBunk ((BOUND_VARIABLE_412 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_6 () UnboundSet)
+(define-fun SpentInLibrary ((BOUND_VARIABLE_438 BoundSet) (BOUND_VARIABLE_439 BoundSet) (BOUND_VARIABLE_440 BoundSet)) Bool true)
+(define-fun AreAbout ((BOUND_VARIABLE_447 BoundSet) (BOUND_VARIABLE_448 BoundSet)) Bool false)
+(define-fun AreBunk ((BOUND_VARIABLE_451 BoundSet)) Bool true)
+)

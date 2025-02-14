@@ -1,0 +1,20 @@
+unknown
+(model
+; cardinality of BoundSet is 5
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; rep: @uc_BoundSet_4
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_6 () UnboundSet)
+(define-fun IsWearingCap ((BOUND_VARIABLE_632 BoundSet)) Bool (= @uc_BoundSet_0 BOUND_VARIABLE_632))
+(define-fun IsNotWearingShirt ((BOUND_VARIABLE_632 BoundSet)) Bool (= @uc_BoundSet_0 BOUND_VARIABLE_632))
+(define-fun IsLayingOnBench ((BOUND_VARIABLE_632 BoundSet)) Bool (ite (= @uc_BoundSet_4 BOUND_VARIABLE_632) true (= @uc_BoundSet_0 BOUND_VARIABLE_632)))
+(define-fun IsRelaxing ((BOUND_VARIABLE_632 BoundSet)) Bool false)
+(define-fun IsOnBench ((BOUND_VARIABLE_632 BoundSet)) Bool false)
+)
+unsat
+(error "Cannot get model unless immediately preceded by SAT/NOT_ENTAILED or UNKNOWN response.")

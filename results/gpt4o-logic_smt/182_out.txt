@@ -1,0 +1,18 @@
+sat
+(model
+; cardinality of BoundSet is 5
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; rep: @uc_BoundSet_4
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_4 () UnboundSet)
+(define-fun wall () BoundSet @uc_BoundSet_0)
+(define-fun flier () BoundSet @uc_BoundSet_1)
+(define-fun Smokes ((BOUND_VARIABLE_420 BoundSet)) Bool true)
+(define-fun LeansAgainst ((BOUND_VARIABLE_427 BoundSet) (BOUND_VARIABLE_428 BoundSet)) Bool true)
+(define-fun HasFlier ((BOUND_VARIABLE_427 BoundSet) (BOUND_VARIABLE_428 BoundSet)) Bool (ite (= @uc_BoundSet_4 BOUND_VARIABLE_427) (= @uc_BoundSet_2 BOUND_VARIABLE_428) false))
+)

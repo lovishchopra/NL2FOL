@@ -1,8 +1,0 @@
-Python 3.9.0
-CUDA is available. GPUs are accessible.
-Number of GPUs available: 1
-Name: NVIDIA H100 80GB HBM3
-Compute Capability: (9, 0)
-Total Memory: 79.10 GB
-Memory Allocated: 0.00 MB
-Memory Reserved: 0.00 MB

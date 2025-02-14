@@ -1,0 +1,41 @@
+unknown
+(model
+; cardinality of BoundSet is 6
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; rep: @uc_BoundSet_4
+; rep: @uc_BoundSet_5
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_7 () UnboundSet)
+(define-fun IsSixFeet ((BOUND_VARIABLE_613 BoundSet)) Bool true)
+(define-fun AreDisplaced ((BOUND_VARIABLE_613 BoundSet)) Bool true)
+(define-fun AreIn ((BOUND_VARIABLE_620 BoundSet) (BOUND_VARIABLE_621 BoundSet)) Bool true)
+(define-fun IsMegacity ((BOUND_VARIABLE_613 BoundSet)) Bool true)
+(define-fun AreVulnerable ((BOUND_VARIABLE_613 BoundSet)) Bool true)
+(define-fun IsWipedOffMap ((BOUND_VARIABLE_613 BoundSet)) Bool true)
+(define-fun AffectsMegacities ((BOUND_VARIABLE_620 BoundSet) (BOUND_VARIABLE_621 BoundSet)) Bool false)
+(define-fun CausesMassiveDisplacement ((BOUND_VARIABLE_620 BoundSet) (BOUND_VARIABLE_621 BoundSet)) Bool false)
+(define-fun CausesDestruction ((BOUND_VARIABLE_620 BoundSet) (BOUND_VARIABLE_621 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_10 () UnboundSet)
+(define-fun IsSixFeet ((BOUND_VARIABLE_698 BoundSet)) Bool true)
+(define-fun AreDisplaced ((BOUND_VARIABLE_698 BoundSet)) Bool true)
+(define-fun AreIn ((BOUND_VARIABLE_705 BoundSet) (BOUND_VARIABLE_706 BoundSet)) Bool true)
+(define-fun IsMegacity ((BOUND_VARIABLE_698 BoundSet)) Bool true)
+(define-fun AreVulnerable ((BOUND_VARIABLE_698 BoundSet)) Bool true)
+(define-fun IsWipedOffMap ((BOUND_VARIABLE_698 BoundSet)) Bool true)
+(define-fun AffectsMegacities ((BOUND_VARIABLE_705 BoundSet) (BOUND_VARIABLE_706 BoundSet)) Bool true)
+(define-fun CausesMassiveDisplacement ((BOUND_VARIABLE_705 BoundSet) (BOUND_VARIABLE_706 BoundSet)) Bool false)
+(define-fun CausesDestruction ((BOUND_VARIABLE_705 BoundSet) (BOUND_VARIABLE_706 BoundSet)) Bool true)
+)

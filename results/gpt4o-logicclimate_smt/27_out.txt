@@ -1,0 +1,32 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_4 () UnboundSet)
+(define-fun Causes ((BOUND_VARIABLE_486 BoundSet) (BOUND_VARIABLE_487 BoundSet)) Bool true)
+(define-fun Beyond ((BOUND_VARIABLE_486 BoundSet) (BOUND_VARIABLE_487 BoundSet)) Bool true)
+(define-fun Within ((BOUND_VARIABLE_486 BoundSet) (BOUND_VARIABLE_487 BoundSet)) Bool false)
+(define-fun OfLifetime ((BOUND_VARIABLE_486 BoundSet) (BOUND_VARIABLE_487 BoundSet)) Bool false)
+(define-fun IsTeenager ((BOUND_VARIABLE_510 BoundSet)) Bool false)
+(define-fun IsToday ((BOUND_VARIABLE_510 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_7 () UnboundSet)
+(define-fun Causes ((BOUND_VARIABLE_552 BoundSet) (BOUND_VARIABLE_553 BoundSet)) Bool true)
+(define-fun Beyond ((BOUND_VARIABLE_552 BoundSet) (BOUND_VARIABLE_553 BoundSet)) Bool true)
+(define-fun Within ((BOUND_VARIABLE_552 BoundSet) (BOUND_VARIABLE_553 BoundSet)) Bool false)
+(define-fun OfLifetime ((BOUND_VARIABLE_552 BoundSet) (BOUND_VARIABLE_553 BoundSet)) Bool true)
+(define-fun IsTeenager ((BOUND_VARIABLE_565 BoundSet)) Bool true)
+(define-fun IsToday ((BOUND_VARIABLE_565 BoundSet)) Bool false)
+)

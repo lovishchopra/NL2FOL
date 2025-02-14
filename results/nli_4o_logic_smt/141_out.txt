@@ -1,0 +1,19 @@
+unknown
+(model
+; cardinality of BoundSet is 4
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_5 () UnboundSet)
+(define-fun IsInBlackTrunks ((BOUND_VARIABLE_507 BoundSet)) Bool true)
+(define-fun IsBouncingOnTrampoline ((BOUND_VARIABLE_507 BoundSet)) Bool true)
+(define-fun IsWet ((BOUND_VARIABLE_507 BoundSet)) Bool true)
+(define-fun IsOutdoors ((BOUND_VARIABLE_507 BoundSet)) Bool false)
+(define-fun IsPlayingOnTrampolines ((BOUND_VARIABLE_507 BoundSet)) Bool false)
+)
+unsat
+(error "Cannot get model unless immediately preceded by SAT/NOT_ENTAILED or UNKNOWN response.")

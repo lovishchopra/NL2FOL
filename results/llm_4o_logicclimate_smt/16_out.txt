@@ -1,0 +1,29 @@
+unknown
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_3 () UnboundSet)
+(define-fun IsRemarkablyWarm ((BOUND_VARIABLE_438 BoundSet)) Bool true)
+(define-fun HasEnded ((BOUND_VARIABLE_438 BoundSet)) Bool true)
+(define-fun IsSurprised ((BOUND_VARIABLE_438 BoundSet)) Bool false)
+(define-fun IsWarm ((BOUND_VARIABLE_438 BoundSet)) Bool false)
+(define-fun OccurredIn ((BOUND_VARIABLE_457 BoundSet) (BOUND_VARIABLE_458 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_8 () UnboundSet)
+(define-fun IsRemarkablyWarm ((BOUND_VARIABLE_523 BoundSet)) Bool true)
+(define-fun HasEnded ((BOUND_VARIABLE_523 BoundSet)) Bool true)
+(define-fun IsSurprised ((BOUND_VARIABLE_523 BoundSet)) Bool true)
+(define-fun IsWarm ((BOUND_VARIABLE_523 BoundSet)) Bool false)
+(define-fun OccurredIn ((BOUND_VARIABLE_532 BoundSet) (BOUND_VARIABLE_533 BoundSet)) Bool true)
+)

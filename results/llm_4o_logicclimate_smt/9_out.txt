@@ -1,0 +1,35 @@
+unknown
+(model
+; cardinality of BoundSet is 8
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; rep: @uc_BoundSet_4
+; rep: @uc_BoundSet_5
+; rep: @uc_BoundSet_6
+; rep: @uc_BoundSet_7
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_9 () UnboundSet)
+(define-fun HasPollutionRelatedDiseases ((BOUND_VARIABLE_574 BoundSet)) Bool true)
+(define-fun DiedPrematurely ((BOUND_VARIABLE_574 BoundSet)) Bool true)
+(define-fun OccurredIn ((BOUND_VARIABLE_574 BoundSet)) Bool true)
+(define-fun IsSignificantCauseOf ((BOUND_VARIABLE_581 BoundSet) (BOUND_VARIABLE_582 BoundSet)) Bool true)
+(define-fun IsWorldwide ((BOUND_VARIABLE_574 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_14 () UnboundSet)
+(define-fun HasPollutionRelatedDiseases ((BOUND_VARIABLE_645 BoundSet)) Bool true)
+(define-fun DiedPrematurely ((BOUND_VARIABLE_645 BoundSet)) Bool true)
+(define-fun OccurredIn ((BOUND_VARIABLE_645 BoundSet)) Bool true)
+(define-fun IsSignificantCauseOf ((BOUND_VARIABLE_652 BoundSet) (BOUND_VARIABLE_653 BoundSet)) Bool true)
+(define-fun IsWorldwide ((BOUND_VARIABLE_645 BoundSet)) Bool false)
+)

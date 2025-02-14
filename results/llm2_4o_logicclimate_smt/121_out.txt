@@ -1,0 +1,20 @@
+unknown
+(model
+; cardinality of BoundSet is 6
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; rep: @uc_BoundSet_4
+; rep: @uc_BoundSet_5
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_7 () UnboundSet)
+(define-fun Sings ((BOUND_VARIABLE_537 BoundSet) (BOUND_VARIABLE_538 BoundSet)) Bool true)
+(define-fun FromBook ((BOUND_VARIABLE_537 BoundSet) (BOUND_VARIABLE_538 BoundSet)) Bool true)
+(define-fun AtChurch ((BOUND_VARIABLE_537 BoundSet) (BOUND_VARIABLE_538 BoundSet)) Bool true)
+(define-fun IsFilledWithSong ((BOUND_VARIABLE_549 BoundSet)) Bool false)
+)
+unsat
+(error "Cannot get model unless immediately preceded by SAT/NOT_ENTAILED or UNKNOWN response.")

@@ -1,0 +1,35 @@
+unknown
+(model
+; cardinality of BoundSet is 4
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_5 () UnboundSet)
+(define-fun IsAbout ((BOUND_VARIABLE_466 BoundSet) (BOUND_VARIABLE_467 BoundSet)) Bool true)
+(define-fun IncludesFears ((BOUND_VARIABLE_466 BoundSet) (BOUND_VARIABLE_467 BoundSet)) Bool true)
+(define-fun IsFearOf ((BOUND_VARIABLE_466 BoundSet) (BOUND_VARIABLE_467 BoundSet)) Bool true)
+(define-fun IsFrom ((BOUND_VARIABLE_466 BoundSet) (BOUND_VARIABLE_467 BoundSet)) Bool false)
+(define-fun IsPossibleWithin ((BOUND_VARIABLE_466 BoundSet) (BOUND_VARIABLE_467 BoundSet)) Bool false)
+(define-fun IsInLifetimeOf ((BOUND_VARIABLE_466 BoundSet) (BOUND_VARIABLE_467 BoundSet)) Bool false)
+(define-fun IsToday ((BOUND_VARIABLE_498 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_7 () UnboundSet)
+(define-fun IsAbout ((BOUND_VARIABLE_535 BoundSet) (BOUND_VARIABLE_536 BoundSet)) Bool true)
+(define-fun IncludesFears ((BOUND_VARIABLE_535 BoundSet) (BOUND_VARIABLE_536 BoundSet)) Bool true)
+(define-fun IsFearOf ((BOUND_VARIABLE_535 BoundSet) (BOUND_VARIABLE_536 BoundSet)) Bool true)
+(define-fun IsFrom ((BOUND_VARIABLE_535 BoundSet) (BOUND_VARIABLE_536 BoundSet)) Bool false)
+(define-fun IsPossibleWithin ((BOUND_VARIABLE_535 BoundSet) (BOUND_VARIABLE_536 BoundSet)) Bool true)
+(define-fun IsInLifetimeOf ((BOUND_VARIABLE_535 BoundSet) (BOUND_VARIABLE_536 BoundSet)) Bool true)
+(define-fun IsToday ((BOUND_VARIABLE_555 BoundSet)) Bool false)
+)

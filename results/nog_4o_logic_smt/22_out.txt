@@ -1,0 +1,26 @@
+unknown
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_2 () UnboundSet)
+(define-fun IsForEducation ((BOUND_VARIABLE_394 BoundSet)) Bool true)
+(define-fun IsUnnecessary ((BOUND_VARIABLE_394 BoundSet)) Bool true)
+(define-fun IsNotReaching ((BOUND_VARIABLE_406 BoundSet) (BOUND_VARIABLE_407 BoundSet)) Bool false)
+(define-fun IsNotUsedForEducation ((BOUND_VARIABLE_394 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_5 () UnboundSet)
+(define-fun IsForEducation ((BOUND_VARIABLE_412 BoundSet)) Bool true)
+(define-fun IsUnnecessary ((BOUND_VARIABLE_412 BoundSet)) Bool true)
+(define-fun IsNotReaching ((BOUND_VARIABLE_419 BoundSet) (BOUND_VARIABLE_420 BoundSet)) Bool true)
+(define-fun IsNotUsedForEducation ((BOUND_VARIABLE_412 BoundSet)) Bool true)
+)

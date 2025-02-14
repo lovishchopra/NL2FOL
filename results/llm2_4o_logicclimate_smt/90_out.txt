@@ -1,0 +1,30 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_4 () UnboundSet)
+(define-fun IsExtremePrecipitationEvent ((BOUND_VARIABLE_495 BoundSet)) Bool true)
+(define-fun IsClimateChangeImpact ((BOUND_VARIABLE_495 BoundSet)) Bool (= @uc_BoundSet_1 BOUND_VARIABLE_495))
+(define-fun IsImpactOfGlobalWarming ((BOUND_VARIABLE_495 BoundSet)) Bool true)
+(define-fun IsAffectedByGlobalWarming ((BOUND_VARIABLE_495 BoundSet)) Bool false)
+(define-fun IsInSouthCarolina ((BOUND_VARIABLE_495 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_9 () UnboundSet)
+(define-fun IsExtremePrecipitationEvent ((BOUND_VARIABLE_554 BoundSet)) Bool true)
+(define-fun IsClimateChangeImpact ((BOUND_VARIABLE_554 BoundSet)) Bool true)
+(define-fun IsImpactOfGlobalWarming ((BOUND_VARIABLE_554 BoundSet)) Bool true)
+(define-fun IsAffectedByGlobalWarming ((BOUND_VARIABLE_554 BoundSet)) Bool false)
+(define-fun IsInSouthCarolina ((BOUND_VARIABLE_554 BoundSet)) Bool false)
+)

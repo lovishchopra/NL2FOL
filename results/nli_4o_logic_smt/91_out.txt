@@ -1,0 +1,24 @@
+unknown
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_2 () UnboundSet)
+(define-fun IsMeanTeacher ((BOUND_VARIABLE_375 BoundSet)) Bool true)
+(define-fun IsPerson ((BOUND_VARIABLE_375 BoundSet)) Bool true)
+(define-fun WouldNotRaiseGrade ((BOUND_VARIABLE_392 BoundSet) (BOUND_VARIABLE_393 BoundSet) (BOUND_VARIABLE_394 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_4 () UnboundSet)
+(define-fun IsMeanTeacher ((BOUND_VARIABLE_403 BoundSet)) Bool true)
+(define-fun IsPerson ((BOUND_VARIABLE_403 BoundSet)) Bool true)
+(define-fun WouldNotRaiseGrade ((BOUND_VARIABLE_415 BoundSet) (BOUND_VARIABLE_416 BoundSet) (BOUND_VARIABLE_417 BoundSet)) Bool false)
+)

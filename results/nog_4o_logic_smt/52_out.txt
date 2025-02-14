@@ -1,0 +1,33 @@
+unknown
+(model
+; cardinality of BoundSet is 4
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; rep: @uc_BoundSet_3
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_5 () UnboundSet)
+(define-fun Thinks ((BOUND_VARIABLE_448 BoundSet)) Bool true)
+(define-fun ShouldStayInside ((BOUND_VARIABLE_448 BoundSet)) Bool true)
+(define-fun AffectsCurve ((BOUND_VARIABLE_455 BoundSet) (BOUND_VARIABLE_456 BoundSet)) Bool true)
+(define-fun IsCOVID19 ((BOUND_VARIABLE_448 BoundSet)) Bool true)
+(define-fun IsStayingInsideCauses ((BOUND_VARIABLE_455 BoundSet) (BOUND_VARIABLE_456 BoundSet)) Bool false)
+(define-fun LosesJobs ((BOUND_VARIABLE_448 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_7 () UnboundSet)
+(define-fun Thinks ((BOUND_VARIABLE_504 BoundSet)) Bool true)
+(define-fun ShouldStayInside ((BOUND_VARIABLE_504 BoundSet)) Bool true)
+(define-fun AffectsCurve ((BOUND_VARIABLE_511 BoundSet) (BOUND_VARIABLE_512 BoundSet)) Bool true)
+(define-fun IsCOVID19 ((BOUND_VARIABLE_504 BoundSet)) Bool true)
+(define-fun IsStayingInsideCauses ((BOUND_VARIABLE_511 BoundSet) (BOUND_VARIABLE_512 BoundSet)) Bool false)
+(define-fun LosesJobs ((BOUND_VARIABLE_504 BoundSet)) Bool true)
+)

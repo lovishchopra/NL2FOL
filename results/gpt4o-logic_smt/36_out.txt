@@ -1,0 +1,16 @@
+unknown
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_3 () UnboundSet)
+(define-fun GetsBetterGasMileage ((BOUND_VARIABLE_437 BoundSet)) Bool true)
+(define-fun IsReliable ((BOUND_VARIABLE_437 BoundSet)) Bool true)
+(define-fun AccordingToConsumerReports ((BOUND_VARIABLE_437 BoundSet)) Bool true)
+(define-fun WantsToSell ((BOUND_VARIABLE_454 BoundSet) (BOUND_VARIABLE_455 BoundSet) (BOUND_VARIABLE_456 BoundSet)) Bool false)
+)
+unsat
+(error "Cannot get model unless immediately preceded by SAT/NOT_ENTAILED or UNKNOWN response.")

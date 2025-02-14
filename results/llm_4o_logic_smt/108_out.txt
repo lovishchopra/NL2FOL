@@ -1,0 +1,34 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_4 () UnboundSet)
+(define-fun IsSnowboarding ((BOUND_VARIABLE_482 BoundSet)) Bool true)
+(define-fun IsOnPileOfSnow ((BOUND_VARIABLE_489 BoundSet) (BOUND_VARIABLE_490 BoundSet)) Bool true)
+(define-fun IsSmallPileOfSnow ((BOUND_VARIABLE_482 BoundSet)) Bool true)
+(define-fun IsSunnyDay ((BOUND_VARIABLE_482 BoundSet)) Bool true)
+(define-fun IsColdDay ((BOUND_VARIABLE_482 BoundSet)) Bool true)
+(define-fun IsYoung ((BOUND_VARIABLE_482 BoundSet)) Bool false)
+(define-fun IsSizingUpJump ((BOUND_VARIABLE_489 BoundSet) (BOUND_VARIABLE_490 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_7 () UnboundSet)
+(define-fun IsSnowboarding ((BOUND_VARIABLE_539 BoundSet)) Bool true)
+(define-fun IsOnPileOfSnow ((BOUND_VARIABLE_546 BoundSet) (BOUND_VARIABLE_547 BoundSet)) Bool true)
+(define-fun IsSmallPileOfSnow ((BOUND_VARIABLE_539 BoundSet)) Bool true)
+(define-fun IsSunnyDay ((BOUND_VARIABLE_539 BoundSet)) Bool true)
+(define-fun IsColdDay ((BOUND_VARIABLE_539 BoundSet)) Bool true)
+(define-fun IsYoung ((BOUND_VARIABLE_539 BoundSet)) Bool false)
+(define-fun IsSizingUpJump ((BOUND_VARIABLE_546 BoundSet) (BOUND_VARIABLE_547 BoundSet)) Bool true)
+)

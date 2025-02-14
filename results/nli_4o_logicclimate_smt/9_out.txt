@@ -1,0 +1,28 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_4 () UnboundSet)
+(define-fun DiedPrematurelyFromDisease ((BOUND_VARIABLE_410 BoundSet) (BOUND_VARIABLE_411 BoundSet)) Bool true)
+(define-fun OccurredInYear ((BOUND_VARIABLE_410 BoundSet) (BOUND_VARIABLE_411 BoundSet)) Bool true)
+(define-fun CauseSignificantPortionOfDeaths ((BOUND_VARIABLE_410 BoundSet) (BOUND_VARIABLE_411 BoundSet)) Bool false)
+(define-fun OccursWorldwide ((BOUND_VARIABLE_410 BoundSet) (BOUND_VARIABLE_411 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_6 () UnboundSet)
+(define-fun DiedPrematurelyFromDisease ((BOUND_VARIABLE_460 BoundSet) (BOUND_VARIABLE_461 BoundSet)) Bool true)
+(define-fun OccurredInYear ((BOUND_VARIABLE_460 BoundSet) (BOUND_VARIABLE_461 BoundSet)) Bool true)
+(define-fun CauseSignificantPortionOfDeaths ((BOUND_VARIABLE_460 BoundSet) (BOUND_VARIABLE_461 BoundSet)) Bool false)
+(define-fun OccursWorldwide ((BOUND_VARIABLE_460 BoundSet) (BOUND_VARIABLE_461 BoundSet)) Bool true)
+)

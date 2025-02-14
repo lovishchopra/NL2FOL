@@ -1,0 +1,8 @@
+(set-logic ALL)
+(set-option :produce-models true)
+(declare-sort BoundSet 0)
+(declare-sort UnboundSet 0)
+(declare-fun IsNear (BoundSet BoundSet) Bool)
+(assert (not (=> (exists ((a BoundSet)) (exists ((b BoundSet)) (IsNear a b))) (exists ((d BoundSet)) (exists ((c BoundSet)) (IsNear c d))))))
+(check-sat)
+(get-model)

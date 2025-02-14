@@ -1,0 +1,18 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_4 () UnboundSet)
+(define-fun IsInBeigeBlazer ((BOUND_VARIABLE_536 BoundSet)) Bool true)
+(define-fun DiscussesImportantTopic ((BOUND_VARIABLE_536 BoundSet)) Bool true)
+(define-fun ReachesForSomething ((BOUND_VARIABLE_536 BoundSet)) Bool true)
+(define-fun IsTalking ((BOUND_VARIABLE_536 BoundSet)) Bool false)
+(define-fun ReachesFor ((BOUND_VARIABLE_552 BoundSet) (BOUND_VARIABLE_553 BoundSet)) Bool false)
+)
+unsat
+(error "Cannot get model unless immediately preceded by SAT/NOT_ENTAILED or UNKNOWN response.")

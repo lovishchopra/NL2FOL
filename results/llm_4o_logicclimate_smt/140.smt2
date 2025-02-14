@@ -1,0 +1,8 @@
+(set-logic ALL)
+(set-option :produce-models true)
+(declare-sort BoundSet 0)
+(declare-sort UnboundSet 0)
+(declare-fun IsGoingForHike (BoundSet) Bool)
+(assert (not (=> (exists ((a BoundSet)) (exists ((b BoundSet)) (exists ((c BoundSet)) (and (IsGoingForHike a) (or (IsGoingForHike b) (IsGoingForHike c)))))) (exists ((d BoundSet)) (IsGoingForHike d)))))
+(check-sat)
+(get-model)

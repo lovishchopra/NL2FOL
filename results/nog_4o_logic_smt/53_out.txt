@@ -1,0 +1,27 @@
+unknown
+(model
+; cardinality of BoundSet is 2
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_3 () UnboundSet)
+(define-fun CauseCancer ((BOUND_VARIABLE_403 BoundSet) (BOUND_VARIABLE_404 BoundSet)) Bool true)
+(define-fun ShouldVote ((BOUND_VARIABLE_403 BoundSet) (BOUND_VARIABLE_404 BoundSet)) Bool false)
+(define-fun TearDown ((BOUND_VARIABLE_419 BoundSet)) Bool false)
+(define-fun Replace ((BOUND_VARIABLE_433 BoundSet) (BOUND_VARIABLE_434 BoundSet) (BOUND_VARIABLE_435 BoundSet)) Bool false)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_5 () UnboundSet)
+(define-fun CauseCancer ((BOUND_VARIABLE_431 BoundSet) (BOUND_VARIABLE_432 BoundSet)) Bool true)
+(define-fun ShouldVote ((BOUND_VARIABLE_431 BoundSet) (BOUND_VARIABLE_432 BoundSet)) Bool false)
+(define-fun TearDown ((BOUND_VARIABLE_443 BoundSet)) Bool false)
+(define-fun Replace ((BOUND_VARIABLE_457 BoundSet) (BOUND_VARIABLE_458 BoundSet) (BOUND_VARIABLE_459 BoundSet)) Bool false)
+)

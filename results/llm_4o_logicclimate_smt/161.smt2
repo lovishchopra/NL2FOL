@@ -1,0 +1,8 @@
+(set-logic ALL)
+(set-option :produce-models true)
+(declare-sort BoundSet 0)
+(declare-sort UnboundSet 0)
+(declare-fun IsInBasement (BoundSet) Bool)
+(assert (not (=> (exists ((a BoundSet)) (IsInBasement a)) (exists ((a BoundSet)) (IsInBasement a)))))
+(check-sat)
+(get-model)

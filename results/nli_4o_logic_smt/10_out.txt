@@ -1,0 +1,26 @@
+unknown
+(model
+; cardinality of BoundSet is 3
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; rep: @uc_BoundSet_1
+; rep: @uc_BoundSet_2
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_4 () UnboundSet)
+(define-fun OccurTo ((BOUND_VARIABLE_422 BoundSet) (BOUND_VARIABLE_423 BoundSet)) Bool true)
+(define-fun AreStatisticallyIndependent ((BOUND_VARIABLE_426 BoundSet)) Bool true)
+(define-fun AreRoutineWheelSpins ((BOUND_VARIABLE_426 BoundSet)) Bool true)
+)
+sat
+(model
+; cardinality of BoundSet is 1
+(declare-sort BoundSet 0)
+; rep: @uc_BoundSet_0
+; cardinality of UnboundSet is 1
+(declare-sort UnboundSet 0)
+(declare-fun groundTerm_6 () UnboundSet)
+(define-fun OccurTo ((BOUND_VARIABLE_436 BoundSet) (BOUND_VARIABLE_437 BoundSet)) Bool true)
+(define-fun AreStatisticallyIndependent ((BOUND_VARIABLE_440 BoundSet)) Bool true)
+(define-fun AreRoutineWheelSpins ((BOUND_VARIABLE_440 BoundSet)) Bool true)
+)

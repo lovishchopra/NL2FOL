@@ -1,0 +1,8 @@
+(set-logic ALL)
+(set-option :produce-models true)
+(declare-sort BoundSet 0)
+(declare-sort UnboundSet 0)
+(declare-fun MarchesInParade (BoundSet) Bool)
+(assert (not (=> (exists ((b BoundSet)) (MarchesInParade b)) (exists ((c BoundSet)) (MarchesInParade c)))))
+(check-sat)
+(get-model)
