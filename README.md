@@ -25,4 +25,4 @@ python3 interpret_smt_result.py <output_of_smt_file_path> <json to relevant sent
 ```
 
 ## Citation
-[Paper](https://drive.google.com/file/d/16ZvnYwbNfGO-LctbT7u9gA4dq1SfGlrQ/view?usp=sharing)
+[Paper](https://arxiv.org/abs/2405.02318)
