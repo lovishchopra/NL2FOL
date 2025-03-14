@@ -51,7 +51,7 @@ tokenizers @ file:///Users/runner/miniforge3/conda-bld/tokenizers_1653159019510/
 torch==2.4.1
 torchvision==0.19.1
 tqdm @ file:///home/conda/feedstock_root/build_artifacts/tqdm_1722737464726/work
-transformers==4.33.3
+transformers==4.48.0
 typing_extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1717802530399/work
 tzdata @ file:///home/conda/feedstock_root/build_artifacts/python-tzdata_1727140567071/work
 urllib3 @ file:///home/conda/feedstock_root/build_artifacts/urllib3_1726496430923/work
