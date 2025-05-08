@@ -48,7 +48,7 @@ six @ file:///home/conda/feedstock_root/build_artifacts/six_1620240208055/work
 sniffio==1.3.1
 sympy==1.13.3
 tokenizers @ file:///Users/runner/miniforge3/conda-bld/tokenizers_1653159019510/work
-torch==2.4.1
+torch==2.6.0
 torchvision==0.19.1
 tqdm @ file:///home/conda/feedstock_root/build_artifacts/tqdm_1722737464726/work
 transformers==4.33.3
